@@ -20,16 +20,17 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      padding: 0 20px;
+      padding: 0 26px;
       font-size: 13px;
       width: 100%;
+      letter-spacing: 0.03em;
     }
   }
 
   &__right-icon {
     position: absolute;
     top: 50%;
-    right: 26px;
+    right: 25px;
     transform: translateY(-50%);
   }
 }
