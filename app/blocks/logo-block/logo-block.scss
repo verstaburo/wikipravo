@@ -6,7 +6,7 @@
     font-family: $font-second;
     font-size: 27px;
     font-weight: 600;
-    line-height: (48/27)*1em;
+    line-height: 1em;
   }
 
   &__text {
@@ -14,5 +14,7 @@
     font-size: 14px;
     font-weight: 300;
     line-height: (25/14)*1em;
+
+    &:not(:first-child) { margin-top: 5px; }
   }
 }

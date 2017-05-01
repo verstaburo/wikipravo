@@ -7,7 +7,7 @@
     padding-left: 41px;
 
     &:not(:first-child) {
-      margin-top: 15px;
+      margin-top: 29px;
     }
   }
 
@@ -18,8 +18,9 @@
   }
 
   &__label {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 1em;
 
     &_big {
       font-size: 22px;
@@ -29,9 +30,10 @@
   &__text {
     color: rgba(white, .5);
     font-size: 13px;
+    line-height: 1.2em;
 
     &:not(:first-child) {
-      margin-top: 5px;
+      margin-top: 15px;
     }
   }
 }

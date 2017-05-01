@@ -8,19 +8,19 @@
     line-height: 1.4em;
 
     &:not(:first-of-type) {
-      margin-top: 32px;
+      margin-top: 30px;
     }
   }
 
   &__link {
-    padding-left: 45px;
+    padding-left: 40px;
     position: relative;
     display: block;
   }
 
   &__icon {
     position: absolute;
-    left: 0;
+    left: -4px;
     top: 50%;
     transform: translateY(-50%);
   }
