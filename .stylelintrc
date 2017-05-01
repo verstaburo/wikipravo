@@ -23,7 +23,9 @@
     "font-weight-notation": "numeric",
     "font-family-name-quotes": "always-unless-keyword",
     "comment-whitespace-inside": "always",
-    "comment-empty-line-before": "always",
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-command", "after-comment"]
+    } ],
     "at-rule-no-vendor-prefix": true,
     "rule-empty-line-before": "always-multi-line",
     "selector-pseudo-element-colon-notation": "double",

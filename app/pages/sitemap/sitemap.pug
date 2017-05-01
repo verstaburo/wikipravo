@@ -1,11 +1,12 @@
 extends ../../layouts/default
+include ../../components/sitemaplist/sitemaplist
 
 block head
   - var pageTitle = 'Wiki Pravo — Главная'
 
 block content
-  +b.index
-
+  +sitemap-list
+      
 block page-left
   +sidebar
   

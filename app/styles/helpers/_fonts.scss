@@ -4,16 +4,10 @@
   font-style: normal;
   font-weight: 400;
   src: url('webfont.eot');
-  src: url('webfont.eot?#iefix') format('embedded-opentype'),
-       url('webfont.woff2') format('woff2'),
-       url('webfont.woff') format('woff'),
-       url('webfont.otf')  format('opentype'),
-       url('webfont.ttf')  format('truetype'),
-       url('webfont.svg#svgFontName') format('svg');
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), url('webfont.woff2') format('woff2'), url('webfont.woff') format('woff'), url('webfont.otf')  format('opentype'), url('webfont.ttf')  format('truetype'), url('webfont.svg#svgFontName') format('svg');
 }
-*/
 
-/* Соответствие письменного названия жирности числовому значению
+Соответствие письменного названия жирности числовому значению
 100 — Thin
 200 — Extra Light, Ultra Light
 300 — Light
@@ -24,3 +18,36 @@
 800 — Extra Bold, Ultra Bold
 900 — Black, Heavy
 */
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../static/fonts/GothamProRegular/GothamProRegular.eot');
+  src: url('../../static/fonts/GothamProRegular/GothamProRegular.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/GothamProRegular/GothamProRegular.woff') format('woff'), url('../../static/fonts/GothamProRegular/GothamProRegular.otf')  format('opentype'), url('../../static/fonts/GothamProRegular/GothamProRegular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../static/fonts/GothamProMedium/GothamProMedium.eot');
+  src: url('../../static/fonts/GothamProMedium/GothamProMedium.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/GothamProMedium/GothamProMedium.woff') format('woff'), url('../../static/fonts/GothamProMedium/GothamProMedium.otf')  format('opentype'), url('../../static/fonts/GothamProMedium/GothamProMedium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../static/fonts/GothamProBold/GothamProBold.eot');
+  src: url('../../static/fonts/GothamProBold/GothamProBold.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/GothamProBold/GothamProBold.woff') format('woff'), url('../../static/fonts/GothamProBold/GothamProBold.otf')  format('opentype'), url('../../static/fonts/GothamProBold/GothamProBold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Warnock Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../static/fonts/WarnockPro-Semibold.otf')  format('opentype');
+}
+
+@import '../../static/fonts/FontAwesome/css/font-awesome';

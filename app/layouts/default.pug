@@ -1,8 +1,10 @@
 include ../../node_modules/bemto.pug/bemto
+include ../components/sidebar/sidebar
+include ../components/header/header
 
 doctype html
 html(lang='ru')
   include head
   body
-    block content
+    include page-layout
     script(src='assets/scripts/app.min.js')
