@@ -1,0 +1,8 @@
+mixin entitled-text(data)
+  -if(data.length > 0)
+    each elem in data
+      +b.entitled-text&attributes(attributes)
+        +e.H2.title= elem.title
+        -if(elem.paragraph)
+          each paragraph in elem.paragraph
+            +e.P= paragraph.text

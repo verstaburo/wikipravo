@@ -59,6 +59,7 @@ body {
   font-family: $font-main; // Задаем основной шрифт
   font-size: 0; // Убираем проблему с отступами между inline-элементами
   box-sizing: border-box; // Задаем box-sizing: border-box по умолчанию
+  color: $color-font;
 }
 
 *, *::before, *::after {
