@@ -1,0 +1,10 @@
+{
+  "link": [
+    { "href": "#", "text": "Юристы", "icon": "assets/images/icon-nav-menu-1.png" },
+    { "href": "#", "text": "Заявки на услуги", "icon": "assets/images/icon-nav-menu-2.png" },
+    { "href": "#", "text": "Заказать документ", "icon": "assets/images/icon-nav-menu-3.png" },
+    { "href": "#", "text": "Заказать консультацию", "icon": "assets/images/icon-nav-menu-4.png" },
+    { "href": "#", "text": "Заказать другую услугу", "icon": "assets/images/icon-nav-menu-5.png" },
+    { "href": "#", "text": "Форум", "icon": "assets/images/icon-nav-menu-6.png" }
+  ]
+}

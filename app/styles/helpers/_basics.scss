@@ -43,6 +43,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 Основные стили
 ########## */
 
+html {
+  display: flex;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -105,4 +109,8 @@ select, input, textarea, button {
   border-radius: 0; // Убираем авто-закругление углов на iOS
 }
 
-a:visited, a:focus { color: inherit; }
+a:visited, a:focus {
+  color: inherit;
+}
+
+a { text-decoration: inherit; }

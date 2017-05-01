@@ -1,0 +1,35 @@
+.selectbox {
+
+  &__button {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    background-color: rgba(#abafc4, .5);
+    color: white;
+    cursor: pointer;
+    position: relative;
+
+    .fa-angle-up {
+      font-size: 18px;
+      color: rgba(white, .5);
+      font-weight: 400;
+    }
+
+    &-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 20px;
+      font-size: 13px;
+      width: 100%;
+    }
+  }
+
+  &__right-icon {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    transform: translateY(-50%);
+  }
+}

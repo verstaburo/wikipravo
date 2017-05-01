@@ -1,3 +1,29 @@
 .sidebar {
-  display: block;
+  background-color: #151827;
+  height: 100vh;
+  overflow: auto;
+
+  &__selectbox:not(:first-child) { margin-top: 25px; }
+
+  &__row {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &:not(:first-of-type) { border-top: 1px solid rgba(white, .1); }
+
+    &_logo {
+      padding-top: 5px;
+      padding-bottom: 28px;
+    }
+
+    &_nav-menu {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &_contacts-block {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
 }

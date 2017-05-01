@@ -1,0 +1,8 @@
+mixin nav-menu(data)
+  +b.UL.nav-menu&attributes(attributes)
+    each link in data.link
+      +e.LI.item
+        +e.A(href=link.href).link
+          +e.SPAN= link.text
+          - if (link.icon.length > 0)
+            +e.IMG.icon(src=link.icon)

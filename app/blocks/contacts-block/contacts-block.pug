@@ -1,0 +1,11 @@
+mixin contacts-block(data)
+  +b.contacts-block&attributes(attributes)
+    each contact in data.contacts
+      - var addClass = ""
+      - if (contact.additionalClass) { addClass = contact.additionalClass }
+      +e.item
+        - if (contact.icon.length > 0)
+          +e.IMG.icon(src=contact.icon)
+        +e(class="label " + addClass)= contact.label
+        - if (contact.text.length > 0)
+          +e.text= contact.text

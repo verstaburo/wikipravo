@@ -1,0 +1,27 @@
+.nav-menu {
+
+  &__item {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4em;
+
+    &:not(:first-of-type) {
+      margin-top: 32px;
+    }
+  }
+
+  &__link {
+    padding-left: 45px;
+    position: relative;
+    display: block;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,3 +1,14 @@
+include ../../blocks/logo-block/logo-block
+include ../../blocks/nav-menu/nav-menu
+include ../../blocks/contacts-block/contacts-block
+include ../../blocks/selectbox/selectbox
+
 mixin sidebar()
   +b.sidebar
-    
+    +e.row_logo
+      +logo-block
+    +e.row_nav-menu
+      +nav-menu(getData('sidebar-nav-basic'))
+    +e.row_contacts-block
+      +contacts-block(getData('sidebar-contacts'))
+      +selectbox(getData('sidebar-city-list')).sidebar__selectbox

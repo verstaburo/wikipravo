@@ -1,0 +1,12 @@
+.page-layout {
+  display: flex;
+  height: 100%;
+
+  &__left-col {
+    width: 358px;
+  }
+
+  &__right-col {
+    flex: 1;
+  }
+}
