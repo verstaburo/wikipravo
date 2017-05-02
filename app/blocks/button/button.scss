@@ -10,6 +10,7 @@
   transition: all 0.25s ease-in-out;
   border: 2px solid transparent;
   cursor: pointer;
+  white-space: nowrap;
 
   &_blue {
     color: white;

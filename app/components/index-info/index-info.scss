@@ -41,8 +41,9 @@
     justify-content: flex-start;
 
     .button {
-      min-width: 280px;
+      max-width: 280px;
       margin-bottom: 9px;
+      flex: 1;
 
       &:not(:last-child) {
         margin-right: 13px;
