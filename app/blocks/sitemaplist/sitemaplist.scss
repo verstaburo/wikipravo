@@ -1,9 +1,12 @@
 .sitemap {
   display: block;
+  padding: 37px 50px;
 
-  &__item {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
+  .icon-link {
+    &__text { font-size: 16px; }
+
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
   }
 }

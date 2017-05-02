@@ -1,6 +1,6 @@
+include ../icon-link/icon-link
+
 mixin sitemaplist()
   +b.UL.sitemap
-    +e.LI.item
-      a(href="sitemap.html") Карта сайта
-    +e.LI.item
-      a(href="index.html") Главная
+    +icon-link("", "Карта сайта")(href="sitemap.html")
+    +icon-link("", "Главная")(href="index.html")
