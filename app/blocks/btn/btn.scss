@@ -7,6 +7,7 @@
   padding: 17px 31px;
   transition: all 0.25s ease-in-out;
   border: 2px solid transparent;
+  cursor: pointer;
 
   &_wide {
     padding-left: 38px;
@@ -17,11 +18,23 @@
     color: white;
     background-color: $color-main;
     border-color: $color-main;
+
+    &:hover {
+      background-color: $color-btn-blue-hover;
+      border-color: $color-btn-blue-hover;
+    }
   }
 
   &_transparent {
     color: $color-main;
     border: 2px solid rgba($color-main, 0.2);
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-main;
+      border-color: $color-main;
+      color: white;
+    }
   }
 
   &__arrow {
