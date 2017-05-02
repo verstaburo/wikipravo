@@ -1,5 +1,11 @@
 include ../../blocks/searchbar/searchbar
+include ../../blocks/contacts-block/contacts-block
+include ../../blocks/icon-link/icon-link
 
 mixin header()
   +b.header&attributes(attributes)
     +searchbar.header__searchbar
+    +e.col._contacts-block
+      +contacts-block(getData('header-contacts'))
+    +e.col._link-button
+      +icon-link("assets/images/icon-login.png", "Войти")(href="#")
