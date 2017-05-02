@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export function VerstaSelectBox() {
   $(document).find(".selectbox").each(function(){
     var selectBox = $(this),
