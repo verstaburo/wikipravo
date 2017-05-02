@@ -10,12 +10,21 @@
   &__selectbox {
     margin-right: -12px;
 
+    @include s-desktop {
+      margin-right: 0;
+    }
+
     &:not(:first-child) { margin-top: 33px; }
   }
 
   &__row {
     padding-left: 40px;
     padding-right: 40px;
+
+    @include s-desktop {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
     &:last-child { padding-bottom: 40px; }
 
