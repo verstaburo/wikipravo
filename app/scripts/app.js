@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import {VerstaSelectBox} from '../blocks/selectbox/selectbox';
 
 $(() => {
