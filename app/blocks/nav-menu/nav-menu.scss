@@ -16,6 +16,10 @@
     padding-left: 40px;
     position: relative;
     display: block;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__icon {

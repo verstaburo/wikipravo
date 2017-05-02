@@ -30,6 +30,6 @@ module.exports = (watch = false) => ({
       },
     }),
     new webpack.NoErrorsPlugin(),
-    !isDebug ? new webpack.optimize.UglifyJsPlugin() : f => f,
+    /*!isDebug ? new webpack.optimize.UglifyJsPlugin() : f => f,*/
   ],
 });
