@@ -1,0 +1,55 @@
+.advantages-item {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 60px;
+  width: 100%;
+  
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+  }
+  
+  &::before {
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $color-main;
+  }
+  
+  &::after {
+    top: 15px;
+    left: 15px;
+    width: 10px;
+    height: 5px;
+    border: 2px solid white;
+    border-top: none;
+    border-right: none;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  &_red::before {
+    background-color: $color-red;
+  }
+  
+  &_blue::before {
+    background-color: $color-main;
+  }
+  
+  &__title {
+    font-size: 20px;
+    line-height: 1.2em;
+    color: $color-font;
+  }
+  
+  &__describe {
+    font-size: 14px;
+    line-height: 2.14em;
+    color: rgba($color-font, .6);
+  }
+}

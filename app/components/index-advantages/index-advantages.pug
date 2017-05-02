@@ -1,0 +1,19 @@
+include ../../blocks/client-registration/client-registration
+include ../../blocks/advantages-item/advantages-item
+
+mixin index-advantages()
+  +b.SECTION.index-advantages&attributes(attributes)
+    -var cols = [getData('advantages-registration-left'), getData('advantages-registration-right')]
+    -var addClass = 'left'
+    -for (var i = 0; i < 2; i++)
+      -if(i == 1) {addClass= 'right'}
+      +e(class= addClass + '-col')
+        +client-registration(cols[i].header).__header
+        +e.P.describe
+          +e.SPAN= cols[i].paragraph.text1
+          +e.B= cols[i].paragraph.special
+          +e.SPAN= cols[i].paragraph.text2
+        +e.UL.list
+          each item in cols[i].list
+            +advantages-item(item)
+            

@@ -1,0 +1,32 @@
+.index-advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  
+  &__left-col,
+  &__right-col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+  }
+  
+  &__left-col {
+    z-index: 1;
+    
+    .index-advantages__header {
+      background-color: $color-red;
+    }
+  }
+  
+  &__right-col {
+    z-index: 2;
+    box-shadow: -10px 0 $big-shadow;
+  }
+  
+  
+}

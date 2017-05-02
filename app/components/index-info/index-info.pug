@@ -2,7 +2,7 @@ include ../../blocks/entitled-text/entitled-text
 include ../../blocks/button/button
 
 mixin index-info()
-  +b.index-info&attributes(attributes)
+  +b.SECTION.index-info&attributes(attributes)
     +e.left-col
       +entitled-text(getData('index-info-about'))
       +e.buttons
