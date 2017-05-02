@@ -7,6 +7,12 @@
     font-size: 27px;
     font-weight: 600;
     line-height: 1em;
+
+    &:not(:first-child) { margin-top: 29px; }
+  }
+
+  &__image {
+    background-color: rgba(white, .1); // Убрать, когда появится иконка
   }
 
   &__text {

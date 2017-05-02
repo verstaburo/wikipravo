@@ -8,7 +8,7 @@ module.exports = (watch = false) => ({
   },
   watch,
   devtool: isDebug ? 'cheap-module-inline-source-map' : false,
-  module: {
+  /*module: {
     rules: [
       {
         enforce: 'pre',
@@ -22,7 +22,7 @@ module.exports = (watch = false) => ({
         loader: 'babel-loader',
       },
     ],
-  },
+  },*/
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

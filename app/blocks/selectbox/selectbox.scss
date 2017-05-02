@@ -1,19 +1,90 @@
 .selectbox {
+  position: relative;
+  color: white;
+
+  &_active {
+
+    .fa-angle-up { transform: translateY(-50%) rotate(180deg) }
+
+    .selectbox {
+      &__button {
+        background-color: rgba(#abafc4, .5);  
+      }
+
+      &__list {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    max-height: 209px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background-color: $color-dark-grey;
+    box-shadow: 0 0 46px rgba(black, .62);
+    z-index: 1;
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .25s ease-in-out;
+
+    &_top {
+      transform: translate3d(0, -10px, 0);
+      bottom: 100%;
+      top: auto;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__option {
+    font-size: 13px;
+    line-height: 1.7em;
+    padding: 16px 26px 14px;
+    transition: all .15s ease-in-out;
+
+    &_active {
+      background-color: rgba($color-dark-medium-grey, .3);
+    }
+
+    &:not(:first-of-type) {
+      border-top: 1px solid $color-dark-medium-grey;
+    }
+
+    &:hover {
+      background-color: $color-dark-medium-grey;
+      cursor: pointer;
+    }
+  }
 
   &__button {
     height: 55px;
     display: flex;
     align-items: center;
     border-radius: 2px;
-    background-color: rgba(#abafc4, .5);
-    color: white;
+    background-color: #383a47;
     cursor: pointer;
     position: relative;
+    z-index: 2;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      background-color: rgba(#abafc4, .5);
+    }
 
     .fa-angle-up {
       font-size: 18px;
       color: rgba(white, .5);
       font-weight: 400;
+      transition: transform .25s ease-in-out;
     }
 
     &-name {
@@ -23,7 +94,7 @@
       padding: 0 26px;
       font-size: 13px;
       width: 100%;
-      letter-spacing: 0.03em;
+      letter-spacing: .03em;
     }
   }
 
