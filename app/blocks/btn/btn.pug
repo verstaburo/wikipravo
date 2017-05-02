@@ -1,23 +1,14 @@
 mixin btn(data)
   each btn in data
+    -var basicClass = '';
     -var addClass = '';
-    -if(btn.arrow) {addClass = btn.arrow}
-    -if(btn.arrow)
-      -if (btn.type == 'link')
-        +b.A(class="btn_arrow" + addClass)&attributes(attributes)
-          +e.name= btn.name
+    -var btnType = '';
+    
+    -if (btn.type == 'link') {btnType = 'a'}
+    -if (btn.type == 'button') {btnType = 'button'}
+    -if (btn.arrow) {addClass = '_arrow' + btn.arrow}
+      
+      +b(btnType)(class="btn" + addClass)&attributes(attributes)
+        +e.name= btn.name
+        -if (btn.arrow)
           +e.I.arrow(class= "fa fa-angle" + btn.arrow)
-
-      -if (data.type == 'button')
-        +b.BUTTON(class="btn_arrow" + addClass)&attributes(attributes)
-          +e.name= btn.name
-          +e.I.arrow(class= "fa fa-angle" + btn.arrow)
-    -if(!btn.arrow)
-      -if (btn.type == 'link')
-        +b.A.btn&attributes(attributes)
-          +e.name= btn.name
-      -if (data.type == 'button')
-        +b.BUTTON.btn&attributes(attributes)
-          +e.name= btn.name
-      -if (data.type == 'input')
-        +b.INPUT.btn(type="button" value="btn.name")&attributes(attributes)
