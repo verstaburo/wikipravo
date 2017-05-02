@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 14px;
+  padding: 17px 31px;
+  transition: all 0.25s ease-in-out;
+  border: 2px solid transparent;
+
+  &_wide {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  &_blue {
+    color: white;
+    background-color: $color-main;
+    border-color: $color-main;
+  }
+
+  &_transparent {
+    color: $color-main;
+    border: 2px solid rgba($color-main, 0.2);
+  }
+
+  &__arrow {
+    color: inherit;
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+}
