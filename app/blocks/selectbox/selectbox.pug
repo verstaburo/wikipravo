@@ -1,9 +1,0 @@
-mixin selectbox(data)
-  +b.selectbox&attributes(attributes)
-    +e.INPUT.input(type='hidden' value=data[0].option)
-    +e.button
-      +e.SPAN.button-name= data[0].option
-      +e.I.right-icon(class='fa fa-angle-up')
-    +e.UL.list
-      each option in data
-        +e.LI.option= option.option
