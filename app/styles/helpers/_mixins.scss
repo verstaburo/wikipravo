@@ -11,3 +11,22 @@
     display: none;
   }
 }
+
+// Адаптив
+@mixin desktop {
+  @media (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin s-desktop {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1180px) {
+    @content;
+  }
+}
