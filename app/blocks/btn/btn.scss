@@ -1,4 +1,4 @@
-.btn {
+.button {
   display: inline-block;
   box-sizing: border-box;
   border-radius: 2px;
@@ -8,11 +8,6 @@
   transition: all 0.25s ease-in-out;
   border: 2px solid transparent;
   cursor: pointer;
-
-  &_wide {
-    padding-left: 38px;
-    padding-right: 38px;
-  }
 
   &_blue {
     color: white;
@@ -30,10 +25,18 @@
     border: 2px solid rgba($color-main, 0.2);
     background-color: transparent;
 
+    .button__arrow {
+      color: rgba($color-main, 0.6);
+    }
+
     &:hover {
       background-color: $color-main;
       border-color: $color-main;
       color: white;
+
+      .button__arrow {
+        color: rgba(white, 0.6);
+      }
     }
   }
 
@@ -42,5 +45,9 @@
     margin-left: 10px;
     font-size: 18px;
     vertical-align: middle;
+  }
+
+  &__name {
+    color: inherit;
   }
 }

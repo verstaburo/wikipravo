@@ -1,14 +1,15 @@
 .entitled-text {
-  h2, &__title {
+  h2 {
     font-size: 30px;
     line-height: 1.5em;
-    letter-spacing: 0.044em;
+    letter-spacing: 0.06em;
+    font-weight: 400;
   }
 
-  p, &__text {
+  p {
     font-size: 14px;
-    line-height: 2.1em;
+    line-height: 2.14em;
     letter-spacing: 0.034em;
-    opacity: 0.6;
+    color: rgba($color-font, 0.6);
   }
 }
