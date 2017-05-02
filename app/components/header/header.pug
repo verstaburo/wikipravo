@@ -1,2 +1,5 @@
+include ../../blocks/searchbar/searchbar
+
 mixin header()
-  +b.header
+  +b.header&attributes(attributes)
+    +searchbar.header__searchbar

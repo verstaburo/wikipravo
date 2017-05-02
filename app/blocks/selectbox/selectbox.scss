@@ -4,12 +4,10 @@
 
   &_active {
 
-    .fa-angle-up { transform: translateY(-50%) rotate(180deg) }
+    .fa-angle-up { transform: translateY(-50%) rotate(180deg); }
 
     .selectbox {
-      &__button {
-        background-color: rgba(#abafc4, .5);  
-      }
+      &__button { background-color: rgba(#abafc4, .5); }
 
       &__list {
         transform: translate3d(0, 0, 0);
@@ -21,7 +19,7 @@
 
   &__list {
     width: 100%;
-    max-height: 209px;
+    max-height: 212px;
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;

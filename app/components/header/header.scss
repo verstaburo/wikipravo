@@ -1,3 +1,15 @@
 .header {
-  display: block;
+  display: flex;
+  box-shadow: 0 10px 40px -2px rgba(#151827, .07);
+  min-height: 80px;
+
+  &__searchbar { flex: 1; }
+
+  &__col {
+    border-left: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    min-height: 100%;
+  }
 }
