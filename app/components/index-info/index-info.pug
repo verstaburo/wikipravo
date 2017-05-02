@@ -1,5 +1,5 @@
 include ../../blocks/entitled-text/entitled-text
-include ../../blocks/btn/btn
+include ../../blocks/button/button
 
 mixin index-info()
   +b.index-info&attributes(attributes)
@@ -10,4 +10,3 @@ mixin index-info()
         +button(getData('index-info-btn-2'))._transparent
     +e.right-col
       +entitled-text(getData('index-info-numerically')).__numerically
-
