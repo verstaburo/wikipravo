@@ -1,10 +1,17 @@
 .contacts-block {
-  color: #fff;
+  &_dark {
+    color: #fff;
+
+    .contacts-block__text { color: rgba(white, .5); }
+  }
+
+  &_icons .contacts-block__item {
+    padding-left: 40px;
+  }
 
   &__item {
     display: block;
     position: relative;
-    padding-left: 40px;
 
     &:not(:first-child) {
       margin-top: 29px;
@@ -28,10 +35,20 @@
       font-size: 22px;
       font-weight: 400;
     }
+
+    &_bigger {
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0;
+
+      & + .contacts-block__text:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
   }
 
   &__text {
-    color: rgba(white, .5);
+    color: rgba(#1f1e26, .6);
     font-size: 13px;
     line-height: 1.2em;
 

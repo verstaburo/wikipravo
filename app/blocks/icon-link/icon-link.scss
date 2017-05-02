@@ -1,0 +1,19 @@
+.icon-link {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__text {
+    color: #3593ea;
+    font-size: 14px;
+    line-height: (35/14)*1em;
+  }
+
+  &:hover { opacity: .6; }
+
+  &__icon {
+    display: inline-block;
+
+    &:not(:last-child) { margin-right: 13px; }
+  }
+}
