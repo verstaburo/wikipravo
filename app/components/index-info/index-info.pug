@@ -5,9 +5,9 @@ mixin index-info()
   +b.index-info&attributes(attributes)
     +e.left-col
       +entitled-text(getData('index-info-about'))
-      +e.btns
-        +btn(getData('index-info-btn-1'))._blue
-        +btn(getData('index-info-btn-2'))._transparent
+      +e.buttons
+        +button(getData('index-info-btn-1'))._blue
+        +button(getData('index-info-btn-2'))._transparent
     +e.right-col
       +entitled-text(getData('index-info-numerically')).__numerically
 

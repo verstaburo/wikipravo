@@ -1,14 +1,15 @@
-mixin btn(data)
+mixin button(data)
   each btn in data
     -var basicClass = '';
     -var addClass = '';
     -var btnType = '';
-    
-    -if (btn.type == 'link') {btnType = 'a'}
-    -if (btn.type == 'button') {btnType = 'button'}
-    -if (btn.arrow) {addClass = '_arrow' + btn.arrow}
-      
-      +b(btnType)(class="btn" + addClass)&attributes(attributes)
-        +e.name= btn.name
+    -var btnHref = '';
+
+    -if (btn.type == 'link') {btnType = 'A'; btnHref = btn.href}
+    -if (btn.type == 'button') {btnType = 'BUTTON'}
+    -if (btn.arrow) {addClass = '_arrow_' + btn.arrow}
+
+      +b(btnType)(class="button" + addClass, href= btnHref )&attributes(attributes)
+        +e.SPAN.name= btn.name
         -if (btn.arrow)
-          +e.I.arrow(class= "fa fa-angle" + btn.arrow)
+          +e.I.arrow(class= "fa fa-angle-" + btn.arrow)
