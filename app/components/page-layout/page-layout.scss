@@ -1,9 +1,15 @@
 .page-layout {
   display: flex;
   height: 100%;
+  position: relative;
+  padding-left: $sidebar-width;
 
   &__left-col {
-    width: 358px;
+    width: $sidebar-width;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   &__right-col {

@@ -4,7 +4,7 @@
   &__item {
     display: block;
     position: relative;
-    padding-left: 41px;
+    padding-left: 40px;
 
     &:not(:first-child) {
       margin-top: 29px;
@@ -13,8 +13,10 @@
 
   &__icon {
     position: absolute;
-    left: 0;
+    left: 12px;
     top: 0;
+    transform: translateX(-50%);
+    background-color: rgba(white, .1);  // Убрать, когда появится иконка
   }
 
   &__label {
@@ -24,6 +26,7 @@
 
     &_big {
       font-size: 22px;
+      font-weight: 400;
     }
   }
 

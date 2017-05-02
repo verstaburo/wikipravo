@@ -1,7 +1,11 @@
 .sidebar {
   background-color: #151827;
-  height: 100vh;
-  overflow: auto;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+
+  @include hide-scrollbar;
 
   &__selectbox {
     margin-right: -12px;
@@ -18,7 +22,7 @@
     &:not(:first-of-type) { border-top: 1px solid rgba(white, .1); }
 
     &_logo {
-      padding-top: 5px;
+      padding-top: 11px;
       padding-bottom: 23px;
     }
 

@@ -1,5 +1,8 @@
 import $ from 'jquery';
+import {VerstaSelectBox} from '../blocks/selectbox/selectbox';
 
 $(() => {
-  // your code goes here
+
+  // Финальный вызов функций
+  VerstaSelectBox();
 });

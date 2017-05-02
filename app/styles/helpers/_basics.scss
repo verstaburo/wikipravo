@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li {
   padding: 0;
 }
 
-* { letter-spacing: 0.06em; }
+* { letter-spacing: .06em; }
 
 ul {
   list-style: none;
@@ -115,4 +115,7 @@ a:visited, a:focus {
   color: inherit;
 }
 
-a { text-decoration: inherit; }
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
