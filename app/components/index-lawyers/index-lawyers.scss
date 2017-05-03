@@ -22,12 +22,20 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     box-sizing: border-box;
     width: 49.5%;
     margin-bottom: 7px;
+
+    @include desktop {
+      width: 100%;
+    }
   }
 
   &__link {

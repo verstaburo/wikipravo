@@ -21,32 +21,6 @@
     padding: 15px 20px 15px 40px;
   }
 
-  &__img {
-    position: relative;
-    width: 106px;
-    height: 106px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: 0;
-      margin: auto;
-      object-fit: cover;
-    }
-  }
-
-  &__orderbutton {
-    width: 100%;
-    padding: 10px 31px;
-  }
-
   &__title {
     box-sizing: border-box;
     width: 100%;
@@ -59,16 +33,17 @@
 
     &_about {
       position: relative;
-      padding-left: 27px;
+      padding-left: 30px;
       padding-right: 13px;
+      text-align: center;
     }
 
     &_specialization {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
-      flex-wrap: nowrap;
+      flex-wrap: wrap-reverse;
 
       a {
         position: relative;
@@ -78,6 +53,8 @@
         text-decoration: none;
         transition: all .25s ease-in-out;
         cursor: pointer;
+        white-space: nowrap;
+        margin-left: auto;
 
         &::before {
           position: absolute;
@@ -103,7 +80,7 @@
     box-sizing: border-box;
     position: relative;
     position: absolute;
-    top: 50%;
+    top: 1.11em/*50%*/;
     left: 0;
     width: 22px;
     height: 22px;
@@ -156,7 +133,7 @@
     position: absolute;
     width: 9px;
     height: 9px;
-    top: 50%;
+    top: 1.11em/*50%*/;
     right: 0;
     transform: translate(0,-50%);
     border-radius: 50%;
@@ -181,10 +158,33 @@
     margin-bottom: 12px;
   }
 
+  &__img {
+    position: relative;
+    min-width: 106px;
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+
   &__status {
     box-sizing: border-box;
     padding: 0 27px;
     flex-grow: 1;
+    max-width: calc(100% - 106px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -251,7 +251,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: 13px;
     line-height: 2.31em;
     letter-spacing: .04em;
@@ -304,9 +304,73 @@
     color: $color-main;
     border: 1px solid rgba($color-main, .3);
     cursor: pointer;
+    margin-bottom: 15px;
   }
 
   &__workcount {
     border-bottom: 1px solid rgba($color-main, .55);
+  }
+
+  &__experience {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    line-height: 3.21em;
+    text-align: center;
+  }
+
+  &__experiencecount {
+    display: inline-block;
+    margin: 0 10px 0 5px;
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 33px;
+    font-weight: 700;
+    color: $color-green-dark;
+    border-radius: 50%;
+    border: 1px solid $color-green-dark;
+  }
+
+  &__list {
+    padding: 0px 0 20px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 2.14em;
+    font-weight: 500;
+  }
+
+  &__sublist {
+    padding: 5px 0;
+  }
+
+  &__subitem {
+    font-size: 13px;
+    line-height: 1.54em;
+    font-weight: 400;
+    color: $color-offline;
+  }
+
+  &__orderbutton {
+    width: 100%;
+    padding: 10px 31px;
+    margin-bottom: 24px;
+  }
+
+  &__maillink {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 2.31em;
+    color: $color-main;
+    cursor: pointer;
   }
 }
