@@ -15,6 +15,18 @@
     align-items: center;
     width: 100%;
     padding: 37px 46px 37px;
+
+    @include s-desktop {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__text {
+    @include s-desktop {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__buttons {
@@ -23,6 +35,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include s-desktop {
+      width: 100%;
+    }
   }
 
   &__button {
