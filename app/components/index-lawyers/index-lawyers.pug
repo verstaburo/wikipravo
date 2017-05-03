@@ -1,0 +1,15 @@
+include ../../blocks/entitled-text/entitled-text
+include ../../blocks/citylist/citylist
+include ../../blocks/lawyercard/lawyercard
+
+mixin index-lawyers()
+  -var data = getData('index-lawyers')
+  +b.SECTION.index-lawyers&attributes(attributes)
+    +e.header
+      +entitled-text(data.title).__text
+      +citylist(getData('sidebar-city-list')).__select
+    +e.list
+      each lawyer in data.lawyers
+        +lawyercard(lawyer)
+    +e.link
+      +e.A Все юристы

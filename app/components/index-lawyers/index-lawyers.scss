@@ -1,0 +1,17 @@
+.index-lawyers {
+  box-sizing: border-box;
+  padding: 0 20px 0 48px;
+
+  &__header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 38px 0 32px;
+  }
+
+  &__select {
+    margin: 18px 0 0 auto;
+  }
+}
