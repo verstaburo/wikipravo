@@ -47,7 +47,7 @@
 
   &__content {
     box-sizing: border-box;
-    padding: 0 61px 0 39px;
+    padding: 0 61px 50px 39px;
     width: 100%;
   }
 
@@ -59,11 +59,20 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 10px 20px 0;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     box-sizing: border-box;
     width: 25%;
+
+    @include desktop {
+      width: 50%;
+    }
   }
 
   &__link {
@@ -81,8 +90,8 @@
       font-size: 18px;
       color: $color-main;
       line-height: 1.67em;
+      letter-spacing: .044em;
       text-decoration: none;
-      padding-bottom: 2px;
       border-bottom: 1px solid rgba($color-main, .3);
       transition: all 0.25s ease-in-out;
       cursor: pointer;
