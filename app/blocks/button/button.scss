@@ -26,11 +26,11 @@
 
   &_transparent {
     color: $color-main;
-    border: 2px solid rgba($color-main,.2);
+    border: 2px solid rgba($color-main, .2);
     background-color: transparent;
 
     .button__arrow {
-      color: rgba($color-main,.6);
+      color: rgba($color-main, .6);
     }
 
     &:hover, &:active {
@@ -39,7 +39,7 @@
       color: white;
 
       .button__arrow {
-        color: rgba(white,.6);
+        color: rgba(white, .6);
       }
     }
   }

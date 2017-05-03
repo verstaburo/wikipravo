@@ -8,8 +8,7 @@
   overflow: hidden;
   flex-wrap: wrap;
 
-  &__left-col .entitled-text,
-  &__buttons {
+  &__left-col .entitled-text, &__buttons {
     &:not(:last-child) { margin-bottom: 30px; }
   }
 
@@ -26,12 +25,13 @@
     }
 
     .entitled-text {
+
       h2 {
         margin-bottom: 22px;
       }
 
       p {
-        color: rgba($color-font,.7);
+        color: rgba($color-font, .7);
       }
     }
   }

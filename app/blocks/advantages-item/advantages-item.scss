@@ -12,8 +12,7 @@
     margin-bottom: 32px;
   }
 
-  &::before,
-  &::after {
+  &::before, &::after {
     position: absolute;
     content: '';
   }

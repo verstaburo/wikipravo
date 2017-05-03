@@ -9,8 +9,7 @@
     flex-wrap: wrap;
   }
 
-  &__left-col,
-  &__right-col {
+  &__left-col, &__right-col {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,7 +37,7 @@
     z-index: 2;
     box-shadow: -10px 0 $big-shadow;
 
-    @include desktop  {
+    @include desktop {
       box-shadow: 0 10px $big-shadow;
     }
   }
@@ -66,6 +65,5 @@
     box-sizing: border-box;
     width: 100%;
     padding: 0 49px;
-
   }
 }

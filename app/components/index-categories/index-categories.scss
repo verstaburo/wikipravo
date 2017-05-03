@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 37px 46px 37px;
+    padding: 37px 46px;
 
     @include s-desktop {
       flex-wrap: wrap;
@@ -98,7 +98,7 @@
       letter-spacing: .044em;
       text-decoration: none;
       border-bottom: 1px solid rgba($color-main, .3);
-      transition: all 0.25s ease-in-out;
+      transition: all .25s ease-in-out;
       cursor: pointer;
 
       &:hover {

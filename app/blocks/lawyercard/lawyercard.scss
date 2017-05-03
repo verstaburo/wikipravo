@@ -6,8 +6,7 @@
   align-items: flex-start;
   border: 1px solid rgba($color-font, .1);
 
-  &__about,
-  &__order {
+  &__about, &__order {
     box-sizing: border-box;
     width: 50%;
   }
@@ -59,7 +58,7 @@
         &::before {
           position: absolute;
           content: '';
-          bottom: 0.5em;
+          bottom: .5em;
           left: 0;
           width: 100%;
           height: 1px;
@@ -68,6 +67,7 @@
         }
 
         &:hover {
+
           &::before {
             background-color: transparent;
           }
@@ -88,7 +88,7 @@
     border: 2px solid transparent;
     transform: translate(0, -50%);
 
-    &::before,&::after {
+    &::before, &::after {
       position: absolute;
       content: '';
     }
@@ -120,11 +120,11 @@
       }
 
       &::before {
-        transform: translate(-50%,-50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
 
       &::after {
-        transform: translate(-50%,-50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
       }
     }
   }
@@ -135,7 +135,7 @@
     height: 9px;
     top: 1.11em/*50%*/;
     right: 0;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     border-radius: 50%;
 
     &_true {
@@ -199,7 +199,6 @@
     letter-spacing: .04em;
     color: $color-font-gray;
 
-
     &::before {
       position: absolute;
       content: '';
@@ -225,7 +224,7 @@
       left: 0;
       width: 9px;
       height: 9px;
-      transform: translate(0,-50%);
+      transform: translate(0, -50%);
       border-radius: 50%;
     }
 
@@ -271,7 +270,7 @@
       left: 0;
       width: 24px;
       height: 2.31em;
-      background: url(../images/icon-like.png) 0 50% no-repeat;
+      background: url('../images/icon-like.png') 0 50% no-repeat;
     }
   }
 
@@ -289,7 +288,7 @@
       left: 0;
       width: 25px;
       height: 2.31em;
-      background: url(../images/icon-dislike.png) 0 50% no-repeat;
+      background: url('../images/icon-dislike.png') 0 50% no-repeat;
     }
   }
 
@@ -337,7 +336,7 @@
   }
 
   &__list {
-    padding: 0px 0 20px;
+    padding: 0 0 20px;
   }
 
   &__item {
