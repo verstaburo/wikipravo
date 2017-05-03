@@ -52,6 +52,7 @@
   }
 
   &__list {
+    position: relative;
     box-sizing: border-box;
     background-color: white;
     width: 100%;
@@ -60,6 +61,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px 20px 0;
+    box-shadow: 0 10px 20px -15px rgba($color-font, .3);
+    z-index: 2;
 
     @include desktop {
       flex-wrap: wrap;
@@ -76,6 +79,7 @@
   }
 
   &__link {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -85,6 +89,7 @@
     padding: 26px 37px;
     text-align: center;
     background-color: white;
+    z-index: 1;
 
     a {
       font-size: 18px;
