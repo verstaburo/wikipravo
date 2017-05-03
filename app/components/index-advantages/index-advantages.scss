@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  
+
   &__left-col,
   &__right-col {
     position: relative;
@@ -13,20 +13,42 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 50%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
   }
-  
+
   &__left-col {
     z-index: 1;
-    
+
     .index-advantages__header {
       background-color: $color-red;
     }
   }
-  
+
   &__right-col {
     z-index: 2;
     box-shadow: -10px 0 $big-shadow;
   }
-  
-  
+
+  &__describe {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px 100px 30px 49px;
+    font-size: 14px;
+    line-height: 2.14em;
+    color: $color-font;
+    letter-spacing: .06em;
+    margin-bottom: 10px;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 49px;
+  }
 }

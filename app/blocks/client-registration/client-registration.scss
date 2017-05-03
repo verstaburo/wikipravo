@@ -4,16 +4,22 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px 35px 20px 30px;
+  padding: 20px 30px 20px 46px;
   background-color: $color-main;
   width: 100%;
-  
+
   &__title {
     font-size: 26px;
     line-height: 1.35em;
+    font-weight: 400;
     color: white;
+    margin-left: 28px;
+    min-width: 180px;
+    width: 180px;
+    text-align: left;
+    letter-spacing: .025em;
   }
-  
+
   &__img {
     box-sizing: border-box;
     display: flex;
@@ -24,5 +30,9 @@
     height: 90px;
     border: 2px solid rgba(#d3d2d0, .3);
     border-radius: 50%;
+  }
+
+  &__button {
+    margin-left: auto;
   }
 }

@@ -6,7 +6,7 @@
   align-items: flex-start;
   width: 100%;
   background-color: $color-bg-index;
-  
+
   &__header {
     box-sizing: border-box;
     display: flex;
@@ -16,7 +16,7 @@
     width: 100%;
     padding: 37px 46px 37px;
   }
-  
+
   &__buttons {
     box-sizing: border-box;
     display: flex;
@@ -24,17 +24,17 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  
+
   &__button {
     padding: 16px 34px;
   }
-  
+
   &__content {
     box-sizing: border-box;
     padding: 0 61px 0 39px;
     width: 100%;
   }
-  
+
   &__list {
     box-sizing: border-box;
     background-color: white;
@@ -44,13 +44,12 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  
+
   &__item {
     box-sizing: border-box;
     width: 25%;
-    padding: 18px 0 18px 46px;
   }
-  
+
   &__link {
     box-sizing: border-box;
     display: flex;
@@ -61,7 +60,7 @@
     padding: 26px 37px;
     text-align: center;
     background-color: white;
-    
+
     a {
       font-size: 18px;
       color: $color-main;
@@ -69,6 +68,12 @@
       text-decoration: none;
       padding-bottom: 2px;
       border-bottom: 1px solid rgba($color-main, .3);
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        border-color: transparent;
+      }
     }
   }
 }

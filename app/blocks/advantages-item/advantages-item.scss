@@ -7,49 +7,57 @@
   align-items: flex-start;
   padding-left: 60px;
   width: 100%;
-  
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
   &::before,
   &::after {
     position: absolute;
     content: '';
   }
-  
+
   &::before {
-    top: 0;
+    top: 2px;
     left: 0;
     width: 30px;
     height: 30px;
+    border-radius: 50%;
     background-color: $color-main;
   }
-  
+
   &::after {
-    top: 15px;
+    top: 17px;
     left: 15px;
-    width: 10px;
-    height: 5px;
+    width: 12px;
+    height: 7px;
     border: 2px solid white;
     border-top: none;
     border-right: none;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
-  
+
   &_red::before {
     background-color: $color-red;
   }
-  
+
   &_blue::before {
     background-color: $color-main;
   }
-  
+
   &__title {
     font-size: 20px;
     line-height: 1.2em;
+    letter-spacing: .06em;
     color: $color-font;
+    margin-bottom: 4px;
   }
-  
+
   &__describe {
     font-size: 14px;
     line-height: 2.14em;
+    letter-spacing: .06em;
     color: rgba($color-font, .6);
   }
 }

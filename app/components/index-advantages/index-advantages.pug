@@ -9,9 +9,11 @@ mixin index-advantages()
       -if(i == 1) {addClass= 'right'}
       +e(class= addClass + '-col')
         +client-registration(cols[i].header).__header
-        -var boldText = '<b>' + cols[i].paragraph.special + '</b>' 
-        +e.P.describe= cols[i].paragraph.text1 + boldText + cols[i].paragraph.text2
+        -var boldText = cols[i].paragraph.special
+        +e.P.describe
+          |#{cols[i].paragraph.text1}
+          +e.B= boldText + " "
+          |#{cols[i].paragraph.text2}
         +e.UL.list
           each item in cols[i].list
             +advantages-item(item)
-            
