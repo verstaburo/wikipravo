@@ -1,0 +1,312 @@
+.lawyercard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid rgba($color-font, .1);
+
+  &__about,
+  &__order {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  &__about {
+    padding: 15px 40px 15px 20px;
+    border-right: 1px solid rgba($color-font, .1);
+  }
+
+  &__order {
+    padding: 15px 20px 15px 40px;
+  }
+
+  &__img {
+    position: relative;
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__orderbutton {
+    width: 100%;
+    padding: 10px 31px;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-font;
+    line-height: 2.22em;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+
+    &_about {
+      position: relative;
+      padding-left: 27px;
+      padding-right: 13px;
+    }
+
+    &_specialization {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+
+      a {
+        position: relative;
+        font-size: 13px;
+        color: $color-main;
+        letter-spacing: .044em;
+        text-decoration: none;
+        transition: all .25s ease-in-out;
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          content: '';
+          bottom: 0.5em;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: rgba($color-main, .4);
+          transition: all .25s ease-in-out;
+        }
+
+        &:hover {
+          &::before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkstatus {
+    box-sizing: border-box;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transform: translate(0, -50%);
+
+    &::before,&::after {
+      position: absolute;
+      content: '';
+    }
+
+    &_true {
+      border-color: $color-green-dark;
+
+      &::before {
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 5px;
+        border: 2px solid $color-green-dark;
+        border-top: none;
+        border-right: none;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &_false {
+      border-color: $color-red;
+
+      &::before,&::after {
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        background-color: $color-red;
+      }
+
+      &::before {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__online {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+
+    &_true {
+      background-color: $color-green;
+    }
+
+    &_false {
+      background-color: $color-offline;
+    }
+  }
+
+  &__info {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    padding: 10px 0;
+    margin-bottom: 12px;
+  }
+
+  &__status {
+    box-sizing: border-box;
+    padding: 0 27px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__location {
+    position: relative;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 2.31em;
+    letter-spacing: .04em;
+    color: $color-font-gray;
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 19px;
+      background: url('../images/icon-location.png') 0 0 no-repeat;
+    }
+  }
+
+  &__busy {
+    position: relative;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 2.31em;
+    letter-spacing: .04em;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      transform: translate(0,-50%);
+      border-radius: 50%;
+    }
+
+    &_false {
+      color: $color-red-light;
+
+      &::before {
+        background-color: $color-red-light;
+      }
+    }
+
+    &_true {
+      color: $color-green-dark;
+
+      &::before {
+        background-color: $color-green-dark;
+      }
+    }
+  }
+
+  &__likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 13px;
+    line-height: 2.31em;
+    letter-spacing: .04em;
+  }
+
+  &__like {
+    position: relative;
+    color: $color-green-like;
+    padding-left: 30px;
+    padding-right: 5px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2.31em;
+      background: url(../images/icon-like.png) 0 50% no-repeat;
+    }
+  }
+
+  &__dislike {
+    position: relative;
+    color: $color-red-dark;
+    padding-left: 30px;
+    padding-right: 5px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 2.31em;
+      background: url(../images/icon-dislike.png) 0 50% no-repeat;
+    }
+  }
+
+  &__publicwork {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    line-height: 1.3em;
+    text-align: center;
+    color: $color-main;
+    border: 1px solid rgba($color-main, .3);
+    cursor: pointer;
+  }
+
+  &__workcount {
+    border-bottom: 1px solid rgba($color-main, .55);
+  }
+}

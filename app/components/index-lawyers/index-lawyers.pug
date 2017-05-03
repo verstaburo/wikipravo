@@ -9,7 +9,7 @@ mixin index-lawyers()
       +entitled-text(data.title).__text
       +citylist(getData('sidebar-city-list')).__select
     +e.list
-      each lawyer in data.lawyers
-        +lawyercard(lawyer)
+      each item in data.lawyers
+        +lawyercard(item).__item
     +e.link
-      +e.A Все юристы
+      +e.A(href= data.href) Все юристы

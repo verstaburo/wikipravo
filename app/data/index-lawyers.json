@@ -6,5 +6,116 @@
         {"text" : "Обратитесь к выбранному специалисту, получите по-настоящему, квалифицированную юридическую помощь"}
       ]
     }
-  ]
+  ],
+  "lawyers" : [
+    {
+      "online" : "true",
+      "checked" : "true",
+      "name" : "Константин Константинов",
+      "image" : "assets/images/lawyer-avatar.jpg",
+      "location" : "Москва",
+      "busy" : "Занят",
+      "like" : "124",
+      "dislike" : "2",
+      "publicworkcount" : "10",
+      "experience" : "10",
+      "specialization" : {
+        "href" : "#",
+        "list" : [
+          {
+            "name" : "Гражданское право",
+            "expanded" : [
+              "Договорное право", "Право собственности"
+            ]
+          },
+          {
+            "name" : "Защита прав потребителей"
+          }
+        ]
+      },
+      "email" : "smth@domen"
+    },
+    {
+      "online" : "false",
+      "checked" : "true",
+      "name" : "Константин Константинов",
+      "image" : "assets/images/lawyer-avatar.jpg",
+      "location" : "Москва",
+      "busy" : "Занят",
+      "like" : "124",
+      "dislike" : "2",
+      "publicworkcount" : "10",
+      "experience" : "10",
+      "specialization" : {
+        "href" : "#",
+        "list" : [
+          {
+            "name" : "Гражданское право",
+            "expanded" : [
+              "Договорное право", "Право собственности"
+            ]
+          },
+          {
+            "name" : "Защита прав потребителей"
+          }
+        ]
+      },
+      "email" : "smth@domen"
+    },
+    {
+      "online" : "true",
+      "checked" : "true",
+      "name" : "Константин Константинов",
+      "image" : "assets/images/lawyer-avatar.jpg",
+      "location" : "Москва",
+      "busy" : "Занят",
+      "like" : "124",
+      "dislike" : "2",
+      "publicworkcount" : "10",
+      "experience" : "10",
+      "specialization" : {
+        "href" : "#",
+        "list" : [
+          {
+            "name" : "Гражданское право",
+            "expanded" : [
+              "Договорное право", "Право собственности"
+            ]
+          },
+          {
+            "name" : "Защита прав потребителей"
+          }
+        ]
+      },
+      "email" : "smth@domen"
+    },
+    {
+      "online" : "false",
+      "checked" : "true",
+      "name" : "Константин Константинов",
+      "image" : "assets/images/lawyer-avatar.jpg",
+      "location" : "Москва",
+      "busy" : "Занят",
+      "like" : "124",
+      "dislike" : "2",
+      "publicworkcount" : "10",
+      "experience" : "10",
+      "specialization" : {
+        "href" : "#",
+        "list" : [
+          {
+            "name" : "Гражданское право",
+            "expanded" : [
+              "Договорное право", "Право собственности"
+            ]
+          },
+          {
+            "name" : "Защита прав потребителей"
+          }
+        ]
+      },
+      "email" : "smth@domen"
+    }
+  ],
+  "href" : "#"
 }

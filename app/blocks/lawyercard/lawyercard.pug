@@ -1,4 +1,45 @@
+include ../button/button
+
 mixin lawyercard(data)
-  +b.lawyercard&attributes(attributes)
+  -var online = data.online;
+  -var checked = data.checked;
+  -var busy = true;
+  -var orderBtn = [{"type" : "link", "name" : "Заказать", "arrow" : "down", "href" : "#"}]
+  -if(data.busy == 'Занят') {busy= false;}
+  +b.SECTION.lawyercard&attributes(attributes)
     +e.SECTION.about
+      +e.H3.title_about
+        +e.SPAN(class= "checkstatus_" + checked)
+        |#{data.name}
+        +e.SPAN(class= "online_" + online)
+      +e.info
+        +e.img
+          +e.IMG(src= data.image)
+        +e.status
+          +e.SPAN.location= data.location
+          +e.SPAN(class= "busy_" + busy)= data.busy
+          +e.SPAN.likes
+            +e.SPAN.like= data.like
+            +e.SPAN.dislike= data.dislike
+      +e.A.publicwork
+        |Дел на РосПравосудие:
+        +e.SPAN.workcount= data.publicworkcount
+      +e.experience
+        |Стаж работы:
+        +e.SPAN.experiencecount= experience
+        |лет
     +e.SECTION.order
+      +e.specialization
+        +e.H3.title_specialization
+          +e.SPAN Специализации
+          +e.A(href= data.specialization.href) Показать все
+        +e.UL.list
+          each specialization in data.specialization.list
+            +e.LI.item= specialization.name
+              -if(specialization.expanded)
+                +e.UL.sublist
+                  each subspecialization in specialization.expanded
+                    +e.LI.subitem= subspecialization
+        +button(orderBtn)._blue.__orderbutton
+        +e.A.maillink(href= "mailto:" + data.email) Написать сообщение
+
