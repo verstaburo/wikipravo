@@ -1,0 +1,11 @@
+include ../../blocks/entitled-text/entitled-text
+include ../../blocks/slider/slider
+include ../../blocks/review/review
+
+mixin index-reviews()
+  -var data = getData('index-reviews')
+  +b.SECTION.index-reviews&attributes(attributes)
+    +entitled-text(data.title)
+    +slider.__slider
+      each review in data.reviews
+        +review(review).__item

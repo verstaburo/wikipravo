@@ -1,0 +1,19 @@
+mixin review(data)
+  -var valueType = "SPAN"
+  -var valueHref = ''
+  +b.ARTICLE.review&attributes(attributes)
+    +e.HEADER.header
+      +e.avatar
+        +e.IMG(src= data.image)
+      +e.describe
+        +e.H3.title
+          +e.SPAN.name= data.author
+          +e.TIME.time= data.time
+        +e.UL.list
+          each item in data.info
+            -if (item.type == 'link') {valueType = 'A'; valueHref= item.href;}
+            +e.LI.item
+              +e.SPAN.category= item.name
+              +e(valueType).value(href= valueHref)= item.content
+    +e.content
+      +e.P= data.review
