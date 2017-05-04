@@ -1,0 +1,27 @@
+.social {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid black;
+
+  &_vk {
+    border-color: #007ac3;
+  }
+
+  &_fb {
+    border-color: #3a69ad;
+  }
+
+  &_twitter {
+    border-color: #00abf0;
+  }
+
+  &_youtube {
+    border-color: #cf1a19;
+  }
+}

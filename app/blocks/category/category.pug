@@ -1,10 +1,9 @@
+include ../menulist/menulist
+
 mixin category(data)
   +b.category&attributes(attributes)
     +e.title
       +e.img
         +e.IMG(src= data.image)
       +e.P= data.title
-    +e.UL.list
-      each item in data.list
-        +e.LI.item
-          +e.A.link(href= item.href)= item.text
+    +menulist(data.list).__list

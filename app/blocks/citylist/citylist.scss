@@ -8,6 +8,7 @@
   overflow-y: visible;
 
   &_active {
+
     .citylist__toggle::before {
       transform: translate(0, -50%) rotate(45deg);
     }
@@ -52,7 +53,6 @@
     top: calc(100% + 10px);
     right: 0;
     box-sizing: border-box;
-    width: 100%;
     height: 156px;
     width: 200px;
     box-shadow: 0 0 32px rgba(27, 52, 176, .2);

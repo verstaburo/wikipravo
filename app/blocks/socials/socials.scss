@@ -1,0 +1,14 @@
+.socials {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+}

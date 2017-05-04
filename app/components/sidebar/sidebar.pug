@@ -6,7 +6,7 @@ include ../../blocks/selectbox/selectbox
 mixin sidebar()
   +b.sidebar
     +e.row_logo
-      +logo-block
+      +logo-block({"logotype" : "light"})
     +e.row_nav-menu
       +nav-menu(getData('sidebar-nav-basic'))
     +e.row_contacts-block

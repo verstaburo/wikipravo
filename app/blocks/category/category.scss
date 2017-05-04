@@ -42,33 +42,6 @@
   }
 
   &__list {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     width: 100%;
-  }
-
-  &__item {
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  &__link {
-    font-size: 14px;
-    color: $color-font;
-    line-height: 2.57em;
-    padding-bottom: 3px;
-    margin-bottom: 2px;
-    text-decoration: none;
-    letter-spacing: .034em;
-    border-bottom: 1px solid rgba($color-font, .2);
-    transition: all .25s ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      border-color: transparent;
-    }
   }
 }

@@ -34,7 +34,7 @@
     .slider__item {
       width: 48.5%;
 
-      @include desktop{
+      @include desktop {
         min-width: 100%;
         width: 100%;
       }

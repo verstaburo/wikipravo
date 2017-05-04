@@ -1,8 +1,15 @@
-mixin logo-block()
-  +b.logo-block&attributes(attributes)
-    +e.logo
-      +e.IMG.image(src="" width="120" height="95")
-    +e.P.brand Wiki Pravo
-    +e.P.text АНО “Национальная рейтинговая юридическая система”
-    
+mixin logo-block(data)
+  -var theme = ''
+  -var position = ''
+  -var image = ''
+  -if(data.logotype == 'light') {theme = '_light'; image = 'assets/images/logo-light.png';}
+  -else if(data.logotype == 'dark') {theme = '_dark'; image = 'assets/images/logo-dark.png';}
+  -if(data.position == 'row') {position = '_row';}
+  +b(class="logo-block" + theme + position)&attributes(attributes)
+    +e(class="logo" + theme)
+      +e.IMG.image(src=image width="120" height="100")
+    +e(class="describe" + theme)
+      +e.P(class="brand" + theme) Wiki Pravo
+      +e.P(class="text" + theme) АНО “Национальная рейтинговая юридическая система”
+
     //- assets/images/logo.png

@@ -1,0 +1,7 @@
+include ../social/social
+
+mixin socials(data)
+  +b.UL.socials&attributes(attributes)
+    each social in data
+      +e.LI.item
+        +social(social)

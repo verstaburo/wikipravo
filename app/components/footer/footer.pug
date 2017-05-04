@@ -1,0 +1,17 @@
+include ../../blocks/logo-block/logo-block
+include ../../blocks/socials/socials
+include ../../blocks/menulist/menulist
+
+mixin footer()
+  -var data = getData('footer-menus')
+  +b.FOOTER.footer&attributes(attributes)
+    +e.info
+      +logo-block({"logotype": "dark", "position" : "row"}).__logo
+      +socials(getData('social-list')).__socials
+      +e.P.copyright Copyright 2016
+    +e.NAV.navigation
+      each category in data
+        +e.category
+          +e.H3.title= category.name
+          +menulist(category.list)._footer.__list
+

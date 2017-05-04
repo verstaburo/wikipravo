@@ -1,0 +1,25 @@
+
+[{
+  "abbr" : "vk",
+  "name" : "ВКонтакте",
+  "image" : "assets/images/icon-vk.png",
+  "href" : "#"
+},
+{
+  "abbr" : "fb",
+  "name" : "Facebook",
+  "image" : "assets/images/icon-facebook.png",
+  "href" : "#"
+},
+{
+  "abbr" : "twitter",
+  "name" : "Twitter",
+  "image" : "assets/images/icon-twitter.png",
+  "href" : "#"
+},
+{
+  "abbr" : "youtube",
+  "name" : "Youtube",
+  "image" : "assets/images/icon-youtube.png",
+  "href" : "#"
+}]

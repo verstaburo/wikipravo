@@ -1,5 +1,38 @@
 .logo-block {
+  box-sizing: border-box;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_dark_row {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+
+    @include desktop {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-block__logo {
+      margin-right: 28px;
+    }
+
+    .logo-block__brand {
+      line-height: 1.78em;
+    }
+
+    .logo-block__text:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+  }
 
   &__brand {
     color: #fff;
@@ -8,7 +41,9 @@
     font-weight: 600;
     line-height: 1em;
 
-    &:not(:first-child) { margin-top: 29px; }
+    &_dark {
+      color: #000;
+    }
   }
 
   &__image {
@@ -20,6 +55,11 @@
     font-size: 14px;
     font-weight: 300;
     line-height: (25/14)*1em;
+    letter-spacing: .02em;
+
+    &_dark {
+      color: rgba(#000, .6);
+    }
 
     &:not(:first-child) { margin-top: 5px; }
   }

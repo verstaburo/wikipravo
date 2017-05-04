@@ -1,0 +1,5 @@
+mixin menulist(data)
+  +b.UL.menulist&attributes(attributes)
+    each item in data
+      +e.LI.item
+        +e.A.link(href=item.href)= item.text
