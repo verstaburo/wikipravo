@@ -24,10 +24,20 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      overflow: hidden;
+
+      @include desktop {
+        justify-content: flex-start;
+      }
     }
 
     .slider__item {
       width: 48.5%;
+
+      @include desktop{
+        min-width: 100%;
+        width: 100%;
+      }
     }
   }
 }
