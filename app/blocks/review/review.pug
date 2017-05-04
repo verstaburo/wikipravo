@@ -4,7 +4,8 @@ mixin review(data)
   +b.ARTICLE.review&attributes(attributes)
     +e.HEADER.header
       +e.avatar
-        +e.IMG(src= data.image)
+        +e.img
+          +e.IMG(src= data.image)
       +e.describe
         +e.H3.title
           +e.SPAN.name= data.author

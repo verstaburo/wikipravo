@@ -1,0 +1,33 @@
+.index-reviews {
+  box-sizing: border-box;
+  padding: 43px 39px 52px 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: $color-bg-index;
+
+  &__header {
+    margin-bottom: 42px;
+  }
+
+  &__slider {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 74px;
+
+    .slider__wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slider__item {
+      width: 48.5%;
+    }
+  }
+}

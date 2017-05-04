@@ -5,7 +5,7 @@ include ../../blocks/review/review
 mixin index-reviews()
   -var data = getData('index-reviews')
   +b.SECTION.index-reviews&attributes(attributes)
-    +entitled-text(data.title)
+    +entitled-text(data.title).__header
     +slider.__slider
       each review in data.reviews
         +review(review).__item

@@ -1,0 +1,132 @@
+.review {
+  position: relative;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10;
+
+  &__header {
+    box-sizing: border-box;
+    padding: 24px 29px 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-bottom: 1px solid rgba(black, .1);
+  }
+
+  &__avatar {
+    box-sizing: border-box;
+    padding-top: 8px;
+    min-width: 105px;
+  }
+
+  &__img {
+    position: relative;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      margin: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__describe {
+    box-sizing: border-box;
+    width: calc(100% - 105px);
+    padding: 0 34px;
+  }
+
+  &__title {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 2.22em;
+    letter-spacing: .04em;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    margin-right: 41px;
+    white-space: nowrap;
+    letter-spacing: .04em;
+  }
+
+  &__time {
+    font-size: 13px;
+    letter-spacing: .04em;
+    color: rgba($color-font, .6);
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__item {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 13px;
+    line-height: 1.92em;
+    letter-spacing: .04em;
+    font-weight: 700;
+    width: 100%;
+
+    a {
+      color: $color-main;
+      border-bottom: 1px solid rgba($color-main, .3);
+      cursor: pointer;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__category {
+    box-sizing: border-box;
+    width: 35%;
+    min-width: 120px;
+    padding-right: 10px;
+    letter-spacing: .04em;
+  }
+
+  &__value {
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    letter-spacing: .04em;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding: 14px 32px 14px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.79em;
+      font-weight: 400;
+      letter-spacing: .023em;
+    }
+  }
+}
