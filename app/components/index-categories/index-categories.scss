@@ -39,6 +39,15 @@
     @include s-desktop {
       width: 100%;
     }
+
+    .button_transparent {
+
+      &:hover {
+        background-color: transparent;
+        border-color: $color-main;
+        color: $color-main;
+      }
+    }
   }
 
   &__button {

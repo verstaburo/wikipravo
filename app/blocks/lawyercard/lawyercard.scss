@@ -12,12 +12,12 @@
   }
 
   &__about {
-    padding: 15px 40px 15px 20px;
+    padding: 13px 35px 13px 18px;
     border-right: 1px solid rgba($color-font, .1);
   }
 
   &__order {
-    padding: 15px 20px 15px 40px;
+    padding: 13px 18px 13px 39px;
   }
 
   &__title {
@@ -32,7 +32,7 @@
 
     &_about {
       position: relative;
-      padding-left: 30px;
+      padding-left: 28px;
       padding-right: 13px;
       text-align: center;
     }
@@ -43,6 +43,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap-reverse;
+      margin-bottom: 0;
 
       a {
         position: relative;
@@ -153,8 +154,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-self: flex-start;
-    padding: 10px 0;
+    align-self: stretch;
+    padding: 8px 0;
     margin-bottom: 12px;
   }
 
@@ -182,12 +183,12 @@
 
   &__status {
     box-sizing: border-box;
-    padding: 0 27px;
+    padding: 2px 24px 8px;
     flex-grow: 1;
     max-width: calc(100% - 106px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
@@ -299,11 +300,12 @@
     padding: 8px;
     font-size: 13px;
     line-height: 1.3em;
+    letter-spacing: .04em;
     text-align: center;
     color: $color-main;
     border: 1px solid rgba($color-main, .3);
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &__workcount {
@@ -318,12 +320,13 @@
     width: 100%;
     font-size: 14px;
     line-height: 3.21em;
+    letter-spacing: .04em;
     text-align: center;
   }
 
   &__experiencecount {
     display: inline-block;
-    margin: 0 10px 0 5px;
+    margin: 0 15px;
     width: 33px;
     height: 33px;
     vertical-align: middle;
@@ -336,13 +339,15 @@
   }
 
   &__list {
-    padding: 0 0 20px;
+    padding-bottom: 10px;
+    margin-bottom: 13px;
   }
 
   &__item {
     font-size: 14px;
     line-height: 2.14em;
     font-weight: 500;
+    letter-spacing: .04em;
   }
 
   &__sublist {
@@ -353,12 +358,13 @@
     font-size: 13px;
     line-height: 1.54em;
     font-weight: 400;
+    letter-spacing: .04em;
     color: $color-offline;
   }
 
   &__orderbutton {
     width: 100%;
-    padding: 10px 31px;
+    padding: 12px 31px;
     margin-bottom: 24px;
   }
 
@@ -369,6 +375,7 @@
     text-align: center;
     font-size: 13px;
     line-height: 2.31em;
+    letter-spacing: .04em;
     color: $color-main;
     cursor: pointer;
   }

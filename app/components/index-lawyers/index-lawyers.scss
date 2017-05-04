@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 38px 0 32px;
+    padding: 38px 15px 32px 0;
   }
 
   &__select {
@@ -30,8 +30,8 @@
 
   &__item {
     box-sizing: border-box;
-    width: 49.5%;
-    margin-bottom: 7px;
+    width: 49.6%;
+    margin-bottom: 8px;
 
     @include desktop {
       width: 100%;
@@ -46,7 +46,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 26px 37px;
+    padding: 16px 37px;
     text-align: center;
     background-color: white;
     z-index: 1;

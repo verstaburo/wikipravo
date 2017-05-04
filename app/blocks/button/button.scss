@@ -17,6 +17,10 @@
     background-color: $color-main;
     border-color: $color-main;
 
+    .button__arrow {
+      color: rgba(white, .75);
+    }
+
     &:hover, &:active {
       color: white;
       background-color: $color-btn-blue-hover;
