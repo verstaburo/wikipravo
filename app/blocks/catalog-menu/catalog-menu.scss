@@ -26,5 +26,9 @@
     box-sizing: border-box;
     width: 25%;
     padding-right: 6.8%;
+
+    @include desktop {
+      padding-right: 20px;
+    }
   }
 }
