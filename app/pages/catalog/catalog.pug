@@ -5,13 +5,14 @@ block head
 
 block content
   +b.catalog
-    +catalog-navigation(getData('catalog-navigation'))
+    +catalog-navigation(getData('catalog-navigation'), true)
+    +catalog-search
 
 block page-left
   +sidebar
 
 block page-top
-  +header
+  +header(true)
 
 block page-bottom
   +footer

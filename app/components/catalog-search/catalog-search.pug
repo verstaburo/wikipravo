@@ -1,0 +1,9 @@
+include ../../blocks/searchbar/searchbar
+include ../../blocks/searchform/searchform
+
+mixin catalog-search()
+  +b.SECTION.catalog-search&attributes(attributes)
+    +searchbar("Введите любую интересующую информацию о юристе").__searchbar
+      +button([{"type" : "button", "name" : "Найти"}])(type="submit")._blue.__button
+    +searchform.__advanced
+

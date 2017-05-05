@@ -1,7 +1,10 @@
 include ../../blocks/breadcrumbs/breadcrumbs
 include ../../blocks/catalog-menu/catalog-menu
 
-mixin catalog-navigation(data)
+mixin catalog-navigation(data, breadcrumbsHidden)
+  -var nobreadcrumbs = ""
   +b.SECTION.catalog-navigation&attributes(attributes)
-    +breadcrumbs(data.path).__breadcrumbs
-    +catalog-menu(data.head).__categories
+    -if(!breadcrumbsHidden) {
+      +breadcrumbs(data.path).__breadcrumbs
+    - } else {nobreadcrumbs = "_nobreadcrumbs";}
+      +catalog-menu(data.head)(class="__categories" + nobreadcrumbs)

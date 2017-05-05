@@ -8,7 +8,7 @@
   &__title {
     font-size: 30px;
     line-height: 1.5em;
-    letter-spacing: .065em;
+    letter-spacing: .058em;
     color: $color-font;
     font-weight: 400;
     margin-bottom: 26px;
@@ -24,11 +24,8 @@
 
   &__item {
     box-sizing: border-box;
+    text-align: left;
     width: 25%;
-    padding-right: 6.8%;
-
-    @include desktop {
-      padding-right: 20px;
-    }
+    padding-right: 20px;
   }
 }

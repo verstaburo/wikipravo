@@ -1,4 +1,5 @@
-mixin searchbar()
+mixin searchbar(placeholder)
   +b.FORM.searchbar&attributes(attributes)
-    +e.INPUT.input(type="search" placeholder="Поиск интересуещего вас вопроса")
+    +e.INPUT.input(type="search" placeholder=placeholder)
     +e.IMG.icon(src="assets/images/icon-search.svg")
+    block

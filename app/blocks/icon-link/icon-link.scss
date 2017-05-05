@@ -16,4 +16,20 @@
 
     &:not(:last-child) { margin-right: 13px; }
   }
+
+  &__icon-fa {
+    color: #3593ea;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  &_big {
+    .icon-link__text {
+      font-size: 18px;
+    }
+
+    .icon-link__icon-fa {
+      font-size: 20px;
+    }
+  }
 }

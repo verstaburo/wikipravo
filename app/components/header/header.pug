@@ -2,10 +2,20 @@ include ../../blocks/searchbar/searchbar
 include ../../blocks/contacts-block/contacts-block
 include ../../blocks/icon-link/icon-link
 
-mixin header()
+mixin header(authorization)
   +b.header&attributes(attributes)
-    +searchbar.header__searchbar
-    +e.col._contacts-block
-      +contacts-block(getData('header-contacts'))
-    +e.col._link-button
-      +icon-link("assets/images/icon-login.png", "Войти")(href="#")
+    +searchbar("Поиск интересуещего вас вопроса").header__searchbar
+    - if (!authorization)
+      +e.col._contacts-block
+        +contacts-block(getData('header-contacts'))
+      +e.col._link-button
+        +icon-link("assets/images/icon-login.png", "Войти")(href="#")
+    - else
+      +e.col_order
+        +icon-link("", "Заказы", "comment-o")._big
+      +e.col_message
+        +icon-link("", "Сообщения", "envelope-o")._big
+          +e.SPAN.counter (1)
+      +e.col_profile
+        +e.avatar
+          +e.IMG(src="assets/images/profile-avatar.jpg")

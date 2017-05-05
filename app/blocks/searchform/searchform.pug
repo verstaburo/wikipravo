@@ -1,0 +1,10 @@
+include ../selectbox/selectbox
+
+mixin searchform()
+  +b.FORM.searchform&attributes(attributes)
+    +e.controls
+      +e.BUTTON.open-btn(type="button")
+        +e.SPAN.btnname Расширенный поиск
+        +e.I(class="icon fa fa-angle-down")
+      +e.BUTTON.reset-btn(type="reset") Сбросить
+

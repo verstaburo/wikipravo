@@ -1,0 +1,21 @@
+.catalog-search {
+  box-sizing: border-box;
+  padding: 50px;
+  background: $color-bg-index;
+
+  &__searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid $color-border-search;
+  }
+
+  &__advanced {
+    width: 100%;
+    padding: 24px 0;
+    background-color: #fff;
+  }
+}
