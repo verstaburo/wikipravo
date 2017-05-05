@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiki Pravo — Каталог юристов</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="page-layout__left-col">
+            <div class="sidebar">
+                <div class="sidebar__row sidebar__row_logo">
+                    <div class="logo-block logo-block_light">
+                        <div class="logo-block__logo logo-block__logo_light">
+                            <img class="logo-block__image" src="assets/images/logo-light.png" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_light">
+                            <p class="logo-block__brand logo-block__brand_light">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_light">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row_nav-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Юристы</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-1.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заявки на услуги</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-2.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать документ</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-3.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать консультацию</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-4.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать другую услугу</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-5.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Форум</span>
+                                <img class="nav-menu__icon" src="assets/images/icon-nav-menu-6.png" alt="" role="presentation" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__row sidebar__row_contacts-block">
+                    <div class="contacts-block contacts-block_icons contacts-block_dark">
+                        <div class="contacts-block__item">
+                            <img class="contacts-block__icon" src="assets/images/icon-mail-dark.png" alt="" role="presentation" />
+                            <div class="contacts-block__label">support@pravoved.ru</div>
+                            <div class="contacts-block__text">E-mail поддержка</div>
+                        </div>
+                        <div class="contacts-block__item">
+                            <img class="contacts-block__icon" src="assets/images/icon-phone-dark.png" alt="" role="presentation" />
+                            <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
+                            <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                        </div>
+                    </div>
+                    <div class="selectbox sidebar__selectbox">
+                        <input class="selectbox__input" type="hidden" value="Москва" />
+                        <div class="selectbox__button">
+                            <span class="selectbox__button-name">Москва</span>
+                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                        </div>
+                        <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__right-col">
+            <div class="page-layout__page-header">
+                <div class="header">
+                    <form class="searchbar header__searchbar">
+                        <input class="searchbar__input" type="search" placeholder="Поиск интересуещего вас вопроса" />
+                        <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                    </form>
+                    <div class="header__col header__col_contacts-block">
+                        <div class="contacts-block">
+                            <div class="contacts-block__item">
+                                <div class="contacts-block__label contacts-block__label_bigger">8 800 700 60 60</div>
+                                <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__col header__col_link-button">
+                        <a class="icon-link" href="#">
+                            <img class="icon-link__icon" src="assets/images/icon-login.png" alt="" role="presentation" />
+                            <span class="icon-link__text">Войти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-content">
+                <div class="catalog">
+                    <section class="catalog-navigation catalog-navigation_lightblue">
+                        <ul class="breadcrumbs catalog-navigation__breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a href="index.html">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_home"></use></svg>
+                                </a>
+                                <i class="breadcrumbs__arrow fa fa-angle-right"></i>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="">Каталог</a>
+                                <i class="breadcrumbs__arrow fa fa-angle-right"></i>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="">Гражданское право</a>
+                                <i class="breadcrumbs__arrow fa fa-angle-right"></i>
+                            </li>
+                        </ul>
+                        <div class="catalog-menu catalog-navigation__categories">
+                            <h2 class="catalog-menu__title">Каталог юристов из категории Гражданское право</h2>
+                            <div class="catalog-menu__list">
+                                <ul class="menulist catalog-menu__item">
+                                    <li class="menulist__item">
+                                        <a class="menulist__link" href="#">Договорное право</a>
+                                    </li>
+                                </ul>
+                                <ul class="menulist catalog-menu__item">
+                                    <li class="menulist__item">
+                                        <a class="menulist__link" href="#">Право собственности</a>
+                                    </li>
+                                </ul>
+                                <ul class="menulist catalog-menu__item">
+                                    <li class="menulist__item">
+                                        <a class="menulist__link" href="#">Взыскание задолженности</a>
+                                    </li>
+                                </ul>
+                                <ul class="menulist catalog-menu__item">
+                                    <li class="menulist__item">
+                                        <a class="menulist__link" href="#">Кредитование</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="catalog-search">
+                        <form class="searchbar catalog-search__searchbar">
+                            <input class="searchbar__input" type="search" placeholder="Введите любую интересующую информацию о юристе" />
+                            <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                            <BUTTON class="button button_blue searchbar__button" href="" type="submit">
+                                <span class="button__name">Найти</span>
+                            </BUTTON>
+                        </form>
+                        <form class="searchform catalog-search__advanced">
+                            <div class="searchform__controls">
+                                <button class="searchform__open-btn" type="button">
+                                    <span class="searchform__btnname">Расширенный поиск</span>
+                                    <i class="searchform__icon fa fa-angle-down"></i>
+                                </button>
+                                <button class="searchform__reset-btn" type="reset">Сбросить</button>
+                            </div>
+                            <div class="searchform__content">
+                                <div class="searchform__row">
+                                    <div class="searchform__field">
+                                        <span class="searchform__label">Категория</span>
+                                        <div class="selectbox selectbox_light">
+                                            <input class="selectbox__input" type="hidden" value="Специалист в категории права" />
+                                            <div class="selectbox__button">
+                                                <span class="selectbox__button-name">Специалист в категории права</span>
+                                                <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                            </div>
+                                            <ul class="selectbox__list">
+                                                <li class="selectbox__option">Конституционное право</li>
+                                                <li class="selectbox__option">Интеллектуальная собственность
+                                                    <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                    <ul class="selectbox__sublist">
+                                                        <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
+                                                        <li class="selectbox__option">Гражданское право</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="selectbox__option">Военное право
+                                                    <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                    <ul class="selectbox__sublist">
+                                                        <li class="selectbox__option">Военное право</li>
+                                                        <li class="selectbox__option">Военное право</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="searchform__field">
+                                        <span class="searchform__label">Местоположение</span>
+                                        <div class="selectbox selectbox_light">
+                                            <input class="selectbox__input" type="hidden" value="Город" />
+                                            <div class="selectbox__button">
+                                                <span class="selectbox__button-name">Город</span>
+                                                <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                            </div>
+                                            <ul class="selectbox__list">
+                                                <li class="selectbox__option">Москва</li>
+                                                <li class="selectbox__option">Санкт-Петербург</li>
+                                                <li class="selectbox__option">Новосибирск</li>
+                                                <li class="selectbox__option">Тольятти</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="searchform__field">
+                                        <span class="searchform__label">Тип документов</span>
+                                        <div class="selectbox selectbox_light">
+                                            <input class="selectbox__input" type="hidden" value="Работает с документами" />
+                                            <div class="selectbox__button">
+                                                <span class="selectbox__button-name">Работает с документами</span>
+                                                <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                            </div>
+                                            <ul class="selectbox__list">
+                                                <li class="selectbox__option">Претензии потребителей
+                                                    <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                    <ul class="selectbox__sublist">
+                                                        <li class="selectbox__option">Претензии на возврат денежных средств за товар (услугу) надлежащего качества</li>
+                                                        <li class="selectbox__option">Претензия на страховую компанию</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="selectbox__option">Категория документа
+                                                    <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                    <ul class="selectbox__sublist">
+                                                        <li class="selectbox__option">Категория документа</li>
+                                                        <li class="selectbox__option">Категория документа</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="searchform__inputfield">
+                                        <span class="searchform__label">Стаж работы</span>
+                                        <input class="searchform__min" type="text" name="min" placeholder="От" />
+                                        <input class="searchform__max" type="text" name="max" placeholder="До" />
+                                    </div>
+                                </div>
+                                <div class="searchform__row">
+                                    <div class="checkbox searchform__checkbox">
+                                        <input type="checkbox" id="lawyers" />
+                                        <label class="checkbox__label" for="lawyers">Только адвокаты</label>
+                                    </div>
+                                    <div class="checkbox searchform__checkbox">
+                                        <input type="checkbox" id="publicwork" />
+                                        <label class="checkbox__label" for="publicwork">Опыт работы в Гос.Структурах</label>
+                                    </div>
+                                    <div class="checkbox searchform__checkbox">
+                                        <input type="checkbox" id="courtroom" />
+                                        <label class="checkbox__label" for="courtroom">Есть кабинет в здании суда</label>
+                                    </div>
+                                    <div class="checkbox searchform__checkbox">
+                                        <input type="checkbox" id="rusjustice" />
+                                        <label class="checkbox__label" for="rusjustice">Есть профиль на РосПравосудие</label>
+                                    </div>
+                                </div>
+                                <div class="searchform__row">
+                                    <BUTTON class="button button_blue searchform__button" href="">
+                                        <span class="button__name">Заказать для отобранных</span>
+                                    </BUTTON>
+                                    <BUTTON class="button button_transparent searchform__button" href="">
+                                        <span class="button__name">Применить</span>
+                                    </BUTTON>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <div class="page-layout__page-footer">
+                <footer class="footer">
+                    <div class="footer__info">
+                        <div class="logo-block logo-block_dark_row footer__logo">
+                            <div class="logo-block__logo logo-block__logo_dark">
+                                <img class="logo-block__image" src="assets/images/logo-dark.png" width="120" height="100" alt="" role="presentation" />
+                            </div>
+                            <div class="logo-block__describe logo-block__describe_dark">
+                                <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                                <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                            </div>
+                        </div>
+                        <ul class="socials footer__socials">
+                            <li class="socials__item">
+                                <a class="social social_vk" href="#">ВКонтакте
+                                    <img src="assets/images/icon-vk.png" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_fb" href="#">Facebook
+                                    <img src="assets/images/icon-facebook.png" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_twitter" href="#">Twitter
+                                    <img src="assets/images/icon-twitter.png" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_youtube" href="#">Youtube
+                                    <img src="assets/images/icon-youtube.png" alt="" role="presentation" />
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="footer__copyright">Copyright 2016</p>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__category">
+                            <h3 class="footer__title">Wikipravo</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О проекте</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О команде</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Вакансии</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Обратная связь</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Новости</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Клиентам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказать документ</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Получить консультацию</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Найти юриста</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказть другую услугу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Юристам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Стать юристом проекта</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
