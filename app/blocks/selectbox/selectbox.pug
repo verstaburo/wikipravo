@@ -1,9 +1,19 @@
-mixin selectbox(data)
+mixin selectbox(data, label)
+  -var placeholder = data.option[0].name
+  -if(data.placeholder) {placeholder = data.placeholder}
   +b.selectbox&attributes(attributes)
-    +e.INPUT.input(type='hidden' value=data[0].option)
+    +e.INPUT.input(type='hidden' value=placeholder)
     +e.button
-      +e.SPAN.button-name= data[0].option
-      +e.I.right-icon(class='fa fa-angle-up')
+      -if(label)
+        +e.SPAN.label= label
+      +e.SPAN.button-name= placeholder
+      +e.I.right-icon(class='fa fa-angle-down')
     +e.UL.list
-      each option in data
-        +e.LI.option= option.option
+      each option in data.option
+        +e.LI.option= option.name
+          -if (option.suboption)
+            +e.I.arrow(class='fa fa-angle-right')
+            +e.UL.sublist
+              each suboption in option.suboption
+                +e.LI.option= suboption
+

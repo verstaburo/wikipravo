@@ -1,0 +1,4 @@
+mixin checkbox(label, id)
+  +b.checkbox&attributes(attributes)
+    +e.INPUT(type="checkbox" id= id)
+    +e.LABEL.label(for= id)= label

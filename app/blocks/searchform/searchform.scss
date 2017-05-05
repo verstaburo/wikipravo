@@ -7,13 +7,13 @@
 
   &__controls {
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: baseline;
     align-self: flex-end;
     width: 100%;
-    padding: 0 95px;
+    padding: 0 97px;
   }
 
   &__open-btn, &__reset-btn {
@@ -43,13 +43,75 @@
 
   &__reset-btn {
     display: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid rgba($color-main, .5);
+    margin-left: 47px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba($color-main, .45);
   }
 
-  &.active {
+  &.opened {
     .searchform__reset-btn {
       display: inline-block;
     }
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px 116px 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__field {
+    width: 23.4%;
+  }
+
+  &__inputfield {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 17.2%;
+
+    input {
+      padding: 0 20px;
+      width: 46.9%;
+      height: 55px;
+      box-sizing: border-box;
+      border: 1px solid $color-border-input;
+
+      &:hover, &:focus {
+        border: 1px solid $color-font;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 2.14em;
+    font-weight: 400;
+    color: $color-font;
+    min-width: 100%;
+  }
+
+  &__button {
+    width: 44.4%;
   }
 }

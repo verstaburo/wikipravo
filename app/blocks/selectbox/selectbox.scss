@@ -4,7 +4,7 @@
 
   &_active {
 
-    .fa-angle-up { transform: translateY(-50%) rotate(180deg); }
+    .fa-angle-down { transform: translateY(-50%) rotate(180deg); }
 
     .selectbox {
       &__button { background-color: rgba(#abafc4, .5); }
@@ -78,7 +78,7 @@
       background-color: rgba(#abafc4, .5);
     }
 
-    .fa-angle-up {
+    .fa-angle-down {
       font-size: 18px;
       color: rgba(white, .5);
       font-weight: 400;
@@ -101,5 +101,10 @@
     top: 50%;
     right: 25px;
     transform: translateY(-50%);
+  }
+
+  &_light {
+
+
   }
 }

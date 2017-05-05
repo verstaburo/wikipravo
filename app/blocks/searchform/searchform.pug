@@ -1,10 +1,38 @@
 include ../selectbox/selectbox
+include ../checkbox/checkbox
+include ../button/button
 
-mixin searchform()
+mixin searchform(authorized)
   +b.FORM.searchform&attributes(attributes)
     +e.controls
       +e.BUTTON.open-btn(type="button")
         +e.SPAN.btnname Расширенный поиск
         +e.I(class="icon fa fa-angle-down")
       +e.BUTTON.reset-btn(type="reset") Сбросить
+    +e.content
+      +e.row
+        +e.field
+          +e.SPAN.label Категория
+          +selectbox(getData('selectbox-law-category'))._light
+        +e.field
+          +e.SPAN.label Местоположение
+          +selectbox(getData('selectbox-searchform-city'))._light
+        +e.field
+          +e.SPAN.label Тип документов
+          +selectbox(getData('selectbox-documents'))._light
+        +e.inputfield
+          +e.SPAN.label Стаж работы
+          +e.INPUT.min(type="text" name="min" placeholder="От")
+          +e.INPUT.max(type="text" name="max" placeholder="До")
+      +e.row
+        +checkbox("Только адвокаты", "lawyers").__checkbox
+        +checkbox("Опыт работы в Гос.Структурах", "publicwork").__checkbox
+        +checkbox("Есть кабинет в здании суда", "courtroom").__checkbox
+        +checkbox("Есть профиль на РосПравосудие", "rusjustice").__checkbox
+      +e.row
+        -if(!authorized)
+          +button([{"type" : "button", "name" : "Заказать для отобранных"}])._blue.__button
+        +button([{"type" : "button", "name" : "Применить"}])._transparent.__button
+
+
 
