@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Каталог юристов'
+
+block content
+  +b.catalog
+    +catalog-navigation(getData('catalog-civil-navigation'))._lightblue
+
+block page-left
+  +sidebar
+
+block page-top
+  +header
+
+block page-bottom
+  +footer

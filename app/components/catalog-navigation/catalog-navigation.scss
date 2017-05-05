@@ -1,0 +1,23 @@
+.catalog-navigation {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 18px 52px 44px;
+
+  &_lightblue {
+    background-color: $color-bg-index;
+  }
+
+  &__breadcrumbs {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__categories {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

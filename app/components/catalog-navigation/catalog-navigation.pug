@@ -1,0 +1,7 @@
+include ../../blocks/breadcrumbs/breadcrumbs
+include ../../blocks/catalog-menu/catalog-menu
+
+mixin catalog-navigation(data)
+  +b.SECTION.catalog-navigation&attributes(attributes)
+    +breadcrumbs(data.path).__breadcrumbs
+    +catalog-menu(data.head).__categories

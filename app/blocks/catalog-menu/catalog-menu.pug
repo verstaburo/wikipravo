@@ -1,0 +1,8 @@
+include ../menulist/menulist
+
+mixin catalog-menu(data)
+  +b.catalog-menu&attributes(attributes)
+    +e.H2.title= data.title
+    +e.list
+      each list in data.list
+        +menulist(list).__item
