@@ -1,0 +1,14 @@
+include ../icon/icons
+
+mixin breadcrumbs(data)
+  +b.UL.breadcrumbs&attributes(attributes)
+    each item in data
+     -if(item.text == 'Главная')
+       +e.LI.item
+         +e.A(href= item.href)
+           +icon("home", "")
+         +e.I.arrow(class="fa fa-angle-right")
+     -else
+       +e.LI.item
+         +e.A(href= item.href)= item.text
+         +e.I.arrow(class="fa fa-angle-right")
