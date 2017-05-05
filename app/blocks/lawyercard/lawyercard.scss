@@ -89,44 +89,12 @@
     border: 2px solid transparent;
     transform: translate(0, -50%);
 
-    &::before, &::after {
-      position: absolute;
-      content: '';
-    }
-
     &_true {
       border-color: $color-green-dark;
-
-      &::before {
-        top: 50%;
-        left: 50%;
-        width: 8px;
-        height: 5px;
-        border: 2px solid $color-green-dark;
-        border-top: none;
-        border-right: none;
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
     }
 
     &_false {
       border-color: $color-red;
-
-      &::before,&::after {
-        top: 50%;
-        left: 50%;
-        width: 10px;
-        height: 2px;
-        background-color: $color-red;
-      }
-
-      &::before {
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
-
-      &::after {
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
     }
   }
 

@@ -6,6 +6,8 @@
   align-items: flex-start;
   width: 100%;
   background-color: $color-bg-index;
+  position: relative;
+  z-index: 2;
 
   &__header {
     box-sizing: border-box;
@@ -14,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 37px 46px;
+    padding: 37px 50px;
 
     @include s-desktop {
       flex-wrap: wrap;
@@ -56,7 +58,7 @@
 
   &__content {
     box-sizing: border-box;
-    padding: 0 61px 50px 39px;
+    padding: 0 50px 50px 50px;
     width: 100%;
   }
 
@@ -70,7 +72,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px 20px 0;
-    box-shadow: 0 10px 20px -15px rgba($color-font, .3);
+    box-shadow: 0 20px 40px -15px rgba($color-font, .06);
     z-index: 2;
 
     @include desktop {

@@ -9,7 +9,7 @@
     flex-wrap: wrap;
   }
 
-  &__left-col, &__right-col {
+  &__col {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,37 +17,36 @@
     align-items: flex-start;
     width: 50%;
     box-sizing: border-box;
-    padding-bottom: 30px;
-    margin-bottom: 10px;
+    padding-bottom: 40px;
+
+    &_left {
+      z-index: 1;
+
+      .index-advantages__header {
+        background-color: $color-red;
+      }
+    }
+
+    &_right {
+      z-index: 2;
+      box-shadow: -10px 0 $big-shadow;
+
+      @include desktop {
+        box-shadow: 0 10px $big-shadow;
+      }
+    }
 
     @include desktop {
       width: 100%;
     }
   }
 
-  &__left-col {
-    z-index: 1;
-
-    .index-advantages__header {
-      background-color: $color-red;
-    }
-  }
-
-  &__right-col {
-    z-index: 2;
-    box-shadow: -10px 0 $big-shadow;
-
-    @include desktop {
-      box-shadow: 0 10px $big-shadow;
-    }
-  }
-
   &__describe {
     box-sizing: border-box;
     width: 100%;
-    padding: 30px 100px 30px 49px;
+    padding: 30px 100px 25px 50px;
     font-size: 14px;
-    line-height: 2.14em;
+    line-height: 2.15em;
     color: $color-font;
     letter-spacing: .034em;
     margin-bottom: 10px;
@@ -64,6 +63,6 @@
   &__list {
     box-sizing: border-box;
     width: 100%;
-    padding: 0 49px;
+    padding: 0 50px;
   }
 }

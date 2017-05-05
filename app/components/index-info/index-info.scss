@@ -76,19 +76,14 @@
     position: relative;
     box-sizing: border-box;
     text-align: left;
-    padding: 29px 38px;
+    padding: 29px 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     z-index: 3;
-
-    @include desktop {
-      padding-left: 50px;
-      padding-right: 50px;
-    }
-
+    
     &:not(:last-child) {
       border-bottom: 1px solid #e5e5e5;
     }

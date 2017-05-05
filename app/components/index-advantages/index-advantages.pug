@@ -4,10 +4,10 @@ include ../../blocks/advantages-item/advantages-item
 mixin index-advantages()
   +b.SECTION.index-advantages&attributes(attributes)
     -var cols = [getData('advantages-registration-left'), getData('advantages-registration-right')]
-    -var addClass = 'left'
+    -var addClass = '_left'
     -for (var i = 0; i < 2; i++)
-      -if(i == 1) {addClass= 'right'}
-      +e(class= addClass + '-col')
+      -if(i == 1) {addClass= '_right'}
+      +e(class='__col' + addClass)
         +client-registration(cols[i].header).__header
         -var boldText = cols[i].paragraph.special
         +e.P.describe
