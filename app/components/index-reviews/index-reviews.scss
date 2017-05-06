@@ -17,6 +17,24 @@
     width: 100%;
     padding: 0 74px;
 
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      width: 74px;
+      height: 100%;
+      top: 0;
+      background-color: $color-bg-index;
+      z-index: 8;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
     .slider__wrapper {
       box-sizing: border-box;
       width: 100%;
@@ -24,7 +42,6 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      overflow: hidden;
 
       @include desktop {
         justify-content: flex-start;
@@ -32,6 +49,7 @@
     }
 
     .slider__item {
+      min-width: 48.5%;
       width: 48.5%;
 
       @include desktop {
