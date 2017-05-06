@@ -3,8 +3,10 @@
     "title" : "Категории и актуальные темы",
     "paragraph" : [{"text" : "Выберите категорию и задайте вопрос прямо сейчас"}]
   }],
-  "button1" : [{ "type" : "link", "name" : "Для бизнеса", "href" : "#" }],
-  "button2" : [{ "type" : "link", "name" : "Частным лицам", "href" : "#" }],
+  "buttons" : [
+    [{"type" : "link", "name" : "Для бизнеса", "href" : "#"}],
+    [{"type" : "link", "name" : "Частным лицам", "href" : "#"}]
+  ],
   "categories" : [
     {
       "image" : "assets/images/icon-case.png",

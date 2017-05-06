@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 46px 51px;
+  padding: 46px 50px;
 
   &__info {
     box-sizing: border-box;
@@ -21,7 +21,7 @@
 
   &__logo {
     padding: 0 3px;
-    margin-bottom: 10px;
+    margin-bottom: 32px;
   }
 
   &__socials {
@@ -42,19 +42,20 @@
     justify-content: space-between;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 8px 2% 0 9%;
+    padding: 8px 0 0 9%;
     width: 70%;
 
     @include desktop {
-      padding: 8px 20px 0;
+      padding: 8px 0 0 20px;
     }
   }
 
   &__category {
     box-sizing: border-box;
+    flex: 1;
 
-    @include desktop {
-      width: 32%;
+    &:not(:last-child) {
+      margin-right: 15px;
     }
   }
 

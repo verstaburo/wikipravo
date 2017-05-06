@@ -17,7 +17,7 @@
   }
 
   &__order {
-    padding: 13px 18px 13px 39px;
+    padding: 13px 18px 13px 35px;
   }
 
   &__title {
@@ -26,15 +26,14 @@
     font-size: 18px;
     font-weight: 400;
     color: $color-font;
-    line-height: 2.22em;
+    line-height: 1.5em;
     letter-spacing: .04em;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 
     &_about {
       position: relative;
-      padding-left: 28px;
-      padding-right: 13px;
-      text-align: center;
+      padding-left: 30px;
+      text-align: left;
     }
 
     &_specialization {
@@ -43,7 +42,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap-reverse;
-      margin-bottom: 0;
+      margin-bottom: 6px;
 
       a {
         position: relative;
@@ -81,7 +80,7 @@
     box-sizing: border-box;
     position: relative;
     position: absolute;
-    top: 1.11em/*50%*/;
+    top: 0.75em/*50%*/;
     left: 0;
     width: 22px;
     height: 22px;
@@ -98,13 +97,15 @@
     }
   }
 
+  &__lawyername {
+    letter-spacing: .04em;
+  }
+
   &__online {
-    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
     width: 9px;
     height: 9px;
-    top: 1.11em/*50%*/;
-    right: 0;
-    transform: translate(0, -50%);
     border-radius: 50%;
 
     &_true {
@@ -151,7 +152,7 @@
 
   &__status {
     box-sizing: border-box;
-    padding: 2px 24px 8px;
+    padding: 2px 0 8px 28px;
     flex-grow: 1;
     max-width: calc(100% - 106px);
     display: flex;

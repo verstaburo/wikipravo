@@ -1,0 +1,22 @@
+.tab-toggles {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include s-desktop {
+    width: 100%;
+  }
+
+  &__button {
+    position: relative;
+    padding: 16px 34px;
+    z-index: 2;
+
+    &:not(:first-child) {
+      margin-left: -2px;
+      z-index: 1;
+    }
+  }
+}

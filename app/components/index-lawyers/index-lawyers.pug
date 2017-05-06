@@ -1,6 +1,7 @@
 include ../../blocks/entitled-text/entitled-text
 include ../../blocks/citylist/citylist
 include ../../blocks/lawyercard/lawyercard
+include ../../blocks/block-link/block-link
 
 mixin index-lawyers()
   -var data = getData('index-lawyers')
@@ -11,5 +12,4 @@ mixin index-lawyers()
     +e.list
       each item in data.lawyers
         +lawyercard(item).__item
-    +e.link
-      +e.A(href= data.href) Все юристы
+    +block-link(data.link).__link

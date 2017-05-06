@@ -10,7 +10,7 @@ mixin lawyercard(data)
     +e.SECTION.about
       +e.H3.title_about
         +e.SPAN(class= "checkstatus_" + checked)
-        |#{data.name}
+        +e.SPAN.lawyername= data.name
         +e.SPAN(class= "online_" + online)
       +e.info
         +e.img

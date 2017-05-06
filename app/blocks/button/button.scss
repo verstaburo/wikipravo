@@ -46,6 +46,18 @@
         color: rgba(white, .6);
       }
     }
+
+    &_v2 {
+      color: $color-main;
+      border: 2px solid rgba($color-main, .2);
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+        border-color: $color-main;
+        color: $color-main;
+      }
+    }
   }
 
   &_white {

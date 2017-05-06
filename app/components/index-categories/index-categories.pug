@@ -1,18 +1,17 @@
 include ../../blocks/entitled-text/entitled-text
-include ../../blocks/button/button
+include ../../blocks/tab-toggles/tab-toggles
 include ../../blocks/category/category
+include ../../blocks/block-link/block-link
 
 mixin index-categories()
   -var data = getData('index-categories')
   +b.SECTION.index-categories&attributes(attributes)
     +e.header
       +entitled-text(data.header).__text
-      +e.buttons
-        +button(data.button1)._blue.__button
-        +button(data.button2)._transparent.__button
+      +tab-toggles(data.buttons).__buttons
     +e.content
       +e.list
         each list in data.categories
           +category(list).__item
-      +e.link
-        +e.A(href= data.link.href)= data.link.text
+      +block-link(data.link).__link
+

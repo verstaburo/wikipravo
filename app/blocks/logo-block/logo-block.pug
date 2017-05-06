@@ -5,7 +5,7 @@ mixin logo-block(data)
   -if(data.logotype == 'light') {theme = '_light'; image = 'assets/images/logo-light.png';}
   -else if(data.logotype == 'dark') {theme = '_dark'; image = 'assets/images/logo-dark.png';}
   -if(data.position == 'row') {position = '_row';}
-  +b(class="logo-block" + theme + position)&attributes(attributes)
+  +b(class="logo-block" + theme + " logo-block" + position)&attributes(attributes)
     +e(class="logo" + theme)
       +e.IMG.image(src=image width="120" height="100")
     +e(class="describe" + theme)

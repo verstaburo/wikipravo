@@ -1,8 +1,10 @@
+include ../icon/icons
+
 mixin slider()
   +b.slider&attributes(attributes)
     +e.wrapper
       block
     +e.controls
       +e.nav
-        +e.prev
-        +e.next
+        +icon("prev").prev
+        +icon("next").next

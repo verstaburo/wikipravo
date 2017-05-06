@@ -1,0 +1,9 @@
+include ../../blocks/button/button
+
+mixin tab-toggles(data)
+  -var btnColor = "_transparent_v2"
+  +b.tab-toggles&attributes(attributes)
+    -for (var i = 0; i < data.length; i++)
+      -if(i%2 == 0) {btnColor = "_blue"}
+      -else {btnColor = "_transparent_v2"}
+        +button(data[i])(class="button" + btnColor).__button

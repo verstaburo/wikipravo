@@ -25,50 +25,19 @@
     width: 21px;
     top: 0;
     cursor: pointer;
+    fill: $color-slider-toggles;
+    transition: all .25s ease-in-out;
 
-    &::before, &::after {
-      position: absolute;
-      content: '';
-      width: 32px;
-      height: 1px;
-      background-color: $color-slider-toggles;
-      transition: all .25s ease-in-out;
-    }
-
-    &:hover::before, &:hover::after {
-      background-color: $color-main;
+    &:hover {
+      fill: $color-main;
     }
   }
 
   &__prev {
     left: 0;
-
-    &::before {
-      top: 12px;
-      left: 0;
-      transform: rotate(-48.8deg);
-    }
-
-    &::after {
-      bottom: 12px;
-      left: 0;
-      transform: rotate(48.8deg);
-    }
   }
 
   &__next {
     right: 0;
-
-    &::before {
-      top: 12px;
-      right: 0;
-      transform: rotate(48.8deg);
-    }
-
-    &::after {
-      bottom: 12px;
-      right: 0;
-      transform: rotate(-48.8deg);
-    }
   }
 }

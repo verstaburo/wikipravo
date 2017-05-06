@@ -61,7 +61,7 @@
     align-items: flex-start;
     box-sizing: border-box;
     width: 100%;
-    padding: 40px 116px 0;
+    padding: 36px 116px 0;
   }
 
   &__row {
@@ -71,14 +71,24 @@
     align-items: stretch;
     box-sizing: border-box;
     width: 100%;
+    margin-top: 22px;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
 
     &:not(:last-child) {
+      margin-top: 0;
       margin-bottom: 30px;
     }
   }
 
   &__field {
     width: 23.4%;
+
+    @include desktop {
+      width: 48%;
+    }
   }
 
   &__inputfield {
@@ -89,6 +99,10 @@
     align-items: stretch;
     flex-wrap: wrap;
     width: 17.2%;
+
+    @include desktop {
+      width: 48%;
+    }
 
     input {
       padding: 0 20px;
@@ -111,7 +125,25 @@
     min-width: 100%;
   }
 
+  &__checkbox {
+    box-sizing: border-box;
+    width: 25%;
+
+    @include desktop {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  }
+
   &__button {
     width: 44.4%;
+
+    @include s-desktop {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

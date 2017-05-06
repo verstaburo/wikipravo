@@ -8,14 +8,14 @@
   &__item {
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 12px;
   }
 
   &__link {
     font-size: 14px;
     color: $color-font;
-    line-height: 2.57em;
+    line-height: 1.8em;
     padding-bottom: 3px;
-    margin-bottom: 2px;
     text-decoration: none;
     letter-spacing: .035em;
     border-bottom: 1px solid rgba($color-font, .2);
@@ -30,11 +30,11 @@
   &_footer {
 
     .menulist__item:not(:last-child) {
-      margin-bottom: 1px;
+      margin-bottom: 18px;
     }
 
     .menulist__link {
-      line-height: 2.71em;
+      line-height: 1.5em;
       border-bottom: none;
       padding-bottom: 0;
 

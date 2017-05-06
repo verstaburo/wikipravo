@@ -25,6 +25,8 @@
   }
 
   &__text {
+    margin-right: 20px;
+
     @include s-desktop {
       width: 100%;
       margin-bottom: 30px;
@@ -32,28 +34,10 @@
   }
 
   &__buttons {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
 
     @include s-desktop {
       width: 100%;
     }
-
-    .button_transparent {
-
-      &:hover {
-        background-color: transparent;
-        border-color: $color-main;
-        color: $color-main;
-      }
-    }
-  }
-
-  &__button {
-    padding: 16px 34px;
   }
 
   &__content {
@@ -86,35 +70,6 @@
 
     @include desktop {
       width: 50%;
-    }
-  }
-
-  &__link {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 26px 37px;
-    text-align: center;
-    background-color: white;
-    z-index: 1;
-
-    a {
-      font-size: 18px;
-      color: $color-main;
-      line-height: 1.67em;
-      letter-spacing: .044em;
-      text-decoration: none;
-      border-bottom: 1px solid rgba($color-main, .3);
-      transition: all .25s ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        border-color: transparent;
-      }
     }
   }
 }

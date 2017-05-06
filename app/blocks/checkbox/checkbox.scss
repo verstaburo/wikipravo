@@ -10,7 +10,8 @@
   &__label {
     position: relative;
     box-sizing: border-box;
-    padding-left: 32px;
+    padding-left: 30px;
+    padding-right: 15px;
     width: 100%;
     font-size: 14px;
     line-height: 1.43em;
@@ -33,6 +34,10 @@
       border: 1px solid #e1e1e1;
       border-radius: 2px;
       transform: translate3d(0, -50%, 0);
+    }
+
+    &:hover::before {
+      border-color: $color-font;
     }
   }
 

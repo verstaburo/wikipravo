@@ -19,7 +19,7 @@
     box-sizing: border-box;
     padding-bottom: 40px;
 
-    &_left {
+    &_red {
       z-index: 1;
 
       .index-advantages__header {
@@ -27,12 +27,16 @@
       }
     }
 
-    &_right {
+    &_blue {
       z-index: 2;
       box-shadow: -10px 0 $big-shadow;
 
       @include desktop {
         box-shadow: 0 10px $big-shadow;
+      }
+
+      .index-advantages__header {
+        background-color: $color-main;
       }
     }
 
