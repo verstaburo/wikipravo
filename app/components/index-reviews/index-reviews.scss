@@ -24,7 +24,7 @@
       height: 100%;
       top: 0;
       background-color: $color-bg-index;
-      z-index: 8;
+      z-index: 1;
     }
 
     &::before {
@@ -51,6 +51,7 @@
     .slider__item {
       min-width: 48.5%;
       width: 48.5%;
+      z-index: 5;
 
       @include desktop {
         min-width: 100%;

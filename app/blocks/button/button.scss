@@ -23,8 +23,8 @@
 
     &:hover, &:active {
       color: white;
-      background-color: $color-btn-blue-hover;
-      border-color: $color-btn-blue-hover;
+      background-color: rgba($color-main, .75);
+      border-color: #63ABED;
     }
   }
 
@@ -40,10 +40,10 @@
     &:hover, &:active {
       background-color: $color-main;
       border-color: $color-main;
-      color: white;
+      color: #fff;
 
       .button__arrow {
-        color: rgba(white, .6);
+        color: #fff;
       }
     }
 
@@ -52,9 +52,9 @@
       border: 2px solid rgba($color-main, .2);
       background-color: transparent;
 
-      &:hover {
+      &:hover, &:active {
         background-color: transparent;
-        border-color: $color-main;
+        border-color: rgba($color-main, .8);
         color: $color-main;
       }
     }
@@ -66,7 +66,7 @@
     font-size: 15px;
 
     &:hover {
-      background-color: rgba(white, .48);
+      background-color: rgba(white, .4);
     }
   }
 
