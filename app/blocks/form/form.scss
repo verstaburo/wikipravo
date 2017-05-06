@@ -1,0 +1,10 @@
+.form {
+  display: block;
+
+  &_vertical {
+    .input:not(:last-child) { margin-bottom: 13px; }
+    .button { width: 100%; }
+  }
+
+  &__bottom-link { margin-top: 3px; }
+}

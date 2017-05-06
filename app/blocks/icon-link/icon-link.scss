@@ -9,6 +9,8 @@
     line-height: (35/14)*1em;
   }
 
+  &_small .icon-link__text { font-size: 13px; }
+
   &:hover { opacity: .6; }
 
   &__icon {

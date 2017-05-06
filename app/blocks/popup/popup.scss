@@ -1,0 +1,41 @@
+.popup {
+  display: block;
+  border-radius: 3px;
+  background-color: white;
+  padding: 37px 37px 16px;
+  transform: scale3d(.95, .95, 1);
+  max-height: calc(100vh - 80px);
+  max-width:calc(100% - 30px);
+  width: 480px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .25s ease-in-out;
+
+  &-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_active {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+
+    &:first-child { margin-bottom: 35px; }
+  }
+}

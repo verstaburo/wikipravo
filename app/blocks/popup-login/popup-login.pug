@@ -1,0 +1,13 @@
+include ../form/form
+include ../popup/popup
+include ../button/button
+include ../icon-link/icon-link
+
+mixin popup-login()
+  +popup.popup-login(id="popup-login")&attributes(attributes)
+    .popup__title Вход в систему
+    +form._vertical
+      +input.__input(type="text" placeholder="Ваш e-mail или телефон")
+      +input.__input(type="password" placeholder="Ваш пароль")
+      +e.BUTTON.button.button._blue Войти
+      +icon-link("", "Забыли пароль?")(href="#")._small.form__bottom-link
