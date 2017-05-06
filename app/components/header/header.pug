@@ -9,7 +9,7 @@ mixin header(authorization)
       +e.col._contacts-block
         +contacts-block(getData('header-contacts'))
       +e.col._link-button
-        +icon-link("assets/images/icon-login.png", "Войти")(href="#")
+        +icon-link("assets/images/icon-login.png", "Войти")(href="#" data-open-popup="popup-login" class="js-popup-open")
     - else
       +e.col_order
         +icon-link("", "Заказы", "comment-o")._big
