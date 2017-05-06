@@ -124,8 +124,6 @@
 
       &__list {
         box-shadow: 0 0 32px rgba(27, 52, 176, 0.2);
-        overflow-x: auto;
-        overflow-y: auto;
       }
 
       &__sublist {
@@ -175,6 +173,72 @@
       .selectbox {
 
         &__button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  &_link {
+
+    .selectbox {
+      color: $color-font;
+
+      &__button {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        background-color: #fff;
+        font-size: 14px;
+        height: auto;
+        color: inherit;
+
+        &-name {
+          padding: 0;
+          margin-right: 8px;
+          font-size: inherit;
+          color: $color-main;
+          padding-bottom: 2px;
+          border-bottom: 1px solid rgba($color-main, .25);
+          cursor: pointer;
+        }
+      }
+
+      &__right-icon {
+        font-size: 18px;
+        color: $color-main;
+        position: static;
+        transform: translate(0);
+        transition: all .25s ease-in-out;
+      }
+
+      &__label {
+        color: $color-font;
+        font-size: 14px;
+        margin-right: 4px;
+      }
+
+      &__list {
+        left: auto;
+        right: 0;
+        max-height: 156px;
+        min-width: 200px;
+        box-shadow: 0 0 32px rgba(27, 52, 176, .2);
+        background-color: white;
+        z-index: 10;
+      }
+
+      &__option {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: $color-citylist-item;
+        background-color: #fff;
+        border: none;
+
+        &:hover {
+          color: $color-font;
           background-color: #fff;
         }
       }
