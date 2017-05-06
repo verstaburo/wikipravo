@@ -6,7 +6,6 @@ export default () => {
     initialSlide: 0,
     slidesPerView: 2,
     spaceBetween: 40,
-    width: 640,
     nextButton: '.slider__next',
     prevButton: '.slider__prev',
     breakpoints: {
