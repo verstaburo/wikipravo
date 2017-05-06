@@ -17,7 +17,7 @@
         <div class="page-layout__left-col">
             <div class="sidebar">
                 <div class="sidebar__row sidebar__row_logo">
-                    <div class="logo-block logo-block_light">
+                    <div class="logo-block logo-block_light logo-block">
                         <div class="logo-block__logo logo-block__logo_light">
                             <img class="logo-block__image" src="assets/images/logo-light.png" width="120" height="100" alt="" role="presentation" />
                         </div>
@@ -153,7 +153,7 @@
                         </div>
                     </section>
                     <section class="index-advantages">
-                        <div class="index-advantages__col index-advantages__col_left">
+                        <div class="index-advantages__col index-advantages__col_red">
                             <div class="client-registration index-advantages__header">
                                 <div class="client-registration__img">
                                     <img src="assets/images/icon-libra.png" alt="" role="presentation" />
@@ -181,7 +181,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="index-advantages__col index-advantages__col_right">
+                        <div class="index-advantages__col index-advantages__col_blue">
                             <div class="client-registration index-advantages__header">
                                 <div class="client-registration__img">
                                     <img src="assets/images/icon-hands.png" alt="" role="presentation" />
@@ -216,11 +216,11 @@
                                 <h2>Категории и актуальные темы</h2>
                                 <p>Выберите категорию и задайте вопрос прямо сейчас</p>
                             </div>
-                            <div class="index-categories__buttons">
-                                <A class="button button_blue index-categories__button" href="#">
+                            <div class="tab-toggles index-categories__buttons">
+                                <A class="button button button_blue tab-toggles__button" href="#">
                                     <span class="button__name">Для бизнеса</span>
                                 </A>
-                                <A class="button button_transparent index-categories__button" href="#">
+                                <A class="button button button_transparent_v2 tab-toggles__button" href="#">
                                     <span class="button__name">Частным лицам</span>
                                 </A>
                             </div>
@@ -313,7 +313,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="index-categories__link">
+                            <div class="block-link index-categories__link">
                                 <a href="#">Показать все категории для бизнеса</a>
                             </div>
                         </div>
@@ -338,7 +338,8 @@
                             <section class="lawyercard index-lawyers__item">
                                 <section class="lawyercard__about">
                                     <h3 class="lawyercard__title lawyercard__title_about">
-                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>Константин Константинов
+                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>
+                                        <span class="lawyercard__lawyername">Константин Константинов</span>
                                         <span class="lawyercard__online lawyercard__online_true"></span>
                                     </h3>
                                     <div class="lawyercard__info">
@@ -386,7 +387,8 @@
                             <section class="lawyercard index-lawyers__item">
                                 <section class="lawyercard__about">
                                     <h3 class="lawyercard__title lawyercard__title_about">
-                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>Константин Константинов
+                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>
+                                        <span class="lawyercard__lawyername">Константин Константинов</span>
                                         <span class="lawyercard__online lawyercard__online_false"></span>
                                     </h3>
                                     <div class="lawyercard__info">
@@ -434,7 +436,8 @@
                             <section class="lawyercard index-lawyers__item">
                                 <section class="lawyercard__about">
                                     <h3 class="lawyercard__title lawyercard__title_about">
-                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>Константин Константинов
+                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>
+                                        <span class="lawyercard__lawyername">Константин Константинов</span>
                                         <span class="lawyercard__online lawyercard__online_true"></span>
                                     </h3>
                                     <div class="lawyercard__info">
@@ -482,7 +485,8 @@
                             <section class="lawyercard index-lawyers__item">
                                 <section class="lawyercard__about">
                                     <h3 class="lawyercard__title lawyercard__title_about">
-                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>Константин Константинов
+                                        <span class="lawyercard__checkstatus lawyercard__checkstatus_true"></span>
+                                        <span class="lawyercard__lawyername">Константин Константинов</span>
                                         <span class="lawyercard__online lawyercard__online_false"></span>
                                     </h3>
                                     <div class="lawyercard__info">
@@ -528,7 +532,7 @@
                                 </section>
                             </section>
                         </div>
-                        <div class="index-lawyers__link">
+                        <div class="block-link index-lawyers__link">
                             <a href="#">Все юристы</a>
                         </div>
                     </section>
@@ -614,8 +618,8 @@
                             </div>
                             <div class="slider__controls">
                                 <div class="slider__nav">
-                                    <div class="slider__prev"></div>
-                                    <div class="slider__next"></div>
+                                    <svg class="slider__prev"><use xlink:href="assets/images/icon.svg#icon_prev"></use></svg>
+                                    <svg class="slider__next"><use xlink:href="assets/images/icon.svg#icon_next"></use></svg>
                                 </div>
                             </div>
                         </div>
@@ -625,7 +629,7 @@
             <div class="page-layout__page-footer">
                 <footer class="footer">
                     <div class="footer__info">
-                        <div class="logo-block logo-block_dark_row footer__logo">
+                        <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
                             <div class="logo-block__logo logo-block__logo_dark">
                                 <img class="logo-block__image" src="assets/images/logo-dark.png" width="120" height="100" alt="" role="presentation" />
                             </div>
