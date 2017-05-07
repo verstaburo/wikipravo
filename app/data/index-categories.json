@@ -9,7 +9,7 @@
   ],
   "categories" : [
     {
-      "image" : "assets/images/icon-case.png",
+      "image" : "http://placehold.it/30x30",
       "title" : "Корпоративное право",
       "list" : [
         {"href" : "#", "text" : "Регистрация юридических лиц"},
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "image" : "assets/images/icon-man.png",
+      "image" : "http://placehold.it/30x30",
       "title" : "Семейное право",
       "list" : [
         {"href" : "#", "text" : "Заключение и расторжения брака"},
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "image" : "assets/images/icon-hammer.png",
+      "image" : "http://placehold.it/30x30",
       "title" : "Трудовое право",
       "list" : [
         {"href" : "#", "text" : "Арбитражный спор"},
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "image" : "assets/images/icon-court.png",
+      "image" : "http://placehold.it/30x30",
       "title" : "Гражданское право",
       "list" : [
         {"href" : "#", "text" : "Договорное право"},

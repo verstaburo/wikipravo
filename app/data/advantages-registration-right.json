@@ -1,5 +1,5 @@
 {
-  "header" : {"image": "assets/images/icon-hands.png", "title" : "Гражданам и бизнесу"},
+  "header" : {"image": "http://placehold.it/50x50", "title" : "Гражданам и бизнесу"},
   "paragraph" : {
     "text1": "Если Вы уже имели дело с юристами",
     "special" : "«обжигались» на профессионалах,",

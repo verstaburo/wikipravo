@@ -20,4 +20,3 @@ export default () => {
     loopedSlides: 2
   });
 };
-

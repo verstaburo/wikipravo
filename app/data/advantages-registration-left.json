@@ -1,5 +1,5 @@
 {
-  "header" : {"image": "assets/images/icon-libra.png", "title" : "Юристам и адвокатам "},
+  "header" : {"image": "http://placehold.it/50x50", "title" : "Юристам и адвокатам "},
   "paragraph" : {
     "text1": "Если вы",
     "special" : "хороший специлист.",

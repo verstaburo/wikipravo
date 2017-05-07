@@ -8,20 +8,30 @@
   cursor: pointer;
   border-radius: 50%;
   border: 3px solid black;
+  background-color: transparent;
+  transition: all .25s ease-in-out;
 
   &_vk {
     border-color: #007ac3;
+
+    &:hover { background-color: #007ac3; }
   }
 
   &_fb {
     border-color: #3a69ad;
+
+    &:hover { background-color: #3a69ad; }
   }
 
   &_twitter {
     border-color: #00abf0;
+
+    &:hover { background-color: #00abf0; }
   }
 
   &_youtube {
     border-color: #cf1a19;
+
+    &:hover { background-color: #cf1a19; }
   }
 }
