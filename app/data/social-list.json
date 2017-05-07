@@ -2,24 +2,24 @@
 [{
   "abbr" : "vk",
   "name" : "ВКонтакте",
-  "image" : "assets/images/icon-vk.png",
+  "image" : "http://placehold.it/15x15",
   "href" : "#"
 },
 {
   "abbr" : "fb",
   "name" : "Facebook",
-  "image" : "assets/images/icon-facebook.png",
+  "image" : "http://placehold.it/15x15",
   "href" : "#"
 },
 {
   "abbr" : "twitter",
   "name" : "Twitter",
-  "image" : "assets/images/icon-twitter.png",
+  "image" : "http://placehold.it/15x15",
   "href" : "#"
 },
 {
   "abbr" : "youtube",
   "name" : "Youtube",
-  "image" : "assets/images/icon-youtube.png",
+  "image" : "http://placehold.it/15x15",
   "href" : "#"
 }]
