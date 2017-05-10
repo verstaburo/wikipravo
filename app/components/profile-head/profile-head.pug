@@ -1,0 +1,12 @@
+include ../../blocks/breadcrumbs/breadcrumbs
+include ../../blocks/profile-control/profile-control
+
+mixin profile-head(data, authorization)
+  +b.SECTION.profile-head&attributes(attributes)
+    +breadcrumbs(data.path)
+    +e.header
+      +e.H2.title= data.name
+      -if(authorization)
+        +e.controls
+          each item in data.controls
+            +profile-control(item)
