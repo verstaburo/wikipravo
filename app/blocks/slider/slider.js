@@ -6,7 +6,7 @@ export default () => {
     initialSlide: 0,
     slidesPerView: 2,
     spaceBetween: 40,
-    width: 640,
+    speed: 700,
     nextButton: '.slider__next',
     prevButton: '.slider__prev',
     breakpoints: {
@@ -17,7 +17,7 @@ export default () => {
     },
     slideClass: 'slider__item',
     wrapperClass: 'slider__wrapper',
-    slidesPerGroup: 2,
-    loopedSlides: 2
+    slidesPerGroup: 1,
+    loopedSlides: 1
   });
 };

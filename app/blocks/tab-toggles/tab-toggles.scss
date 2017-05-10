@@ -14,6 +14,11 @@
     padding: 16px 34px;
     z-index: 2;
 
+    &.active {
+      background-color: $color-main;
+      color: white;
+    }
+
     &:not(:first-child) {
       margin-left: -2px;
       z-index: 1;

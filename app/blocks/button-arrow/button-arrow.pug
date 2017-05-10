@@ -1,0 +1,12 @@
+mixin button-arrow(arrow, type, target)
+  -var addClass = '';
+  -var btnType = 'a';
+  
+  -if (type === 'button') {btnType = 'button'}
+  -if (arrow === 'right') {addClass = '_arrow_' + arrow}
+
+    +b(btnType)(class="button" + addClass, data-tab-target=target)&attributes(attributes)
+      +e.SPAN.name
+        block
+      -if (arrow)
+        +e.I.arrow(class= "fa fa-angle-" + arrow)

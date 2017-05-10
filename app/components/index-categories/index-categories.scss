@@ -9,6 +9,8 @@
   position: relative;
   z-index: 2;
 
+  &__tabs-container { width: 100%; }
+
   &__header {
     box-sizing: border-box;
     display: flex;
@@ -44,6 +46,16 @@
     box-sizing: border-box;
     padding: 0 50px 38px 50px;
     width: 100%;
+    display: none;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    transition: all .25s ease-in-out;
+
+    &.active {
+      display: block;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   &__list {

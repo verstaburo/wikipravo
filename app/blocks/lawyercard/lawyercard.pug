@@ -4,7 +4,6 @@ mixin lawyercard(data)
   -var online = data.online;
   -var checked = data.checked;
   -var busy = true;
-  -var orderBtn = [{"type" : "link", "name" : "Заказать", "arrow" : "down", "href" : "#"}]
   -if(data.busy == 'Занят') {busy= false;}
   +b.SECTION.lawyercard&attributes(attributes)
     +e.SECTION.about
@@ -40,6 +39,5 @@ mixin lawyercard(data)
                 +e.UL.sublist
                   each subspecialization in specialization.expanded
                     +e.LI.subitem= subspecialization
-        +button(orderBtn)._blue.__orderbutton
+        +button-arrow("down")._blue.__orderbutton Заказать
         +e.A.maillink(href= "mailto:" + data.email) Написать сообщение
-

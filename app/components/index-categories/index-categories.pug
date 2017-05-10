@@ -8,9 +8,14 @@ mixin index-categories()
   +b.SECTION.index-categories&attributes(attributes)
     +e.header
       +entitled-text(data.header).__text
-      +tab-toggles(data.buttons).__buttons
-    +e.content
-      +e.list
-        each list in data.categories
-          +category(list).__item
-      +block-link(data.link).__link
+      +tab-toggles(getData('index-categories-tabs')).__buttons
+    - var tabnumber = 0;
+    +e.tabs-container(data-tab-group-container="categories")
+      each tab in data.tabs
+        - tabnumber += 1;
+        - if (tab.active) {var addClass = "active"} else {var addClass = ""}
+        +e.content(class=addClass data-tab-group="categories" data-tab-id="categories"+tabnumber)
+          +e.list
+            each list in tab.categories
+              +category(list).__item
+          +block-link(tab.link).__link

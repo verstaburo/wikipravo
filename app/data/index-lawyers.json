@@ -11,7 +11,7 @@
     {
       "online" : "true",
       "checked" : "true",
-      "name" : "Константин Константинов",
+      "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
       "location" : "Москва",
       "busy" : "Занят",
@@ -38,7 +38,7 @@
     {
       "online" : "false",
       "checked" : "true",
-      "name" : "Константин Константинов",
+      "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
       "location" : "Москва",
       "busy" : "Занят",
@@ -65,7 +65,7 @@
     {
       "online" : "true",
       "checked" : "true",
-      "name" : "Константин Константинов",
+      "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
       "location" : "Москва",
       "busy" : "Занят",
@@ -92,7 +92,7 @@
     {
       "online" : "false",
       "checked" : "true",
-      "name" : "Константин Константинов",
+      "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
       "location" : "Москва",
       "busy" : "Занят",
