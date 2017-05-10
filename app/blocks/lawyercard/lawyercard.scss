@@ -79,14 +79,14 @@
   &__checkstatus {
     box-sizing: border-box;
     position: absolute;
-    top: 0.75em/*50%*/;
+    top: .75em;
     left: 0;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     border: 2px solid transparent;
     transform: translate(0, -50%);
-    background-image: url("http://placehold.it/10x10");
+    background-image: url('http://placehold.it/10x10');
     background-position: center;
     background-repeat: no-repeat;
 
@@ -161,113 +161,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  }
-
-  &__location {
-    position: relative;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-    color: $color-font-gray;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 4;
-      left: 0;
-      width: 12px;
-      height: 19px;
-      background-image: url("http://placehold.it/12x19");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__busy {
-    position: relative;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 2px;
-      width: 9px;
-      height: 9px;
-      transform: translate(0, -50%);
-      border-radius: 50%;
-    }
-
-    &_false {
-      color: $color-red-light;
-
-      &::before {
-        background-color: $color-red-light;
-      }
-    }
-
-    &_true {
-      color: $color-green-dark;
-
-      &::before {
-        background-color: $color-green-dark;
-      }
-    }
-  }
-
-  &__likes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-  }
-
-  &__like {
-    position: relative;
-    color: $color-green-like;
-    padding-left: 30px;
-    padding-right: 5px;
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 25px;
-      height: 100%;
-      background-image: url("http://placehold.it/25x22");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__dislike {
-    position: relative;
-    color: $color-red-dark;
-    padding-left: 30px;
-    padding-right: 5px;
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 25px;
-      height: 100%;
-      background-image: url("http://placehold.it/25x22");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
   }
 
   &__publicwork {

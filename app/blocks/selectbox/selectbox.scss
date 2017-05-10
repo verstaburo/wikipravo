@@ -123,11 +123,12 @@
       color: $color-placeholder;
 
       &__list {
-        box-shadow: 0 0 32px rgba(27, 52, 176, 0.2);
+        box-shadow: 0 0 32px rgba(27, 52, 176, .2);
+        overflow: visible;
       }
 
       &__sublist {
-        box-shadow: 16px 0 32px rgba(27, 52, 176, 0.2);
+        box-shadow: 16px 0 32px rgba(27, 52, 176, .2);
         border: 1px solid #e1e1e1;
       }
 
@@ -166,7 +167,6 @@
         font-size: 18px;
       }
     }
-
 
     &_active {
 

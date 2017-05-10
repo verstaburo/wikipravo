@@ -29,7 +29,7 @@
   }
 
   &_blurred {
-    filter: url("../images/icon.svg#gaussian_blur");
+    filter: url('../images/icon.svg#gaussian_blur');
     filter: blur(3px);
   }
 }

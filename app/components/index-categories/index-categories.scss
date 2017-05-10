@@ -34,7 +34,6 @@
   }
 
   &__buttons {
-
     @include s-desktop {
       width: 100%;
     }
@@ -42,7 +41,7 @@
 
   &__content {
     box-sizing: border-box;
-    padding: 0 50px 38px 50px;
+    padding: 0 50px 38px;
     width: 100%;
   }
 

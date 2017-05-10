@@ -1,4 +1,6 @@
 include ../button/button
+include ../vote-block/vote-block
+include ../status-list/status-list
 
 mixin lawyercard(data)
   -var online = data.online;
@@ -16,11 +18,8 @@ mixin lawyercard(data)
         +e.img
           +e.IMG(src= data.image)
         +e.status
-          +e.SPAN.location= data.location
-          +e.SPAN(class= "busy_" + busy)= data.busy
-          +e.SPAN.likes
-            +e.SPAN.like= data.like
-            +e.SPAN.dislike= data.dislike
+          +status-list(data.status).__status-list
+          +vote-block(data.vote).__likes
       +e.A.publicwork
         |Дел на РосПравосудие:
         +e.SPAN.workcount= data.publicworkcount
@@ -42,4 +41,3 @@ mixin lawyercard(data)
                     +e.LI.subitem= subspecialization
         +button(orderBtn)._blue.__orderbutton
         +e.A.maillink(href= "mailto:" + data.email) Написать сообщение
-
