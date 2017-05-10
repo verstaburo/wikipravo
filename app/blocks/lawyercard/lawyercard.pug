@@ -1,6 +1,9 @@
 include ../button/button
 include ../vote-block/vote-block
 include ../status-list/status-list
+include ../specialization/specialization
+include ../experience/experience
+include ../icon/icons
 
 mixin lawyercard(data)
   -var online = data.online;
@@ -11,7 +14,8 @@ mixin lawyercard(data)
   +b.SECTION.lawyercard&attributes(attributes)
     +e.SECTION.about
       +e.H3.title_about
-        +e.SPAN(class= "checkstatus_" + checked)
+        +e(class= "checkstatus_" + checked)
+          +icon("check").__icon
         +e.SPAN.lawyername= data.name
         +e.SPAN(class= "online_" + online)
       +e.info
@@ -23,21 +27,12 @@ mixin lawyercard(data)
       +e.A.publicwork
         |Дел на РосПравосудие:
         +e.SPAN.workcount= data.publicworkcount
-      +e.experience
-        |Стаж работы:
-        +e.SPAN.experiencecount= data.experience
-        |лет
+      +experience(data.experience).__experience
     +e.SECTION.order
       +e.specialization
         +e.H3.title_specialization
           +e.SPAN Специализации
           +e.A(href= data.specialization.href) Показать все
-        +e.UL.list
-          each specialization in data.specialization.list
-            +e.LI.item= specialization.name
-              -if(specialization.expanded)
-                +e.UL.sublist
-                  each subspecialization in specialization.expanded
-                    +e.LI.subitem= subspecialization
+        +specialization(data.specialization.list).__list
         +button(orderBtn)._blue.__orderbutton
         +e.A.maillink(href= "mailto:" + data.email) Написать сообщение

@@ -1,0 +1,24 @@
+.experience {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 3.21em;
+  letter-spacing: .04em;
+  text-align: center;
+
+  &__count {
+    display: inline-block;
+    margin: 0 15px;
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 33px;
+    font-weight: 700;
+    color: $color-green-dark;
+    border-radius: 50%;
+    border: 1px solid $color-green-dark;
+  }
+}
