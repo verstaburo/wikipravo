@@ -1,0 +1,7 @@
+include ../../blocks/paginator/paginator
+include ../../blocks/items-on-page/items-on-page
+
+mixin page-navigation(data)
+  +b.page-navigation&attributes(attributes)
+    +items-on-page(data.shownitems).__shownitems
+    +paginator(data.paginator).__paginator

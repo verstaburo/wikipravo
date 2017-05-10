@@ -1,0 +1,51 @@
+.items-on-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    font-size: 18px;
+    line-height: 1.67em;
+    font-weight: 400;
+    letter-spacing: .045em;
+    color: $color-font;
+    margin-right: 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__link {
+    width: 33px;
+    height: 33px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.67em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: $color-font;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      background-color: $color-main;
+      box-shadow: 0 0 13px rgba($color-paginator-shadow, .42);
+      color: #fff;
+    }
+  }
+}

@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     border-radius: 2px;
-    background-color: #383a47;
+    background-color: $color-dark-grey;
     cursor: pointer;
     position: relative;
     z-index: 2;
@@ -123,13 +123,13 @@
       color: $color-placeholder;
 
       &__list {
-        box-shadow: 0 0 32px rgba(27, 52, 176, .2);
+        box-shadow: 0 0 32px rgba($color-searchform-selectbox-shadow, .2);
         overflow: visible;
       }
 
       &__sublist {
-        box-shadow: 16px 0 32px rgba(27, 52, 176, .2);
-        border: 1px solid #e1e1e1;
+        box-shadow: 16px 0 32px rgba($color-searchform-selectbox-shadow, .2);
+        border: 1px solid $color-border-input;
       }
 
       &__button {
@@ -224,7 +224,7 @@
         right: 0;
         max-height: 156px;
         min-width: 200px;
-        box-shadow: 0 0 32px rgba(27, 52, 176, .2);
+        box-shadow: 0 0 32px rgba($color-searchform-selectbox-shadow, .2);
         background-color: white;
         z-index: 10;
       }
