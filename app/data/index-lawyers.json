@@ -13,10 +13,14 @@
       "checked" : "true",
       "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
-      "location" : "Москва",
-      "busy" : "Занят",
-      "like" : "124",
-      "dislike" : "2",
+      "status" : [
+        {"type" : "location", "image" : "location", "name" : "Москва", "status": ""},
+        {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
+      ],
+      "vote" : [
+        {"type" : "like", "image" : "like", "count" : "124"},
+        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+      ],
       "publicworkcount" : "10",
       "experience" : "10",
       "specialization" : {
@@ -40,10 +44,14 @@
       "checked" : "true",
       "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
-      "location" : "Москва",
-      "busy" : "Занят",
-      "like" : "124",
-      "dislike" : "2",
+      "status" : [
+        {"type" : "location", "image" : "location", "name" : "Москва", "status": ""},
+        {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
+      ],
+      "vote" : [
+        {"type" : "like", "image" : "like", "count" : "124"},
+        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+      ],
       "publicworkcount" : "10",
       "experience" : "10",
       "specialization" : {
@@ -67,10 +75,14 @@
       "checked" : "true",
       "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
-      "location" : "Москва",
-      "busy" : "Занят",
-      "like" : "124",
-      "dislike" : "2",
+      "status" : [
+        {"type" : "location", "image" : "location", "name" : "Москва", "status": ""},
+        {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
+      ],
+      "vote" : [
+        {"type" : "like", "image" : "like", "count" : "124"},
+        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+      ],
       "publicworkcount" : "10",
       "experience" : "10",
       "specialization" : {
@@ -94,10 +106,14 @@
       "checked" : "true",
       "name" : "Константин Константин",
       "image" : "assets/images/lawyer-avatar.jpg",
-      "location" : "Москва",
-      "busy" : "Занят",
-      "like" : "124",
-      "dislike" : "2",
+      "status" : [
+        {"type" : "location", "image" : "location", "name" : "Москва", "status": ""},
+        {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
+      ],
+      "vote" : [
+        {"type" : "like", "image" : "like", "count" : "124"},
+        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+      ],
       "publicworkcount" : "10",
       "experience" : "10",
       "specialization" : {

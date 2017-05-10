@@ -82,24 +82,37 @@
   &__checkstatus {
     box-sizing: border-box;
     position: absolute;
-    top: 0.75em/*50%*/;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: .75em;
     left: 0;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     border: 2px solid transparent;
     transform: translate(0, -50%);
-    background-image: url("http://placehold.it/10x10");
-    background-position: center;
-    background-repeat: no-repeat;
 
     &_true {
       border-color: $color-green-dark;
+
+      .lawyercard__icon {
+        fill: $color-green-dark;
+      }
     }
 
     &_false {
       border-color: $color-red;
+
+      .lawyercard__icon {
+        fill: $color-red;
+      }
     }
+  }
+
+  &__icon {
+    width: 9px;
+    height: 8px;
   }
 
   &__lawyername {
@@ -170,111 +183,6 @@
     align-items: flex-start;
   }
 
-  &__location {
-    position: relative;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-    color: $color-font-gray;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 4;
-      left: 0;
-      width: 12px;
-      height: 19px;
-      background-image: url("http://placehold.it/12x19");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__busy {
-    position: relative;
-    padding-left: 20px;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 2px;
-      width: 9px;
-      height: 9px;
-      transform: translate(0, -50%);
-      border-radius: 50%;
-    }
-
-    &_false {
-      color: $color-red-light;
-
-      &::before {
-        background-color: $color-red-light;
-      }
-    }
-
-    &_true {
-      color: $color-green-dark;
-
-      &::before {
-        background-color: $color-green-dark;
-      }
-    }
-  }
-
-  &__likes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 13px;
-    line-height: 2.31em;
-    letter-spacing: .04em;
-  }
-
-  &__like {
-    position: relative;
-    color: $color-green-like;
-    padding-left: 30px;
-    padding-right: 5px;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 25px;
-      height: 100%;
-      background-image: url("http://placehold.it/25x22");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__dislike {
-    position: relative;
-    color: $color-red-dark;
-    padding-left: 30px;
-    padding-right: 5px;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 25px;
-      height: 100%;
-      background-image: url("http://placehold.it/25x22");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
   &__publicwork {
     box-sizing: border-box;
     display: inline-block;
@@ -297,53 +205,12 @@
   }
 
   &__experience {
-    box-sizing: border-box;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    font-size: 14px;
-    line-height: 3.21em;
-    letter-spacing: .04em;
-    text-align: center;
-  }
-
-  &__experiencecount {
-    display: inline-block;
-    margin: 0 15px;
-    width: 33px;
-    height: 33px;
-    vertical-align: middle;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 700;
-    color: $color-green-dark;
-    border-radius: 50%;
-    border: 1px solid $color-green-dark;
   }
 
   &__list {
     padding-bottom: 10px;
     margin-bottom: 13px;
-  }
-
-  &__item {
-    font-size: 14px;
-    line-height: 2.14em;
-    font-weight: 500;
-    letter-spacing: .04em;
-  }
-
-  &__sublist {
-    padding: 5px 0;
-  }
-
-  &__subitem {
-    font-size: 13px;
-    line-height: 1.54em;
-    font-weight: 400;
-    letter-spacing: .04em;
-    color: $color-offline;
   }
 
   &__orderbutton {
