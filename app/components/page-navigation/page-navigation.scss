@@ -1,0 +1,28 @@
+.page-navigation {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 49px 126px;
+  background-color: $color-bg-index;
+
+  @include s-desktop {
+    padding: 49px 50px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__shownitems {
+    margin-right: 50px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+}

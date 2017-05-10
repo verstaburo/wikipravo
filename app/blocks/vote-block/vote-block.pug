@@ -1,0 +1,6 @@
+include ../like-button/like-button
+
+mixin vote-block(data)
+  +b.vote-block&attributes(attributes)
+    each button in data
+      +like-button(button)(class="_" + button.type)

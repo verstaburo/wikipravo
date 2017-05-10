@@ -1,0 +1,8 @@
+mixin specialization(data)
+  +b.UL.specialization&attributes(attributes)
+    each item in data
+      +e.LI.item= item.name
+        -if(item.expanded)
+          +e.UL.sublist
+            each subitem in item.expanded
+              +e.LI.subitem= subitem

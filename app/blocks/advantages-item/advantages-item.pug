@@ -1,4 +1,8 @@
-mixin advantages-item(data) 
+include ../icon/icons
+
+mixin advantages-item(data)
  +b.LI(class= 'advantages-item_' + data.markcolor)&attributes(attributes)
+   +e.check
+     +icon("check")
    +e.P.title= data.item.title
    +e.P.describe= data.item.describe

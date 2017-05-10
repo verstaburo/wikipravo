@@ -1,0 +1,7 @@
+mixin items-on-page(data)
+  +b.items-on-page&attributes(attributes)
+    +e.P Показать:
+    +e.UL.list
+      each item in data
+        +e.LI.item
+          +e.A.link(href= item.href)= item.name

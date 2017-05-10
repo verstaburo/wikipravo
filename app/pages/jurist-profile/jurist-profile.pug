@@ -1,0 +1,16 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Профиль юриста'
+
+block content
+  +b.jurist-profile
+    +profile-head(getData("jurist-profile-head"), true)
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer

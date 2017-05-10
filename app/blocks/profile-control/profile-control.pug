@@ -1,0 +1,8 @@
+include ../icon/icons
+include ../note/note
+
+mixin profile-control(data)
+  +b.A(class="profile-control" + "_" + data.type href= data.href)&attributes(attributes)
+    +icon(data.image)
+    -if(data.type == "note")
+      +note(data.text)

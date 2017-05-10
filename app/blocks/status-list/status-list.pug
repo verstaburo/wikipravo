@@ -1,0 +1,10 @@
+include ../icon/icons
+
+mixin status-list(data)
+  -var status = ""
+  +b.UL.status-list&attributes(attributes)
+    each item in data
+      -if(item.status) {status = "status-list__item_" + item.type + "_" + item.status;}
+      +e.LI(class="item_" + item.type + " " + status)
+        +icon(item.image).__img
+        +e.SPAN.name= item.name

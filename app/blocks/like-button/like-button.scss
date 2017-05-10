@@ -1,0 +1,50 @@
+.like-button {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__img {
+    width: 18px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  &__count {
+    font-size: 13px;
+    line-height: 2.31em;
+    letter-spacing: .04em;
+  }
+
+  &_like {
+
+    &.like-button {
+
+      &__img {
+        fill: $color-green-like;
+      }
+
+      &__count {
+        color: $color-green-like;
+      }
+    }
+  }
+
+  &_dislike {
+
+    &.like-button {
+
+      &__img {
+        fill: $color-red-dark;
+      }
+
+      &__count {
+        color: $color-red-dark;
+      }
+    }
+  }
+}

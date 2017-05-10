@@ -1,8 +1,9 @@
 include ../menulist/menulist
+include ../page-title/page-title
 
 mixin catalog-menu(data)
   +b.catalog-menu&attributes(attributes)
-    +e.H2.title= data.title
+    +page-title(data.title).__title
     +e.list
       each list in data.list
         +menulist(list).__item

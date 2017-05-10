@@ -12,6 +12,26 @@
     margin-bottom: 32px;
   }
 
+  &__check {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '';
+    top: 7px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $color-main;
+
+    svg {
+      width: 11px;
+      height: 9px;
+      fill: #fff;
+    }
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -21,17 +41,21 @@
     height: 30px;
     border-radius: 50%;
     background-color: $color-main;
-    background-image: url("http://placehold.it/10x10");
+    background-image: url('http://placehold.it/10x10');
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  &_red::before {
-    background-color: $color-red;
+  &_red {
+    .advantages-item__check {
+      background-color: $color-red;
+    }
   }
 
-  &_blue::before {
-    background-color: $color-main;
+  &_blue {
+    .advantages-item__check {
+      background-color: $color-main;
+    }
   }
 
   &__title {
