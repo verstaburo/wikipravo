@@ -33,8 +33,12 @@
 
   &__button {
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin-right: 92px;
+
+      @include tablet {
+        margin-right: 50px;
+      }
     }
   }
 }

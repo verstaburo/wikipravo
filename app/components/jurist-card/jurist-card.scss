@@ -1,0 +1,114 @@
+.jurist-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0 50px;
+
+  @include desktop {
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    width: 64%;
+    background-color: #fff;
+    border: 1px solid $color-border-jurist-card;
+    border-right-color: rgba($color-font, .1);
+    align-items: stretch;
+
+    @include desktop {
+      width: 100%;
+      border-right-color: $color-border-jurist-card;
+    }
+  }
+
+  &__describe {
+    box-sizing: border-box;
+    padding: 28px 40px 30px;
+    width: 56%;
+    border-left: none;
+    background-color: #fff;
+    border: 1px solid $color-border-jurist-card;
+    border-left-width: 0;
+
+    @include desktop {
+      width: 100%;
+      border-top-width: 0;
+      border-left-width: 1px;
+    }
+  }
+
+  &__slogan {
+    font-size: 18px;
+    line-height: 2.5em;
+    letter-spacing: .065em;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__services {
+    margin-right: 48px;
+  }
+
+  &__features {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1800px) {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      flex-grow: 1;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.43em;
+      font-weight: 400;
+      letter-spacing: .035em;
+
+      &:not(:last-child) {
+        margin-right: 46px;
+        margin-bottom: 10px;
+      }
+
+      &_jurist {
+
+        .jurist-card__icon {
+          width: 27px;
+          min-width: 27px;
+          height: 36px;
+        }
+      }
+
+      &_court {
+
+        .jurist-card__icon {
+          width: 33px;
+          min-width: 33px;
+          height: 31px;
+        }
+      }
+
+      &_shield {
+
+        .jurist-card__icon {
+          width: 27px;
+          min-width: 27px;
+          height: 34px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 18px;
+    fill: $color-font;
+  }
+}

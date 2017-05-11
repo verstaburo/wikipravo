@@ -232,4 +232,19 @@
 
     &:hover { opacity: .7; }
   }
+
+  &_wide-padding {
+
+    .lawyercard__about {
+      padding: 38px 40px 24px 30px;
+    }
+
+    .lawyercard__order {
+      padding: 38px 40px 24px;
+    }
+  }
+
+  &_no-border {
+    border: none;
+  }
 }

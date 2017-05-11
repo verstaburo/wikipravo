@@ -1,0 +1,41 @@
+{
+  "lawyer" : {
+    "online" : "true",
+    "checked" : "true",
+    "name" : "Константин Константин",
+    "image" : "assets/images/lawyer-avatar.jpg",
+    "status" : [
+      {"type" : "location", "image" : "location", "name" : "Москва", "status": ""},
+      {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
+    ],
+    "vote" : [
+      {"type" : "like", "image" : "like", "count" : "124"},
+      {"type" : "dislike", "image" : "dislike", "count" : "2"}
+    ],
+    "publicworkcount" : "10",
+    "experience" : "10",
+    "specialization" : {
+      "href" : "#",
+      "list" : [
+        {
+          "name" : "Гражданское право",
+          "expanded" : [
+            "Договорное право", "Право собственности"
+          ]
+        },
+        {
+          "name" : "Защита прав потребителей"
+        }
+      ]
+    },
+    "email" : "smth@domen"
+  },
+  "services" : [
+    "Консультации", "Оформление договоров", "Представительство в суде"
+  ],
+  "features" : [
+    {"image" : "jurist", "text" : "Адвокат"},
+    {"image" : "court", "text" : "Есть кабинет в здании суда"},
+    {"image" : "shield", "text" : "Есть опыт работы в  ГосСтруктурах"}
+  ]
+}

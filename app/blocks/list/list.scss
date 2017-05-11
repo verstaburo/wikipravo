@@ -1,0 +1,33 @@
+.list {
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: .035em;
+    font-weight: 400;
+    color: $color-font;
+    margin-bottom: 9px;
+  }
+
+  &_dash {
+
+    .list {
+
+      &__item {
+        position: relative;
+        padding-left: 16px;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          content: '\2013';
+          font-size: 14px;
+          color: $color-font;
+          line-height: 1.5em;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+}
