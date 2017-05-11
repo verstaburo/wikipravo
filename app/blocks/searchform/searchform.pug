@@ -31,8 +31,8 @@ mixin searchform(authorized)
         +checkbox("Есть профиль на РосПравосудие", "rusjustice").__checkbox
       +e.row
         -if(!authorized)
-          +button([{"type" : "button", "name" : "Заказать для отобранных"}])._blue.__button
-        +button([{"type" : "button", "name" : "Применить"}])._transparent.__button
+          +button("button")._blue.__button Заказать для отобранных
+        +button("button")._transparent.__button Применить
 
 
 

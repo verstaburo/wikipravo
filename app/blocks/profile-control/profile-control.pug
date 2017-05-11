@@ -2,9 +2,7 @@ include ../icon/icons
 include ../note/note
 
 mixin profile-control(data)
-  -var status = ""
-  -if(data.type == "note") {status = "active"}
-  +b.A(class="profile-control" + "_" + data.type + " " + status, href= data.href, title= data.title )&attributes(attributes)
+  +b.A(class="profile-control" + "_" + data.type, href= data.href, title= data.title )&attributes(attributes)
     +icon(data.image).__icon
-    -if(data.type == "note")
-      +note(data.text).__note
+  -if(data.type == "note")
+    +note(data.text).profile-control__note

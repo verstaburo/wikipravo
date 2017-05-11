@@ -5,6 +5,6 @@ mixin catalog-search(authorized)
   -var login = authorized
   +b.SECTION.catalog-search&attributes(attributes)
     +searchbar("Введите любую интересующую информацию о юристе").__searchbar
-      +button([{"type" : "button", "name" : "Найти"}])(type="submit")._blue.__button
+      +button("button")(type="submit")._blue.__button Найти
     +searchform(login).__advanced
 

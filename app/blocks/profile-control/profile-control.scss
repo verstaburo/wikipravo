@@ -23,10 +23,6 @@
     .profile-control__icon {
       fill: $color-green-dark;
     }
-
-    .profile-control__note {
-      display: flex;
-    }
   }
 
   &:hover {
@@ -44,6 +40,10 @@
 
   &__note {
     display: none;
+
+    &.active {
+      display: flex;
+    }
   }
 
   &_favorites {

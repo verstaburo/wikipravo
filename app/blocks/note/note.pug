@@ -1,12 +1,12 @@
 include ../button/button
 
 mixin note(data)
-  -var buttons = [{"type" : "button", "name" : "Сохранить", "value" : "submit"}, {"type" : "button", "name" : "Отмена", "value" : "reset"}];
   +b.FORM.note&attributes(attributes)
     -if(data)
       +e.P= data
-      +button([{"type" : "button", "name" : "Удалить", "type": "button"}])._text.__button
+      +button("button")._text.__button(type="button") Удалить
     -else
       +e.TEXTAREA.text
       +e.buttons
-        +button(buttons)._text.__button
+        +button("button")._text.__button(type="submit") Сохранить
+        +button("button")._text.__button(type="reset") Отмена
