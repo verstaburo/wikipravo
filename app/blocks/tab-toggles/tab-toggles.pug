@@ -1,11 +1,8 @@
 include ../../blocks/button/button
 
 mixin tab-toggles(data)
-  -var btnColor = "";
   -var nname = "";
   +b.tab-toggles&attributes(attributes)
     each bbtn in data
-      -if(i == 0) {btnColor = "_transparent_second active"}
-      -else {btnColor = "_transparent_second"}
       -if (bbtn.main) {var mainClass = "active"} else {var mainClass = ""}
-      +button('a')(class= btnColor + " " + mainClass, data-tab-target= bbtn.target).__button= bbtn.name
+      +button('a')(class= " " + mainClass, data-tab-target= bbtn.target).__button= bbtn.name

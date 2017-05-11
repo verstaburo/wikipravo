@@ -1,0 +1,6 @@
+[
+  {"name" : "Основное", "target" : "info1", "main" : true},
+  {"name" : "Профессиональные навыки", "target" : "info2"},
+  {"name" : "Все cпециализации", "target" : "info3"},
+  {"name" : "Отзывы", "target" : "info4"}
+]

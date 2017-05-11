@@ -1,0 +1,25 @@
+.jurist-tabs {
+  box-sizing: border-box;
+  padding: 0 50px;
+
+  &__controls {
+    box-sizing: border-box;
+    width: 100%;
+
+    .tab-toggles__button {
+      box-sizing: border-box;
+      width: 25%;
+    }
+  }
+
+  &__tabs-container {
+    box-sizing: border-box;
+    padding: 30px 65px;
+    border: 1px solid $color-border-jurist-card;
+    background-color: #fff;
+  }
+
+  &__content {
+
+  }
+}

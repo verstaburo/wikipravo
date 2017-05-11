@@ -1,0 +1,10 @@
+include ../../blocks/tab-toggles/tab-toggles
+
+mixin jurist-tabs()
+  +b.SECTION.jurist-tabs&attributes(attributes)
+    +tab-toggles(getData("jurist-tabs"))._transparent.__controls
+    +e.tabs-container(data-tab-group-container="info")
+      +e.content(class=" active" data-tab-group="info" data-tab-id="info1")
+      +e.content(data-tab-group="info" data-tab-id="info2")
+      +e.content(data-tab-group="info" data-tab-id="info3")
+      +e.content(data-tab-group="info" data-tab-id="info4")

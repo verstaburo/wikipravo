@@ -13,6 +13,15 @@
     position: relative;
     padding: 16px 34px;
     z-index: 2;
+    color: $color-main;
+    border: 2px solid rgba($color-main, .2);
+    background-color: transparent;
+
+    &:hover, &:active {
+      background-color: transparent;
+      border-color: rgba($color-main, .8);
+      color: $color-main;
+    }
 
     &.active {
       background-color: $color-main;
