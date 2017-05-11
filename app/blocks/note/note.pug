@@ -5,7 +5,8 @@ mixin note(data)
   +b.FORM.note&attributes(attributes)
     -if(data)
       +e.P= data
-      +button([{"type" : "button", "name" : "Удалить", "type": "button"}])
+      +button([{"type" : "button", "name" : "Удалить", "type": "button"}])._text.__button
     -else
-      +e.TEXTAREA
-      +button(buttons)
+      +e.TEXTAREA.text
+      +e.buttons
+        +button(buttons)._text.__button

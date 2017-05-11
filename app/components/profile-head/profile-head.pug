@@ -1,12 +1,13 @@
 include ../../blocks/breadcrumbs/breadcrumbs
 include ../../blocks/profile-control/profile-control
+include ../../blocks/page-title/page-title
 
 mixin profile-head(data, authorization)
   +b.SECTION.profile-head&attributes(attributes)
-    +breadcrumbs(data.path)
+    +breadcrumbs(data.path).__breadcrumbs
     +e.header
-      +e.H2.title= data.name
+      +page-title(data.name).__title
       -if(authorization)
         +e.controls
           each item in data.controls
-            +profile-control(item)
+            +profile-control(item).__button

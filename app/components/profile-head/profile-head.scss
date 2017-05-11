@@ -1,3 +1,40 @@
 .profile-head {
+  box-sizing: border-box;
+  padding: 0 50px;
 
+  &__breadcrumbs {
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+
+  &__header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 29px;
+    background-color: #fff;
+  }
+
+  &__title {
+    flex-grow: 1;
+    margin-right: 50px;
+  }
+
+  &__controls {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__button {
+
+    &:not(:last-child) {
+      margin-right: 92px;
+    }
+  }
 }

@@ -1,0 +1,72 @@
+.profile-control {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  background-color: $color-bg-index;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba($color-searchform-selectbox-shadow, 0.25);
+  transition: all .25s ease-in-out;
+
+  &.disabled, &:hover.disabled {
+    background-color: $color-bg-index;
+
+    .profile-control__icon {
+      fill: $color-citylist-item;
+    }
+  }
+
+  &:active, &.active {
+    .profile-control__icon {
+      fill: $color-green-dark;
+    }
+
+    .profile-control__note {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    background-color: $color-green-dark;
+    box-shadow: 0 0 10px rgba($color-green-dark, 0.25);
+
+    .profile-control__icon {
+      fill: #fff;
+    }
+  }
+
+  &__icon {
+    fill: $color-main;
+  }
+
+  &__note {
+    display: none;
+  }
+
+  &_favorites {
+
+    .profile-control__icon {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &_blacklist {
+
+    .profile-control__icon {
+      width: 18px;
+      height: 21px;
+    }
+  }
+
+  &_note {
+
+    .profile-control__icon {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}

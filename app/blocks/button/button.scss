@@ -12,6 +12,17 @@
   cursor: pointer;
   white-space: nowrap;
 
+  &_text {
+    color: $color-main;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.54em;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+  }
+
   &_blue {
     color: white;
     background-color: $color-main;
