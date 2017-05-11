@@ -19,7 +19,9 @@
     }
   }
 
-  &:active, &.active {
+  &.active {
+    background-color: $color-bg-index;
+
     .profile-control__icon {
       fill: $color-green-dark;
     }
@@ -59,6 +61,26 @@
     .profile-control__icon {
       width: 18px;
       height: 21px;
+    }
+
+    &:hover {
+      background-color: $color-red;
+    }
+
+    &:hover.disabled {
+      background-color: $color-bg-index;
+
+      .profile-control__icon {
+        fill: $color-citylist-item;
+      }
+    }
+
+    &.active {
+      background-color: $color-bg-index;
+
+      .profile-control__icon {
+        fill: $color-red;
+      }
     }
   }
 
