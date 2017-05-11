@@ -1,0 +1,15 @@
+include ../../blocks/lawyercard/lawyercard
+include ../../blocks/icon/icons
+include ../../blocks/list/list
+
+mixin jurist-catalog-card(data)
+  +b.SECTION.jurist-card._catalog&attributes(attributes)
+    +lawyercard(data.lawyer).__info
+    +e.SECTION.describe
+      +e.H3.slogan Решу любую вашу задачу!
+      +list(data.services)._dash.__services
+      +e.UL.features
+        each item in data.features
+          +e.LI(class="features-item" + "_" + item.image)
+            +icon(item.image).icon
+            |#{item.text}

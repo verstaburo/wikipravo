@@ -8,6 +8,31 @@
   padding: 0 50px;
   z-index: 1;
 
+  &_catalog {
+    padding: 0;
+
+    .lawyercard {
+      &__about, &__order { padding: 19px 30px 17px 30px; }
+    }
+
+    .jurist-card {
+
+      &__describe { padding: 9px 30px 17px 30px; }
+
+      &__features { margin-top: 40px; }
+
+      &__info {
+        border-left: 0;
+        border-bottom: 0;
+      }
+
+      &__describe {
+        border-right: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+
   @include desktop {
     flex-wrap: wrap;
   }
@@ -74,10 +99,10 @@
       line-height: 1.43em;
       font-weight: 400;
       letter-spacing: .035em;
+      margin-bottom: 10px;
 
       &:not(:last-child) {
         margin-right: 46px;
-        margin-bottom: 10px;
       }
 
       &_jurist {
