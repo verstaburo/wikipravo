@@ -1,12 +1,13 @@
 include ../../blocks/entitled-text/entitled-text
 include ../../blocks/button/button
+include ../../blocks/button-arrow/button-arrow
 
 mixin index-info()
   +b.SECTION.index-info&attributes(attributes)
     +e.left-col
       +entitled-text(getData('index-info-about'))
       +e.buttons
-        +button(getData('index-info-btn-1'))._blue
-        +button(getData('index-info-btn-2'))._transparent
+        +button._blue Подбор юриста
+        +button-arrow("right")._transparent Подробнее о сервисе
     +e.right-col
       +entitled-text(getData('index-info-numerically')).__numerically

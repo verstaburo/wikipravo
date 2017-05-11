@@ -6,6 +6,8 @@
 
     .fa-angle-down { transform: translateY(-50%) rotate(180deg); }
 
+    &.selectbox_link .selectbox__right-icon.fa-angle-down { transform: rotate(180deg); }
+
     .selectbox {
       &__button { background-color: rgba(#abafc4, .5); }
 

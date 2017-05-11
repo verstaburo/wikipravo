@@ -96,6 +96,7 @@
       color: $color-main;
       border-bottom: 1px solid rgba($color-main, .3);
       cursor: pointer;
+      line-height: 1.2em;
 
       &:hover {
         border-color: transparent;
@@ -118,6 +119,7 @@
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: .04em;
+    font-weight: 400;
   }
 
   &__content {

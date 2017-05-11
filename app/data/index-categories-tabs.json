@@ -1,0 +1,4 @@
+[
+  {"type" : "link", "name" : "Для бизнеса", "href" : "#", "target" : "categories1", "main" : true},
+  {"type" : "link", "name" : "Частным лицам", "href" : "#", "target" : "categories2"}
+]
