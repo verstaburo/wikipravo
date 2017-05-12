@@ -12,12 +12,12 @@
     padding: 0;
 
     .lawyercard {
-      &__about, &__order { padding: 19px 30px 17px 30px; }
+      &__about, &__order { padding: 19px 30px 17px; }
     }
 
     .jurist-card {
 
-      &__describe { padding: 9px 30px 17px 30px; }
+      &__describe { padding: 9px 30px 17px; }
 
       &__features { margin-top: 40px; }
 
@@ -75,8 +75,8 @@
     margin-bottom: 10px;
   }
 
-  &__services {
-    margin-right: 48px;
+  &__features {
+    margin-top: 48px;
   }
 
   &__features {

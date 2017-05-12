@@ -2,7 +2,7 @@ mixin selectbox(data, label)
   -var placeholder = data.option[0].name
   -if(data.placeholder) {placeholder = data.placeholder}
   +b.selectbox&attributes(attributes)
-    +e.INPUT.input(type='hidden' value=placeholder)
+    +e.INPUT.input(type='hidden' value=placeholder placeholder=placeholder)
     +e.button
       -if(label)
         +e.SPAN.label= label

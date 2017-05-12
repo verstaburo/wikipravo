@@ -24,7 +24,7 @@
     &:hover, &:active {
       color: white;
       background-color: rgba($color-main, .75);
-      border-color: #63ABED;
+      border-color: #63abed;
     }
   }
 
@@ -51,7 +51,7 @@
       color: $color-main;
       border: 2px solid rgba($color-main, .2);
       background-color: transparent;
-      
+
       &:hover, &:active {
         background-color: transparent;
         border-color: rgba($color-main, .8);

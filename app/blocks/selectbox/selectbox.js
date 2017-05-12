@@ -28,9 +28,9 @@ export function VerstaSelectBox() {
       e.stopPropagation();
       $(this).parents("." + mainClass).toggleClass(activeClass);
       $(this).addClass(optionActiveClass).siblings("." + optionClass).removeClass(optionActiveClass);
-      selectValue = $(this).text();
+      selectValue = this.childNodes[0].data;
         $(this).parents("." + mainClass).find("." + buttonTextOutput).text(selectValue);
-      $(this).parents("." + mainClass).find("." + buttonClass).val(selectValue);
+      $(this).parents("." + mainClass).find("." + inputClass).val(selectValue);
     });
 
     // Клик вне селектбокса

@@ -9,7 +9,7 @@
   padding: 17px 14px;
   width: 375px;
   background-color: #fff;
-  box-shadow: 0 0 25px rgba($color-searchform-selectbox-shadow, 0.1);
+  box-shadow: 0 0 25px rgba($color-searchform-selectbox-shadow, .1);
   z-index: 10;
 
   p, &__text {
@@ -27,13 +27,8 @@
     border: none;
     border-radius: 2px;
     height: 72px;
-    border: 1px solid $color-border-input;
     resize: none;
     padding: 10px;
-
-    &:hover, &:focus {
-      border: 1px solid $color-font;
-    }
   }
 
   &__buttons {
@@ -48,7 +43,7 @@
     font-size: 13px;
     width: 49%;
 
-    &[type="reset"] {
+    &[type='reset'] {
       color: $color-offline;
     }
   }

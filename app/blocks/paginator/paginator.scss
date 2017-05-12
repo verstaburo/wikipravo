@@ -49,6 +49,7 @@
     width: 10px;
     height: 20px;
     fill: $color-font;
+    transition: all .25s ease-in-out;
   }
 
   &__prev:hover, &__next:hover {
@@ -66,7 +67,7 @@
     margin-left: 24px;
 
     svg {
-      transform: rotate(180deg)
+      transform: rotate(180deg);
     }
   }
 }

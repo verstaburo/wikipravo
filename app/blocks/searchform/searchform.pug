@@ -1,6 +1,7 @@
 include ../selectbox/selectbox
 include ../checkbox/checkbox
 include ../button/button
+include ../input/input
 
 mixin searchform(authorized)
   +b.FORM.searchform&attributes(attributes)
@@ -22,8 +23,8 @@ mixin searchform(authorized)
           +selectbox(getData('selectbox-documents'))._light
         +e.inputfield
           +e.SPAN.label Стаж работы
-          +e.INPUT.min(type="text" name="min" placeholder="От")
-          +e.INPUT.max(type="text" name="max" placeholder="До")
+          +input.min(type="text" name="min" placeholder="От")
+          +input.max(type="text" name="max" placeholder="До")
       +e.row
         +checkbox("Только адвокаты", "lawyers").__checkbox
         +checkbox("Опыт работы в Гос.Структурах", "publicwork").__checkbox

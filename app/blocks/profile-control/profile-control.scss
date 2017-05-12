@@ -8,7 +8,7 @@
   height: 38px;
   background-color: $color-bg-index;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba($color-searchform-selectbox-shadow, 0.25);
+  box-shadow: 0 0 10px rgba($color-searchform-selectbox-shadow, .25);
   transition: all .25s ease-in-out;
 
   &.disabled, &:hover.disabled {
@@ -29,7 +29,7 @@
 
   &:hover {
     background-color: $color-green-dark;
-    box-shadow: 0 0 10px rgba($color-green-dark, 0.25);
+    box-shadow: 0 0 10px rgba($color-green-dark, .25);
 
     .profile-control__icon {
       fill: #fff;

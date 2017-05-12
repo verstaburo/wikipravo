@@ -59,7 +59,7 @@
     box-sizing: border-box;
     flex: 1;
 
-    @include tablet{ flex: 0 auto; }
+    @include tablet { flex: 0 auto; }
 
     &:not(:last-child) {
       margin-right: 50px;
