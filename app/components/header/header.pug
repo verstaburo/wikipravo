@@ -1,6 +1,7 @@
 include ../../blocks/searchbar/searchbar
 include ../../blocks/contacts-block/contacts-block
 include ../../blocks/icon-link/icon-link
+include ../../blocks/avatar/avatar
 
 mixin header(authorization)
   +b.header&attributes(attributes)
@@ -18,5 +19,4 @@ mixin header(authorization)
         +icon-link("", "Сообщения", "envelope-o")._big
           +e.SPAN.counter (1)
       +e.col_profile
-        +e.avatar
-          +e.IMG(src="assets/images/profile-avatar.jpg")
+        +avatar("assets/images/profile-avatar.jpg")._small._blue-border._dark-bg.__avatar

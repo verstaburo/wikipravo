@@ -1,0 +1,5 @@
+[
+  {"name" : "Все отзывы (128)", "target" : "review1", "main" : true},
+  {"name" : "Положительные (127)", "target" : "review2"},
+  {"name" : "Отрицательные (2)", "target" : "review3"}
+]

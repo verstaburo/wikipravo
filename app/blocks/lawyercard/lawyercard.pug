@@ -4,6 +4,7 @@ include ../status-list/status-list
 include ../specialization/specialization
 include ../experience/experience
 include ../icon/icons
+include ../avatar/avatar
 
 mixin lawyercard(data)
   -var online = data.online;
@@ -18,8 +19,7 @@ mixin lawyercard(data)
         +e.SPAN.lawyername= data.name
         +e.SPAN(class= "online_" + online)
       +e.info
-        +e.img
-          +e.IMG(src= data.image)
+        +avatar(data.image)._big.__img
         +e.status
           +status-list(data.status).__status-list
           +vote-block(data.vote).__likes

@@ -1,0 +1,11 @@
+include ../avatar/avatar
+include ../like-button/like-button
+
+mixin short-review(data)
+  +b.ARTICLE.short-review&attributes(attributes)
+    +avatar(data.image).__avatar
+    +e.review
+      +e.H4.title
+        +e.SPAN.author= data.author
+        +like-button(data.like)(class="_" + data.like.image).__like
+      +e.P.content= data.review

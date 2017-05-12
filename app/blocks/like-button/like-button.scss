@@ -22,29 +22,23 @@
 
   &_like {
 
-    &.like-button {
+    .like-button__img {
+      fill: $color-green-like;
+    }
 
-      &__img {
-        fill: $color-green-like;
-      }
-
-      &__count {
-        color: $color-green-like;
-      }
+    .like-button__count {
+      color: $color-green-like;
     }
   }
 
   &_dislike {
 
-    &.like-button {
+    .like-button__img {
+      fill: $color-red-dark;
+    }
 
-      &__img {
-        fill: $color-red-dark;
-      }
-
-      &__count {
-        color: $color-red-dark;
-      }
+    .like-button__count {
+      color: $color-red-dark;
     }
   }
 }

@@ -56,4 +56,35 @@
       }
     }
   }
+
+  &_link {
+
+    .tab-toggles__button {
+      padding: 2px 0;
+      font-size: 13px;
+      color: $color-main;
+      border-width: 0 0 1px;
+      border-color: rgba($color-main, .4);
+      font-weight: 400;
+      margin-bottom: 0px;
+
+
+      &:hover, &:active {
+        color: rgba($color-main, .6);
+        border-color: rgba($color-main, .2);
+      }
+
+      &.active {
+        color: $color-main;
+        font-weight: 500;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0;
+        z-index: 1;
+      }
+    }
+  }
 }

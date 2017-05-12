@@ -1,10 +1,45 @@
 include ../../blocks/tab-toggles/tab-toggles
+include ../../blocks/short-review/short-review
 
 mixin jurist-tabs()
   +b.SECTION.jurist-tabs&attributes(attributes)
     +tab-toggles(getData("jurist-tabs"))._transparent.__controls
     +e.tabs-container(data-tab-group-container="info")
       +e.content(class=" active" data-tab-group="info" data-tab-id="info1")
+        +e.table.main-data
+          +e.col_info
+            +e.row_age
+              +e.SPAN.head Возраст:
+              +e.SPAN.value 54 года
+            +e.row_experience
+              +e.SPAN.head Стаж работы:
+              +e.SPAN.value 24 года
+          +e.col_publicwork
+            +e.row_profile
+              +e.SPAN.head Профиль на РосПравосудие:
+              +e.SPAN.value
+                +e.A(href="#") Личный кабинет на РосПравосудие
+            +e.row_work
+              +e.SPAN.head Дел на РосПравосудие:
+              +e.SPAN.value 27 дел
+          +e.col_profiledata
+            +e.row_regdate
+              +e.SPAN.head Зарегистрировался на сайте:
+              +e.SPAN.value 2 года и 2 месяца
+            +e.row_lastvisit
+              +e.SPAN.special Был последний раз 1 день 2 часа назад
       +e.content(data-tab-group="info" data-tab-id="info2")
       +e.content(data-tab-group="info" data-tab-id="info3")
       +e.content(data-tab-group="info" data-tab-id="info4")
+        +tab-toggles(getData("reviews-tab"))._link.__review-controls
+        +e.review-tabs-container(data-tab-group-container="review")
+          -for(var i = 1; i < 4; i ++) {
+            -var addClass = ""
+            -if(i == 1) {addClass = " active";} else {addClass = "";}
+              +e.review-content(class=addClass , data-tab-group="review", data-tab-id="review" + i)
+                +e.review-row
+                  -for (var k = 0; k < 6; k++) {
+                    +short-review(getData("jurist-short-review")).__review
+                  -}
+          -}
+
