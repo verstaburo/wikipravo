@@ -5,6 +5,9 @@
   &__controls {
     box-sizing: border-box;
     width: 100%;
+    background-color: #fff;
+    border: 1px solid #e7e7e9;
+    margin: -2px 0;
 
     .tab-toggles__button {
       box-sizing: border-box;

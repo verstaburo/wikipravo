@@ -33,4 +33,27 @@
       z-index: 1;
     }
   }
+
+  &_transparent {
+
+    .tab-toggles__button {
+      color: rgba($color-font, .8);
+      border-color: transparent;
+
+      &:hover, &:active {
+        color: rgba($color-main, .8);
+      }
+
+      &.active {
+        color: rgba($color-main, .8);
+        border-color: $color-main;
+        background-color: transparent;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0;
+        z-index: 1;
+      }
+    }
+  }
 }
