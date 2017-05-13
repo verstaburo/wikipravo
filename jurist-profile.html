@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="selectbox sidebar__selectbox">
-                        <input class="selectbox__input" type="hidden" value="Москва" />
+                        <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
                         <div class="selectbox__button">
                             <span class="selectbox__button-name">Москва</span>
                             <i class="selectbox__right-icon fa fa-angle-down"></i>
@@ -106,7 +106,9 @@
                     <div class="header__col header__col_order">
                         <a class="icon-link icon-link_big">
                             <i class="icon-link__icon-fa fa fa-comment-o"></i>
-                            <span class="icon-link__text">Заказы</span>
+                            <span class="icon-link__text">Заказы
+                                <span class="icon-link__counter"></span>
+                            </span>
                         </a>
                     </div>
                     <div class="header__col header__col_message">
@@ -118,7 +120,7 @@
                         </a>
                     </div>
                     <div class="header__col header__col_profile">
-                        <div class="header__avatar">
+                        <div class="avatar avatar_small avatar_blue-border avatar_dark-bg header__avatar">
                             <img src="assets/images/profile-avatar.jpg" alt="" role="presentation" />
                         </div>
                     </div>
@@ -176,7 +178,7 @@
                                     <span class="lawyercard__online lawyercard__online_true"></span>
                                 </h3>
                                 <div class="lawyercard__info">
-                                    <div class="lawyercard__img">
+                                    <div class="avatar avatar_big lawyercard__img">
                                         <img src="assets/images/lawyer-avatar.jpg" alt="" role="presentation" />
                                     </div>
                                     <div class="lawyercard__status">
@@ -247,6 +249,287 @@
                                     <svg class="jurist-card__icon"><use xlink:href="assets/images/icon.svg#icon_shield"></use></svg>Есть опыт работы в ГосСтруктурах</li>
                             </ul>
                         </section>
+                    </section>
+                    <section class="jurist-tabs">
+                        <div class="tab-toggles tab-toggles_transparent jurist-tabs__controls">
+                            <A class="button active tab-toggles__button" data-tab-target="info1">
+                                <span class="button__name">Основное</span>
+                            </A>
+                            <A class="button tab-toggles__button" data-tab-target="info2">
+                                <span class="button__name">Профессиональные навыки</span>
+                            </A>
+                            <A class="button tab-toggles__button" data-tab-target="info3">
+                                <span class="button__name">Все cпециализации</span>
+                            </A>
+                            <A class="button tab-toggles__button" data-tab-target="info4">
+                                <span class="button__name">Отзывы</span>
+                            </A>
+                        </div>
+                        <div class="jurist-tabs__tabs-container" data-tab-group-container="info">
+                            <div class="jurist-tabs__content active" data-tab-group="info" data-tab-id="info1">
+                                <div class="jurist-tabs__table">
+                                    <div class="jurist-tabs__col jurist-tabs__col_info">
+                                        <div class="jurist-tabs__row jurist-tabs__row_age">
+                                            <span class="jurist-tabs__head">Возраст:</span>
+                                            <span class="jurist-tabs__value">54 года</span>
+                                        </div>
+                                        <div class="jurist-tabs__row jurist-tabs__row_experience">
+                                            <span class="jurist-tabs__head">Стаж работы:</span>
+                                            <span class="jurist-tabs__value">24 года</span>
+                                        </div>
+                                    </div>
+                                    <div class="jurist-tabs__col jurist-tabs__col_publicwork">
+                                        <div class="jurist-tabs__row jurist-tabs__row_profile">
+                                            <span class="jurist-tabs__head">Профиль на РосПравосудие:</span>
+                                            <span class="jurist-tabs__value">
+                                                <a href="#">Личный кабинет на РосПравосудие</a>
+                                            </span>
+                                        </div>
+                                        <div class="jurist-tabs__row jurist-tabs__row_work">
+                                            <span class="jurist-tabs__head">Дел на РосПравосудие:</span>
+                                            <span class="jurist-tabs__value">27 дел</span>
+                                        </div>
+                                    </div>
+                                    <div class="jurist-tabs__col jurist-tabs__col_profiledata">
+                                        <div class="jurist-tabs__row jurist-tabs__row_regdate">
+                                            <span class="jurist-tabs__head">Зарегистрировался на сайте:</span>
+                                            <span class="jurist-tabs__value">2 года и 2 месяца</span>
+                                        </div>
+                                        <div class="jurist-tabs__row jurist-tabs__row_lastvisit">
+                                            <span class="jurist-tabs__special">Был последний раз 1 день 2 часа назад</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jurist-tabs__content" data-tab-group="info" data-tab-id="info2">
+                                <div class="jurist-tabs__skill-list">
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Являетесь ли Вы адвокатом</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>Да, Адвокатское бюро &quot;Падва и партнеры&quot;</p>
+                                                <p>№ удостоверения 1234567890</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_check">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-check"></i>
+                                                </div>
+                                                <span>Проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Есть ли у Вас кабинет в здании суда</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>Да, Мещерский районный суд</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_check">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-check"></i>
+                                                </div>
+                                                <span>Проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Образование</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>МГЮА Факультет: Правоведение, 2006-2010</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_check">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-check"></i>
+                                                </div>
+                                                <span>Проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>СВВАИУ Факультет: Радиоэлектроника, 1990- 1995</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_cross">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-times"></i>
+                                                </div>
+                                                <span>Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Опыт работы</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>2000-2002, Адвокатское бюро &quot;Иванов и партнеры&quot;</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_cross">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-times"></i>
+                                                </div>
+                                                <span>Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Опыт работы в Госструктурах</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>1992-2000, Госдума РФ</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_cross">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-times"></i>
+                                                </div>
+                                                <span>Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill jurist-tabs__skill-item">
+                                        <h3 class="skill__title">Ученая степень</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__text">
+                                                <p>Доктор наук</p>
+                                                <p>Тема диссертации: &quot;Развитие международного сотрудничества, проблемы создания единых пространств в области гуманитарного сотрудничества, экономического и экологического взаимодействия и тенденции в области
+                                                    международного частного права.&quot;</p>
+                                            </div>
+                                            <div class="skill__checkdata skill__checkdata_cross">
+                                                <div class="skill__icon-wrapper">
+                                                    <i class="skill__icon fa fa-times"></i>
+                                                </div>
+                                                <span>Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="jurist-tabs__content" data-tab-group="info" data-tab-id="info3">
+                                <ul class="specialization specialization_marked jurist-tabs__specialization-list">
+                                    <li class="specialization__item specialization__item_main">Конституционное право</li>
+                                    <li class="specialization__item">Гражданское право
+                                        <ul class="specialization__sublist">
+                                            <li class="specialization__subitem">Договорное право</li>
+                                        </ul>
+                                    </li>
+                                    <li class="specialization__item specialization__item_main">Cемейное право
+                                        <ul class="specialization__sublist">
+                                            <li class="specialization__subitem">Помогите мне пожалуйста в регистрации компании</li>
+                                        </ul>
+                                    </li>
+                                    <li class="specialization__item specialization__item_main">Недвижимость
+                                        <ul class="specialization__sublist">
+                                            <li class="specialization__subitem specialization__subitem_main">Жилищное право</li>
+                                        </ul>
+                                    </li>
+                                    <li class="specialization__item">Тудовое право</li>
+                                </ul>
+                            </div>
+                            <div class="jurist-tabs__content" data-tab-group="info" data-tab-id="info4">
+                                <div class="jurist-tabs__filters">
+                                    <A class="button button_text button_border button_center button_small jurist-tabs__filter-btn active">
+                                        <span class="button__name">Все отзывы (128)</span>
+                                    </A>
+                                    <A class="button button_text button_border button_center button_small jurist-tabs__filter-btn">
+                                        <span class="button__name">Положительные (127)</span>
+                                    </A>
+                                    <A class="button button_text button_border button_center button_small jurist-tabs__filter-btn">
+                                        <span class="button__name">Отрицательные (2)</span>
+                                    </A>
+                                </div>
+                                <div class="jurist-tabs__review-row">
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                    <article class="short-review jurist-tabs__review">
+                                        <div class="avatar short-review__avatar">
+                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                        </div>
+                                        <div class="short-review__review">
+                                            <h4 class="short-review__title">
+                                                <span class="short-review__author">Иван Ковалев</span>
+                                                <span class="like-button like-button_like short-review__like">
+                                                    <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                    <span class="like-button__count">2</span>
+                                                </span>
+                                            </h4>
+                                            <p class="short-review__content">Понятно. Спасибо за консультацию. В общем надо было всё отрицать, себе же полезнее было бы наверно. А честно призналась.... наверно зря. Ну теперь уже ничего не поделаешь.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>
