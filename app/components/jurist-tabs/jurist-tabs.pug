@@ -6,7 +6,7 @@ mixin jurist-tabs()
     +tab-toggles(getData("jurist-tabs"))._transparent.__controls
     +e.tabs-container(data-tab-group-container="info")
       +e.content(class=" active" data-tab-group="info" data-tab-id="info1")
-        +e.table.main-data
+        +e.table
           +e.col_info
             +e.row_age
               +e.SPAN.head Возраст:
@@ -31,15 +31,12 @@ mixin jurist-tabs()
       +e.content(data-tab-group="info" data-tab-id="info2")
       +e.content(data-tab-group="info" data-tab-id="info3")
       +e.content(data-tab-group="info" data-tab-id="info4")
-        +tab-toggles(getData("reviews-tab"))._link.__review-controls
-        +e.review-tabs-container(data-tab-group-container="review")
-          -for(var i = 1; i < 4; i ++) {
-            -var addClass = ""
-            -if(i == 1) {addClass = " active";} else {addClass = "";}
-              +e.review-content(class=addClass , data-tab-group="review", data-tab-id="review" + i)
-                +e.review-row
-                  -for (var k = 0; k < 6; k++) {
-                    +short-review(getData("jurist-short-review")).__review
-                  -}
+        +e.filters
+          +button("a")._text._border._center._small.__filter-btn.active Все отзывы (128)
+          +button("a")._text._border._center._small.__filter-btn Положительные (127)
+          +button("a")._text._border._center._small.__filter-btn Отрицательные (2)
+        +e.review-row
+          -for (var k = 0; k < 6; k++) {
+            +short-review(getData("jurist-short-review")).__review
           -}
 

@@ -12,6 +12,18 @@
   cursor: pointer;
   white-space: nowrap;
 
+  &_small {
+    font-size: 13px;
+  }
+
+  &_centered {
+    text-align: center;
+  }
+
+  &_left {
+    text-align: left;
+  }
+
   &_text {
     color: $color-main;
     font-weight: 400;
@@ -20,7 +32,15 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    text-align: left;
+  }
+
+  &_border {
+    border-bottom: 1px solid rgba($color-main, .4);
+
+    &:hover {
+      color: rgba($color-main, .6);
+      border-color: rgba($color-main, .2);
+    }
   }
 
   &_blue {

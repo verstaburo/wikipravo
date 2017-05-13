@@ -9,9 +9,18 @@
     border: 1px solid #e7e7e9;
     margin: -2px 0;
 
+    @include desktop {
+      flex-wrap: wrap;
+    }
+
     .tab-toggles__button {
       box-sizing: border-box;
       width: 25%;
+      letter-spacing: .035em;
+
+      @include desktop {
+        width: 50%;
+      }
     }
   }
 
@@ -31,7 +40,7 @@
     }
   }
 
-  &__review-controls {
+  &__filters {
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -40,24 +49,22 @@
     align-items: center;
     padding: 30px 0;
 
-    .tab-toggles__button {
+    .jurist-tabs__filter-btn {
+
+      &.active {
+        color: $color-main;
+        font-weight: 500;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
       &:not(:last-of-type) {
         margin-right: 95px;
+
+        @include tablet {
+          margin-right: 40px;
+        }
       }
-    }
-  }
-
-  &__review-tabs-container {
-    height: auto;
-  }
-
-  &__review-content {
-    display: none;
-    width: 100%;
-    height: 100%;
-
-    &.active {
-      display: block;
     }
   }
 
@@ -70,7 +77,6 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
   }
 
   &__review {
@@ -82,6 +88,10 @@
     min-width: 50%;
     width: 50%;
     margin: 0;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__table {
@@ -91,6 +101,8 @@
     align-items: stretch;
     flex-wrap: wrap;
     align-content: stretch;
+    box-sizing: border-box;
+    padding: 0 50px;
     width: 100%;
   }
 
@@ -100,33 +112,33 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    padding: 28px 50px;
+    padding: 28px 0;
 
     &:not(:last-of-type) {
       border-right: 1px solid rgba($color-font, .1);
+      padding-right: 50px;
+      margin-right: 50px;
     }
 
     &_info {
-      min-width: 22%;
 
       .jurist-tabs__head {
-        width: 50%;
+        min-width: 110px;
       }
     }
 
     &_publicwork {
-      min-width: 44%;
 
       .jurist-tabs__head {
-        width: 45%;
+        min-width: 225px;
       }
     }
 
     &_profiledata {
-      min-width: 34%;
 
       .jurist-tabs__head {
-        width: auto;
+        min-width: 228px;
+        margin-right: 14px;
       }
     }
   }
@@ -143,23 +155,22 @@
 
   &__head {
     box-sizing: border-box;
-    padding-right: 15px;
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: .035em;
+    letter-spacing: .045em;
     line-height: 1.5em;
     color: rgba($color-font, .35);
     text-align: left;
     white-space: nowrap;
+    margin-right: 50px
   }
 
   &__value {
     box-sizing: border-box;
-    padding-left: 15px;
     font-size: 14px;
     color: $color-font;
     font-weight: 400;
-    letter-spacing: .035em;
+    letter-spacing: .045em;
     line-height: 1.5em;
     text-align: left;
     text-overflow: ellipsis;
@@ -183,7 +194,7 @@
     font-size: 14px;
     color: $color-green-dark;
     font-weight: 400;
-    letter-spacing: .035em;
+    letter-spacing: .045em;
     line-height: 1.5em;
     width: 100%;
   }
