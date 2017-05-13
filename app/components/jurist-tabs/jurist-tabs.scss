@@ -114,10 +114,18 @@
     align-items: stretch;
     padding: 28px 0;
 
+    @include desktop {
+      width: 100%;
+    }
+
     &:not(:last-of-type) {
       border-right: 1px solid rgba($color-font, .1);
       padding-right: 50px;
       margin-right: 50px;
+
+      @include desktop {
+        border-right-width: 0;
+      }
     }
 
     &_info {
@@ -209,7 +217,7 @@
 
   &__skill-item {
     box-sizing: border-box;
-    padding: 60px 40px;
+    padding: 38px 40px 22px;
     width: 100%;
 
     &:not(:last-of-type) {
