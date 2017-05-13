@@ -224,4 +224,36 @@
       border-bottom: 1px solid rgba($color-font, .1);
     }
   }
+
+  &__specialization-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 38px 65px 8px;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
+
+    @include tablet {
+      padding: 38px 50px !important;
+    }
+
+    .specialization__item {
+      box-sizing: border-box;
+      width: 20%;
+      padding-right: 50px;
+      margin-bottom: 20px;
+
+      @include desktop {
+        width: 33%;
+      }
+
+      @include tablet {
+        width: 50% !important;
+      }
+    }
+  }
 }

@@ -1,0 +1,11 @@
+mixin specialization-mark(data)
+  -var mmark = ""
+  +b.UL.specialization&attributes(attributes)
+    each item in data
+      -if(item.mark) {mmark = "_" + item.mark} else {mmark = ""}
+        +e.LI(class="item" + mmark)= item.name
+          -if(item.expanded)
+            +e.UL.sublist
+              each subitem in item.expanded
+                -if(subitem.mark) {mmark = "_" + subitem.mark} else {mmark = ""}
+                  +e.LI(class="subitem" + mmark)= subitem.name

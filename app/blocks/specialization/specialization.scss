@@ -18,4 +18,54 @@
     letter-spacing: .04em;
     color: $color-offline;
   }
+
+  &_marked {
+    .specialization__item {
+      position: relative;
+      padding: 0 12px;
+      line-height: 1.5em;
+      color: $color-main;
+
+      &_main {
+
+        &::before {
+          position: absolute;
+          content: '';
+          top: 10.5px;
+          left: 0;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          transform: translate(0, -50%);
+          background-color: $color-main;
+        }
+      }
+    }
+
+    .specialization__sublist {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+
+    .specialization__subitem {
+      position: relative;
+      font-weight: 300;
+      color: #b6b6b6;
+
+      &_main {
+
+        &::before {
+          position: absolute;
+          content: '';
+          top: 10px;
+          left: -12px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          transform: translate(0, -50%);
+          background-color: rgba(#b6b6b6, .65);
+        }
+      }
+    }
+  }
 }

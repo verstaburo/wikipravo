@@ -1,6 +1,7 @@
 include ../../blocks/tab-toggles/tab-toggles
 include ../../blocks/short-review/short-review
 include ../../blocks/skill/skill
+include ../../blocks/specialization/specialization-mark
 
 mixin jurist-tabs()
   -var skills = getData("jurist-profile-skills")
@@ -35,6 +36,7 @@ mixin jurist-tabs()
           each skill in skills
             +skill(skill).__skill-item
       +e.content(data-tab-group="info" data-tab-id="info3")
+        +specialization-mark(getData("jurist-profile-specialization"))._marked.__specialization-list
       +e.content(data-tab-group="info" data-tab-id="info4")
         +e.filters
           +button("a")._text._border._center._small.__filter-btn.active Все отзывы (128)
