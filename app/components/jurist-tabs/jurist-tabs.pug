@@ -1,7 +1,9 @@
 include ../../blocks/tab-toggles/tab-toggles
 include ../../blocks/short-review/short-review
+include ../../blocks/skill/skill
 
 mixin jurist-tabs()
+  -var skills = getData("jurist-profile-skills")
   +b.SECTION.jurist-tabs&attributes(attributes)
     +tab-toggles(getData("jurist-tabs"))._transparent.__controls
     +e.tabs-container(data-tab-group-container="info")
@@ -29,6 +31,9 @@ mixin jurist-tabs()
             +e.row_lastvisit
               +e.SPAN.special Был последний раз 1 день 2 часа назад
       +e.content(data-tab-group="info" data-tab-id="info2")
+        +e.skill-list
+          each skill in skills
+            +skill(skill).__skill-item
       +e.content(data-tab-group="info" data-tab-id="info3")
       +e.content(data-tab-group="info" data-tab-id="info4")
         +e.filters
@@ -39,4 +44,3 @@ mixin jurist-tabs()
           -for (var k = 0; k < 6; k++) {
             +short-review(getData("jurist-short-review")).__review
           -}
-
