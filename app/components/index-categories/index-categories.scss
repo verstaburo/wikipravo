@@ -70,6 +70,7 @@
     padding: 10px 20px 0;
     box-shadow: 0 20px 40px -15px rgba($color-font, .06);
     z-index: 2;
+    overflow: hidden;
 
     @include desktop {
       flex-wrap: wrap;
