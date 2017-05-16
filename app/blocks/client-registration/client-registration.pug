@@ -4,6 +4,6 @@ include ../button/button
 mixin client-registration(data)
   +b.client-registration&attributes(attributes)
     +e.img
-      +e.IMG(src= data.image)
+      +icon(data.image)
     +e.H2.title= data.title
     +button-arrow("right")._white.__button Регистрация

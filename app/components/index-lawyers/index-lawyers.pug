@@ -9,7 +9,7 @@ mixin index-lawyers()
   +b.SECTION.index-lawyers&attributes(attributes)
     +e.header
       +entitled-text(data.title).__text
-      +selectbox(getData('lawyers-city-list'), 'Город:')._link.__select
+      +selectbox(getData('lawyers-city-list'), 'Город:')._link.__select.selectbox_scrollable
     +e.list
       each item in data.lawyers
         +lawyercard(item).__item

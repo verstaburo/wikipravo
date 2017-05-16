@@ -31,6 +31,13 @@
     height: 90px;
     border: 2px solid rgba(#d3d2d0, .3);
     border-radius: 50%;
+
+    svg, img {
+      max-width: 80%;
+      max-height: 75%;
+      fill: transparent;
+      stroke: white;
+    }
   }
 
   &__button {

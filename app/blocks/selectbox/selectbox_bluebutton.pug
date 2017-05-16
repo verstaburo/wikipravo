@@ -1,13 +1,12 @@
-mixin selectbox(data, label)
+include ../button-arrow/button-arrow
+
+mixin selectbox_bluebutton(data, label)
   -var placeholder = data.option[0].name
   -if(data.placeholder) {placeholder = data.placeholder}
-  +b.selectbox&attributes(attributes)
+  +b.selectbox&attributes(attributes)._link
     +e.INPUT.input(type='hidden' value=placeholder placeholder=placeholder)
-    +e.button
-      -if(label)
-        +e.SPAN.label= label
-      +e.SPAN.button-name= placeholder
-      +e.I.right-icon(class='fa fa-angle-down')
+    +button-arrow('down').__button.button_blue
+      block
     +e.UL.list
       each option in data.option
         +e.LI.option= option.name

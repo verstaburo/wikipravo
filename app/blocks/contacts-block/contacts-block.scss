@@ -24,7 +24,10 @@
     left: 12px;
     top: 0;
     transform: translateX(-50%);
-    background-color: rgba(white, .1);  // Убрать, когда появится иконка
+    width: 20px;
+    height: 24px;
+    fill: transparent;
+    stroke: #8b8b93;
   }
 
   &__label {

@@ -2,6 +2,5 @@ include ../icon/icons
 
 mixin like-button(data)
  +b.SPAN.like-button&attributes(attributes)
-   +e.IMG.img(src="http://placehold.it/18x16")
-   //-+icons(data.image).img
+   +icon(data.image).img
    +e.SPAN.count= data.count

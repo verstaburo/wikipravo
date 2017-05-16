@@ -5,6 +5,7 @@ import {VerstaTabs} from '../blocks/verstatabs/verstatabs';
 import {advancedSearchOpened} from '../blocks/searchform/searchform';
 import ReviewsSlider from '../blocks/slider/slider';
 import {NoteButtonSwitch} from '../blocks/profile-control/profile-control';
+import {ScrollBar} from '../blocks/scrollbar/scrollbar';
 
 $(() => {
 
@@ -15,4 +16,6 @@ $(() => {
   advancedSearchOpened();
   ReviewsSlider();
   NoteButtonSwitch();
+  ScrollBar();
+
 });

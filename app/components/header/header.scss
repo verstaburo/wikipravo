@@ -5,6 +5,13 @@
   position: relative;
   z-index: 10;
 
+  &__login-button .icon-link__icon {
+    fill: transparent;
+    stroke: #4993ea;
+    height: 36px;
+    width: 36px;
+  }
+
   &__searchbar { flex: 1; }
 
   &__col {

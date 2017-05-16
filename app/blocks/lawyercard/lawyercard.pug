@@ -5,6 +5,7 @@ include ../specialization/specialization
 include ../experience/experience
 include ../icon/icons
 include ../avatar/avatar
+include ../selectbox/selectbox_bluebutton
 
 mixin lawyercard(data)
   -var online = data.online;
@@ -16,7 +17,8 @@ mixin lawyercard(data)
       +e.H3.title_about
         +e(class= "checkstatus_" + checked)
           +icon("check").__icon
-        +e.SPAN.lawyername= data.name
+        +e.SPAN.lawyername
+          a(href="#")= data.name
         +e.SPAN(class= "online_" + online)
       +e.info
         +avatar(data.image)._big.__img
@@ -33,5 +35,5 @@ mixin lawyercard(data)
           +e.SPAN Специализации
           +e.A(href= data.specialization.href) Показать все
         +specialization(data.specialization.list).__list
-        +button-arrow("down")._blue.__orderbutton Заказать
+        +selectbox_bluebutton(getData('lawyer-dropdown-button')).__orderbutton Заказать
         +e.A.maillink(href= "mailto:" + data.email) Написать сообщение
