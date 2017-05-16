@@ -32,37 +32,37 @@
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Юристы</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-1"></use></svg>
                             </a>
                         </li>
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Заявки на услуги</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-2"></use></svg>
                             </a>
                         </li>
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Заказать документ</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-3"></use></svg>
                             </a>
                         </li>
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Заказать консультацию</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-4"></use></svg>
                             </a>
                         </li>
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Заказать другую услугу</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-5"></use></svg>
                             </a>
                         </li>
                         <li class="nav-menu__item">
                             <a class="nav-menu__link" href="#">
                                 <span>Форум</span>
-                                <img class="nav-menu__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-6"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -70,23 +70,27 @@
                 <div class="sidebar__row sidebar__row_contacts-block">
                     <div class="contacts-block contacts-block_icons contacts-block_dark">
                         <div class="contacts-block__item">
-                            <img class="contacts-block__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-7"></use></svg>
                             <div class="contacts-block__label">support@pravoved.ru</div>
                             <div class="contacts-block__text">E-mail поддержка</div>
                         </div>
                         <div class="contacts-block__item">
-                            <img class="contacts-block__icon" src="http://placehold.it/24x24" alt="" role="presentation" />
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-8"></use></svg>
                             <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
                             <div class="contacts-block__text">Бесплатные звонки по РФ</div>
                         </div>
                     </div>
-                    <div class="selectbox sidebar__selectbox">
+                    <div class="selectbox sidebar__selectbox selectbox selectbox_scrollable">
                         <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
                         <div class="selectbox__button">
                             <span class="selectbox__button-name">Москва</span>
                             <i class="selectbox__right-icon fa fa-angle-down"></i>
                         </div>
                         <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
                             <li class="selectbox__option">Москва</li>
                             <li class="selectbox__option">Санкт-Петербург</li>
                             <li class="selectbox__option">Новосибирск</li>
@@ -329,7 +333,9 @@
                                             <span class="lawyercard__checkstatus lawyercard__checkstatus_true">
                                                 <svg class="lawyercard__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
                                             </span>
-                                            <span class="lawyercard__lawyername">Константин Константин</span>
+                                            <span class="lawyercard__lawyername">
+                                                <a href="#">Константин Константин</a>
+                                            </span>
                                             <span class="lawyercard__online lawyercard__online_true"></span>
                                         </h3>
                                         <div class="lawyercard__info">
@@ -338,22 +344,22 @@
                                             </div>
                                             <div class="lawyercard__status">
                                                 <ul class="status-list lawyercard__status-list">
-                                                    <li class="status-list__item status-list__item_location">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_location"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_location">
+                                                        <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
                                                         <span class="status-list__name">Москва</span>
                                                     </li>
-                                                    <li class="status-list__item status-list__item_free status-list__item status-list__item_free_false">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_disk"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_free status-list__item status-list__item_free_false">
+                                                        <span class="status-list__img"></span>
                                                         <span class="status-list__name">Занят</span>
                                                     </li>
                                                 </ul>
                                                 <div class="vote-block lawyercard__likes">
                                                     <span class="like-button like-button_like">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
                                                         <span class="like-button__count">124</span>
                                                     </span>
                                                     <span class="like-button like-button_dislike">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
                                                         <span class="like-button__count">2</span>
                                                     </span>
                                                 </div>
@@ -380,10 +386,30 @@
                                                 </li>
                                                 <li class="specialization__item">Защита прав потребителей</li>
                                             </ul>
-                                            <a class="button button_blue lawyercard__orderbutton">
-                                                <span class="button__name">Заказать</span>
-                                                <i class="button__arrow fa fa-angle-down"></i>
-                                            </a>
+                                            <div class="selectbox selectbox_link selectbox_visible lawyercard__orderbutton">
+                                                <input class="selectbox__input" type="hidden" value="Консультацию" placeholder="Консультацию" />
+                                                <a class="button selectbox__button button button_blue">
+                                                    <span class="button__name">Заказать</span>
+                                                    <i class="button__arrow fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Консультацию
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Документ
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - документ</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Услугу
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - работа</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <a class="lawyercard__maillink" href="mailto:smth@domen">Написать сообщение</a>
                                         </div>
                                     </section>
@@ -404,6 +430,28 @@
                                             <svg class="jurist-card__icon"><use xlink:href="assets/images/icon.svg#icon_shield"></use></svg>Есть опыт работы в ГосСтруктурах</li>
                                     </ul>
                                 </section>
+                                <div class="action-controls action-controls_vertical jurist-card__controls">
+                                    <a class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_note action-controls__button action-controls__button_note" href="#" title="Заметка">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                    </a>
+                                    <form class="note action-controls__note">
+                                        <textarea class="note__text"></textarea>
+                                        <div class="note__buttons">
+                                            <BUTTON class="button button_text note__button" type="submit">
+                                                <span class="button__name">Сохранить</span>
+                                            </BUTTON>
+                                            <BUTTON class="button button_text note__button" type="reset">
+                                                <span class="button__name">Отмена</span>
+                                            </BUTTON>
+                                        </div>
+                                    </form>
+                                </div>
                             </section>
                             <section class="jurist-card jurist-card_catalog">
                                 <section class="lawyercard jurist-card__info">
@@ -412,7 +460,9 @@
                                             <span class="lawyercard__checkstatus lawyercard__checkstatus_true">
                                                 <svg class="lawyercard__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
                                             </span>
-                                            <span class="lawyercard__lawyername">Константин Константин</span>
+                                            <span class="lawyercard__lawyername">
+                                                <a href="#">Константин Константин</a>
+                                            </span>
                                             <span class="lawyercard__online lawyercard__online_true"></span>
                                         </h3>
                                         <div class="lawyercard__info">
@@ -421,22 +471,22 @@
                                             </div>
                                             <div class="lawyercard__status">
                                                 <ul class="status-list lawyercard__status-list">
-                                                    <li class="status-list__item status-list__item_location">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_location"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_location">
+                                                        <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
                                                         <span class="status-list__name">Москва</span>
                                                     </li>
-                                                    <li class="status-list__item status-list__item_free status-list__item status-list__item_free_false">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_disk"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_free status-list__item status-list__item_free_false">
+                                                        <span class="status-list__img"></span>
                                                         <span class="status-list__name">Занят</span>
                                                     </li>
                                                 </ul>
                                                 <div class="vote-block lawyercard__likes">
                                                     <span class="like-button like-button_like">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
                                                         <span class="like-button__count">124</span>
                                                     </span>
                                                     <span class="like-button like-button_dislike">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
                                                         <span class="like-button__count">2</span>
                                                     </span>
                                                 </div>
@@ -463,10 +513,30 @@
                                                 </li>
                                                 <li class="specialization__item">Защита прав потребителей</li>
                                             </ul>
-                                            <a class="button button_blue lawyercard__orderbutton">
-                                                <span class="button__name">Заказать</span>
-                                                <i class="button__arrow fa fa-angle-down"></i>
-                                            </a>
+                                            <div class="selectbox selectbox_link selectbox_visible lawyercard__orderbutton">
+                                                <input class="selectbox__input" type="hidden" value="Консультацию" placeholder="Консультацию" />
+                                                <a class="button selectbox__button button button_blue">
+                                                    <span class="button__name">Заказать</span>
+                                                    <i class="button__arrow fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Консультацию
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Документ
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - документ</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Услугу
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - работа</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <a class="lawyercard__maillink" href="mailto:smth@domen">Написать сообщение</a>
                                         </div>
                                     </section>
@@ -487,6 +557,28 @@
                                             <svg class="jurist-card__icon"><use xlink:href="assets/images/icon.svg#icon_shield"></use></svg>Есть опыт работы в ГосСтруктурах</li>
                                     </ul>
                                 </section>
+                                <div class="action-controls action-controls_vertical jurist-card__controls">
+                                    <a class="profile-control profile-control_favorites active action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_blacklist disabled action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_note action-controls__button action-controls__button_note" href="#" title="Заметка">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                    </a>
+                                    <form class="note action-controls__note">
+                                        <textarea class="note__text"></textarea>
+                                        <div class="note__buttons">
+                                            <BUTTON class="button button_text note__button" type="submit">
+                                                <span class="button__name">Сохранить</span>
+                                            </BUTTON>
+                                            <BUTTON class="button button_text note__button" type="reset">
+                                                <span class="button__name">Отмена</span>
+                                            </BUTTON>
+                                        </div>
+                                    </form>
+                                </div>
                             </section>
                             <section class="jurist-card jurist-card_catalog">
                                 <section class="lawyercard jurist-card__info">
@@ -495,7 +587,9 @@
                                             <span class="lawyercard__checkstatus lawyercard__checkstatus_true">
                                                 <svg class="lawyercard__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
                                             </span>
-                                            <span class="lawyercard__lawyername">Константин Константин</span>
+                                            <span class="lawyercard__lawyername">
+                                                <a href="#">Константин Константин</a>
+                                            </span>
                                             <span class="lawyercard__online lawyercard__online_true"></span>
                                         </h3>
                                         <div class="lawyercard__info">
@@ -504,22 +598,22 @@
                                             </div>
                                             <div class="lawyercard__status">
                                                 <ul class="status-list lawyercard__status-list">
-                                                    <li class="status-list__item status-list__item_location">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_location"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_location">
+                                                        <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
                                                         <span class="status-list__name">Москва</span>
                                                     </li>
-                                                    <li class="status-list__item status-list__item_free status-list__item status-list__item_free_false">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_disk"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_free status-list__item status-list__item_free_false">
+                                                        <span class="status-list__img"></span>
                                                         <span class="status-list__name">Занят</span>
                                                     </li>
                                                 </ul>
                                                 <div class="vote-block lawyercard__likes">
                                                     <span class="like-button like-button_like">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
                                                         <span class="like-button__count">124</span>
                                                     </span>
                                                     <span class="like-button like-button_dislike">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
                                                         <span class="like-button__count">2</span>
                                                     </span>
                                                 </div>
@@ -546,10 +640,30 @@
                                                 </li>
                                                 <li class="specialization__item">Защита прав потребителей</li>
                                             </ul>
-                                            <a class="button button_blue lawyercard__orderbutton">
-                                                <span class="button__name">Заказать</span>
-                                                <i class="button__arrow fa fa-angle-down"></i>
-                                            </a>
+                                            <div class="selectbox selectbox_link selectbox_visible lawyercard__orderbutton">
+                                                <input class="selectbox__input" type="hidden" value="Консультацию" placeholder="Консультацию" />
+                                                <a class="button selectbox__button button button_blue">
+                                                    <span class="button__name">Заказать</span>
+                                                    <i class="button__arrow fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Консультацию
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Документ
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - документ</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Услугу
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - работа</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <a class="lawyercard__maillink" href="mailto:smth@domen">Написать сообщение</a>
                                         </div>
                                     </section>
@@ -570,6 +684,24 @@
                                             <svg class="jurist-card__icon"><use xlink:href="assets/images/icon.svg#icon_shield"></use></svg>Есть опыт работы в ГосСтруктурах</li>
                                     </ul>
                                 </section>
+                                <div class="action-controls action-controls_vertical jurist-card__controls">
+                                    <a class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_note active action-controls__button action-controls__button_note" href="#" title="Заметка">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                    </a>
+                                    <form class="note action-controls__note">
+                                        <p>Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.</p>
+                                        <BUTTON
+                                            class="button button_text note__button" type="button">
+                                            <span class="button__name">Удалить</span>
+                                            </BUTTON>
+                                    </form>
+                                </div>
                             </section>
                             <section class="jurist-card jurist-card_catalog">
                                 <section class="lawyercard jurist-card__info">
@@ -578,7 +710,9 @@
                                             <span class="lawyercard__checkstatus lawyercard__checkstatus_true">
                                                 <svg class="lawyercard__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
                                             </span>
-                                            <span class="lawyercard__lawyername">Константин Константин</span>
+                                            <span class="lawyercard__lawyername">
+                                                <a href="#">Константин Константин</a>
+                                            </span>
                                             <span class="lawyercard__online lawyercard__online_true"></span>
                                         </h3>
                                         <div class="lawyercard__info">
@@ -587,22 +721,22 @@
                                             </div>
                                             <div class="lawyercard__status">
                                                 <ul class="status-list lawyercard__status-list">
-                                                    <li class="status-list__item status-list__item_location">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_location"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_location">
+                                                        <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
                                                         <span class="status-list__name">Москва</span>
                                                     </li>
-                                                    <li class="status-list__item status-list__item_free status-list__item status-list__item_free_false">
-                                                        <svg class="status-list__img"><use xlink:href="assets/images/icon.svg#icon_disk"></use></svg>
+                                                    <li class="status-list__item status-list__item status-list__item_free status-list__item status-list__item_free_false">
+                                                        <span class="status-list__img"></span>
                                                         <span class="status-list__name">Занят</span>
                                                     </li>
                                                 </ul>
                                                 <div class="vote-block lawyercard__likes">
                                                     <span class="like-button like-button_like">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
                                                         <span class="like-button__count">124</span>
                                                     </span>
                                                     <span class="like-button like-button_dislike">
-                                                        <img class="like-button__img" src="http://placehold.it/18x16" alt="" role="presentation" />
+                                                        <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
                                                         <span class="like-button__count">2</span>
                                                     </span>
                                                 </div>
@@ -629,10 +763,30 @@
                                                 </li>
                                                 <li class="specialization__item">Защита прав потребителей</li>
                                             </ul>
-                                            <a class="button button_blue lawyercard__orderbutton">
-                                                <span class="button__name">Заказать</span>
-                                                <i class="button__arrow fa fa-angle-down"></i>
-                                            </a>
+                                            <div class="selectbox selectbox_link selectbox_visible lawyercard__orderbutton">
+                                                <input class="selectbox__input" type="hidden" value="Консультацию" placeholder="Консультацию" />
+                                                <a class="button selectbox__button button button_blue">
+                                                    <span class="button__name">Заказать</span>
+                                                    <i class="button__arrow fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Консультацию
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Документ
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - документ</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Услугу
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - работа</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             <a class="lawyercard__maillink" href="mailto:smth@domen">Написать сообщение</a>
                                         </div>
                                     </section>
@@ -653,6 +807,28 @@
                                             <svg class="jurist-card__icon"><use xlink:href="assets/images/icon.svg#icon_shield"></use></svg>Есть опыт работы в ГосСтруктурах</li>
                                     </ul>
                                 </section>
+                                <div class="action-controls action-controls_vertical jurist-card__controls">
+                                    <a class="profile-control profile-control_favorites disabled action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_blacklist active action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_note action-controls__button action-controls__button_note" href="#" title="Заметка">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                    </a>
+                                    <form class="note action-controls__note">
+                                        <textarea class="note__text"></textarea>
+                                        <div class="note__buttons">
+                                            <BUTTON class="button button_text note__button" type="submit">
+                                                <span class="button__name">Сохранить</span>
+                                            </BUTTON>
+                                            <BUTTON class="button button_text note__button" type="reset">
+                                                <span class="button__name">Отмена</span>
+                                            </BUTTON>
+                                        </div>
+                                    </form>
+                                </div>
                             </section>
                         </div>
                     </section>
@@ -806,6 +982,7 @@
     </div>
     <script src="assets/libs/jquery.min.js"></script>
     <script src="assets/libs/velocity.min.js"></script>
+    <script src="assets/libs/jquery.scrollbar.min.js"></script>
     <script src="assets/scripts/app.min.js"></script>
 </body>
 
