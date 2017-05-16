@@ -5,7 +5,7 @@ mixin contacts-block(data)
       - if (contact.additionalClass) { addClass = contact.additionalClass }
       +e.item
         - if (contact.icon.length > 0)
-          +e.IMG.icon(src=contact.icon)
+          +icon(contact.icon).__icon
         +e(class="label " + addClass)= contact.label
         - if (contact.text.length > 0)
           +e.text= contact.text

@@ -1,10 +1,10 @@
 {
   "link": [
-    { "href": "#", "text": "Юристы", "icon": "http://placehold.it/24x24" },
-    { "href": "#", "text": "Заявки на услуги", "icon": "http://placehold.it/24x24" },
-    { "href": "#", "text": "Заказать документ", "icon": "http://placehold.it/24x24" },
-    { "href": "#", "text": "Заказать консультацию", "icon": "http://placehold.it/24x24" },
-    { "href": "#", "text": "Заказать другую услугу", "icon": "http://placehold.it/24x24" },
-    { "href": "#", "text": "Форум", "icon": "http://placehold.it/24x24" }
+    { "href": "#", "text": "Юристы", "icon": "menu-1" },
+    { "href": "#", "text": "Заявки на услуги", "icon": "menu-2" },
+    { "href": "#", "text": "Заказать документ", "icon": "menu-3" },
+    { "href": "#", "text": "Заказать консультацию", "icon": "menu-4" },
+    { "href": "#", "text": "Заказать другую услугу", "icon": "menu-5" },
+    { "href": "#", "text": "Форум", "icon": "menu-6" }
   ]
 }

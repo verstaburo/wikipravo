@@ -23,7 +23,8 @@
   &_like {
 
     .like-button__img {
-      fill: $color-green-like;
+      stroke: $color-green-like;
+      fill: transparent;
     }
 
     .like-button__count {
@@ -34,7 +35,8 @@
   &_dislike {
 
     .like-button__img {
-      fill: $color-red-dark;
+      stroke: $color-red-dark;
+      fill: transparent;
     }
 
     .like-button__count {

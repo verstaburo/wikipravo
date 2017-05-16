@@ -38,6 +38,11 @@
       .index-advantages__header {
         background-color: $color-main;
       }
+
+      .client-registration__img svg {
+        fill: white;
+        stroke: transparent;
+      }
     }
 
     @include desktop {

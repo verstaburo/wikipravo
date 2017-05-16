@@ -10,7 +10,7 @@ mixin header(authorization)
       +e.col._contacts-block
         +contacts-block(getData('header-contacts'))
       +e.col._link-button
-        +icon-link("http://placehold.it/21x21", "Войти")(href="#" data-open-popup="popup-login" class="js-popup-open")
+        +icon-link("menu-9", "Войти")(href="#" data-open-popup="popup-login" class="js-popup-open").__login-button
     - else
       +e.col_order
         +icon-link("", "Заказы", "comment-o")._big

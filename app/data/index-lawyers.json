@@ -18,8 +18,8 @@
         {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
       ],
       "vote" : [
-        {"type" : "like", "image" : "like", "count" : "124"},
-        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+        {"type" : "like", "image" : "menu-12", "count" : "124"},
+        {"type" : "dislike", "image" : "menu-13", "count" : "2"}
       ],
       "publicworkcount" : "10",
       "experience" : "10",
@@ -49,8 +49,8 @@
         {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
       ],
       "vote" : [
-        {"type" : "like", "image" : "like", "count" : "124"},
-        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+        {"type" : "like", "image" : "menu-12", "count" : "124"},
+        {"type" : "dislike", "image" : "menu-13", "count" : "2"}
       ],
       "publicworkcount" : "10",
       "experience" : "10",
@@ -80,8 +80,8 @@
         {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
       ],
       "vote" : [
-        {"type" : "like", "image" : "like", "count" : "124"},
-        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+        {"type" : "like", "image" : "menu-12", "count" : "124"},
+        {"type" : "dislike", "image" : "menu-13", "count" : "2"}
       ],
       "publicworkcount" : "10",
       "experience" : "10",
@@ -111,8 +111,8 @@
         {"type" : "free", "image" : "disk", "name" : "Занят", "status": "false"}
       ],
       "vote" : [
-        {"type" : "like", "image" : "like", "count" : "124"},
-        {"type" : "dislike", "image" : "dislike", "count" : "2"}
+        {"type" : "like", "image" : "menu-12", "count" : "124"},
+        {"type" : "dislike", "image" : "menu-13", "count" : "2"}
       ],
       "publicworkcount" : "10",
       "experience" : "10",

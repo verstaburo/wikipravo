@@ -3,7 +3,7 @@ mixin icon-link(icon, text, faClass)
   -if (faClass) {fa = faClass}
   +b.A.icon-link&attributes(attributes)
     - if (icon.length > 0)
-      +e.IMG.icon(src=icon)
+      +icon(icon).__icon
     - if (fa.length > 0)
       +e.I(class="icon-fa fa fa-" + fa)
     +e.SPAN.text= text

@@ -18,8 +18,8 @@
       .status-list {
 
         &__img {
-          width: 12px;
-          height: 19px;
+          width: 19px;
+          left: -5px;
         }
 
         &__name {
@@ -35,6 +35,7 @@
         &__img {
           width: 9px;
           height: 9px;
+          border-radius: 50%;
         }
       }
 
@@ -43,7 +44,7 @@
         .status-list {
 
           &__img {
-            fill: $color-green-dark;
+            background-color: $color-green-dark;
           }
 
           &__name {
@@ -57,7 +58,7 @@
         .status-list {
 
           &__img {
-            fill: $color-red-light;
+            background-color: $color-red-light;
           }
 
           &__name {

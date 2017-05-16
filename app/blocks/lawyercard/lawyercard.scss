@@ -111,12 +111,14 @@
   }
 
   &__icon {
-    width: 9px;
+    width: 10px;
     height: 8px;
   }
 
   &__lawyername {
     letter-spacing: .04em;
+
+    a:hover { opacity: .7; }
   }
 
   &__online {
@@ -193,8 +195,9 @@
 
   &__orderbutton {
     width: 100%;
-    padding: 12px 31px;
     margin-bottom: 24px;
+
+    .selectbox__option { text-align: center; }
   }
 
   &__maillink {
