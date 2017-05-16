@@ -161,12 +161,22 @@
                                 <a class="profile-control profile-control_note action-controls__button action-controls__button_note" href="#" title="Заметка">
                                     <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
                                 </a>
-                                <form class="note action-controls__note">
-                                    <p>Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.</p>
-                                    <BUTTON
-                                        class="button button_text note__button" type="button">
-                                        <span class="button__name">Удалить</span>
+                                <form class="note note_noempty action-controls__note">
+                                    <textarea class="note__text"></textarea>
+                                    <p class="note__content" contenteditable="true" tabindex="1">Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.</p>
+                                    <span class="note__placeholder">
+                                        <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                    <div class="note__buttons">
+                                        <BUTTON class="button button_text note__button note__button_save" type="submit">
+                                            <span class="button__name">Сохранить</span>
                                         </BUTTON>
+                                        <BUTTON class="button button_text note__button note__button_cancel" type="reset">
+                                            <span class="button__name">Отмена</span>
+                                        </BUTTON>
+                                        <BUTTON class="button button_text note__button note__button_remove" type="button">
+                                            <span class="button__name">Удалить</span>
+                                        </BUTTON>
+                                    </div>
                                 </form>
                             </div>
                         </div>
