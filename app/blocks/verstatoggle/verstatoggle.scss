@@ -1,0 +1,5 @@
+[data-toggle-block] {
+  display: none;
+
+  &.visible { display: block; }
+}

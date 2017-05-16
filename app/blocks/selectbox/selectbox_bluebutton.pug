@@ -3,15 +3,12 @@ include ../button-arrow/button-arrow
 mixin selectbox_bluebutton(data, label)
   -var placeholder = data.option[0].name
   -if(data.placeholder) {placeholder = data.placeholder}
-  +b.selectbox&attributes(attributes)._link
+  +b.selectbox&attributes(attributes)._link._visible
     +e.INPUT.input(type='hidden' value=placeholder placeholder=placeholder)
     +button-arrow('down').__button.button_blue
       block
     +e.UL.list
       each option in data.option
         +e.LI.option= option.name
-          -if (option.suboption)
-            +e.I.arrow(class='fa fa-angle-right')
-            +e.UL.sublist
-              each suboption in option.suboption
-                +e.LI.option= suboption
+          +e.title
+            span= option.title

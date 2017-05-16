@@ -1,3 +1,4 @@
-mixin block-link(data)
+mixin block-link-changeable(href, target)
   +b.block-link&attributes(attributes)
-    +e.A(href= data.href)= data.text
+    +e.A(href= href, data-toggle-target= target)
+      block
