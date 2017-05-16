@@ -1,0 +1,55 @@
+.action-controls {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_vertical {
+    flex-direction: column;
+    justify-content: space-between;
+
+    .profile-control_note {
+      order: 1;
+    }
+
+    .profile-control_favorites {
+      order: 2;
+    }
+
+    .profile-control_blacklist {
+      order: 3;
+    }
+
+    .action-controls__button {
+
+      &:not(:last-of-type) {
+        margin-right: 0;
+
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__button {
+
+    &:not(:last-of-type) {
+      margin-right: 92px;
+
+      @include tablet {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__note {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

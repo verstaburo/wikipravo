@@ -29,6 +29,11 @@
       &__describe {
         border-right: 0;
         border-bottom: 0;
+
+        @include desktop {
+          flex: 1;
+          border-left: 0;
+        }
       }
     }
   }
@@ -137,5 +142,17 @@
   &__icon {
     margin-right: 18px;
     fill: $color-font;
+  }
+
+  &__controls {
+    width: 98px;
+    box-sizing: border-box;
+    padding: 35px 30px;
+    background-color: #fff;
+    border-top: 1px solid $color-border-jurist-card;
+
+    @include desktop {
+      border-top: 0;
+    }
   }
 }

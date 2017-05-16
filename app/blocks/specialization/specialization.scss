@@ -5,6 +5,20 @@
     line-height: 2.14em;
     font-weight: 500;
     letter-spacing: .04em;
+
+    a {
+      font-size: inherit;
+      letter-spacing: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      color: inherit;
+      text-decoration: none;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
   }
 
   &__sublist {
@@ -26,6 +40,11 @@
       line-height: 1.5em;
       color: $color-main;
 
+      &:hover {
+        opacity: 1;
+        color: rgba($color-main, .6);
+      }
+
       &_main {
 
         &::before {
@@ -38,6 +57,11 @@
           border-radius: 50%;
           transform: translate(0, -50%);
           background-color: $color-main;
+          transition: all .25s ease-in-out;
+        }
+
+        &:hover::before {
+          background-color: rgba($color-main, .6);
         }
       }
     }

@@ -1,8 +1,9 @@
 include ../../blocks/lawyercard/lawyercard
 include ../../blocks/icon/icons
 include ../../blocks/list/list
+include ../../blocks/action-controls/action-controls
 
-mixin jurist-catalog-card(data)
+mixin jurist-catalog-card(data, authorization, noteState, favoriteState, blacklistState, noteText)
   +b.SECTION.jurist-card._catalog&attributes(attributes)
     +lawyercard(data.lawyer).__info
     +e.SECTION.describe
@@ -13,3 +14,5 @@ mixin jurist-catalog-card(data)
           +e.LI(class="features-item" + "_" + item.image)
             +icon(item.image).icon
             |#{item.text}
+    -if(authorization)
+      +action-controls(noteState, favoriteState, blacklistState, noteText)._vertical.__controls

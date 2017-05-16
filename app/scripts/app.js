@@ -4,7 +4,7 @@ import {VerstaPopups} from '../components/popups/popups';
 import {VerstaTabs} from '../blocks/verstatabs/verstatabs';
 import {advancedSearchOpened} from '../blocks/searchform/searchform';
 import ReviewsSlider from '../blocks/slider/slider';
-import {NoteButtonSwitch} from '../blocks/profile-control/profile-control';
+import {NoteButtonSwitch} from '../blocks/action-controls/action-controls';
 
 $(() => {
 

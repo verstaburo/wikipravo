@@ -1,8 +1,8 @@
 include ../icon/icons
 include ../note/note
 
-mixin profile-control(data)
-  +b.A(class="profile-control" + "_" + data.type, href= data.href, title= data.title )&attributes(attributes)
-    +icon(data.image).__icon
-  -if(data.type == "note")
-    +note(data.text).profile-control__note
+mixin profile-control(type, title, image, state)
+  -var controlState = ""
+  -if(state) {controlState = " " + state;}
+  +b.A(class="profile-control" + "_" + type + controlState, href= "#", title= title )&attributes(attributes)
+    +icon(image).__icon

@@ -3,7 +3,8 @@ mixin specialization-mark(data)
   +b.UL.specialization&attributes(attributes)
     each item in data
       -if(item.mark) {mmark = "_" + item.mark} else {mmark = ""}
-        +e.LI(class="item" + mmark)= item.name
+        +e.LI(class="item" + mmark)
+          +e.A(href="#")= item.name
           -if(item.expanded)
             +e.UL.sublist
               each subitem in item.expanded

@@ -13,6 +13,7 @@
 
   &.disabled, &:hover.disabled {
     background-color: $color-bg-index;
+    box-shadow: none;
 
     .profile-control__icon {
       fill: $color-citylist-item;
@@ -38,14 +39,6 @@
 
   &__icon {
     fill: $color-main;
-  }
-
-  &__note {
-    display: none;
-
-    &.active {
-      display: flex;
-    }
   }
 
   &_favorites {

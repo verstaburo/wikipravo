@@ -2,7 +2,7 @@ include ../jurist-card/jurist-catalog-card
 
 mixin catalog-cards()
   +b.catalog-cards&attributes(attributes)
-    +jurist-catalog-card(getData("jurist"))
-    +jurist-catalog-card(getData("jurist"))
-    +jurist-catalog-card(getData("jurist"))
-    +jurist-catalog-card(getData("jurist"))
+    +jurist-catalog-card(getData("jurist"), "true")
+    +jurist-catalog-card(getData("jurist"), "true", "", "active", "disabled")
+    +jurist-catalog-card(getData("jurist"), "true", "active", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.")
+    +jurist-catalog-card(getData("jurist"), "true", "", "disabled", "active")

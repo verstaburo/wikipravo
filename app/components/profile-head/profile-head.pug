@@ -1,5 +1,5 @@
 include ../../blocks/breadcrumbs/breadcrumbs
-include ../../blocks/profile-control/profile-control
+include ../../blocks/action-controls/action-controls
 include ../../blocks/page-title/page-title
 
 mixin profile-head(data, authorization)
@@ -8,6 +8,4 @@ mixin profile-head(data, authorization)
     +e.header
       +page-title(data.name).__title
       -if(authorization)
-        +e.controls
-          each item in data.controls
-            +profile-control(item).__button
+        +action-controls("", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.").controls
