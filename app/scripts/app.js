@@ -6,6 +6,7 @@ import {advancedSearchOpened} from '../blocks/searchform/searchform';
 import ReviewsSlider from '../blocks/slider/slider';
 import {NoteButtonSwitch} from '../blocks/action-controls/action-controls';
 import {ScrollBar} from '../blocks/scrollbar/scrollbar';
+import {NoteTextareaFocus} from '../blocks/note/note';
 
 $(() => {
 
@@ -17,5 +18,6 @@ $(() => {
   ReviewsSlider();
   NoteButtonSwitch();
   ScrollBar();
+  NoteTextareaFocus();
 
 });

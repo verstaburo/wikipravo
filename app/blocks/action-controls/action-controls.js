@@ -1,17 +1,11 @@
 export function NoteButtonSwitch() {
-  var button = document.querySelector(".action-controls__button_note");
-  var note = document.querySelector(".action-controls__note")
-
-  if(button && note) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-      if (button.classList.contains("active")) {
-        button.classList.remove("active");
-        note.classList.remove("active");
-      } else {
-        button.classList.add("active");
-        note.classList.add("active");
-      }
-    }, false);
-  }
+  $(".action-controls__button_note").click(function(e) {
+    if($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).parents(".action-controls").find(".action-controls__note").removeClass("active");
+    } else {
+      $(this).addClass("active");
+      $(this).parents(".action-controls").find(".action-controls__note").addClass("active");
+    }
+  });
 }

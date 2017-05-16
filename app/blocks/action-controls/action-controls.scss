@@ -32,6 +32,11 @@
         }
       }
     }
+
+    .action-controls__note.active {
+      top: 0;
+      right: 100%;
+    }
   }
 
   &__button {
@@ -50,6 +55,8 @@
 
     &.active {
       display: flex;
+      top: calc(100% + 20px);
+      right: -44px;
     }
   }
 }
