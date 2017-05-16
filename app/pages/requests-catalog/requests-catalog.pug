@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Каталог заявок'
+
+block content
+  +b.requests-catalog
+    +requests-catalog-header
+
+block page-left
+  +sidebar
+
+block page-top
+  +header
+
+block page-bottom
+  +footer

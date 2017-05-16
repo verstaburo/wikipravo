@@ -8,6 +8,7 @@ import ReviewsSlider from '../blocks/slider/slider';
 import {NoteButtonSwitch} from '../blocks/action-controls/action-controls';
 import {ScrollBar} from '../blocks/scrollbar/scrollbar';
 import {NoteTextareaFocus} from '../blocks/note/note';
+import {FilterOpened} from '../blocks/filter-controls/filter-controls';
 
 $(() => {
 
@@ -21,5 +22,6 @@ $(() => {
   NoteButtonSwitch();
   ScrollBar();
   NoteTextareaFocus();
+  FilterOpened();
 
 });

@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin filter-controls(openedName, closedName)
+  +b.filter-controls&attributes(attributes)
+    +e.controls
+      +button("button")._text._small.__open-btn(type="button" data-opened-name=openedName data-closed-name=closedName)
+        |#{openedName}
+        +e.I(class="icon fa fa-angle-down")
+      +button("button")._text._small.__reset-btn(type="reset") Сбросить
+    +e.content
+      block
+
+
+
