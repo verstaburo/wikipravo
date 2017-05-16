@@ -48,7 +48,7 @@ export function VerstaSelectBox() {
     if (el.parents(".sidebar").length > 0) {
       selectScrollParent = $(".sidebar");
     } else {
-      selectScrollParent = $(".page-layout__right-col");
+      selectScrollParent = $("body, html");
     }
 
     // Определяем высоту селекта
