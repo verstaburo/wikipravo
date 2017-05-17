@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiki Pravo — Каталог заявок</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="page-layout__left-col">
+            <div class="sidebar">
+                <div class="sidebar__row sidebar__row_logo">
+                    <div class="logo-block logo-block_light logo-block">
+                        <div class="logo-block__logo logo-block__logo_light">
+                            <img class="logo-block__image" src="http://placehold.it/120x100" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_light">
+                            <p class="logo-block__brand logo-block__brand_light">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_light">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row_nav-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Юристы</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-1"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заявки на услуги</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-2"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать документ</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-3"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать консультацию</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-4"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать другую услугу</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-5"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Форум</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-6"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__row sidebar__row_contacts-block">
+                    <div class="contacts-block contacts-block_icons contacts-block_dark">
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-7"></use></svg>
+                            <div class="contacts-block__label">support@pravoved.ru</div>
+                            <div class="contacts-block__text">E-mail поддержка</div>
+                        </div>
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-8"></use></svg>
+                            <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
+                            <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                        </div>
+                    </div>
+                    <div class="selectbox sidebar__selectbox selectbox selectbox_scrollable">
+                        <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                        <div class="selectbox__button">
+                            <span class="selectbox__button-name">Москва</span>
+                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                        </div>
+                        <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__right-col">
+            <div class="page-layout__page-header">
+                <div class="header">
+                    <form class="searchbar header__searchbar">
+                        <input class="searchbar__input" type="search" placeholder="Поиск интересуещего вас вопроса" />
+                        <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                    </form>
+                    <div class="header__col header__col_contacts-block">
+                        <div class="contacts-block">
+                            <div class="contacts-block__item">
+                                <div class="contacts-block__label contacts-block__label_bigger">8 800 700 60 60</div>
+                                <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__col header__col_link-button">
+                        <a class="icon-link js-popup-open header__login-button" href="#" data-open-popup="popup-login">
+                            <svg class="icon-link__icon"><use xlink:href="assets/images/icon.svg#icon_menu-9"></use></svg>
+                            <span class="icon-link__text">Войти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-content">
+                <div class="requests-catalog">
+                    <div class="requests-catalog-header">
+                        <div class="requests-catalog-header__header">
+                            <h2 class="page-title requests-catalog-header__title">Заявки на услуги</h2>
+                            <A class="button button_blue requests-catalog-header__button">
+                                <span class="button__name">Бесплатно создать заказ</span>
+                            </A>
+                        </div>
+                        <div class="requests-catalog-header__headertext">
+                            <p>Вы видите только публичные заказы. Если вы хотите видеть все заказы клиентов и отвечать на них, зарегистрируйтесь как специалист:
+                                <a href="#">Пройти регистрацию</a>
+                            </p>
+                        </div>
+                        <form class="searchform searchform_requests requests-catalog-header__searchform">
+                            <div class="filter-controls opened filter-controls filter-controls_requests opened">
+                                <div class="filter-controls__controls">
+                                    <button class="button button_text button_small filter-controls__open-btn" type="button" data-opened-name="Показать фильтр" data-closed-name="Скрыть фильтр">
+                                        <span class="button__name">Скрыть фильтр</span>
+                                        <i class="button__arrow fa fa-angle-down"></i>
+                                    </button>
+                                    <BUTTON class="button button_text button_small button_border filter-controls__reset-btn" type="reset">
+                                        <span class="button__name">Сбросить</span>
+                                    </BUTTON>
+                                </div>
+                                <div class="filter-controls__content">
+                                    <div class="filter-controls__row filter-controls__row_checkboxes">
+                                        <span class="filter-controls__grouplabel filter-controls__grouplabel_bold">Показывать заявки на:</span>
+                                        <div class="checkbox filter-controls__checkbox">
+                                            <input type="checkbox" id="consultation-service" />
+                                            <label class="checkbox__label" for="consultation-service">Консультации</label>
+                                        </div>
+                                        <div class="checkbox filter-controls__checkbox">
+                                            <input type="checkbox" id="document-service" />
+                                            <label class="checkbox__label" for="document-service">Составление документов</label>
+                                        </div>
+                                        <div class="checkbox filter-controls__checkbox">
+                                            <input type="checkbox" id="other-service" />
+                                            <label class="checkbox__label" for="other-service">Другие услуги</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-controls__row">
+                                        <div class="filter-controls__field">
+                                            <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Категории права</span>
+                                            <div class="selectbox selectbox_light">
+                                                <input class="selectbox__input" type="hidden" value="Выбрать право" placeholder="Выбрать право" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Выбрать право</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Конституционное право</li>
+                                                    <li class="selectbox__option">Интеллектуальная собственность
+                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                        <ul class="selectbox__sublist">
+                                                            <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
+                                                            <li class="selectbox__option">Гражданское право</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="selectbox__option">Военное право
+                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                        <ul class="selectbox__sublist">
+                                                            <li class="selectbox__option">Военное право</li>
+                                                            <li class="selectbox__option">Военное право</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="filter-controls__field">
+                                            <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Виды документа</span>
+                                            <div class="selectbox selectbox_light">
+                                                <input class="selectbox__input" type="hidden" value="Не задано" placeholder="Не задано" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Не задано</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Претензии потребителей
+                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                        <ul class="selectbox__sublist">
+                                                            <li class="selectbox__option">Претензии на возврат денежных средств за товар (услугу) надлежащего качества</li>
+                                                            <li class="selectbox__option">Категория документа</li>
+                                                            <li class="selectbox__option">Категория документа</li>
+                                                            <li class="selectbox__option">Категория документа</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="selectbox__option">Категория документа</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="filter-controls__field">
+                                            <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Регион</span>
+                                            <div class="selectbox selectbox_light">
+                                                <input class="selectbox__input" type="hidden" value="Регион" placeholder="Регион" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Регион</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Республика Адегея</li>
+                                                    <li class="selectbox__option">Республика Башкортостан</li>
+                                                    <li class="selectbox__option">Республика Бурятия</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-controls__row">
+                                        <BUTTON class="button button_blue filter-controls__button">
+                                            <span class="button__name">Применить</span>
+                                        </BUTTON>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="requests-list">
+                        <article class="short-request requests-list__item">
+                            <h3 class="short-request__header">
+                                <span class="short-request__title">
+                                    <a href="#">Помогите мне пожалуйста в регистрации компании</a>
+                                </span>
+                                <span class="action-controls action-controls_nonote short-request__action-controls">
+                                    <a class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                    </a>
+                                    <a class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                    </a>
+                                </span>
+                                <span class="request-condition short-request__condition">
+                                    <span class="request-condition__type">Консультация</span>
+                                    <span class="request-condition__time">
+                                        <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                        <span class="request-condition__text">По договоренности</span>
+                                    </span>
+                                    <span class="request-condition__price">
+                                        <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                        <span class="request-condition__text">По договоренности</span>
+                                    </span>
+                                </span>
+                            </h3>
+                            <div class="short-request__content">
+                                <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                                <div
+                                    class="short-request__data">
+                                    <div class="publication-date short-request__publication">
+                                        <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                    </div>
+                                    <div class="author short-request__author">
+                                        <span class="author__online"></span>
+                                        <span class="author__name">Ксения</span>
+                                        <span class="author__location">г. Томск</span>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="short-request__footer">
+                        <div class="subject short-request__subject">
+                            <span class="subject__label">Категория права:</span>
+                            <a class="subject__link" href="#">Миграционное право</a>
+                        </div>
+                        <div class="browse short-request__browse">
+                            <span class="browse__views">
+                                <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                <span class="browse__viewscount">395</span>
+                            </span>
+                            <span class="browse__reply">
+                                <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                <span class="browse__replycount">4</span>
+                            </span>
+                        </div>
+                    </div>
+                    </article>
+                    <article class="short-request requests-list__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="action-controls action-controls_nonote short-request__action-controls">
+                                <a class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                </a>
+                                <a class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                </a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Работаю менеджером по работе с клиентами! Нас 3 девочки работаем 4/2 168 часов в месяц! Одна из нас собралась увольняться! Получится что мы будем работать 210 часов! Начальство сказало что 168 часов нам оплатят по нашему тарифу,
+                                а остальные 42 часа...</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="short-request requests-list__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Отчет о доходах</a>
+                            </span>
+                            <span class="action-controls action-controls_nonote short-request__action-controls">
+                                <a class="profile-control profile-control_favorites active action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                </a>
+                                <a class="profile-control profile-control_blacklist disabled action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                </a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">2 месяца</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="short-request requests-list__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Помочь в регистрации компании</a>
+                            </span>
+                            <span class="action-controls action-controls_nonote short-request__action-controls">
+                                <a class="profile-control profile-control_favorites disabled action-controls__button action-controls__button_favorites" href="#" title="В избраном">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                </a>
+                                <a class="profile-control profile-control_blacklist active action-controls__button action-controls__button_blacklist" href="#" title="В черном списке">
+                                    <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                </a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Составление документов</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">2 месяца</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__page-footer">
+            <footer class="footer">
+                <div class="footer__info">
+                    <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
+                        <div class="logo-block__logo logo-block__logo_dark">
+                            <img class="logo-block__image" src="http://placehold.it/120x100" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_dark">
+                            <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                    <ul class="socials footer__socials">
+                        <li class="socials__item">
+                            <a class="social social_vk" href="#">ВКонтакте
+                                <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_fb" href="#">Facebook
+                                <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_twitter" href="#">Twitter
+                                <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_youtube" href="#">Youtube
+                                <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__copyright">Copyright 2016</p>
+                </div>
+                <nav class="footer__navigation">
+                    <div class="footer__category">
+                        <h3 class="footer__title">Wikipravo</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">О проекте</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">О команде</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Вакансии</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Обратная связь</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Новости</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__category">
+                        <h3 class="footer__title">Клиентам</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Правила сервиса</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Заказать документ</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Получить консультацию</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Найти юриста</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Заказть другую услугу</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__category">
+                        <h3 class="footer__title">Юристам</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Правила сервиса</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Стать юристом проекта</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/velocity.min.js"></script>
+    <script src="assets/libs/jquery.scrollbar.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
