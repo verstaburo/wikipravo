@@ -1,6 +1,6 @@
 include ../../blocks/page-title/page-title
 include ../../blocks/button/button
-//-include ../../blocks/filter-controls/filter-controls
+include ../../blocks/searchform/searchform-requests
 
 mixin requests-catalog-header(authorization)
   +b.requests-catalog-header&attributes(attributes)
@@ -13,3 +13,5 @@ mixin requests-catalog-header(authorization)
         +e.P
           | Вы видите только публичные заказы. Если вы  хотите видеть  все заказы клиентов и отвечать на них, зарегистрируйтесь как специалист:
           +e.A(href="#") Пройти регистрацию
+    +searchform-requests.__searchform
+

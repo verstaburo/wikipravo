@@ -1,12 +1,11 @@
 include ../button/button
+include ../button-arrow/button-arrow
 
 mixin filter-controls(openedName, closedName)
-  +b.filter-controls&attributes(attributes)
+  +b.filter-controls.opened&attributes(attributes)
     +e.controls
-      +button("button")._text._small.__open-btn(type="button" data-opened-name=openedName data-closed-name=closedName)
-        |#{openedName}
-        +e.I(class="icon fa fa-angle-down")
-      +button("button")._text._small.__reset-btn(type="reset") Сбросить
+      +button-arrow("down", "button")._text._small.__open-btn(type="button" data-opened-name=openedName data-closed-name=closedName) #{closedName}
+      +button("button")._text._small._border.__reset-btn(type="reset") Сбросить
     +e.content
       block
 

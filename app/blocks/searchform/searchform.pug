@@ -2,15 +2,11 @@ include ../selectbox/selectbox
 include ../checkbox/checkbox
 include ../button/button
 include ../input/input
+include ../filter-controls/filter-controls
 
 mixin searchform(authorized)
   +b.FORM.searchform&attributes(attributes)
-    +e.controls
-      +e.BUTTON.open-btn(type="button")
-        +e.SPAN.btnname Расширенный поиск
-        +e.I(class="icon fa fa-angle-down")
-      +e.BUTTON.reset-btn(type="reset") Сбросить
-    +e.content
+    +filter-controls("Расширенный поиск", "Cкрыть расширенный поиск").filter-controls_end.filter-controls_widepadding.opened
       +e.row
         +e.field
           +e.SPAN.label Категория
