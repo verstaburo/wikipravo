@@ -6,9 +6,9 @@ mixin requests-catalog-header(authorization)
   +b.requests-catalog-header&attributes(attributes)
     +e.header
       +page-title("Заявки на услуги").__title
-      -if(authorization)
+      -if(!authorization)
         +button('a')._blue.__button Бесплатно создать заказ
-    -if(authorization)
+    -if(!authorization)
       +e.headertext
         +e.P
           | Вы видите только публичные заказы. Если вы  хотите видеть  все заказы клиентов и отвечать на них, зарегистрируйтесь как специалист:

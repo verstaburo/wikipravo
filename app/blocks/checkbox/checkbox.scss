@@ -18,8 +18,6 @@
     letter-spacing: .035em;
     color: $color-font;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow-x: hidden;
 
     &::before, &::after {
       position: absolute;

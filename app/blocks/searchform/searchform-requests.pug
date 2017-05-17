@@ -6,21 +6,21 @@ include ../filter-controls/filter-controls
 
 mixin searchform-requests()
   +b.FORM.searchform._requests&attributes(attributes)
-    +filter-controls("Показать фильтр", "Скрыть фильтр").opened
-      +e.row
-        +e.SPAN.label_big Показывать заявки на:
+    +filter-controls("Показать фильтр", "Скрыть фильтр").filter-controls_requests.opened
+      +e.row_checkboxes
+        +e.SPAN.grouplabel_bold Показывать заявки на:
         +checkbox("Консультации", "consultation-service").__checkbox
         +checkbox("Составление документов", "document-service").__checkbox
         +checkbox("Другие услуги", "other-service").__checkbox
       +e.row
         +e.field
-          +e.SPAN.label Категории права
-          +selectbox(getData('selectbox-law-category'))._light
+          +e.SPAN.label_bold._small Категории права
+          +selectbox(getData('request-filter-law-category'))._light
         +e.field
-          +e.SPAN.label Виды документа
-          +selectbox(getData('selectbox-documents'))._light
+          +e.SPAN.label_bold._small Виды документа
+          +selectbox(getData('request-filter-documents'))._light
         +e.field
-          +e.SPAN.label Регион
-          +selectbox(getData('selectbox-searchform-city'))._light
+          +e.SPAN.label_bold._small Регион
+          +selectbox(getData('request-filter-region'))._light
       +e.row
         +button("button")._blue.__button Применить

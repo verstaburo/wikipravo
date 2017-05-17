@@ -14,7 +14,7 @@
     justify-content: flex-start;
     align-items: baseline;
     width: 100%;
-    padding: 0 36px;
+    padding: 21px 36px;
   }
 
   &_end {
@@ -25,15 +25,16 @@
   }
 
   &_widepadding {
+
     .filter-controls__controls {
-      padding: 0 97px;
+      padding: 28px 97px;
     }
 
     .filter-controls__content {
-      padding: 36px 116px 0;
+      padding: 8px 116px 48px;
 
       @include tablet {
-        padding: 36px 50px 0;
+        padding: 8px 50px 48px;
       }
     }
   }
@@ -61,7 +62,7 @@
 
   &__reset-btn {
     display: none;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
     margin-left: 47px;
   }
 
@@ -74,6 +75,13 @@
     .filter-controls__content {
       display: flex;
     }
+
+    .filter-controls__open-btn {
+
+      .button__arrow {
+        transform: rotate(-180deg);
+      }
+    }
   }
 
   &__content {
@@ -83,7 +91,7 @@
     align-items: flex-start;
     box-sizing: border-box;
     width: 100%;
-    padding: 36px 38px 0;
+    padding: 36px 38px 30px;
   }
 
   &__row {
@@ -99,9 +107,17 @@
       flex-wrap: wrap;
     }
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin-top: 0;
       margin-bottom: 30px;
+    }
+
+    &_checkboxes {
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      flex-wrap: wrap;
+      margin-bottom: 0;
     }
   }
 
@@ -139,34 +155,112 @@
     font-weight: 400;
     color: $color-font;
     min-width: 100%;
+    white-space: nowrap;
+
+    &_small {
+      font-size: 13px;
+      line-height: 2.3em;
+    }
+
+    &_bold {
+      font-weight: 500;
+    }
+  }
+
+  &__grouplabel {
+    font-size: 14px;
+    line-height: 1.43em;
+    font-weight: 400;
+    color: $color-font;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &_bold {
+      font-weight: 500;
+    }
   }
 
   &__checkbox {
     box-sizing: border-box;
-    min-width: 25%;
+    min-width: 170px;
+    margin-bottom: 30px;
 
     &:not(:last-of-type) {
-      padding-right: 50px;
+      margin-right: 50px;
 
       @include desktop {
-        padding-right: 20px;
+        margin-right: 4%;
       }
     }
 
     @include desktop {
       min-width: 48%;
-      margin-bottom: 30px;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
     }
   }
 
   &__button {
-    width: 44.4%;
+    min-width: 44.4%;
 
     @include s-desktop {
       width: 100%;
 
       &:not(:last-child) {
         margin-bottom: 10px;
+      }
+    }
+  }
+
+  &_requests {
+
+    .filter-controls {
+
+      &__row {
+        justify-content: flex-start;
+      }
+
+      &__row {
+        margin-top: 0;
+        flex-wrap: wrap;
+
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+        }
+      }
+
+      &__checkbox {
+        min-width: 130px;
+
+        &:not(:last-of-type) {
+          margin-right: 35px;
+        }
+      }
+
+      &__field {
+        margin-bottom: 30px;
+      }
+
+      &__field, &__button {
+        min-width: 402px;
+
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+
+        @include desktop {
+          min-width: calc(50% - 10px);
+          margin-right: 20px;
+
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+        }
       }
     }
   }

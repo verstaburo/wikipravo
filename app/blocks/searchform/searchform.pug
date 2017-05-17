@@ -21,7 +21,7 @@ mixin searchform(authorized)
           +e.SPAN.label Стаж работы
           +input.min(type="text" name="min" placeholder="От")
           +input.max(type="text" name="max" placeholder="До")
-      +e.row
+      +e.row_checkboxes
         +checkbox("Только адвокаты", "lawyers").__checkbox
         +checkbox("Опыт работы в Гос.Структурах", "publicwork").__checkbox
         +checkbox("Есть кабинет в здании суда", "courtroom").__checkbox
