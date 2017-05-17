@@ -10,6 +10,7 @@
     line-height: 1.5em;
     letter-spacing: .04em;
     font-weight: 500;
+    white-space: nowrap;
   }
 
   &__text {
@@ -46,5 +47,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
   }
 }

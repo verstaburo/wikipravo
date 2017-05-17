@@ -9,25 +9,65 @@
   &__header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    padding: 12px 39px;
+    padding: 14px 39px 0;
+    
+    @media (max-width: 1700px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
-    font-size: 20px;
-    line-height: 1.4em;
-    letter-spacing: .06em;
-    font-weight: 400;
-    color: $color-main;
-    padding-bottom: 3px;
-    border-bottom: 1px solid $color-main;
+    min-width: 300px;
+    margin-right: 50px;
+    margin-bottom: 14px;
+    
+    a {
+      font-size: 20px;
+      line-height: 1.4em;
+      letter-spacing: .06em;
+      font-weight: 400;
+      color: $color-main;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $color-main;
+      transition: all .25s ease-in-out;
 
-    &:hover {
-      color: rgba($color-main, .8);
-      border-color: rgba($color-main, .8);
+      &:hover {
+        color: rgba($color-main, .8);
+        border-color: rgba($color-main, .8);
+      }
+    }
+    
+    @include desktop {
+      width: calc(100% - 170px);
+    }
+  }
+  
+  &__action-controls {
+    width: 120px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    
+    @include desktop {
+      margin: 0 0 14px;
+    }
+  }
+  
+  &__condition {
+    display: inline-flex;
+    margin-left: 50px;
+    box-sizing: border-box;
+    padding: 0 28px;
+    background-color: $color-bg-index;
+    white-space: nowrap;
+    margin-bottom: 14px;
+    
+    @include desktop {
+      margin-left: 0;
+      margin-right: auto;
     }
   }
 

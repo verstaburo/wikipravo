@@ -6,6 +6,27 @@
   justify-content: flex-start;
   align-items: center;
 
+  &__button {
+
+    &:not(:last-of-type) {
+      margin-right: 92px;
+
+      @include tablet {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__note {
+    display: none;
+
+    &.active {
+      display: flex;
+      top: calc(100% + 20px);
+      right: -44px;
+    }
+  }
+  
   &_vertical {
     flex-direction: column;
     justify-content: space-between;
@@ -37,26 +58,19 @@
       top: 0;
       right: 100%;
     }
-  }
-
-  &__button {
-
-    &:not(:last-of-type) {
-      margin-right: 92px;
-
-      @include tablet {
-        margin-right: 50px;
+  }  
+  
+  &_nonote {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    .action-controls__button {
+      
+      &:not(:last-of-type) {
+        margin-right: 40px;
       }
-    }
-  }
-
-  &__note {
-    display: none;
-
-    &.active {
-      display: flex;
-      top: calc(100% + 20px);
-      right: -44px;
     }
   }
 }

@@ -2,6 +2,6 @@ include ../note/note
 include ../profile-control/profile-control
 
 mixin action-controls-nonote(favoriteState, blacklistState)
-  +b.action-controls&attributes(attributes)
+  +b.action-controls_nonote&attributes(attributes)
     +profile-control("favorites", "В избраном", "star", favoriteState).__button_favorites
     +profile-control("blacklist", "В черном списке", "lock", blacklistState).__button_blacklist

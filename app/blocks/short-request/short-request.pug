@@ -8,7 +8,8 @@ include ../request-condition/request-condition
 mixin short-request(data, authorization)
   +b.ARTICLE.short-request&attributes(attributes)
     +e.H3.header
-      +e.A.title(href="#")= data.title
+      +e.title
+        +e.A(href="#")= data.title
       +action-controls-nonote(data.action.favorites, data.action.blacklist).__action-controls
       +request-condition(data.condition.type, data.condition.time, data.condition.price).__condition
     +e.content
@@ -19,3 +20,4 @@ mixin short-request(data, authorization)
     +e.footer
       +subject("Категория права:", "Миграционное право").__subject
       +browse("395", "4").__browse
+      
