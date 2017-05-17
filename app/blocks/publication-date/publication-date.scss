@@ -1,0 +1,28 @@
+.publication-date {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: .04em;
+  font-weight: 400;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  &__label {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  &__date {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: 400;
+    color: $color-placeholder;
+  }
+}

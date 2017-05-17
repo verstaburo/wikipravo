@@ -1,0 +1,47 @@
+.browse {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: .04em;
+  font-weight: 400;
+  color: $color-author-status;
+  white-space: nowrap;
+
+  &__views {
+    margin-right: 45px;
+  }
+
+  &__views, &__reply {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__viewscount, &__replycount {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  &__icon {
+    margin-right: 8px;
+
+    &_eye {
+      width: 18px;
+      height: 11px;
+      fill: $color-font;
+    }
+
+    &_comment {
+      width: 18px;        
+      height: 17px;
+      fill: $color-font;
+    }
+  }
+}

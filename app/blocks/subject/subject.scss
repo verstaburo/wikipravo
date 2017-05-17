@@ -1,0 +1,36 @@
+.subject {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: .04em;
+  font-weight: 400;
+
+  &__label {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: 500;
+    margin-right: 34px;
+    white-space: nowrap;
+  }
+
+  &__link {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: $color-main;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $color-main;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba($color-main, .8);
+      border-color: rgba($color-main, .8);
+      white-space: nowrap;
+    }
+  }
+}

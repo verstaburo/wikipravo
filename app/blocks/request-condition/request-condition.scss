@@ -1,0 +1,50 @@
+.request-condition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__type {
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    margin-right: 10px;
+
+    &_time {
+      width: 15px;
+      height: 15px;
+      stroke: rgba($color-font, .8);
+      fill: transparent;
+    }
+
+    &_money {
+      width: 14px;
+      height: 16px;
+      fill: rgba($color-font, .8);
+    }
+  }
+
+  &__type, &__time {
+    margin-right: 43px;
+  }
+
+  &__time, &_price {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

@@ -1,0 +1,11 @@
+include ../icon/icons
+
+mixin request-condition(type, time, price)
+  +b.request-condition&attributes(attributes)
+    +e.SPAN.type= type
+    +e.time
+      +icon("time").__icon_time
+      +e.SPAN.text= time
+    +e.price
+      +icon("money").__icon_money
+      +e.SPAN.text= price

@@ -1,0 +1,5 @@
+mixin publication-date(date, label)
+  +b.publication-date&attributes(attributes)
+    -if(label)
+      +e.SPAN.label= label
+    +e.TIME.date= date

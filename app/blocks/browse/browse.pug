@@ -1,0 +1,10 @@
+include ../icon/icons
+
+mixin browse(views_count, reply_count)
+  +b.browse&attributes(attributes)
+    +e.SPAN.views
+      +icon("eye").__icon_eye
+      +e.SPAN.viewscount= views_count
+    +e.SPAN.reply
+      +icon("comment").__icon_comment
+      +e.SPAN.replycount= reply_count

@@ -1,0 +1,21 @@
+include ../action-controls/action-controls-nonote
+include ../publication-date/publication-date
+include ../author/author
+include ../subject/subject
+include ../browse/browse
+include ../request-condition/request-condition
+
+mixin short-request(data, authorization)
+  +b.ARTICLE.short-request&attributes(attributes)
+    +e.H3.header
+      +e.A.title(href="#")= data.title
+      +action-controls-nonote(data.action.favorites, data.action.blacklist).__action-controls
+      +request-condition(data.condition.type, data.condition.time, data.condition.price).__condition
+    +e.content
+      +e.P= data.text
+      +e.data
+        +publication-date(data.publication).__publication
+        +author("Ксения", "г. Томск", data.authoronline).__author
+    +e.footer
+      +subject("Категория права:", "Миграционное право").__subject
+      +browse("395", "4").__browse

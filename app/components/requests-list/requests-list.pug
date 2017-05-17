@@ -1,0 +1,6 @@
+include ../../blocks/short-request/short-request
+
+mixin requests-list(data)
+  +b.requests-list&attributes(attributes)
+    each item in data
+      +short-request(item, true).__item

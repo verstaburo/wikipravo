@@ -1,0 +1,7 @@
+mixin author(name, location, online)
+  -var status = ""
+  -if(online) {status = "_" + online}
+  +b.author&attributes(attributes)
+    +e.SPAN(class="online" + status)
+    +e.SPAN.name= name
+    +e.SPAN.location= location
