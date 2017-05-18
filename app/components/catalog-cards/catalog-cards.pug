@@ -1,8 +1,8 @@
 include ../jurist-card/jurist-catalog-card
 
-mixin catalog-cards()
+mixin catalog-cards(authorization)
   +b.catalog-cards&attributes(attributes)
-    +jurist-catalog-card(getData("jurist"), "true")
-    +jurist-catalog-card(getData("jurist"), "true", "", "active", "disabled")
-    +jurist-catalog-card(getData("jurist"), "true", "", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.")
-    +jurist-catalog-card(getData("jurist"), "true", "", "disabled", "active")
+    +jurist-catalog-card(getData("jurist"), authorization)
+    +jurist-catalog-card(getData("jurist"), authorization, "", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.")
+    +jurist-catalog-card(getData("jurist"), authorization, "", "active", "disabled")
+    +jurist-catalog-card(getData("jurist"), authorization, "", "disabled", "active")

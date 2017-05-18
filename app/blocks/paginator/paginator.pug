@@ -1,12 +1,14 @@
 include ../icon/icons
 
 mixin paginator(data)
+  -var activeClass = ""
   +b.paginator&attributes(attributes)
     +e.A.prev(href="#")
       +icon("angle-small").__icon
     +e.UL.list
       each item in data
-        +e.LI.item
-          +e.A.link(href= item.href)= item.name
+        - if(item.active) { activeClass = "active" } else { activeClass = ""}
+          +e.LI(class="item " + activeClass)
+            +e.A.link(href= item.href)= item.name
     +e.A.next(href="#")
       +icon("angle-small").__icon
