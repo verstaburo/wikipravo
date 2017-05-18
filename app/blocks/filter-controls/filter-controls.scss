@@ -126,6 +126,26 @@
       width: 48%;
       margin-bottom: 30px;
     }
+    
+    &_category {
+      order: 1;
+    }
+    
+    &_location {
+      order: 3;
+      
+      @include desktop {
+        order: 2;
+      }
+    }
+    
+    &_document {
+      order: 2;
+      
+      @include desktop {
+        order: 3;
+      }
+    }    
   }
 
   &__inputfield {
@@ -140,6 +160,10 @@
     @include desktop {
       width: 48%;
       margin-bottom: 30px;
+    }
+    
+    &_experience {
+      order: 4;
     }
 
     input {

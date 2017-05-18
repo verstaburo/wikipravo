@@ -1,0 +1,8 @@
+include ../jurist-card/jurist-catalog-card
+
+mixin catalog-cards-request(authorization)
+  +b.catalog-cards&attributes(attributes)
+    +jurist-catalog-card(getData("jurist"), authorization, "", "", "", "", true, false)
+    +jurist-catalog-card(getData("jurist"), authorization, "", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.", true, true)
+    +jurist-catalog-card(getData("jurist"), authorization, "", "active", "disabled", "", true, false)
+    +jurist-catalog-card(getData("jurist"), authorization, "", "disabled", "active", "", true, false)

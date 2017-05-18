@@ -7,10 +7,12 @@ include ../icon/icons
 include ../avatar/avatar
 include ../selectbox/selectbox_bluebutton
 
-mixin lawyercard(data)
+mixin lawyercard(data, request, requestin)
   -var online = data.online;
   -var checked = data.checked;
   -var busy = true;
+  -var inRequest = "";
+  -var btnRequestName = "";
   -if(data.busy == 'Занят') {busy= false;}
   +b.SECTION.lawyercard&attributes(attributes)
     +e.SECTION.about
@@ -35,5 +37,10 @@ mixin lawyercard(data)
           +e.SPAN Специализации
           +e.A(href= data.specialization.href) Показать все
         +specialization(data.specialization.list).__list
-        +selectbox_bluebutton(getData('lawyer-dropdown-button')).__orderbutton Заказать
+        - if(request) {
+          - if (requestin) {inRequest = "_transparent"; btnRequestName= "Убрать из моей заявки";} else {inRequest = "_blue"; btnRequestName= "Добавить в мою заявку";}
+            +button("button")(class=inRequest).__orderbutton= btnRequestName
+        - } else {
+          +selectbox_bluebutton(getData('lawyer-dropdown-button')).__orderbutton Заказать
+        - }
         +e.A.maillink(href= "mailto:" + data.email) Написать сообщение

@@ -3,9 +3,12 @@ include ../../blocks/contacts-block/contacts-block
 include ../../blocks/icon-link/icon-link
 include ../../blocks/avatar/avatar
 
-mixin header(authorization)
+mixin header(authorization, request)
   +b.header&attributes(attributes)
     +searchbar("Поиск интересуещего вас вопроса").header__searchbar
+    - if (request)
+      +e.col_request
+        +icon-link("", "Моя заявка", "bell-o")._big
     - if (!authorization)
       +e.col._contacts-block
         +contacts-block(getData('header-contacts'))
@@ -20,3 +23,4 @@ mixin header(authorization)
           +e.SPAN.counter (1)
       +e.col_profile
         +avatar("assets/images/profile-avatar.jpg")._small._blue-border._dark-bg.__avatar
+

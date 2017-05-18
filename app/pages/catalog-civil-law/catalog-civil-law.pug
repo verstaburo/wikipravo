@@ -7,14 +7,14 @@ block content
   +b.catalog
     +catalog-navigation(getData('catalog-civil-navigation'), false)._lightblue
     +catalog-search(false)
-      +catalog-cards(false).__catalog-cards
+      +catalog-cards-request(false).__catalog-cards
     +page-navigation(getData('page-navigation'))
 
 block page-left
   +sidebar
 
 block page-top
-  +header(false)
+  +header(false, true)
 
 block page-bottom
   +footer

@@ -3,9 +3,9 @@ include ../../blocks/icon/icons
 include ../../blocks/list/list
 include ../../blocks/action-controls/action-controls
 
-mixin jurist-catalog-card(data, authorization, noteState, favoriteState, blacklistState, noteText)
+mixin jurist-catalog-card(data, authorization, noteState, favoriteState, blacklistState, noteText, request, requestin)
   +b.SECTION.jurist-card._catalog&attributes(attributes)
-    +lawyercard(data.lawyer).__info
+    +lawyercard(data.lawyer, request, requestin).__info
     +e.SECTION.describe
       +e.H3.slogan Решу любую вашу задачу!
       +list(data.services)._dash.__services
