@@ -9,6 +9,7 @@ import {NoteButtonSwitch} from '../blocks/action-controls/action-controls';
 import {ScrollBar} from '../blocks/scrollbar/scrollbar';
 import {NoteTextareaFocus} from '../blocks/note/note';
 import {FilterOpened} from '../blocks/filter-controls/filter-controls';
+import {LocationPopup} from '../components/popup-location/popup-location';
 
 $(() => {
 
@@ -23,5 +24,6 @@ $(() => {
   ScrollBar();
   NoteTextareaFocus();
   FilterOpened();
+  LocationPopup();
 
 });

@@ -2,6 +2,7 @@ include ../../blocks/logo-block/logo-block
 include ../../blocks/nav-menu/nav-menu
 include ../../blocks/contacts-block/contacts-block
 include ../../blocks/selectbox/selectbox
+include ../popup-location/popup-location
 
 mixin sidebar()
   +b.sidebar
@@ -12,3 +13,5 @@ mixin sidebar()
     +e.row_contacts-block
       +contacts-block(getData('sidebar-contacts'))._icons._dark
       +selectbox(getData('sidebar-city-list')).sidebar__selectbox.selectbox_scrollable
+      +popup-location.__popup-location
+      

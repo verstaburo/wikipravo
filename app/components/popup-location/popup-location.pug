@@ -1,0 +1,11 @@
+include ../../blocks/button/button
+
+mixin popup-location()
+  +b.popup-location&attributes(attributes)
+    +e.P.bold
+      | Ваш город: 
+      +e.SPAN.city Москва
+    +e.P Угадали?
+    +e.buttons
+      +button("button")(type="button")._blue.__button_yes Да
+      +button("button")(type="button")._lightgrey.__button_no Нет
