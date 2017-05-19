@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiki Pravo — Просмотр заявки клиент</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="page-layout__left-col">
+            <div class="sidebar">
+                <div class="sidebar__row sidebar__row_logo">
+                    <div class="logo-block logo-block_light logo-block">
+                        <div class="logo-block__logo logo-block__logo_light">
+                            <img class="logo-block__image" src="http://placehold.it/120x100" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_light">
+                            <p class="logo-block__brand logo-block__brand_light">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_light">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row_nav-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Юристы</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-1"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заявки на услуги</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-2"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать документ</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-3"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать консультацию</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-4"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать другую услугу</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-5"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Форум</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-6"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__row sidebar__row_contacts-block">
+                    <div class="contacts-block contacts-block_icons contacts-block_dark">
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-7"></use></svg>
+                            <div class="contacts-block__label">support@pravoved.ru</div>
+                            <div class="contacts-block__text">E-mail поддержка</div>
+                        </div>
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-8"></use></svg>
+                            <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
+                            <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                        </div>
+                    </div>
+                    <div class="selectbox sidebar__selectbox selectbox selectbox_scrollable">
+                        <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                        <div class="selectbox__button">
+                            <span class="selectbox__button-name">Москва</span>
+                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                        </div>
+                        <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                        </ul>
+                    </div>
+                    <div class="popup-location sidebar__popup-location">
+                        <p class="popup-location__bold">Ваш город:
+                            <span class="popup-location__city">Москва</span>
+                        </p>
+                        <p>Угадали?</p>
+                        <div class="popup-location__buttons">
+                            <BUTTON class="button button_blue popup-location__button popup-location__button_yes" type="button">
+                                <span class="button__name">Да</span>
+                            </BUTTON>
+                            <BUTTON class="button button_lightgrey popup-location__button popup-location__button_no" type="button">
+                                <span class="button__name">Нет</span>
+                            </BUTTON>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__right-col">
+            <div class="page-layout__page-header">
+                <div class="header">
+                    <form class="searchbar header__searchbar">
+                        <input class="searchbar__input" type="search" placeholder="Поиск интересуещего вас вопроса" />
+                        <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                    </form>
+                    <div class="header__col header__col_contacts-block">
+                        <div class="contacts-block">
+                            <div class="contacts-block__item">
+                                <div class="contacts-block__label contacts-block__label_bigger">8 800 700 60 60</div>
+                                <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__col header__col_link-button">
+                        <a class="icon-link js-popup-open header__login-button" href="#" data-open-popup="popup-login">
+                            <svg class="icon-link__icon"><use xlink:href="assets/images/icon.svg#icon_menu-9"></use></svg>
+                            <span class="icon-link__text">Войти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-content">
+                <div class="request request_client">
+                    <div class="request-head request-head_client">
+                        <a class="control-link control-link_back request-head__control-link">
+                            <svg class="control-link__icon"><use xlink:href="assets/images/icon.svg#icon_prev"></use></svg>
+                            <span class="control-link__name">Назад</span>
+                        </a>
+                        <div class="request-head__header">
+                            <h2 class="request-head__title">Отчет о доходах</h2>
+                            <div class="request-condition request-head__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <div class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </div>
+                                <div class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="request-content">
+                        <div class="request-content__jurist">
+                            <div class="request-content__info">
+                                <div class="jurist-name request-content__title">
+                                    <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                        <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                    </div>
+                                    <span class="jurist-name__lawyername">
+                                        <a href="#">Алексей Михайлович</a>
+                                    </span>
+                                    <span class="jurist-name__online jurist-name__online_true"></span>
+                                </div>
+                                <div class="request-content__info-content">
+                                    <div class="avatar avatar_big request-content__img">
+                                        <img src="/assets/images/lawyer-avatar.jpg" alt="" role="presentation" />
+                                    </div>
+                                    <div class="request-content__status">
+                                        <ul class="status-list request-content__status-list">
+                                            <li class="status-list__item status-list__item status-list__item_location">
+                                                <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                <span class="status-list__name">Москва</span>
+                                            </li>
+                                        </ul>
+                                        <div class="vote-block request-content__likes">
+                                            <span class="like-button like-button_like">
+                                                <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
+                                                <span class="like-button__count">124</span>
+                                            </span>
+                                            <span class="like-button like-button_dislike">
+                                                <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
+                                                <span class="like-button__count">2</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="request-content__action">
+                                <p class="request-content__reginfo">Зарегистрирован на сайте:
+                                    <span class="request-content__regtime">меньше месяца</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="request-content__request-body">
+                            <div class="request-content__text">&mdash; Добрый день. Нужно подготовить все необходимые документы для регистрации ООО. Компания занимается интернет-торговлей.</div>
+                            <div class="request-content__describe">
+                                <div class="publication-date request-content__publication">
+                                    <span class="publication-date__label">Опубликовано:</span>
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="subject subject subject_nomargin request-content__subject">
+                                    <span class="subject__label">Категория права:</span>
+                                    <a class="subject__link" href="#">Регистрация ООО</a>
+                                </div>
+                                <div class="request-content__request-status">
+                                    <div class="request-content__open">Открыта</div>
+                                    <div class="browse request-content__browse">
+                                        <span class="browse__views">
+                                            <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                            <span class="browse__viewscount">395</span>
+                                        </span>
+                                        <span class="browse__reply">
+                                            <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                            <span class="browse__replycount">4</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-footer">
+                <footer class="footer">
+                    <div class="footer__info">
+                        <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
+                            <div class="logo-block__logo logo-block__logo_dark">
+                                <img class="logo-block__image" src="http://placehold.it/120x100" width="120" height="100" alt="" role="presentation" />
+                            </div>
+                            <div class="logo-block__describe logo-block__describe_dark">
+                                <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                                <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                            </div>
+                        </div>
+                        <ul class="socials footer__socials">
+                            <li class="socials__item">
+                                <a class="social social_vk" href="#">ВКонтакте
+                                    <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_fb" href="#">Facebook
+                                    <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_twitter" href="#">Twitter
+                                    <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_youtube" href="#">Youtube
+                                    <img src="http://placehold.it/15x15" alt="" role="presentation" />
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="footer__copyright">Copyright 2016</p>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__category">
+                            <h3 class="footer__title">Wikipravo</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О проекте</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О команде</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Вакансии</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Обратная связь</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Новости</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Клиентам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказать документ</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Получить консультацию</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Найти юриста</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказть другую услугу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Юристам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Стать юристом проекта</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close-button js-popup-close">
+            <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-login" id="popup-login">
+                <div class="popup__title">Вход в систему</div>
+                <div class="form form_vertical">
+                    <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
+                    <input class="input form__input" type="password" placeholder="Ваш пароль" />
+                    <BUTTON class="button button_blue">
+                        <span class="button__name">Войти</span>
+                    </BUTTON>
+                    <a class="icon-link icon-link_small form__bottom-link" href="#">
+                        <span class="icon-link__text">Забыли пароль?</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/velocity.min.js"></script>
+    <script src="assets/libs/jquery.scrollbar.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
