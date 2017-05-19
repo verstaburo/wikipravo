@@ -6,7 +6,8 @@ block head
 block content
   +b.request_client
     +request-head(getData('request-client-header'), false, "back")._client
-    +request-content(false)
+    +request-card(false)
+    +request-client-content(getData('requests-client'), false)
 
 block page-left
   +sidebar

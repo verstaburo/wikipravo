@@ -1,0 +1,21 @@
+include ../../blocks/button/button
+include ../../blocks/short-request/short-request
+include ../../blocks/block-link/block-link-changeable
+
+mixin request-client-content(data, authorization)
+  +b.request-client-content&attributes(attributes)
+    +e.offer
+      +e.buttons
+        +button("a")(href="#")._transparent_second.__button Оставить похожую заявку
+        +button("a")(href="#")._transparent_second.__button Посмотреть другие заявки
+      +e.P
+        | Если вы хотите откликнуться на заявку,
+        +e.A(href="#") войдите
+        |  или
+        +e.A(href="#") зарегистрируйтесь
+        |  как специалист
+    +e.H3.title Другие заявки из категории Миграционное право
+    +e.content
+      each request in data
+        +short-request(request, authorization).__request
+    +block-link({"href" : "#", "text" : "Все заявки из категории Миграционное право"})._small.__link

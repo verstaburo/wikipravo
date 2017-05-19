@@ -10,7 +10,9 @@ mixin short-request(data, authorization)
     +e.H3.header
       +e.title
         +e.A(href="#")= data.title
-      +action-controls-nonote(data.action.favorites, data.action.blacklist).__action-controls
+      -if(authorization) {
+        +action-controls-nonote(data.action.favorites, data.action.blacklist).__action-controls
+      -}
       +request-condition(data.condition.type, data.condition.time, data.condition.price).__condition
     +e.content
       +e.P= data.text
@@ -20,4 +22,3 @@ mixin short-request(data, authorization)
     +e.footer
       +subject("Категория права:", "Миграционное право").__subject
       +browse("395", "4").__browse
-      

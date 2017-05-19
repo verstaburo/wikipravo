@@ -8,8 +8,8 @@ include ../../blocks/browse/browse
 include ../../blocks/publication-date/publication-date
 include ../../blocks/action-controls/action-controls-quadro
 
-mixin request-content(authorization)
-  +b.request-content&attributes(attributes)
+mixin request-card(authorization)
+  +b.request-card&attributes(attributes)
     +e.jurist
       +e.info
         +jurist-name("Алексей Михайлович", true, true).__title
