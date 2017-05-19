@@ -7,5 +7,5 @@ mixin short-review(data)
     +e.review
       +e.H4.title
         +e.SPAN.author= data.author
-        +like-button(data.like)(class="_" + data.like.image).__like
+        +like-button(data.like)(class="_" + data.like.name).__like
       +e.P.content= data.review
