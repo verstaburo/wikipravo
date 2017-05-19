@@ -83,3 +83,15 @@ export function VerstaSelectBox() {
         selectListHeight;
   });
 };
+
+export function ResetSelectBox(el) {
+  var mainClass = "selectbox",
+      buttonClass = mainClass + "__button",
+      buttonTextOutput = mainClass + "__button-name",
+      inputClass = mainClass + "__input",
+      placeholder;
+
+  placeholder = $(el).find('.' + inputClass).attr("placeholder");
+  $(el).find('.' + buttonTextOutput).text(placeholder);
+  $(el).find('.' + inputClass).val(placeholder);
+};

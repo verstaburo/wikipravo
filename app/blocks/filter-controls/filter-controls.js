@@ -1,3 +1,5 @@
+import {ResetSelectBox} from '../selectbox/selectbox';
+
 export function FilterOpened() {
   var mainClass = "filter-controls",
       openBtn = mainClass + "__open-btn",
@@ -27,5 +29,21 @@ export function FilterOpened() {
         $(this).css({"display" : "flex"});
       });
     }
+  });
+};
+
+export function FilterReset() {
+  var mainClass = "filter-controls",
+      resetBtn = mainClass + "__reset-btn",
+      content = mainClass + "__content",
+      selectboxArray;
+
+  $('.' + resetBtn).click(function (e) {
+    e.preventDefault();
+    selectboxArray = document.querySelectorAll("." + mainClass + " .selectbox");
+    for (var i = 0; i <= selectboxArray.length; i++) {
+      ResetSelectBox(selectboxArray[i]);
+    }
+    $(this).parents("form")[0].reset();
   });
 }

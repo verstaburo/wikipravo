@@ -10,6 +10,7 @@ import {ScrollBar} from '../blocks/scrollbar/scrollbar';
 import {NoteTextareaFocus} from '../blocks/note/note';
 import {FilterOpened} from '../blocks/filter-controls/filter-controls';
 import {LocationPopup} from '../components/popup-location/popup-location';
+import {FilterReset} from '../blocks/filter-controls/filter-controls';
 
 $(() => {
 
@@ -25,5 +26,6 @@ $(() => {
   NoteTextareaFocus();
   FilterOpened();
   LocationPopup();
+  FilterReset();
 
 });
