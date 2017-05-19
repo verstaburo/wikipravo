@@ -3,6 +3,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
+  padding: 8px 0;
+  cursor: pointer;
 
   &_back {
 
@@ -35,17 +38,18 @@
   }
 
   &__icon {
-    width: 7px;
-    height: 11px;
-    fill: $color-main;
+    font-size: 18px;
+    color: $color-main;
+    transition: all .25s ease-in-out;
   }
 
   &__name {
     font-size: 14px;
-    line-height: 2.14em;
+    line-height: 1em;
     letter-spacing: .04em;
     font-weight: 400;
     color: $color-main;
+    transition: all .25s ease-in-out;
   }
 
   &:hover {
@@ -53,7 +57,7 @@
     .control-link {
 
       &__icon {
-        fill: rgba($color-main, .8);
+        color: rgba($color-main, .8);
       }
 
       &__name {

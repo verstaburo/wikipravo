@@ -5,7 +5,8 @@ mixin control-link(control)
   -var controlName = ""
   -var controlIcon = ""
   +b.A(class="control-link" + addClass)&attributes(attributes)
-    -if(control == "back") {controlName = "Назад"; controlIcon = "prev"}
-    -if(control == "next") {controlName = "Вперед"; controlIcon = "next"}
-    +icon(controlIcon).__icon
+    -if(control == "back") {controlName = "Назад"; controlIcon = "left"}
+    -if(control == "next") {controlName = "Вперед"; controlIcon = "right"}
+    +e.I(class="icon fa fa-angle-" + controlIcon)
+    //+icon(controlIcon).__icon
     +e.SPAN.name= controlName
