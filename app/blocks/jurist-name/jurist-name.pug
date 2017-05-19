@@ -1,0 +1,11 @@
+include ../icon/icons
+
+mixin jurist-name(name, online, checked)
+  -var onlineStatus = "_" + online
+  -var check = "_" + checked
+  +b.jurist-name&attributes(attributes)
+    +e(class= "checkstatus" + check)
+      +icon("check").__icon
+    +e.SPAN.lawyername
+      a(href="#")= name
+    +e.SPAN(class= "online" + onlineStatus)

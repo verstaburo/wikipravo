@@ -6,6 +6,7 @@ include ../experience/experience
 include ../icon/icons
 include ../avatar/avatar
 include ../selectbox/selectbox_bluebutton
+include ../jurist-name/jurist-name
 
 mixin lawyercard(data, request, requestin)
   -var online = data.online;
@@ -16,16 +17,11 @@ mixin lawyercard(data, request, requestin)
   -if(data.busy == 'Занят') {busy= false;}
   +b.SECTION.lawyercard&attributes(attributes)
     +e.SECTION.about
-      +e.H3.title_about
-        +e(class= "checkstatus_" + checked)
-          +icon("check").__icon
-        +e.SPAN.lawyername
-          a(href="#")= data.name
-        +e.SPAN(class= "online_" + online)
+      +jurist-name(data.name, data.online, data.checked).__title_about
       +e.info
         +avatar(data.image)._big.__img
         +e.status
-          +status-list(data.status).__status-list
+          +status-list(true).__status-list
           +vote-block(data.vote).__likes
       +e.A.publicwork
         |Дел на РосПравосудие:

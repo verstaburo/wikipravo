@@ -1,0 +1,75 @@
+.jurist-name {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  color: $color-font;
+  line-height: 1.5em;
+  letter-spacing: .04em;
+  text-align: left;
+  padding-left: 30px;
+
+  &__checkstatus {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: .75em;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transform: translate(0, -50%);
+
+    &_true {
+      border-color: $color-green-dark;
+
+      .jurist-name__icon {
+        fill: $color-green-dark;
+      }
+    }
+
+    &_false {
+      border-color: $color-red;
+
+      .jurist-name__icon {
+        fill: $color-red;
+      }
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 8px;
+  }
+
+  &__lawyername {
+    letter-spacing: .04em;
+
+    a:hover { opacity: .7; }
+  }
+
+  &__online {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-top: 9px;
+    flex-basis: 9px;
+    min-width: 9px;
+    margin-left: 6px;
+
+    &_true {
+      background-color: $color-green;
+    }
+
+    &_false {
+      background-color: $color-offline;
+    }
+  }
+}

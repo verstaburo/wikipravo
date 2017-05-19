@@ -1,0 +1,11 @@
+include ../note/note
+include ../profile-control/profile-control
+
+mixin action-controls-quadro(noteState, favoriteState, blacklistState, text)
+  +b.action-controls_quadro&attributes(attributes)
+    +e.col_favor
+      +profile-control("favorites", "В избраное", "star", favoriteState, true).__button_favorites
+      +profile-control("blacklist", "В черный список", "lock", blacklistState, true).__button_blacklist
+    +e.col_note
+      +profile-control("note", "Оставить заметку", "pencil", noteState, true).__button_note
+      +note(text).__note

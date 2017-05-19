@@ -58,19 +58,20 @@
       border-color: #63abed;
     }
   }
-  
+
   &_lightgrey {
     color: $color-font;
     background-color: $color-border-search;
     border-color: $color-border-search;
-    
+
     .button__arrow {
       color: $color-font;
     }
-    
+
     &:hover, &:active {
-      color: rgba($color-font, .6);
-      border-color: $color-font;
+      color: #fff;
+      background-color: $color-author-status;
+      border-color: $color-author-status;
     }
   }
 

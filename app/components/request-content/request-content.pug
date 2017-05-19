@@ -1,0 +1,37 @@
+include ../../blocks/jurist-name/jurist-name
+include ../../blocks/avatar/avatar
+include ../../blocks/button/button
+include ../../blocks/vote-block/vote-block
+include ../../blocks/status-list/status-list
+include ../../blocks/subject/subject
+include ../../blocks/browse/browse
+include ../../blocks/publication-date/publication-date
+include ../../blocks/action-controls/action-controls-quadro
+
+mixin request-content(authorization)
+  +b.request-content&attributes(attributes)
+    +e.jurist
+      +e.info
+        +jurist-name("Алексей Михайлович", true, true).__title
+        +e.info-content
+          +avatar("/assets/images/lawyer-avatar.jpg")._big.__img
+          +e.status
+            +status-list(false).__status-list
+            +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
+        -if(authorization) {
+          +button("a")(href="mailto:").button_text._centered._small.__mail Написать сообщение
+        -}
+      +e.action
+        -if(authorization) {
+          +action-controls-quadro("", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.").__action-controls
+        -}
+        +e.P.reginfo Зарегистрирован на сайте:
+          +e.SPAN.regtime меньше месяца
+    +e.request-body
+      +e.text &mdash; Добрый день. Нужно подготовить все необходимые документы для регистрации ООО. Компания занимается интернет-торговлей.
+      +e.describe
+        +publication-date("26 Января 2017, 12:21", "Опубликовано:").__publication
+        +subject("Категория права:", "Регистрация ООО").subject_nomargin.__subject
+        +e.request-status
+          +e.open Открыта
+          +browse("395", "4").__browse

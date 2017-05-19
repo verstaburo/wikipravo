@@ -1,0 +1,66 @@
+.request-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 51px 0 5px;
+  width: 100%;
+
+  &_client {
+    margin: 0 0 5px;
+    width: 100%;
+  }
+
+  &__control-link {
+    margin: 23px 0;
+  }
+
+  &__header {
+    box-sizing: border-box;
+    padding: 22px 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  &__title {
+    margin-right: 50px;
+    font-size: 30px;
+    line-height: 1.26em;
+    letter-spacing: .06em;
+    color: $color-font;
+    font-weight: 400;
+    width: 470px;
+    margin-bottom: 22px;
+
+    @include desktop {
+      width: calc(100% - 170px)
+    }
+  }
+
+  &__action-controls {
+    margin-right: auto;
+    margin-bottom: 22px;
+
+    @include desktop {
+      margin-right: 0;
+    }
+  }
+
+  &__condition {
+    margin-left: 50px;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: #fff;
+    white-space: nowrap;
+    margin-bottom: 22px;
+
+    @include desktop {
+      margin-left: 0;
+    }
+  }
+}

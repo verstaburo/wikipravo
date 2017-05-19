@@ -3,7 +3,7 @@ include ../profile-control/profile-control
 
 mixin action-controls(noteState, favoriteState, blacklistState, text)
   +b.action-controls&attributes(attributes)
-    +profile-control("favorites", "В избраном", "star", favoriteState).__button_favorites
-    +profile-control("blacklist", "В черном списке", "lock", blacklistState).__button_blacklist
-    +profile-control("note", "Заметка", "pencil", noteState).__button_note
+    +profile-control("favorites", "В избраное", "star", favoriteState).__button_favorites
+    +profile-control("blacklist", "В черный список", "lock", blacklistState).__button_blacklist
+    +profile-control("note", "Оставить заметку", "pencil", noteState).__button_note
     +note(text).__note

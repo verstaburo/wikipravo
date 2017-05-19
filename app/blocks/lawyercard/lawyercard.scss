@@ -23,20 +23,7 @@
   &__title {
     box-sizing: border-box;
     width: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    color: $color-font;
-    line-height: 1.5em;
-    letter-spacing: .04em;
     margin-bottom: 16px;
-
-    &_about {
-      position: relative;
-      padding-left: 30px;
-      text-align: left;
-      display: flex;
-      align-items: flex-start;
-    }
 
     &_specialization {
       display: flex;
@@ -76,68 +63,6 @@
           }
         }
       }
-    }
-  }
-
-  &__checkstatus {
-    box-sizing: border-box;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: .75em;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transform: translate(0, -50%);
-
-    &_true {
-      border-color: $color-green-dark;
-
-      .lawyercard__icon {
-        fill: $color-green-dark;
-      }
-    }
-
-    &_false {
-      border-color: $color-red;
-
-      .lawyercard__icon {
-        fill: $color-red;
-      }
-    }
-  }
-
-  &__icon {
-    width: 10px;
-    height: 8px;
-  }
-
-  &__lawyername {
-    letter-spacing: .04em;
-
-    a:hover { opacity: .7; }
-  }
-
-  &__online {
-    display: inline-block;
-    vertical-align: middle;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    margin-top: 9px;
-    flex-basis: 9px;
-    min-width: 9px;
-    margin-left: 6px;
-
-    &_true {
-      background-color: $color-green;
-    }
-
-    &_false {
-      background-color: $color-offline;
     }
   }
 

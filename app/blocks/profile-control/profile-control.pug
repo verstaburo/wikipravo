@@ -1,8 +1,12 @@
 include ../icon/icons
 include ../note/note
 
-mixin profile-control(type, title, image, state)
+mixin profile-control(type, title, image, state, titleVisible)
   -var controlState = ""
   -if(state) {controlState = " " + state;}
   +b.A(class="profile-control" + "_" + type + controlState, href= "#", title= title )&attributes(attributes)
-    +icon(image).__icon
+    +e.SPAN.img
+      +icon(image).__icon
+    -if(titleVisible) {
+      +e.SPAN.title= title
+    -}

@@ -1,0 +1,64 @@
+.control-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_back {
+
+    .control-link {
+
+      &__icon {
+        order: 1;
+        margin-right: 10px;
+      }
+
+      &__name {
+        order: 2;
+      }
+    }
+  }
+
+  &_next {
+
+    .control-link {
+
+      &__icon {
+        order: 2;
+        margin-left: 10px;
+      }
+
+      &__name {
+        order: 1;
+      }
+    }
+  }
+
+  &__icon {
+    width: 7px;
+    height: 11px;
+    fill: $color-main;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 2.14em;
+    letter-spacing: .04em;
+    font-weight: 400;
+    color: $color-main;
+  }
+
+  &:hover {
+
+    .control-link {
+
+      &__icon {
+        fill: rgba($color-main, .8);
+      }
+
+      &__name {
+        color: rgba($color-main, .8);
+      }
+    }
+  }
+}

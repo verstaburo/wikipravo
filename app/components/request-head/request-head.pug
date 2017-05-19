@@ -1,0 +1,14 @@
+include ../../blocks/control-link/control-link
+include ../../blocks/action-controls/action-controls-nonote
+include ../../blocks/request-condition/request-condition
+
+mixin request-head(data, authorization, control)
+  +b.request-head&attributes(attributes)
+    -if(control)
+      +control-link(control).__control-link
+    +e.header
+      +e.H2.title= data.title
+      -if(authorization) {
+        +action-controls-nonote(data.action.favorites, data.action.blacklist).__action-controls
+      -}
+      +request-condition(data.condition.type, data.condition.time, data.condition.price).__condition

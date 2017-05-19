@@ -1,0 +1,11 @@
+include ../icon/icons
+
+mixin control-link(control)
+  -var addClass = "_" + control
+  -var controlName = ""
+  -var controlIcon = ""
+  +b.A(class="control-link" + addClass)&attributes(attributes)
+    -if(control == "back") {controlName = "Назад"; controlIcon = "prev"}
+    -if(control == "next") {controlName = "Вперед"; controlIcon = "next"}
+    +icon(controlIcon).__icon
+    +e.SPAN.name= controlName

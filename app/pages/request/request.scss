@@ -1,0 +1,13 @@
+.request {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: $color-bg-index;
+  padding: 0 50px;
+
+  &_client {
+    padding: 0 50px;
+  }
+}
