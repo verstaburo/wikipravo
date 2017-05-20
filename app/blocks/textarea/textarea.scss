@@ -1,0 +1,22 @@
+.textarea {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.5em;
+  letter-spacing: .06em;
+  font-weight: 400;
+  color: $color-font;
+  resize: none;
+  background-color: #fff;
+  border: none;
+  outline: none;
+
+  &:placeholder {
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: .06em;
+    font-weight: 400;
+    color: rgba(#afafaf, .8);
+  }
+}

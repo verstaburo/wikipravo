@@ -1,0 +1,18 @@
+include ../button/button
+include ../icon/icons
+
+mixin files-list()
+  -var data = [{"name" : "User_mail", "ext" : "doc"}, {"name" : "User_mail", "ext" : "pdf"}]
+  -var imgData = ""
+  -var fileName = ""
+  +b.UL.files-list&attributes(attributes)
+    each item in data
+      - fileName= item.name + "." + item.ext
+      - if( item.ext == "doc") {imgData = "assets/images/doc.png"}
+      - else if( item.ext == "pdf") {imgData = "assets/images/pdf.png"}
+      - else {imgData = ""}
+      +e.LI.item
+        +e.IMG(src=imgData).__img
+        +e.SPAN.filename= fileName
+        +e.BUTTON(type="button").remove
+          +icon("cross").__icon
