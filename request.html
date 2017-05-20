@@ -293,22 +293,8 @@
                         <form class="message__form" id="message">
                             <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
                             <output class="message__files-output" for="files" id="filelist">
-                                <ul class="files-list message__files-list">
-                                    <li class="files-list__item">
-                                        <img class="files-list__img" src="assets/images/doc.png" alt="" role="presentation" />
-                                        <span class="files-list__filename">User_mail.doc</span>
-                                        <button class="files-list__remove" type="button">
-                                            <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
-                                        </button>
-                                    </li>
-                                    <li class="files-list__item">
-                                        <img class="files-list__img" src="assets/images/pdf.png" alt="" role="presentation" />
-                                        <span class="files-list__filename">User_mail.pdf</span>
-                                        <button class="files-list__remove" type="button">
-                                            <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
-                                        </button>
-                                    </li>
-                                </ul>
+                                <span class="message__placeholder">Нет выбранных файлов</span>
+                                <ul class="files-list message__files-list"></ul>
                             </output>
                             <div class="message__buttons">
                                 <BUTTON class="button button_blue message__button" type="submit">
