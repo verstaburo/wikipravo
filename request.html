@@ -288,6 +288,38 @@
                             </div>
                         </div>
                     </div>
+                    <div class="message">
+                        <h3 class="message__title">Ваш ответ</h3>
+                        <form class="message__form" id="message">
+                            <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
+                            <output class="message__files-output" for="files" id="filelist">
+                                <ul class="files-list message__files-list">
+                                    <li class="files-list__item">
+                                        <img class="files-list__img" src="assets/images/doc.png" alt="" role="presentation" />
+                                        <span class="files-list__filename">User_mail.doc</span>
+                                        <button class="files-list__remove" type="button">
+                                            <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                        </button>
+                                    </li>
+                                    <li class="files-list__item">
+                                        <img class="files-list__img" src="assets/images/pdf.png" alt="" role="presentation" />
+                                        <span class="files-list__filename">User_mail.pdf</span>
+                                        <button class="files-list__remove" type="button">
+                                            <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </output>
+                            <div class="message__buttons">
+                                <BUTTON class="button button_blue message__button" type="submit">
+                                    <span class="button__name">Отправить</span>
+                                </BUTTON>
+                                <label class="message__fileselect button button_transparent_second" for="files">Прикрепить файлы
+                                    <input class="message__files" type="file" id="files" name="files[]" multiple="multiple" />
+                                </label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="page-layout__page-footer">
