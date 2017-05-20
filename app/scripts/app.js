@@ -11,6 +11,7 @@ import {NoteTextareaFocus} from '../blocks/note/note';
 import {FilterOpened} from '../blocks/filter-controls/filter-controls';
 import {LocationPopup} from '../components/popup-location/popup-location';
 import {FilterReset} from '../blocks/filter-controls/filter-controls';
+import {ReadFileList} from '../blocks/message/message'
 
 $(() => {
 
@@ -27,5 +28,5 @@ $(() => {
   FilterOpened();
   LocationPopup();
   FilterReset();
-
+  ReadFileList();
 });

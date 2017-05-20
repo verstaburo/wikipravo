@@ -8,7 +8,8 @@ mixin message(title, textareaPlaceholder)
     +e.FORM.__form#message
       +textarea(placeholder= textareaPlaceholder class=" ").__textarea
       +e.OUTPUT.__files-output(for="files" id="filelist")
-        +files-list.__files-list
+        +e.SPAN.placeholder Нет выбранных файлов
+        +b.UL.files-list.message__files-list
       +e.__buttons
         +button("button")(type="submit")._blue.__button Отправить
         +e.LABEL(for="files" class=" message__fileselect button_transparent_second")
