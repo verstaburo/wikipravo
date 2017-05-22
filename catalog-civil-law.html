@@ -302,10 +302,31 @@
                                             <label class="checkbox__label" for="rusjustice">Есть профиль на РосПравосудие</label>
                                         </div>
                                     </div>
-                                    <div class="filter-controls__row">
-                                        <BUTTON class="button button_blue filter-controls__button">
-                                            <span class="button__name">Заказать для отобранных</span>
-                                        </BUTTON>
+                                    <div class="filter-controls__row filter-controls__row_buttons">
+                                        <div class="selectbox selectbox_link selectbox_visible filter-controls__button">
+                                            <input class="selectbox__input" type="hidden" value="Консультацию" placeholder="Консультацию" />
+                                            <a class="button selectbox__button button button_blue">
+                                                <span class="button__name">Заказать для отобранных</span>
+                                                <i class="button__arrow fa fa-angle-down"></i>
+                                            </a>
+                                            <ul class="selectbox__list">
+                                                <li class="selectbox__option">Консультацию
+                                                    <div class="selectbox__title">
+                                                        <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                    </div>
+                                                </li>
+                                                <li class="selectbox__option">Документ
+                                                    <div class="selectbox__title">
+                                                        <span>тип заказа - документ</span>
+                                                    </div>
+                                                </li>
+                                                <li class="selectbox__option">Услугу
+                                                    <div class="selectbox__title">
+                                                        <span>тип заказа - работа</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <BUTTON class="button button_transparent filter-controls__button">
                                             <span class="button__name">Применить</span>
                                         </BUTTON>
