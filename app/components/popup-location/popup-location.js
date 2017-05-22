@@ -1,7 +1,19 @@
 export function LocationPopup() {
-  
+
+  $(".popup-location__button_yes").click(function() {
+    $(".popup-location").css({"display" : "none"});
+  });
+  $(".popup-location__button_no").click(function() {
+    $(".popup-location").css({"display" : "none"});
+  });
+  $("html").click(function(e) {
+      if(!$(".popup-location").is(e.target) && $(".popup-location").has(e.target).length === 0) {
+        $(".popup-location").css({"display" : "none"});
+      }
+  });
+
   // Позиционируем относительно .sidebar__selectbox
-  
+
   function popupLocationPosition() {
     var locationPopupHeight = $(".popup-location").outerHeight();
     var locationPopupPosition =  {top: 0, left: 0}
@@ -22,6 +34,6 @@ export function LocationPopup() {
 
     $(".popup-location").offset(locationPopupPosition).css({"visibility" : "visible"});
   }
-  
+
   popupLocationPosition();
 };

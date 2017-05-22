@@ -26,9 +26,9 @@ mixin searchform(authorized)
         +checkbox("Опыт работы в Гос.Структурах", "publicwork").__checkbox
         +checkbox("Есть кабинет в здании суда", "courtroom").__checkbox
         +checkbox("Есть профиль на РосПравосудие", "rusjustice").__checkbox
-      +e.row
+      +e.row_buttons
         -if(!authorized)
-          +button("button")._blue.__button Заказать для отобранных
+          +selectbox_bluebutton(getData('lawyer-dropdown-button')).__button Заказать для отобранных
         +button("button")._transparent.__button Применить
 
 

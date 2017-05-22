@@ -4,7 +4,7 @@ include ../note/note
 mixin profile-control(type, title, image, state, titleVisible)
   -var controlState = ""
   -if(state) {controlState = " " + state;}
-  +b.A(class="profile-control" + "_" + type + controlState, href= "#", title= title )&attributes(attributes)
+  +b.BUTTON(class="profile-control" + "_" + type + controlState, title= title )&attributes(attributes)
     +e.SPAN.img
       +icon(image).__icon
     -if(titleVisible) {

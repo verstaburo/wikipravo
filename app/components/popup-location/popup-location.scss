@@ -11,7 +11,11 @@
   width: 289px;
   min-height: 150px;
   visibility: hidden;
-  
+
+  @include s-desktop {
+    width: 240px;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -23,9 +27,9 @@
     border-bottom-color: #fff;
     transform: translate(0, -100%);
   }
-  
+
   &_top {
-    
+
     &::before {
       top: auto;
       bottom: 0;
@@ -34,19 +38,19 @@
       transform: translate(0, 100%);
     }
   }
-  
+
   p {
     font-size: 14px;
     line-height: 1.5em;
     letter-spacing: .04em;
     font-weight: 400;
     color: #000;
-    
+
     &:not(:last-of-type) {
       margin-bottom: 7px;
     }
   }
-  
+
   &__city {
     font-size: inherit;
     line-height: inherit;
@@ -54,11 +58,11 @@
     font-weight: 400;
     color: inherit;
   }
-  
+
   &__bold {
     font-weight: 500 !important;
   }
-  
+
   &__buttons {
     display: inline-flex;
     flex-direction: row;
@@ -68,10 +72,16 @@
     padding: 0 12px;
     margin-top: 17px;
     width: 100%;
+
+    @include s-desktop {
+      padding: 0;
+    }
   }
-  
+
   &__button {
     flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
 
     &:not(:last-of-type) {
       margin-right: 13px;

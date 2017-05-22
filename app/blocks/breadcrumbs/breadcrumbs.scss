@@ -16,26 +16,35 @@
       font-size: 13px;
       line-height: 2.77em;
       letter-spacing: .035em;
-      color: $color-breadcrumbs-text;
+      color: $color-main;
       margin-right: 8px;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        color: rgba($color-main, .6);
+
+        svg {
+          fill: rgba($color-main, .35);
+        }
+      }
     }
 
     i {
       font-size: 18px;
-      color: $color-breadcrumbs-text;
+      color: $color-main;
     }
 
     svg {
       width: 12px;
       height: 9px;
-      fill: rgba(#000, .35);
+      fill: $color-main/*rgba(#000, .35)*/;
     }
 
     &:last-child {
       margin-right: 0;
 
       a {
-        color: $color-main;
+        color: $color-breadcrumbs-text;
         cursor: default;
       }
 

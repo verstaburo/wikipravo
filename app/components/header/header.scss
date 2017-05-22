@@ -12,7 +12,9 @@
     width: 36px;
   }
 
-  &__searchbar { flex: 1; }
+  &__searchbar {
+    flex: 1;
+  }
 
   &__col {
     border-left: 1px solid #e5e5e5;
@@ -24,6 +26,10 @@
     &_contacts-block {
       text-align: right;
       padding: 13px 20px 13px 35px;
+
+      @include tablet {
+        padding: 13px 16px;
+      }
     }
 
     &_link-button {
@@ -32,6 +38,10 @@
       .icon-link {
         padding: 16px 38px;
         min-height: 100%;
+
+        @include tablet {
+          padding: 13px 16px;
+        }
       }
     }
 
@@ -41,11 +51,15 @@
       align-items: center;
       box-sizing: border-box;
       padding: 7px 16px;
+
+      .icon-link {
+        white-space: nowrap;
+      }
     }
 
     &_request {
-      min-width: 160px;
-      width: 16.4%;
+      min-width: 170px;
+      min-width: 16.4%
     }
 
     &_order {
@@ -63,6 +77,10 @@
       width: 11%;
       border-right: 1px solid #e5e5e5;
       margin-right: 50px;
+
+      @include tablet {
+        margin-right: 10px;
+      }
     }
   }
 }
