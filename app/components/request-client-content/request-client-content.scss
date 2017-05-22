@@ -5,6 +5,7 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 60px;
 
   &__offer {
     display: flex;
@@ -82,5 +83,9 @@
     &:not(:last-of-type) {
       margin-bottom: 29px;
     }
+  }
+
+  &__link {
+    padding: 39px 37px;
   }
 }
