@@ -82,7 +82,6 @@ export function FileListControl() {
   }
 
   function RemoveFileFromFileList(fileListInput, fileName) {
-    var files = [];
     var files = fileListInput.files;
     console.log(fileListInput.files);
 
