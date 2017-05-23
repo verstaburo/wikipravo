@@ -1,0 +1,153 @@
+.client-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;  
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 15px 30px;
+    border: 1px solid #d1d1d1;
+  }
+
+  &__image {
+    position: relative;
+    min-width: 74px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid rgba($color-registration-grey, .2);
+    margin-right: 19px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 46px;
+    transform: translate(-50%, -50%);
+    fill: $color-registration-grey;
+    
+    &_reg-jurist {
+      fill: transparent;
+      stroke: $color-registration-grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    p {
+      font-size: 13px;
+      line-height: 1.54em;
+      letter-spacing: .035em;
+      color: $color-registration-grey;
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.25em;
+    letter-spacing: .05em;
+    color: $color-registration-grey;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+
+    .client-type {
+
+      &__label {
+
+        &_red:hover {
+          background-color: $color-registration-red;
+          border-color: $color-registration-red;
+        }
+
+        &_blue:hover {
+          background-color: $color-main;
+          border-color: $color-main;
+        }
+      }
+
+      &__image {
+        border-color: rgba(#fff, .2);
+      }
+
+      &__img {
+        fill: #fff;
+        
+        &_reg-jurist {
+          fill: transparent;
+          stroke: #fff;
+        }
+      }
+
+      &__title {
+        color: #fdfdfd;
+      }
+
+      &__content {
+
+        p {
+          color: #fdfdfd;
+        }
+      }
+    }
+  }
+
+  input:checked ~ .client-type__label {
+
+    &_red {
+      background-color: $color-registration-red;
+      border-color: $color-registration-red;
+    }
+
+    &_blue {
+      background-color: $color-main;
+      border-color: $color-main;
+    }
+
+    > .client-type__image {
+      border-color: rgba(#fff, .2);
+    }
+
+    > .client-type__image .client-type__img {
+      fill: #fff;
+      
+      &_reg-jurist {
+        fill: transparent;
+        stroke: #fff;
+      }
+    }
+
+    > .client-type__content .client-type__title {
+      color: #fdfdfd;
+    }
+
+    > .client-type__content {
+
+      p {
+        color: #fdfdfd;
+      }
+    }
+  }
+}

@@ -13,6 +13,7 @@ import {LocationPopup} from '../components/popup-location/popup-location';
 import {FilterReset} from '../blocks/filter-controls/filter-controls';
 import {FileListControl} from '../blocks/message/message';
 import {FavoritesSwitch} from '../blocks/action-controls/action-controls';
+import {JuristColorChange} from '../components/system-regform/system-regform';
 
 $(() => {
 
@@ -31,4 +32,5 @@ $(() => {
   FilterReset();
   FileListControl();
   FavoritesSwitch();
+  JuristColorChange();
 });

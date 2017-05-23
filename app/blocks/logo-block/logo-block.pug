@@ -2,8 +2,8 @@ mixin logo-block(data)
   -var theme = ''
   -var position = ''
   -var image = ''
-  -if(data.logotype == 'light') {theme = '_light'; image = 'http://placehold.it/120x100';}
-  -else if(data.logotype == 'dark') {theme = '_dark'; image = 'http://placehold.it/120x100';}
+  -if(data.logotype == 'light') {theme = '_light'; image = 'assets/images/wikipravo-logo-light.svg';}
+  -else if(data.logotype == 'dark') {theme = '_dark'; image = 'assets/images/wikipravo-logo-dark.svg';}
   -if(data.position == 'row') {position = '_row';}
   +b(class="logo-block" + theme + " logo-block" + position)&attributes(attributes)
     +e(class="logo" + theme)

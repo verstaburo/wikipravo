@@ -1,0 +1,29 @@
+include ../../blocks/section-title/section-title
+include ../../blocks/client-type/client-type
+include ../../blocks/input/input
+include ../../blocks/checkbox/checkbox
+include ../../blocks/button-arrow/button-arrow
+include ../../blocks/socials/socials
+
+mixin system-regform()
+  +b.FORM.system-regform&attributes(attributes)
+    +section-title("Тип пользователя").__title
+    +e.row_client-type
+      +client-type({"type" : "jurist", "image" : "reg-jurist", "title" : "Я Юрист/Адвокат", "text" : "Помогу в решение юридических проблем"}, "red").__type_jurist
+      +client-type({"type" : "client", "image" : "reg-client", "title" : "Я клиент", "text" : "Требуется квалифицированная помощь специалиста"}, "blue", true).__type_user
+    +section-title("Авторизоваться через социальные сети").__title
+    +e.row_social-authorization
+      +socials(getData('registration-socials')).__socials
+    +e.row_narrow
+      +e.field
+        +e.LABEL.label Это имя будет указано в Ваше профиле
+        +input(type="text" placeholder="Ваше Имя" name="username" required)
+      +e.field
+        +e.LABEL.label На указанный адрес прийдет письмо с подтверждением
+        +input(type="password" placeholder="Ваш E-mail" name="password" required)
+    +e.row_narrow
+      +e.field
+        +checkbox("Я согласен с ", "rules")._grey._big.__rules
+          +e.A правилами сервиса
+      +e.field
+        +button-arrow("right", "button")(type="submit")._blue.__button Продолжить

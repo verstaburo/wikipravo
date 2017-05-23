@@ -1,4 +1,5 @@
 .social {
+  position: relative;
   box-sizing: border-box;
   display: inline-flex;
   justify-content: center;
@@ -10,28 +11,83 @@
   border: 3px solid black;
   background-color: transparent;
   transition: all .25s ease-in-out;
+  
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &_vk {
     border-color: #007ac3;
 
-    &:hover { background-color: #007ac3; }
+    .social__img {
+      width: 12px;
+      height: 12px;
+      fill: #007ac3;
+    }
+
+    &:hover {
+      background-color: #007ac3;
+
+      .social__img {
+        fill: #fff;
+      }
+    }
   }
 
   &_fb {
     border-color: #3a69ad;
 
-    &:hover { background-color: #3a69ad; }
+    .social__img {
+      width: 12px;
+      height: 16px;
+      fill: #3a69ad;
+    }
+
+    &:hover {
+      background-color: #3a69ad;
+
+      .social__img {
+        fill: #fff;
+      }
+    }
   }
 
   &_twitter {
     border-color: #00abf0;
 
-    &:hover { background-color: #00abf0; }
+    .social__img {
+      width: 18px;
+      height: 15px;
+      fill: #00abf0;
+    }
+
+    &:hover {
+      background-color: #00abf0;
+
+      .social__img {
+        fill: #fff;
+      }
+    }
   }
 
   &_youtube {
     border-color: #cf1a19;
 
-    &:hover { background-color: #cf1a19; }
+    .social__img {
+      width: 15px;
+      height: 15px;
+      fill: #cf1a19;
+    }
+
+    &:hover {
+      background-color: #cf1a19;
+
+      .social__img {
+        fill: #fff;
+      }
+    }
   }
 }

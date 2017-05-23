@@ -16,10 +16,4 @@
   "name" : "Twitter",
   "image" : "twitter",
   "href" : "#"
-},
-{
-  "abbr" : "youtube",
-  "name" : "Youtube",
-  "image" : "youtube",
-  "href" : "#"
 }]

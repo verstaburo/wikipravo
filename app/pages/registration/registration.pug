@@ -1,0 +1,17 @@
+extends ../../layouts/default2
+
+block head
+  - var pageTitle = 'Wiki Pravo — Регистрация'
+
+block content
+  +b.registration
+    +page-title("Регистрация в системе").__title
+    +system-regform
+
+block page-top
+  +header-dark
+
+block page-bottom
+
+block page-popups
+  +popups

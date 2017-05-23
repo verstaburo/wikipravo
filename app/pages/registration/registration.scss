@@ -1,0 +1,15 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 1020px;
+  min-width: 1020px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 66px 0 80px;
+
+  &__title {
+    align-self: center;
+  }
+}

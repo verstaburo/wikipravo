@@ -1,0 +1,10 @@
+include ../../blocks/contacts-block/contacts-block
+include ../../blocks/logo-block/logo-block
+
+mixin header-dark()
+  +b.header_dark&attributes(attributes)
+    +e.wrapper
+      +e.col_noborder._logo
+        +logo-block({"logotype": "light", "position" : "row"})._header.__logo
+      +e.col_noborder._contacts-block
+        +contacts-block(getData('header-contacts-dark'))._icons._dark.__contacts

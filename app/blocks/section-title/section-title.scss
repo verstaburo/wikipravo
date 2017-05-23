@@ -1,0 +1,16 @@
+.section-title {
+  font-size: 14px;
+  line-height: 1.5em;
+  letter-spacing: .04em;
+  font-weight: 400;
+  color: $color-font;
+  text-align: center;
+
+  &_left {
+    text-align: left;
+  }
+
+  &_right {
+    text-align: right;
+  }
+}

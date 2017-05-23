@@ -58,6 +58,22 @@
       border-color: #63abed;
     }
   }
+  
+  &_red {
+    color: white;
+    background-color: $color-registration-red;
+    border-color: $color-registration-red;
+
+    .button__arrow {
+      color: rgba(white, .75);
+    }
+
+    &:hover, &:active {
+      color: white;
+      background-color: rgba($color-registration-red, .75);
+      border-color: $color-registration-red;
+    }
+  }
 
   &_lightgrey {
     color: $color-font;

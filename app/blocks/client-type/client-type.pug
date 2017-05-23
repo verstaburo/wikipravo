@@ -1,0 +1,15 @@
+include ../icon/icons
+
+mixin client-type(data, color, checked)
+  -var clr = ""
+  -var chk = false
+  -if(color) {clr = "_" + color;}
+  -if(checked) {chk = "true"}
+  +b.client-type&attributes(attributes)
+    +e.INPUT(type="radio", name="client-type", value=data.type, id="type-" + data.type checked=chk).checkbox
+    +e.LABEL(for="type-" + data.type, class="label" + clr)
+      +e.image
+        +icon(data.image)(class="img_" + data.image)
+      +e.content
+        +e.H3.title= data.title
+        +e.P= data.text

@@ -83,4 +83,36 @@
       }
     }
   }
+
+  &_dark {
+    background-color: $color-font;
+    box-shadow: none;
+
+    .header {
+
+      &__wrapper {
+        box-sizing: border-box;
+        width: 1020px;
+        min-width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      &__col {
+        border-left-width: 0;
+        padding: 8px 0;
+
+        &_logo {
+          margin-right: auto;
+        }
+
+        &_contacts-block {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
 }

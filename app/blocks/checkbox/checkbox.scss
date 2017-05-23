@@ -18,6 +18,18 @@
     letter-spacing: .035em;
     color: $color-font;
     white-space: nowrap;
+    
+    a {
+      border-bottom: 1px solid $color-font;
+      letter-spacing: .035em;
+      padding-bottom: 5px;
+      cursor: pointer;
+      
+      &:hover {
+        color: rgba($color-font, .6);
+        border-color: rgba($color-font, .6);
+      }
+    }
 
     &::before, &::after {
       position: absolute;
@@ -52,5 +64,52 @@
 
   input:checked ~ label::after {
     background-color: rgba($color-font, .5);
+  }
+  
+  &_grey {
+    
+    .checkbox {
+      
+      &__label {
+        color: rgba($color-font, .5);
+        letter-spacing: .025em;
+        
+        a {
+          color: rgba($color-font, .4);
+          border-color: rgba($color-font, .4);
+          letter-spacing: .025em;
+          
+          &:hover {
+            color: rgba($color-font, .8);
+            border-color: rgba($color-font, .8);
+          }
+        }
+        
+        &::before {
+          border-color: rgba($color-font, .15);
+        }
+      }
+    }    
+  }
+  
+  &_big {
+    
+    .checkbox {
+      
+      &__label {
+        padding-left: 45px;
+        
+        &::after {
+          left: 12px;
+          width: 15px;
+          height: 15px;
+        }
+        
+        &::before {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }    
   }
 }

@@ -1,3 +1,5 @@
+include ../icon/icons
+
 mixin social(data)
   +b.A(class="social_" + data.abbr href=data.href)= data.name
-    +e.IMG(src= data.image)
+    +icon(data.image).__img

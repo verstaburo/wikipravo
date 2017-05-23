@@ -42,10 +42,6 @@
     }
   }
 
-  &__image {
-    background-color: rgba(white, .1); // Убрать, когда появится иконка
-  }
-
   &__text {
     color: rgba(white, .4);
     font-size: 14px;
@@ -58,5 +54,36 @@
     }
 
     &:not(:first-child) { margin-top: 5px; }
+  }
+
+  &_header {
+    margin-bottom: 0 !important;
+    align-items: stretch !important;
+
+    .logo-block {
+
+      &__describe {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      &__logo {
+        margin-bottom: 0;
+      }
+
+      &__brand {
+        margin-right: 24px;
+      }
+
+      &__text {
+        width: 260px;
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }

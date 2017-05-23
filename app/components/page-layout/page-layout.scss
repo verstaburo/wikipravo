@@ -31,4 +31,8 @@
     filter: url('../images/icon.svg#gaussian_blur');
     filter: blur(3px);
   }
+
+  &_noleft {
+    padding-left: 0;
+  }
 }
