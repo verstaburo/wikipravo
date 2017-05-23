@@ -68,7 +68,7 @@ export function VerstaSelectBox() {
       el.parents("." + mainClass).find("." + listClass).removeClass(selectTopListClass);
     }
   }
-
+  
   selectBoxPosition( $("." + buttonClass) );
 
   // #####################

@@ -18,6 +18,7 @@ import {JuristColorChange} from '../components/system-regform/system-regform';
 $(() => {
 
   // Финальный вызов функций
+  JuristColorChange();
   VerstaSelectBox();
   VerstaPopups();
   VerstaTabs();
@@ -32,5 +33,4 @@ $(() => {
   FilterReset();
   FileListControl();
   FavoritesSwitch();
-  JuristColorChange();
 });
