@@ -1,13 +1,14 @@
 .jurist-tabs {
   box-sizing: border-box;
   padding: 0 50px;
+  overflow: hidden;
 
   &__controls {
     box-sizing: border-box;
     width: 100%;
     background-color: #fff;
     border: 1px solid #e7e7e9;
-    margin: -2px 0;
+    margin: -1px 0;
 
     @include desktop {
       flex-wrap: wrap;
