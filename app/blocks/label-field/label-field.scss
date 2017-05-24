@@ -15,4 +15,13 @@
     width: 100%;
     text-align: left;
   }
+
+  &_reverse {
+
+    .label-field__label {
+      margin-bottom: 0;
+      margin-top: 10px;
+      order: 2;
+    }
+  }
 }

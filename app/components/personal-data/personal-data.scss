@@ -14,6 +14,16 @@
     &_photo {
       margin-bottom: 20px;
     }
+
+    &_twothird {
+      flex: 1;
+      margin-right: 26px;
+    }
+
+    &_third {
+      width: 268px;
+      min-width: 268px;
+    }
   }
 
   &__row {
@@ -31,6 +41,10 @@
 
     &_photo {
       margin-bottom: 36px;
+    }
+
+    &_nomargin {
+      margin-bottom: 0;
     }
   }
 
@@ -56,28 +70,23 @@
     }
 
     &_rospravo {
-      min-width: 330px;
-      margin-right: 30px;
+      flex: 1;
+      margin-right: 26px;
     }
 
     &_experience {
-      min-width: 170px;
-      margin-right: 30px;
-    }
-
-    &_specialization {
+      width: 270px;
       min-width: 270px;
-      flex: 1;
-      margin-right: 0;
-
-      .selectbox {
-        width: 100%;
-      }
     }
   }
 
   &__nolabel {
     margin-top: auto;
+
+    &_reverse {
+      margin-top: 0;
+      margin-bottom: auto;
+    }
   }
 
   &__password {
@@ -103,7 +112,7 @@
       font-size: 14px;
       line-height: 1.78em;
       font-weight: 300;
-      letter-spacing: .04em;
+      letter-spacing: .03em;
       color: #b1b1b1;
     }
 
@@ -120,13 +129,82 @@
         text-align: center;
       }
     }
+
+    &_bold {
+
+      p {
+        font-weight: 400;
+      }
+    }
   }
 
   &__specs {
     width: 100%;
+    margin-top: 24px;
+    margin-bottom: 27px;
   }
 
   &__button {
     width: 100%;
+  }
+
+  &_jurist {
+    padding: 58px 77px 0;
+
+    .personal-data {
+
+      &__title {
+        margin-bottom: 16px;
+
+        &_specs {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__row {
+        margin-bottom: 38px;
+
+        &_table {
+          margin-bottom: 27px;
+        }
+
+        &_photo {
+          margin-top: 26px;
+          margin-bottom: 68px;
+        }
+
+        &_nomargin {
+          margin-bottom: 0;
+        }
+      }
+
+      &__field {
+
+        &_second {
+
+          &:not(:nth-of-type(2n)) {
+            margin-right: 27px;
+          }
+        }
+
+        &_third {
+
+          &:not(:nth-of-type(3n)) {
+            margin-right: 30px;
+          }
+        }
+
+        &_rospravo {
+          flex: 1;
+          margin-right: 26px;
+        }
+
+        &_experience {
+          flex: 0;
+          width: 268px;
+          min-width: 268px;
+        }
+      }
+    }
   }
 }

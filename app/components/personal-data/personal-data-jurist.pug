@@ -1,0 +1,57 @@
+include ../../blocks/section-title/section-title
+include ../../blocks/input/input
+include ../../blocks/input-password/input-password
+include ../../blocks/button/button
+include ../../blocks/label-field/label-field
+include ../../blocks/selectbox/selectbox
+include ../../blocks/avatar-browse/avatar-browse
+include ../../blocks/warning/warning
+include ../specs/specs
+
+mixin personal-data-jurist()
+  +b.FORM.personal-data_jurist&attributes(attributes)
+    +section-title("Логин и пароль")._left._bold.__title
+    +e.row_table
+      +label-field("Латинские буквы и цифры, от 8 до 32 символов", "userlogin")._reverse.__field_second
+        +input(type="text" id="userlogin" placeholder="Логин" required)
+      +label-field("Латинские буквы и цифры, от 10 до 32 символов", "password")._reverse.__field_second
+        +input-password("Пароль", "password")
+    +e.row
+      +label-field("Требуется для восстановления пароля и входа", "phone")._reverse.__field_second
+        +input(type="tel" id="phone" placeholder="Телефон" required)
+      +e.field_second
+        +input-password("Повторить пароль", "password-repeat").__nolabel_reverse
+    +section-title("Местоположение")._left._bold.__title
+    +e.row
+      +selectbox(getData("selectbox-region"))._light._height._scrollable.__field_second
+      +selectbox(getData("selectbox-searchform-city"))._light._height._scrollable.__field_second
+    +section-title("Дата рождения")._left._bold.__title
+    +e.row
+      +selectbox(getData("selectbox-day"))._light._height._scrollable.__field_third
+      +selectbox(getData("selectbox-month"))._light._height._scrollable.__field_third
+      +selectbox(getData("selectbox-year"))._light._height._scrollable.__field_third
+    +e.row_nomargin
+      +section-title("Профиль на РосПравосудие")._left._bold.__title_twothird
+      +section-title("Стаж работы")._left._bold.__title_third
+    +e.row
+      +label-field("Укажите ссылку, для доверия клиентов к Вам", "rospravosudie")._reverse.__field_rospravo
+        +input(type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие")
+      +label-field("Укажите стаж", "experience")._reverse.__field_experience
+        +input(type="text" id="experience" placeholder="Стаж работы")
+    +e.row_photo
+      +avatar-browse("Выберите файл").__avatar
+      +e.describe
+        +section-title("Ваше фото")._left._bold.__title_photo
+        +warning("Файл не выбран").__photo-warning
+        +e.P
+          | Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы  jpg, jpeg, png, bmp
+    +section-title("Специализации")._left._bold.__title_specs
+    +e.describe_dark._bold
+      +e.P
+        | Укажите специализации,которыми вы занимаетесь.
+      +e.P
+        | Вы можете указать не более 3-х основных специализаций любое количество долнительных
+    +specs.__specs
+    +button-arrow("button")(type="submit")._red.__button Завершить регистрацию
+
+

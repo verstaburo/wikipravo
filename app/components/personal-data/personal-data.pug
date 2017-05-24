@@ -30,16 +30,6 @@ mixin personal-data(jurist)
       +selectbox(getData("selectbox-day"))._light._height._scrollable.__field_third
       +selectbox(getData("selectbox-month"))._light._height._scrollable.__field_third
       +selectbox(getData("selectbox-year"))._light._height._scrollable.__field_third
-    -if(jurist) {
-      +section-title("Ваша профессиональность").__title
-      +e.row
-        +label-field("Укажите ссылку, для доверия клиентов к Вам", "rospravosudie").__field_rospravo
-          +input(type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие")
-        +label-field("Укажите стаж", "experience").__field_experience
-          +input(type="text" id="experience" placeholder="Стаж работы")
-        +e.field_specialization
-          +selectbox(getData("registration-main-specialization"))._visible._light.__nolabel
-    -}
     +section-title("Ваше фото").__title_photo
     +e.row_photo
       +avatar-browse("Выберите файл").__avatar
@@ -47,15 +37,5 @@ mixin personal-data(jurist)
         +warning("Файл не выбран").__photo-warning
         +e.P
           | Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы  jpg, jpeg, png, bmp
-    -if(jurist) {
-      +section-title("Специализации").__title
-      +e.describe_dark._centered
-        +e.P
-          | Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных
-      +specs.__specs
-      +button-arrow("button")(type="submit")._red.__button Завершить регистрацию
-    -} else {
       +button-arrow("button")(type="submit")._blue.__button Завершить регистрацию
-    -}
-
 
