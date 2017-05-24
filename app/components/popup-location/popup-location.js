@@ -35,5 +35,7 @@ export function LocationPopup() {
     $(".popup-location").offset(locationPopupPosition).css({"visibility" : "visible"});
   }
 
-  popupLocationPosition();
+  if(document.querySelector(".sidebar__selectbox")) {
+    popupLocationPosition();
+  }
 };

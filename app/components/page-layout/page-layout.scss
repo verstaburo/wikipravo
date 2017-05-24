@@ -34,5 +34,9 @@
 
   &_noleft {
     padding-left: 0;
+
+    @include s-desktop {
+      padding-left: 0;
+    }
   }
 }

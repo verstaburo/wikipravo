@@ -11,19 +11,19 @@ mixin personal-data(jurist)
   +b.FORM.personal-data&attributes(attributes)
     +section-title("Логин и пароль").__title
     +e.row_table
-      +label-field("Латинские буквы и цифры, от 8 до 32 символов", "userlogin").__field
+      +label-field("Латинские буквы и цифры, от 8 до 32 символов", "userlogin").__field_second
         +input(type="text" id="userlogin" placeholder="Логин" required)
-      +label-field("Латинские буквы и цифры, от 10 до 32 символов", "password").__field
+      +label-field("Латинские буквы и цифры, от 10 до 32 символов", "password").__field_second
         +input-password("Пароль", "password")
     +e.row
-      +label-field("Требуется для восстановления пароля и входа", "phone").__field
+      +label-field("Требуется для восстановления пароля и входа", "phone").__field_second
         +input(type="tel" id="phone" placeholder="Телефон" required)
-      +e.field
+      +e.field_second
         +input-password("Повторить пароль", "password-repeat").__nolabel
     +section-title("Местоположение").__title
     +e.row
-      +selectbox(getData("selectbox-region"))._light._height.__field
-      +selectbox(getData("selectbox-searchform-city"))._light._height.__field
+      +selectbox(getData("selectbox-region"))._light._height.__field_second
+      +selectbox(getData("selectbox-searchform-city"))._light._height.__field_second
     +section-title("Дата рождения").__title
     +e.row
       +selectbox(getData("selectbox-day"))._light._height.__field_third
@@ -36,7 +36,8 @@ mixin personal-data(jurist)
           +input(type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие")
         +label-field("Укажите стаж", "experience").__field_experience
           +input(type="text" id="experience" placeholder="Стаж работы")
-        +selectbox(getData("registration-main-specialization"))._light.__field_specialization
+        +e.field_specialization
+          +selectbox(getData("registration-main-specialization"))._visible._light.__nolabel
     -}
     +section-title("Ваше фото").__title_photo
     +e.row_photo
@@ -47,7 +48,7 @@ mixin personal-data(jurist)
           | Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы  jpg, jpeg, png, bmp
     -if(jurist) {
       +section-title("Специализации").__title
-      +e.describe
+      +e.describe_dark._centered
         +e.P
           | Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных
       +button-arrow("button")(type="submit")._red.__button Завершить регистрацию
