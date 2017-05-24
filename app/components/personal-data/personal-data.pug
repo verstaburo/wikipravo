@@ -6,6 +6,7 @@ include ../../blocks/label-field/label-field
 include ../../blocks/selectbox/selectbox
 include ../../blocks/avatar-browse/avatar-browse
 include ../../blocks/warning/warning
+include ../specs/specs
 
 mixin personal-data(jurist)
   +b.FORM.personal-data&attributes(attributes)
@@ -51,8 +52,10 @@ mixin personal-data(jurist)
       +e.describe_dark._centered
         +e.P
           | Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных
+      +specs.__specs
       +button-arrow("button")(type="submit")._red.__button Завершить регистрацию
     -} else {
       +button-arrow("button")(type="submit")._blue.__button Завершить регистрацию
     -}
+
 
