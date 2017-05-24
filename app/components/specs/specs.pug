@@ -1,0 +1,66 @@
+include ../../blocks/checkbox/checkbox
+
+mixin specs()
+  +b.specs
+    +e('h3') Специализации
+    +e('p')
+      | Укажите специализации которыми вы занимаетесь<br>
+      | Вы можите указать не боле 3-х основных специализаций и любое количество дополнительных
+    +e.wrap
+      +e.slide._active
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Конституционное право')
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)')
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Конституционное право')
+            +e.slide-right
+              +checkbox('(основная)')
+          +e.row
+            +e.slide-left
+              +checkbox('Конституционное право')
+            +e.slide-right
+              +checkbox('(основная)')
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Гражданское право')
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)')
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право')
+            +e.slide-right
+              +checkbox('(основная)')
+          +e.row
+            +e.slide-left
+              +checkbox('Право собственности')
+            +e.slide-right
+              +checkbox('(основная)')
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Гражданское право')
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)')
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право')
+            +e.slide-right
+              +checkbox('(основная)')
+          +e.row
+            +e.slide-left
+              +checkbox('Право собственности')
+            +e.slide-right
+              +checkbox('(основная)')
