@@ -22,13 +22,13 @@ mixin personal-data(jurist)
         +input-password("Повторить пароль", "password-repeat").__nolabel
     +section-title("Местоположение").__title
     +e.row
-      +selectbox(getData("selectbox-region"))._light._height.__field_second
-      +selectbox(getData("selectbox-searchform-city"))._light._height.__field_second
+      +selectbox(getData("selectbox-region"))._light._height._scrollable.__field_second
+      +selectbox(getData("selectbox-searchform-city"))._light._height._scrollable.__field_second
     +section-title("Дата рождения").__title
     +e.row
-      +selectbox(getData("selectbox-day"))._light._height.__field_third
-      +selectbox(getData("selectbox-month"))._light._height.__field_third
-      +selectbox(getData("selectbox-year"))._light._height.__field_third
+      +selectbox(getData("selectbox-day"))._light._height._scrollable.__field_third
+      +selectbox(getData("selectbox-month"))._light._height._scrollable.__field_third
+      +selectbox(getData("selectbox-year"))._light._height._scrollable.__field_third
     -if(jurist) {
       +section-title("Ваша профессиональность").__title
       +e.row
