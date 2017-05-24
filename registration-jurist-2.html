@@ -44,6 +44,188 @@
             <div class="page-layout__page-content">
                 <div class="registration">
                     <h2 class="page-title registration__title">Заполнение личных данных</h2>
+                    <form class="personal-data">
+                        <h4 class="section-title personal-data__title">Логин и пароль</h4>
+                        <div class="personal-data__row personal-data__row_table">
+                            <div class="label-field personal-data__field personal-data__field_second">
+                                <label class="label-field__label" for="userlogin">Латинские буквы и цифры, от 8 до 32 символов</label>
+                                <input class="input" type="text" id="userlogin" placeholder="Логин" required="required" />
+                            </div>
+                            <div class="label-field personal-data__field personal-data__field_second">
+                                <label class="label-field__label" for="password">Латинские буквы и цифры, от 10 до 32 символов</label>
+                                <div class="input-password">
+                                    <input class="input input-password__password" type="password" id="password" placeholder="Пароль" required="required" />
+                                    <svg class="input-password__button"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-data__row">
+                            <div class="label-field personal-data__field personal-data__field_second">
+                                <label class="label-field__label" for="phone">Требуется для восстановления пароля и входа</label>
+                                <input class="input" type="tel" id="phone" placeholder="Телефон" required="required" />
+                            </div>
+                            <div class="personal-data__field personal-data__field_second">
+                                <div class="input-password personal-data__nolabel">
+                                    <input class="input input-password__password" type="password" id="password-repeat" placeholder="Повторить пароль" required="required" />
+                                    <svg class="input-password__button"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="section-title personal-data__title">Местоположение</h4>
+                        <div class="personal-data__row">
+                            <div class="selectbox selectbox_light selectbox_height personal-data__field personal-data__field_second">
+                                <input class="selectbox__input" type="hidden" value="Федеральный округ" placeholder="Федеральный округ" />
+                                <div class="selectbox__button">
+                                    <span class="selectbox__button-name">Федеральный округ</span>
+                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                </div>
+                                <ul class="selectbox__list">
+                                    <li class="selectbox__option">Республика Адегея</li>
+                                    <li class="selectbox__option">Республика Башкортостан</li>
+                                    <li class="selectbox__option">Республика Бурятия</li>
+                                </ul>
+                            </div>
+                            <div class="selectbox selectbox_light selectbox_height personal-data__field personal-data__field_second">
+                                <input class="selectbox__input" type="hidden" value="Город" placeholder="Город" />
+                                <div class="selectbox__button">
+                                    <span class="selectbox__button-name">Город</span>
+                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                </div>
+                                <ul class="selectbox__list">
+                                    <li class="selectbox__option">Москва</li>
+                                    <li class="selectbox__option">Санкт-Петербург</li>
+                                    <li class="selectbox__option">Новосибирск</li>
+                                    <li class="selectbox__option">Тольятти</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h4 class="section-title personal-data__title">Дата рождения</h4>
+                        <div class="personal-data__row">
+                            <div class="selectbox selectbox_light selectbox_height personal-data__field personal-data__field_third">
+                                <input class="selectbox__input" type="hidden" value="День" placeholder="День" />
+                                <div class="selectbox__button">
+                                    <span class="selectbox__button-name">День</span>
+                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                </div>
+                                <ul class="selectbox__list">
+                                    <li class="selectbox__option">1</li>
+                                    <li class="selectbox__option">2</li>
+                                    <li class="selectbox__option">3</li>
+                                    <li class="selectbox__option">4</li>
+                                    <li class="selectbox__option">5</li>
+                                    <li class="selectbox__option">6</li>
+                                    <li class="selectbox__option">7</li>
+                                    <li class="selectbox__option">8</li>
+                                    <li class="selectbox__option">9</li>
+                                    <li class="selectbox__option">10</li>
+                                    <li class="selectbox__option">11</li>
+                                    <li class="selectbox__option">12</li>
+                                    <li class="selectbox__option">13</li>
+                                </ul>
+                            </div>
+                            <div class="selectbox selectbox_light selectbox_height personal-data__field personal-data__field_third">
+                                <input class="selectbox__input" type="hidden" value="Месяц" placeholder="Месяц" />
+                                <div class="selectbox__button">
+                                    <span class="selectbox__button-name">Месяц</span>
+                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                </div>
+                                <ul class="selectbox__list">
+                                    <li class="selectbox__option">Январь</li>
+                                    <li class="selectbox__option">Февраль</li>
+                                    <li class="selectbox__option">Март</li>
+                                    <li class="selectbox__option">Апрель</li>
+                                    <li class="selectbox__option">Май</li>
+                                    <li class="selectbox__option">Июнь</li>
+                                    <li class="selectbox__option">Июль</li>
+                                    <li class="selectbox__option">Август</li>
+                                    <li class="selectbox__option">Сентябрь</li>
+                                    <li class="selectbox__option">Октябрь</li>
+                                    <li class="selectbox__option">Ноябрь</li>
+                                    <li class="selectbox__option">Декабрь</li>
+                                </ul>
+                            </div>
+                            <div class="selectbox selectbox_light selectbox_height personal-data__field personal-data__field_third">
+                                <input class="selectbox__input" type="hidden" value="Год" placeholder="Год" />
+                                <div class="selectbox__button">
+                                    <span class="selectbox__button-name">Год</span>
+                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                </div>
+                                <ul class="selectbox__list">
+                                    <li class="selectbox__option">2017</li>
+                                    <li class="selectbox__option">2016</li>
+                                    <li class="selectbox__option">2015</li>
+                                    <li class="selectbox__option">2014</li>
+                                    <li class="selectbox__option">2013</li>
+                                    <li class="selectbox__option">2012</li>
+                                    <li class="selectbox__option">2011</li>
+                                    <li class="selectbox__option">2010</li>
+                                    <li class="selectbox__option">2009</li>
+                                    <li class="selectbox__option">2008</li>
+                                    <li class="selectbox__option">2007</li>
+                                    <li class="selectbox__option">2006</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h4 class="section-title personal-data__title">Ваша профессиональность</h4>
+                        <div class="personal-data__row">
+                            <div class="label-field personal-data__field personal-data__field_rospravo">
+                                <label class="label-field__label" for="rospravosudie">Укажите ссылку, для доверия клиентов к Вам</label>
+                                <input class="input" type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие" />
+                            </div>
+                            <div class="label-field personal-data__field personal-data__field_experience">
+                                <label class="label-field__label" for="experience">Укажите стаж</label>
+                                <input class="input" type="text" id="experience" placeholder="Стаж работы" />
+                            </div>
+                            <div class="personal-data__field personal-data__field_specialization">
+                                <div class="selectbox selectbox_visible selectbox_light personal-data__nolabel">
+                                    <input class="selectbox__input" type="hidden" value="Основная специализация" placeholder="Основная специализация" />
+                                    <div class="selectbox__button">
+                                        <span class="selectbox__button-name">Основная специализация</span>
+                                        <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                    </div>
+                                    <ul class="selectbox__list">
+                                        <li class="selectbox__option">Конституционное право</li>
+                                        <li class="selectbox__option">Интеллектуальная собственность
+                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                            <ul class="selectbox__sublist">
+                                                <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
+                                                <li class="selectbox__option">Гражданское право</li>
+                                            </ul>
+                                        </li>
+                                        <li class="selectbox__option">Военное право
+                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                            <ul class="selectbox__sublist">
+                                                <li class="selectbox__option">Военное право</li>
+                                                <li class="selectbox__option">Военное право</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="section-title personal-data__title personal-data__title_photo">Ваше фото</h4>
+                        <div class="personal-data__row personal-data__row_photo">
+                            <label class="avatar-browse personal-data__avatar" for="photofile">
+                                <span class="avatar-browse__label">Выберите файл</span>
+                                <input class="avatar-browse__input" type="file" id="photofile" name="photofile" accept="image/jpg, image/jpeg, image/png, image/bmp" />
+                                <output class="avatar-browse__output" for="photofile">
+                                    <img class="avatar-browse__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
+                                </output>
+                            </label>
+                            <div class="personal-data__describe">
+                                <div class="warning personal-data__photo-warning">Файл не выбран</div>
+                                <p>Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы jpg, jpeg, png, bmp</p>
+                            </div>
+                        </div>
+                        <h4 class="section-title personal-data__title">Специализации</h4>
+                        <div class="personal-data__describe personal-data__describe_dark personal-data__describe_centered">
+                            <p>Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных</p>
+                        </div>
+                        <a class="button button_red personal-data__button" type="submit">
+                            <span class="button__name">Завершить регистрацию</span>
+                            <i class="button__arrow fa fa-angle-button"></i>
+                        </a>
+                    </form>
                 </div>
             </div>
             <div class="page-layout__page-footer"></div>

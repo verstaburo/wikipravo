@@ -211,7 +211,7 @@
                                     <div class="filter-controls__row">
                                         <div class="filter-controls__field filter-controls__field_category">
                                             <span class="filter-controls__label">Категория</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Специалист в категории права" placeholder="Специалист в категории права" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Специалист в категории права</span>
@@ -238,7 +238,7 @@
                                         </div>
                                         <div class="filter-controls__field filter-controls__field_location">
                                             <span class="filter-controls__label">Местоположение</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Город" placeholder="Город" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Город</span>
@@ -254,7 +254,7 @@
                                         </div>
                                         <div class="filter-controls__field filter-controls__field_document">
                                             <span class="filter-controls__label">Тип документов</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Работает с документами" placeholder="Работает с документами" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Работает с документами</span>
@@ -818,6 +818,26 @@
                         </div>
                     </nav>
                 </footer>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close-button js-popup-close">
+            <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-login" id="popup-login">
+                <div class="popup__title">Вход в систему</div>
+                <div class="form form_vertical">
+                    <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
+                    <input class="input form__input" type="password" placeholder="Ваш пароль" />
+                    <BUTTON class="button button_blue">
+                        <span class="button__name">Войти</span>
+                    </BUTTON>
+                    <a class="icon-link icon-link_small form__bottom-link" href="#">
+                        <span class="icon-link__text">Забыли пароль?</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -181,7 +181,7 @@
                                     <div class="filter-controls__row">
                                         <div class="filter-controls__field">
                                             <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Категории права</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Выбрать право" placeholder="Выбрать право" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Выбрать право</span>
@@ -208,7 +208,7 @@
                                         </div>
                                         <div class="filter-controls__field">
                                             <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Виды документа</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Не задано" placeholder="Не задано" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Не задано</span>
@@ -230,7 +230,7 @@
                                         </div>
                                         <div class="filter-controls__field">
                                             <span class="filter-controls__label filter-controls__label_bold filter-controls__label_small">Регион</span>
-                                            <div class="selectbox selectbox_light">
+                                            <div class="selectbox selectbox_light selectbox_visible">
                                                 <input class="selectbox__input" type="hidden" value="Регион" placeholder="Регион" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Регион</span>
@@ -625,6 +625,26 @@
             </footer>
         </div>
     </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close-button js-popup-close">
+            <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-login" id="popup-login">
+                <div class="popup__title">Вход в систему</div>
+                <div class="form form_vertical">
+                    <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
+                    <input class="input form__input" type="password" placeholder="Ваш пароль" />
+                    <BUTTON class="button button_blue">
+                        <span class="button__name">Войти</span>
+                    </BUTTON>
+                    <a class="icon-link icon-link_small form__bottom-link" href="#">
+                        <span class="icon-link__text">Забыли пароль?</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/libs/jquery.min.js"></script>
     <script src="assets/libs/velocity.min.js"></script>
