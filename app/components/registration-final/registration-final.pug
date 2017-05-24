@@ -1,0 +1,25 @@
+include ../../blocks/button/button
+
+mixin registration-final(jurist)
+  +b.registration-final&attributes(attributes)
+    +e.describe
+      +e.row
+        +e.P
+          | На указанный Вами адрес
+          +e.SPAN.email mail@yandex.ru
+          |  отправлено письмо с подтверждением.
+        +e.P
+          | Для завершения регистрации перейдите по ссылке в письме
+      +e.row_horizontal
+        +e.P.repeat-send
+          | Письмо не пришло?
+          +e.A(href="#") Выслать повторно
+        +e.P.support
+          | Возникли проблемы?
+          +e.A(href="mailto:support@mail") Обратитесь в службу поддержки
+    -if(jurist) {
+      +button("a")(href="index.html")._red.__button  Перейти на главную
+    -} else {
+      +button("a")(href="index.html")._blue.__button  Перейти на главную
+    -}
+
