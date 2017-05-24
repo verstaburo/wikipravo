@@ -1,0 +1,8 @@
+mixin avatar-browse(label, image)
+  -var imgSrc = ""
+  -if(image) {imgSrc = image}
+  +b.LABEL(for="photofile").avatar-browse&attributes(attributes)
+    +e.SPAN.label= label
+    +e.INPUT(type="file", id="photofile", name="photofile", accept = "image/jpg, image/jpeg, image/png, image/bmp").input
+    +e.OUTPUT(for="photofile").output
+      +e.IMG(src=imgSrc).img

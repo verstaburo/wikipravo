@@ -14,11 +14,13 @@ import {FilterReset} from '../blocks/filter-controls/filter-controls';
 import {FileListControl} from '../blocks/message/message';
 import {FavoritesSwitch} from '../blocks/action-controls/action-controls';
 import {JuristColorChange} from '../components/system-regform/system-regform';
+import {ViewPassword} from '../blocks/input-password/input-password';
 
 $(() => {
 
   // Финальный вызов функций
   JuristColorChange();
+  ViewPassword();
   VerstaSelectBox();
   VerstaPopups();
   VerstaTabs();

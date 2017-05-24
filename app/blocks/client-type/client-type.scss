@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 
   &__checkbox {
     display: none;
@@ -19,6 +19,7 @@
     height: 100%;
     padding: 15px 30px;
     border: 1px solid #d1d1d1;
+    cursor: pointer;
   }
 
   &__image {
@@ -39,10 +40,11 @@
     height: 46px;
     transform: translate(-50%, -50%);
     fill: $color-registration-grey;
-    
+
     &_reg-jurist {
       fill: transparent;
       stroke: $color-registration-grey;
+      stroke-width: 1.4px;
     }
   }
 
@@ -94,7 +96,7 @@
 
       &__img {
         fill: #fff;
-        
+
         &_reg-jurist {
           fill: transparent;
           stroke: #fff;
@@ -132,7 +134,7 @@
 
     > .client-type__image .client-type__img {
       fill: #fff;
-      
+
       &_reg-jurist {
         fill: transparent;
         stroke: #fff;

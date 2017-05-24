@@ -1,0 +1,57 @@
+include ../../blocks/section-title/section-title
+include ../../blocks/input/input
+include ../../blocks/input-password/input-password
+include ../../blocks/button/button
+include ../../blocks/label-field/label-field
+include ../../blocks/selectbox/selectbox
+include ../../blocks/avatar-browse/avatar-browse
+include ../../blocks/warning/warning
+
+mixin personal-data(jurist)
+  +b.FORM.personal-data&attributes(attributes)
+    +section-title("Логин и пароль").__title
+    +e.row_table
+      +label-field("Латинские буквы и цифры, от 8 до 32 символов", "userlogin").__field
+        +input(type="text" id="userlogin" placeholder="Логин" required)
+      +label-field("Латинские буквы и цифры, от 10 до 32 символов", "password").__field
+        +input-password("Пароль", "password")
+    +e.row
+      +label-field("Требуется для восстановления пароля и входа", "phone").__field
+        +input(type="tel" id="phone" placeholder="Телефон" required)
+      +e.field
+        +input-password("Повторить пароль", "password-repeat").__nolabel
+    +section-title("Местоположение").__title
+    +e.row
+      +selectbox(getData("selectbox-region"))._light._height.__field
+      +selectbox(getData("selectbox-searchform-city"))._light._height.__field
+    +section-title("Дата рождения").__title
+    +e.row
+      +selectbox(getData("selectbox-day"))._light._height.__field_third
+      +selectbox(getData("selectbox-month"))._light._height.__field_third
+      +selectbox(getData("selectbox-year"))._light._height.__field_third
+    -if(jurist) {
+      +section-title("Ваша профессиональность").__title
+      +e.row
+        +label-field("Укажите ссылку, для доверия клиентов к Вам", "rospravosudie").__field_rospravo
+          +input(type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие")
+        +label-field("Укажите стаж", "experience").__field_experience
+          +input(type="text" id="experience" placeholder="Стаж работы")
+        +selectbox(getData("registration-main-specialization"))._light.__field_specialization
+    -}
+    +section-title("Ваше фото").__title_photo
+    +e.row_photo
+      +avatar-browse("Выберите файл").__avatar
+      +e.describe
+        +warning("Файл не выбран").__photo-warning
+        +e.P
+          | Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы  jpg, jpeg, png, bmp
+    -if(jurist) {
+      +section-title("Специализации").__title
+      +e.describe
+        +e.P
+          | Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных
+      +button-arrow("button")(type="submit")._red.__button Завершить регистрацию
+    -} else {
+      +button-arrow("button")(type="submit")._blue.__button Завершить регистрацию
+    -}
+

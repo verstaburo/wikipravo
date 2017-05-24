@@ -4,6 +4,8 @@
 
   &_visible .selectbox__list { overflow: visible; }
 
+  &_height .selectbox__list { max-height: 150px; }
+
   &__title {
     position: absolute;
     top: 100%;
@@ -184,7 +186,6 @@
 
       &__list {
         box-shadow: 0 0 32px rgba($color-searchform-selectbox-shadow, .2);
-        overflow: visible;
       }
 
       &__sublist {

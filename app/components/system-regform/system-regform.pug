@@ -4,6 +4,7 @@ include ../../blocks/input/input
 include ../../blocks/checkbox/checkbox
 include ../../blocks/button-arrow/button-arrow
 include ../../blocks/socials/socials
+include ../../blocks/label-field/label-field
 
 mixin system-regform()
   +b.FORM.system-regform&attributes(attributes)
@@ -15,12 +16,10 @@ mixin system-regform()
     +e.row_social-authorization
       +socials(getData('registration-socials')).__socials
     +e.row_narrow
-      +e.field
-        +e.LABEL.label Это имя будет указано в Ваше профиле
-        +input(type="text" placeholder="Ваше Имя" name="username" required)
-      +e.field
-        +e.LABEL.label На указанный адрес прийдет письмо с подтверждением
-        +input(type="password" placeholder="Ваш E-mail" name="password" required)
+      +label-field("Это имя будет указано в Ваше профиле", "username").__field
+        +input(id="username" type="text" placeholder="Ваше Имя" name="username" required)
+      +label-field("На указанный адрес прийдет письмо с подтверждением", "email").__field
+        +input(id="email" type="email" placeholder="Ваш E-mail" name="email" required)
     +e.row_narrow
       +e.field
         +checkbox("Я согласен с ", "rules")._grey._big.__rules

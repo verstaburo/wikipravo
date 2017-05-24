@@ -15,12 +15,12 @@ mixin searchform-requests()
       +e.row
         +e.field
           +e.SPAN.label_bold._small Категории права
-          +selectbox(getData('request-filter-law-category'))._light
+          +selectbox(getData('request-filter-law-category'))._light._visible
         +e.field
           +e.SPAN.label_bold._small Виды документа
-          +selectbox(getData('request-filter-documents'))._light
+          +selectbox(getData('request-filter-documents'))._light._visible
         +e.field
           +e.SPAN.label_bold._small Регион
-          +selectbox(getData('request-filter-region'))._light
+          +selectbox(getData('request-filter-region'))._light._visible
       +e.row
         +button("button")._blue.__button Применить

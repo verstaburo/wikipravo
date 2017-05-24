@@ -1,0 +1,29 @@
+.warning {
+  position: relative;
+  font-size: 13px;
+  color: #de4647;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: .035em;
+  padding-left: 31px;
+
+  &::before {
+    position: absolute;
+    content: '!';
+    top: 50%;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    font-size: 13px;
+    color: #de4647;
+    line-height: 21px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .035em;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #de4647;
+    transform: translate(0, -50%)
+  }
+}

@@ -1,0 +1,86 @@
+.personal-data {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 30px 96px 0;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 36px;
+
+    &_photo {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 36px;
+
+    &_table {
+      margin-bottom: 19px;
+    }
+
+    &_photo {
+      margin-bottom: 39px;
+    }
+  }
+
+  &__field {
+    flex: 1;
+
+    &:not(:nth-of-type(2n)) {
+      margin-right: 19px;
+    }
+
+    &_third {
+
+      &:not(:nth-of-type(2n)) {
+        margin-right: 0;
+      }
+
+      &:not(:nth-of-type(3n)) {
+        margin-right: 39px;
+      }
+    }
+  }
+
+  &__password {
+    width: 100%;
+  }
+
+  &__avatar {
+    margin-right: 58px;
+  }
+
+  &__photo-warning {
+    margin-bottom: 16px;
+  }
+
+  &__describe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+      font-size: 14px;
+      line-height: 1.78em;
+      font-weight: 300;
+      letter-spacing: .04em;
+      color: #b1b1b1;
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
