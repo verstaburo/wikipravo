@@ -42,16 +42,16 @@
                 </div>
             </div>
             <div class="page-layout__page-content">
-                <div class="registration">
+                <div class="registration registration_jurist">
                     <h2 class="page-title registration__title">Заполнение личных данных</h2>
-                    <form class="personal-data">
-                        <h4 class="section-title personal-data__title">Логин и пароль</h4>
+                    <form class="personal-data personal-data_jurist">
+                        <h4 class="section-title section-title_left section-title_bold personal-data__title">Логин и пароль</h4>
                         <div class="personal-data__row personal-data__row_table">
-                            <div class="label-field personal-data__field personal-data__field_second">
+                            <div class="label-field label-field_reverse personal-data__field personal-data__field_second">
                                 <label class="label-field__label" for="userlogin">Латинские буквы и цифры, от 8 до 32 символов</label>
                                 <input class="input" type="text" id="userlogin" placeholder="Логин" required="required" />
                             </div>
-                            <div class="label-field personal-data__field personal-data__field_second">
+                            <div class="label-field label-field_reverse personal-data__field personal-data__field_second">
                                 <label class="label-field__label" for="password">Латинские буквы и цифры, от 10 до 32 символов</label>
                                 <div class="input-password">
                                     <input class="input input-password__password" type="password" id="password" placeholder="Пароль" required="required" />
@@ -60,18 +60,18 @@
                             </div>
                         </div>
                         <div class="personal-data__row">
-                            <div class="label-field personal-data__field personal-data__field_second">
+                            <div class="label-field label-field_reverse personal-data__field personal-data__field_second">
                                 <label class="label-field__label" for="phone">Требуется для восстановления пароля и входа</label>
                                 <input class="input" type="tel" id="phone" placeholder="Телефон" required="required" />
                             </div>
                             <div class="personal-data__field personal-data__field_second">
-                                <div class="input-password personal-data__nolabel">
+                                <div class="input-password personal-data__nolabel personal-data__nolabel_reverse">
                                     <input class="input input-password__password" type="password" id="password-repeat" placeholder="Повторить пароль" required="required" />
                                     <svg class="input-password__button"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </div>
                             </div>
                         </div>
-                        <h4 class="section-title personal-data__title">Местоположение</h4>
+                        <h4 class="section-title section-title_left section-title_bold personal-data__title">Местоположение</h4>
                         <div class="personal-data__row">
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_second">
                                 <input class="selectbox__input" type="hidden" value="Федеральный округ" placeholder="Федеральный округ" />
@@ -99,7 +99,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4 class="section-title personal-data__title">Дата рождения</h4>
+                        <h4 class="section-title section-title_left section-title_bold personal-data__title">Дата рождения</h4>
                         <div class="personal-data__row">
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_third">
                                 <input class="selectbox__input" type="hidden" value="День" placeholder="День" />
@@ -166,44 +166,20 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4 class="section-title personal-data__title">Ваша профессиональность</h4>
+                        <div class="personal-data__row personal-data__row_nomargin">
+                            <h4 class="section-title section-title_left section-title_bold personal-data__title personal-data__title_twothird">Профиль на РосПравосудие</h4>
+                            <h4 class="section-title section-title_left section-title_bold personal-data__title personal-data__title_third">Стаж работы</h4>
+                        </div>
                         <div class="personal-data__row">
-                            <div class="label-field personal-data__field personal-data__field_rospravo">
+                            <div class="label-field label-field_reverse personal-data__field personal-data__field_rospravo">
                                 <label class="label-field__label" for="rospravosudie">Укажите ссылку, для доверия клиентов к Вам</label>
                                 <input class="input" type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие" />
                             </div>
-                            <div class="label-field personal-data__field personal-data__field_experience">
+                            <div class="label-field label-field_reverse personal-data__field personal-data__field_experience">
                                 <label class="label-field__label" for="experience">Укажите стаж</label>
                                 <input class="input" type="text" id="experience" placeholder="Стаж работы" />
                             </div>
-                            <div class="personal-data__field personal-data__field_specialization">
-                                <div class="selectbox selectbox_visible selectbox_light personal-data__nolabel">
-                                    <input class="selectbox__input" type="hidden" value="Основная специализация" placeholder="Основная специализация" />
-                                    <div class="selectbox__button">
-                                        <span class="selectbox__button-name">Основная специализация</span>
-                                        <i class="selectbox__right-icon fa fa-angle-down"></i>
-                                    </div>
-                                    <ul class="selectbox__list">
-                                        <li class="selectbox__option">Конституционное право</li>
-                                        <li class="selectbox__option">Интеллектуальная собственность
-                                            <i class="selectbox__arrow fa fa-angle-right"></i>
-                                            <ul class="selectbox__sublist">
-                                                <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
-                                                <li class="selectbox__option">Гражданское право</li>
-                                            </ul>
-                                        </li>
-                                        <li class="selectbox__option">Военное право
-                                            <i class="selectbox__arrow fa fa-angle-right"></i>
-                                            <ul class="selectbox__sublist">
-                                                <li class="selectbox__option">Военное право</li>
-                                                <li class="selectbox__option">Военное право</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
-                        <h4 class="section-title personal-data__title personal-data__title_photo">Ваше фото</h4>
                         <div class="personal-data__row personal-data__row_photo">
                             <label class="avatar-browse personal-data__avatar" for="photofile">
                                 <span class="avatar-browse__label">Выберите файл</span>
@@ -213,18 +189,17 @@
                                 </output>
                             </label>
                             <div class="personal-data__describe">
+                                <h4 class="section-title section-title_left section-title_bold personal-data__title personal-data__title_photo">Ваше фото</h4>
                                 <div class="warning personal-data__photo-warning">Файл не выбран</div>
                                 <p>Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы jpg, jpeg, png, bmp</p>
                             </div>
                         </div>
-                        <h4 class="section-title personal-data__title">Специализации</h4>
-                        <div class="personal-data__describe personal-data__describe_dark personal-data__describe_centered">
-                            <p>Укажите специализации,которыми вы занимаетес. Вы можете указать не более 3-х основных специализаций любое количество долнительных</p>
+                        <h4 class="section-title section-title_left section-title_bold personal-data__title personal-data__title_specs">Специализации</h4>
+                        <div class="personal-data__describe personal-data__describe_dark personal-data__describe_bold">
+                            <p>Укажите специализации,которыми вы занимаетесь.</p>
+                            <p>Вы можете указать не более 3-х основных специализаций любое количество долнительных</p>
                         </div>
                         <div class="specs personal-data__specs">
-                            <!--+e('h3') Специализации-->
-                            <!--+e('p')| Укажите специализации которыми вы занимаетесь<br>
-| Вы можите указать не боле 3-х основных специализаций и любое количество дополнительных-->
                             <div class="specs__wrap">
                                 <div class="specs__slide specs__slide_active">
                                     <div class="specs__slide-head">
