@@ -1,5 +1,9 @@
+include ../icon/icons
+
 mixin checkbox(label, id)
   +b.checkbox&attributes(attributes)
     +e.INPUT(type="checkbox" id= id)
     +e.LABEL.label(for= id)= label
+      +e.check
+        +icon("check").__check-img
       block
