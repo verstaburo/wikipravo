@@ -2,61 +2,214 @@ include ../../blocks/checkbox/checkbox
 
 mixin specs()
   +b.specs&attributes(attributes)
+    +e('h3') Специализации
+    +e('p') Укажите специализации, которыми вы занимаетесь. <br>  Вы можете указать не более 3-х основных специализаций любое количество дополниьтельных
     +e.wrap
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Конституционное право', 'id1')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id2')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Конституционное право', 'id3')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id4')._red
+          +e.row
+            +e.slide-left
+              +checkbox('Конституционное право', 'id5')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id6')._red
       +e.slide._active
         +e.slide-head
           +e.slide-left
-            +checkbox('Конституционное право')
+            +checkbox('Гражданское право', 'id7', checked)._red
             +e.count (2)
             +e('i').__arrow.fa.fa-angle-down
           +e.slide-right
-            +checkbox('(основная)')
+            +checkbox('(основная)', 'id8')._red
         +e.slide-content
           +e.row
             +e.slide-left
-              +checkbox('Конституционное право')
+              +checkbox('Договорное право', 'id9')._red
             +e.slide-right
-              +checkbox('(основная)')
+              +checkbox('(основная)', 'id10')._red
           +e.row
             +e.slide-left
-              +checkbox('Конституционное право')
+              +checkbox('Право собственности', 'id11')._red
             +e.slide-right
-              +checkbox('(основная)')
+              +checkbox('(основная)', 'id12')._red
+          +e.row
+            +e.slide-left
+              +checkbox('Взыскание задолженности', 'id13')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id14')._red
+          +e.row
+            +e.slide-left
+              +checkbox('Кредитование', 'id15')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id16')._red
       +e.slide
         +e.slide-head
           +e.slide-left
-            +checkbox('Гражданское право')
+            +checkbox('Семейное право', 'id17')._red
             +e.count (2)
             +e('i').__arrow.fa.fa-angle-down
           +e.slide-right
-            +checkbox('(основная)')
+            +checkbox('(основная)', 'id18')._red
         +e.slide-content
           +e.row
             +e.slide-left
-              +checkbox('Договорное право')
+              +checkbox('Договорное право', 'id19')._red
             +e.slide-right
-              +checkbox('(основная)')
-          +e.row
-            +e.slide-left
-              +checkbox('Право собственности')
-            +e.slide-right
-              +checkbox('(основная)')
+              +checkbox('(основная)', 'id20')._red
       +e.slide
         +e.slide-head
           +e.slide-left
-            +checkbox('Гражданское право')
+            +checkbox('Недвижимость', 'id21')._red
             +e.count (2)
             +e('i').__arrow.fa.fa-angle-down
           +e.slide-right
-            +checkbox('(основная)')
+            +checkbox('(основная)', 'id22')._red
         +e.slide-content
           +e.row
             +e.slide-left
-              +checkbox('Договорное право')
+              +checkbox('Договорное право', 'id23')._red
             +e.slide-right
-              +checkbox('(основная)')
+              +checkbox('(основная)', 'id24')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Трудовое право', 'id25')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id26')._red
+        +e.slide-content
           +e.row
             +e.slide-left
-              +checkbox('Право собственности')
+              +checkbox('Договорное право', 'id27')._red
             +e.slide-right
-              +checkbox('(основная)')
+              +checkbox('(основная)', 'id28')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Защита прав потребителей', 'id29')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id30')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id31')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id32')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Нотариат', 'id33')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id34')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id35')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id36')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Наследство', 'id37')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id38')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id39')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id40')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Уголовное право', 'id41')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id42')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id43')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id44')._red
+      +e.slide._active
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Предпринимательское право', 'id45')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id46')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Тендеры, контрактная система в сфере закупок', 'id47')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id47')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Кредитование', 'id48')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id50')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Административное право', 'id51')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id52')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id53')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id54')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Военное право', 'id55')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id56')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id57')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id57')._red
+      +e.slide
+        +e.slide-head
+          +e.slide-left
+            +checkbox('Автомобильное право', 'id59')._red
+            +e.count (2)
+            +e('i').__arrow.fa.fa-angle-down
+          +e.slide-right
+            +checkbox('(основная)', 'id60')._red
+        +e.slide-content
+          +e.row
+            +e.slide-left
+              +checkbox('Договорное право', 'id61')._red
+            +e.slide-right
+              +checkbox('(основная)', 'id62')._red
