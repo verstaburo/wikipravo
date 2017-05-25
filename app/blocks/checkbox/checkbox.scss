@@ -118,4 +118,19 @@
       }
     }
   }
+
+  &_red {
+
+    input:checked ~ label {
+
+      .checkbox__check {
+        background: #d93a37;
+        border-color: #d93a37;
+      }
+
+      .checkbox__check-img {
+        fill: #fff;
+      }
+    }
+  }
 }
