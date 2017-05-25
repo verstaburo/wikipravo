@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin: 0 24px;
   }
 
   &__item {
@@ -65,15 +66,7 @@
     }
   }
 
-  &__prev {
-    margin-right: 24px;
-  }
-
   &__next {
-    margin-left: 24px;
-
-    svg {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
   }
 }

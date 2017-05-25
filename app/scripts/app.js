@@ -19,6 +19,7 @@ import {ViewPassword} from '../blocks/input-password/input-password';
 $(() => {
 
   // Финальный вызов функций
+  svg4everybody();
   JuristColorChange();
   ViewPassword();
   VerstaSelectBox();

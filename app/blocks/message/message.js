@@ -13,6 +13,12 @@ export function FileListControl() {
     var outputUl = output.querySelector('.files-list')
     var placeholder =  output.querySelector('.message__placeholder');
 
+    output.querySelector('.files-list').addEventListener('change', function () {
+      if(!(this.hasChildNodes)) {
+        output.querySelector('.message__placeholder').style = "display: block";
+      }
+    }, false);
+
     input.addEventListener('change', function() {
       var files = this.files;
       var outputList = [];
@@ -90,10 +96,4 @@ export function FileListControl() {
     $(this).parents('li').remove();
     $('input[name^=file][data-file-id="' + fileId + '"]').remove();
   });
-
-  output.querySelector('.files-list').addEventListener("change", function () {
-    if(!(this.hasChildNodes)) {
-      output.querySelector('.message__placeholder').style = "display: block";
-    }
-  }, false);
 };
