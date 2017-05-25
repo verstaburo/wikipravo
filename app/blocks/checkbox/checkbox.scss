@@ -94,7 +94,7 @@
       }
 
       &__check {
-        border-color: $color-font;
+        border-color: rgba($color-font, .15);
       }
     }
   }
