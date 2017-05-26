@@ -1,8 +1,6 @@
 .profile-control {
   box-sizing: border-box;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: inline-block;
   height: 38px;
   overflow: visible;
   background-color: transparent;
@@ -24,6 +22,7 @@
   }
 
   &.active {
+
     .profile-control__img {
       background-color: $color-bg-index;
     }
@@ -78,9 +77,11 @@
   }
 
   &__title {
+    display: inline-block;
+    vertical-align: top;
     margin-left: 22px;
     font-size: 14px;
-    line-height: 1em;
+    line-height: 38px;
     letter-spacing: .04em;
     font-weight: 400;
     color: $color-main;

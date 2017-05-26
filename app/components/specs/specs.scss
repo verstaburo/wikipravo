@@ -52,7 +52,7 @@
     margin-bottom: 14px;
 
     .specs__slide-left {
-      font-weight: bold;
+      font-weight: 500;
       align-items: center;
       position: relative;
     }
@@ -70,13 +70,13 @@
     width: 370px;
     display: flex;
 
-      &:hover {
-        color: #d93a37;
+    &:hover {
+      color: #d93a37;
 
-        .checkbox__label {
-          color: #d93a37;
-        }
+      .checkbox__label {
+        color: #d93a37;
       }
+    }
   }
 
   &__slide-content {
@@ -94,9 +94,9 @@
   }
 
   &__arrow {
-     font-size: 20px;
-     position: absolute;
-     left: 310px;
+    font-size: 20px;
+    position: absolute;
+    left: 310px;
   }
 
   .checkbox__label {

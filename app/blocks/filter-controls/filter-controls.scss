@@ -51,13 +51,16 @@
   }
 
   &__open-btn {
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: inline-block;
     white-space: nowrap;
 
     .button__name {
       padding-right: 8px;
+    }
+
+    .button__arrow {
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 

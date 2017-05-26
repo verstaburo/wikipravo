@@ -12,13 +12,14 @@
     letter-spacing: .035em;
     margin-bottom: 4px;
     color: $color-font;
+    width: 100%;
   }
 
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     margin-bottom: 16px;
   }
@@ -29,6 +30,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 40px;
+    width: 100%;
 
     p {
       font-size: 14px;
@@ -38,11 +40,12 @@
       color: rgba(#000, .35);
       flex: 1;
       margin-right: 50px;
+      width: 100%;
     }
   }
 
   &__checkdata {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
