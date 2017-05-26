@@ -19,28 +19,6 @@ export function FileListControl() {
       }
     }, false);
 
-    input.addEventListener('change', function() {
-      var files = this.files;
-      var outputList = [];
-      var fileName, fileImg;
-
-      for(var i = 0; i < files.length; i++) {
-        var file = files[i];
-
-        fileName = file.name;
-
-        if(selectedFiles[fileName] != undefined) continue;
-
-        selectedFiles[fileName] = file;
-        queue.push(file);
-      }
-
-      this.value = '';
-      OutputFile();
-
-      placeholder.style = "display:none";
-    }, false);
-
     function OutputFile() {
       var icons = {"doc" : "assets/images/doc.png", "pdf" : "assets/images/pdf.png", "other" : "https://placehold.it/18x24"};
 
@@ -87,6 +65,28 @@ export function FileListControl() {
         })(file);
       }
     }
+
+    input.addEventListener('change', function() {
+      var files = this.files;
+      var outputList = [];
+      var fileName, fileImg;
+
+      for(var i = 0; i < files.length; i++) {
+        var file = files[i];
+
+        fileName = file.name;
+
+        if(selectedFiles[fileName] != undefined) continue;
+
+        selectedFiles[fileName] = file;
+        queue.push(file);
+      }
+
+      this.value = '';
+      OutputFile();
+
+      placeholder.style = "display:none";
+    }, false);
   }
 
   $(document).on('click', '.files-list__remove', function () {

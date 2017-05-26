@@ -229,6 +229,7 @@
 
   &__button {
     min-width: 44.4%;
+    min-height: 54px;
 
     @include s-desktop {
       width: 100%;
@@ -236,6 +237,10 @@
       &:not(:last-child) {
         margin-bottom: 10px;
       }
+    }
+
+    .selectbox__option {
+      text-align: center;
     }
   }
 
