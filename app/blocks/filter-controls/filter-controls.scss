@@ -54,6 +54,7 @@
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
 
     .button__name {
       padding-right: 8px;

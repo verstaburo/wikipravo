@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import $ from 'jquery';
 import {VerstaSelectBox} from '../blocks/selectbox/selectbox';
 import {VerstaPopups} from '../components/popups/popups';
@@ -16,7 +17,7 @@ import {FavoritesSwitch} from '../blocks/action-controls/action-controls';
 import {JuristColorChange} from '../components/system-regform/system-regform';
 import {ViewPassword} from '../blocks/input-password/input-password';
 
-$(() => {
+$(function () {
 
   // Финальный вызов функций
   svg4everybody();

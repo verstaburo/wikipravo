@@ -29,7 +29,7 @@
 
   &_vertical {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     .profile-control_note {
       order: 1;
@@ -37,6 +37,7 @@
 
     .profile-control_favorites {
       order: 2;
+      margin: auto 0;
     }
 
     .profile-control_blacklist {

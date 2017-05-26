@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-export default () => {
+export default function () {
   const ReviewsSlider = new Swiper('.slider', {
     loop: true,
     initialSlide: 0,
