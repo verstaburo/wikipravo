@@ -85,13 +85,19 @@
       &__button {
         position: relative;
         z-index: 4;
+        width: 100%;
 
         &:not(:last-of-type) {
           margin-right: 0;
+          margin-bottom: auto;
 
           @include tablet {
             margin-right: 0;
           }
+        }
+
+        &:not(:first-of-type) {
+          margin-top: 44px;
         }
       }
 
@@ -114,7 +120,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
 
