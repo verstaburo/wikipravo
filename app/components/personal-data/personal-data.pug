@@ -17,9 +17,9 @@ mixin personal-data(jurist)
       +label-field("Латинские буквы и цифры, от 10 до 32 символов", "password").__field_second
         +input-password("Пароль", "password")
     +e.row
-      +label-field("Требуется для восстановления пароля и входа", "phone").__field_second
+      +label-field("Требуется для восстановления пароля и входа", "phone").__field_second._phone
         +input(type="tel" id="phone" placeholder="Телефон" required)
-      +e.field_second
+      +e.field_second._password-repeat
         +input-password("Повторить пароль", "password-repeat").__nolabel
     +section-title("Местоположение").__title
     +e.row

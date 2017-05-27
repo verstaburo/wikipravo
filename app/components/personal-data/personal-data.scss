@@ -18,11 +18,21 @@
     &_twothird {
       flex: 1;
       margin-right: 26px;
+
+      @include s-desktop {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &_third {
       width: 268px;
       min-width: 268px;
+
+      @include s-desktop {
+        width: 100%;
+      }
     }
   }
 
@@ -35,12 +45,27 @@
     width: 100%;
     margin-bottom: 37px;
 
+    @include s-desktop {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 37px;
+    }
+
     &_table {
       margin-bottom: 19px;
+
+      @include s-desktop {
+        margin-bottom: 20px;
+      }
     }
 
     &_photo {
       margin-bottom: 36px;
+
+      @include s-desktop {
+        flex-direction: row;
+        align-items: stretch;
+      }
     }
 
     &_nomargin {
@@ -55,10 +80,23 @@
     align-items: flex-start;
     flex: 1;
 
+    @include s-desktop {
+      width: 100%;
+      flex: none;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
     &_second {
 
       &:not(:nth-of-type(2n)) {
         margin-right: 19px;
+
+        @include s-desktop {
+          margin-right: 0;
+        }
       }
     }
 
@@ -66,17 +104,48 @@
 
       &:not(:nth-of-type(3n)) {
         margin-right: 39px;
+
+        @include s-desktop {
+          margin-right: 0;
+        }
       }
     }
 
     &_rospravo {
       flex: 1;
       margin-right: 26px;
+
+      @include s-desktop {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &_experience {
       width: 270px;
       min-width: 270px;
+
+      @include s-desktop {
+        width: 100%;
+      }
+    }
+
+    &_phone {
+
+      @include s-desktop {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
+
+    &_password-repeat {
+
+      @include s-desktop {
+        order: 1;
+        margin-bottom: 20px;
+      }
+
     }
   }
 
@@ -166,6 +235,21 @@
         &_specs {
           margin-bottom: 10px;
         }
+
+        &_hidden {
+          display: none;
+
+          @include s-desktop {
+            display: block;
+          }
+        }
+
+        &_visible-on1920 {
+
+          @include s-desktop {
+            display: none;
+          }
+        }
       }
 
       &__row {
@@ -173,6 +257,10 @@
 
         &_table {
           margin-bottom: 27px;
+
+          @include s-desktop {
+            margin-bottom: 20px;
+          }
         }
 
         &_photo {
@@ -191,6 +279,10 @@
 
           &:not(:nth-of-type(2n)) {
             margin-right: 27px;
+
+            @include s-desktop {
+              margin-right: 0;
+            }
           }
         }
 
@@ -198,18 +290,32 @@
 
           &:not(:nth-of-type(3n)) {
             margin-right: 30px;
+
+            @include s-desktop {
+              margin-right: 0;
+            }
           }
         }
 
         &_rospravo {
           flex: 1;
           margin-right: 26px;
+
+          @include s-desktop {
+            width: 100%;
+            margin-right: 0;
+            flex: none;
+          }
         }
 
         &_experience {
-          flex: 0;
+          flex: none;
           width: 268px;
           min-width: 268px;
+
+          @include s-desktop {
+            width: 100%;
+          }
         }
       }
     }

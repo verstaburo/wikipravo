@@ -20,6 +20,12 @@
     width: 100%;
     margin-bottom: 20px;
 
+    @include s-desktop {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 95px;
+    }
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -41,6 +47,10 @@
   &__type {
     width: 50%;
 
+    @include s-desktop {
+      width: 100%;
+    }
+
     &_user {
       border-left-width: 0;
     }
@@ -54,8 +64,24 @@
   &__field {
     flex: 1;
 
+    @include s-desktop {
+      flex: none;
+      width: 100%;
+    }
+
     &:not(:nth-of-type(2n)) {
       margin-right: 20px;
+
+      @include s-desktop {
+        margin-right: 0;
+      }
+    }
+
+    &:not(:last-of-type) {
+
+      @include s-desktop {
+        margin-bottom: 20px;
+      }
     }
   }
 
