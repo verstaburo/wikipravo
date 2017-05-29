@@ -169,11 +169,9 @@
                         <h4 class="section-title personal-data__title personal-data__title_photo">Ваше фото</h4>
                         <div class="personal-data__row personal-data__row_photo">
                             <label class="avatar-browse personal-data__avatar" for="photofile">
-                                <span class="avatar-browse__label">Выберите файл</span>
+                                <span class="avatar-browse__label" data-label-on-load="">Выберите файл</span>
                                 <input class="avatar-browse__input" type="file" id="photofile" name="photofile" accept="image/jpg, image/jpeg, image/png, image/bmp" />
-                                <output class="avatar-browse__output" for="photofile">
-                                    <img class="avatar-browse__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
-                                </output>
+                                <output class="avatar-browse__output" for="photofile"></output>
                             </label>
                             <div class="personal-data__describe">
                                 <div class="warning personal-data__photo-warning">Файл не выбран</div>
