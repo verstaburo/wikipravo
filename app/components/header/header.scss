@@ -87,6 +87,7 @@
   &_dark {
     background-color: $color-font;
     box-shadow: none;
+    width: 100%;
 
     .header {
 
@@ -99,6 +100,13 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: stretch;
+
+        @include tablet {
+          width: 100%;
+          max-width: 1020px;
+          min-width: auto;
+          padding: 0 20px;
+        }
       }
 
       &__col {
@@ -110,7 +118,7 @@
         }
 
         &_contacts-block {
-          margin-left: 50px;
+          margin-left: 30px;
         }
       }
     }

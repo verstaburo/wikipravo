@@ -1,9 +1,11 @@
 .profile-control {
   box-sizing: border-box;
   display: inline-block;
+  text-align: left;
   height: 38px;
   overflow: visible;
   background-color: transparent;
+  white-space: nowrap;
 
   &.disabled, &:hover.disabled {
 
@@ -86,8 +88,12 @@
     font-weight: 400;
     color: $color-main;
     transition: all .25s ease-in-out;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 60px);
 
-    @include tablet {
+    @include s-desktop {
       display: none;
     }
   }
