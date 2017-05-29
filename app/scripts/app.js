@@ -18,6 +18,7 @@ import {JuristColorChange} from '../components/system-regform/system-regform';
 import {ViewPassword} from '../blocks/input-password/input-password';
 import {AvatarLoad} from '../blocks/avatar-browse/avatar-browse';
 import {CandidateAddEmulation} from '../components/order-candidate/order-candidate';
+import {ProfileActivation} from '../blocks/header-profile/header-profile';
 
 $(function () {
 
@@ -41,4 +42,5 @@ $(function () {
   FavoritesSwitch();
   AvatarLoad();
   CandidateAddEmulation();
+  ProfileActivation();
 });

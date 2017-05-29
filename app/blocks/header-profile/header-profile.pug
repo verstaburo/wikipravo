@@ -1,0 +1,12 @@
+include ../avatar/avatar
+
+mixin header-profile()
+  +b.header-profile&attributes(attributes)
+    +avatar("assets/images/profile-avatar.jpg")._small._blue-border._dark-bg.__avatar
+    +e.UL.list
+      +e.LI.item
+        +e.A(href="#").link Профиль
+      +e.LI.item
+        +e.A(href="#").link Управление учетом
+      +e.LI.item
+        +e.A(href="#").link Выход
