@@ -1,0 +1,9 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 36px 50px 50px;
+  background-color: $color-bg-index;
+}

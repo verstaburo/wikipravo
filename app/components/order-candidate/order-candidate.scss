@@ -1,0 +1,97 @@
+.order-candidate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 25px 38px 27px;
+  width: 100%;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 19px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: $color-bg-index;
+    padding: 13px 22px 0;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__message, &__name {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 500;    
+    color: #212121;    
+  }
+  
+  &__message {
+    padding: 16px 8px 29px;
+    width: 100%;
+    letter-spacing: .032em;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  &__item {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+    align-items: center;      
+    box-sizing: border-box;
+    margin-right: 50px;
+    margin-bottom: 13px;
+    min-width: 240px;
+  }
+  
+  &__avatar {
+    margin-right: 18px;
+  }
+  
+  &__name {
+    letter-spacing: .03em;
+    margin-right: 14px;
+  }
+  
+  &__remove {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &:hover {
+      
+      .order-candidate__icon {
+        stroke: #828282;
+      }
+    }
+  }
+  
+  &__icon {
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: #a2a2a2;
+  }
+
+  &__button {
+    min-width: 310px;
+    width: 310px;
+  }
+}

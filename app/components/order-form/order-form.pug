@@ -1,0 +1,8 @@
+include ../../blocks/entitled-text/entitled-text
+include ../../blocks/form/form
+
+mixin order-form()
+  +b.order-form&attributes(attributes)
+    +entitled-text([{"title" : "Заказать консультацию", "paragraph" : [{"text": "Если у вас есть вопрос, на который вы хотите получить ответ от юриста, заполните заявку и получите предложения юристов со всей России!"}]}])._title._grey.__title
+    +form.__form
+      block

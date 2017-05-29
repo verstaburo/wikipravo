@@ -11,31 +11,6 @@ export function AvatarLoad() {
       var file = files[0];
       var message = "";
 
-      /*function ImgValidate (theFile) {
-        if(theFile) {
-          var fileType = theFile.name.split('.').pop();
-          var validSize = 5242880;
-          var fileSize = theFile.size;
-
-          if(fileType != 'jpg|jpeg|bmp|png') {
-            message = "Не допустимый формат файла";
-            return false;
-          }
-
-          if(fileSize > validSize) {
-            message = "Файл больше 5MB";
-            return false;
-          }
-
-          message = "Файл выбран";
-
-          return true;
-        }
-      }
-
-      if(ImgValidate(file)) {
-        console.log(message);*/
-
       function ImgPreview(img) {
         var removeBtn = document.createElement('BUTTON');
 

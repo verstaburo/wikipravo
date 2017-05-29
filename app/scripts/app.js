@@ -17,6 +17,7 @@ import {FavoritesSwitch} from '../blocks/action-controls/action-controls';
 import {JuristColorChange} from '../components/system-regform/system-regform';
 import {ViewPassword} from '../blocks/input-password/input-password';
 import {AvatarLoad} from '../blocks/avatar-browse/avatar-browse';
+import {CandidateAddEmulation} from '../components/order-candidate/order-candidate';
 
 $(function () {
 
@@ -39,4 +40,5 @@ $(function () {
   FileListControl();
   FavoritesSwitch();
   AvatarLoad();
+  CandidateAddEmulation();
 });

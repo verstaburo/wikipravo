@@ -6,6 +6,12 @@
   border-radius: 50%;
   z-index: 2;
   overflow: hidden;
+  
+  &_smaller {
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+  }
 
   &_small {
     min-width: 68px;

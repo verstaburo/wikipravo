@@ -13,4 +13,24 @@
     letter-spacing: .035em;
     color: rgba($color-font, .6);
   }
+
+  &_title {
+
+    h2 {
+      margin-bottom: 13px;
+      letter-spacing: .05em;
+    }
+
+    p {
+      line-height: 1.78em;
+      letter-spacing: .04em;
+    }
+  }
+
+  &_grey {
+
+    p {
+      color: $color-placeholder;
+    }
+  }
 }

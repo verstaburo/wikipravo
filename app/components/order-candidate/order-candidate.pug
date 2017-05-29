@@ -1,0 +1,9 @@
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+
+mixin order-candidate()
+  +b.order-candidate&attributes(attributes)
+    +block-title("Кандидаты").__title
+    +e.content
+      +e.P.message Юристы из этого списка получит уведомление и сразу будут назначены кандидатами по заявке
+    +button("button")._blue.__button Добавить еще
