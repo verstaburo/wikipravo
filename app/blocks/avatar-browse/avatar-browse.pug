@@ -1,8 +1,9 @@
-mixin avatar-browse(label, image)
+mixin avatar-browse(label, image, labelLoad)
   -var imgSrc = ""
+  -var lblOnLoad = ""
+  -if(labelLoad) {lblOnLoad = lableLoad}
   -if(image) {imgSrc = image}
   +b.LABEL(for="photofile").avatar-browse&attributes(attributes)
-    +e.SPAN.label= label
+    +e.SPAN.label(data-label-on-load=lblOnLoad)= label
     +e.INPUT(type="file", id="photofile", name="photofile", accept = "image/jpg, image/jpeg, image/png, image/bmp").input
     +e.OUTPUT(for="photofile").output
-      +e.IMG(src=imgSrc).img

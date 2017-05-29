@@ -78,7 +78,6 @@
     }
 
     &:not(:last-of-type) {
-
       @include s-desktop {
         margin-bottom: 20px;
       }

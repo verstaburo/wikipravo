@@ -86,7 +86,10 @@
     }
 
     &:not(:last-of-type) {
-      margin-bottom: 20px;
+
+      @include s-desktop {
+        margin-bottom: 20px;
+      }
     }
 
     &_second {

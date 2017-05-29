@@ -8,6 +8,7 @@
   min-width: 147px;
   height: 147px;
   cursor: pointer;
+  z-index: 1;
 
   &__input {
     display: none;
@@ -26,6 +27,33 @@
     color: $color-placeholder;
     padding: 0 18px;
     transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 4;
+
+    &:hover {
+
+      .avatar-browse__icon {
+        stroke: #878787;
+      }
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: transparent;
+    stroke: $color-placeholder;
+    transition: all .25s ease-in-out;
   }
 
   &__output {
@@ -35,10 +63,10 @@
     overflow: hidden;
     border-radius: 50%;
     border: 1px solid $color-border-input;
+    z-index: 2;
   }
 
   &__img {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
