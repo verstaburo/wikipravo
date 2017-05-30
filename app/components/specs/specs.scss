@@ -71,6 +71,7 @@
   &__slide-left {
     width: 370px;
     display: flex;
+    transition: all .25s ease-in-out;
 
     &:hover {
       color: #d93a37;
@@ -106,6 +107,7 @@
     right: 45px;
     transform: translate(0, -50%) rotate(0);
     cursor: pointer;
+    transition: all .25s ease-in-out;
   }
 
   .checkbox__label {

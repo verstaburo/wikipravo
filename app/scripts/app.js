@@ -19,6 +19,7 @@ import {ViewPassword} from '../blocks/input-password/input-password';
 import {AvatarLoad} from '../blocks/avatar-browse/avatar-browse';
 import {CandidateAddEmulation} from '../components/order-candidate/order-candidate';
 import {ProfileActivation} from '../blocks/header-profile/header-profile';
+import {specs} from '../components/specs/specs';
 
 $(function () {
 
@@ -43,4 +44,5 @@ $(function () {
   AvatarLoad();
   CandidateAddEmulation();
   ProfileActivation();
+  specs();
 });
