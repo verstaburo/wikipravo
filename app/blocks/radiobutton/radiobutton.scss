@@ -1,5 +1,7 @@
 .radio {
+  box-sizing: border-box;
   display: inline-flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
@@ -10,67 +12,40 @@
   &__label {
     position: relative;
     box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 15px;
-    min-width: 100%;
-    font-size: 14px;
-    line-height: 1.43em;
-    letter-spacing: .035em;
-    color: $color-font;
-    white-space: nowrap;
+    padding-left: 35px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-weight: 400;
+    color: #1a1a1a;
 
-    a {
-      border-bottom: 1px solid $color-font;
-      letter-spacing: .035em;
-      padding-bottom: 5px;
+    &::before {
+      box-sizing: border-box;
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(#000, .15);
+      border-radius: 50%;
+      padding: 5px;
+      background-clip: content-box;
+      transform: translate(0, -50%);
+      transition: all .25s ease-in-out;
       cursor: pointer;
+    }
 
-      &:hover {
-        color: rgba($color-font, .6);
-        border-color: rgba($color-font, .6);
-      }
+    &:hover::before {
+      border-color: rgba(#000, .5);
     }
   }
 
-  &__check {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    transition: all .25s ease-in-out;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: 1px solid #e1e1e1;
-    border-radius: 100%;
-    transform: translate3d(0, -50%, 0);
+  input:checked ~ .radio__label {
 
-    &:hover {
-      border-color: $color-font;
-    }
-  }
-
-  &__check-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    transform: translate(-50%, -50%);
-    transition: all .25s ease-in-out;
-    background: transparent;
-    border-radius: 100%;
-  }
-
-  input:checked ~ label {
-
-    .radio__check {
-      border-color: $color-font;
-    }
-
-    .radio__check-img {
-      background: #3593ea;
+    &::before {
+      background-color: $color-main;
     }
   }
 
@@ -92,10 +67,10 @@
             border-color: rgba($color-font, .8);
           }
         }
-      }
 
-      &__check {
-        border-color: rgba($color-font, .15);
+        &::before {
+          border-color: rgba($color-font, .15);
+        }
       }
     }
   }
@@ -108,29 +83,20 @@
         padding-left: 45px;
       }
 
-      &__check {
+      &::before {
         width: 25px;
         height: 25px;
-      }
-
-      &__check-img {
-        width: 17px;
-        height: 14px;
       }
     }
   }
 
   &_red {
 
-    input:checked ~ label {
+    input:checked ~ .radio__label {
 
-      .radio__check {
-        background: #d93a37;
+      &::before {
+        background-color: #d93a37;
         border-color: #d93a37;
-      }
-
-      .radio__check-img {
-        fill: #fff;
       }
     }
   }
