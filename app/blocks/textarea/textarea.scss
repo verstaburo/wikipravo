@@ -9,6 +9,7 @@
   color: $color-font;
   resize: none;
   background-color: #fff;
+  border-radius: 2px;
   border: none;
   outline: none;
 
@@ -18,5 +19,13 @@
     letter-spacing: .06em;
     font-weight: 400;
     color: rgba(#afafaf, .8);
+  }
+
+  &_grey {
+    border: 1px solid $color-border-input;
+
+    &:placeholder {
+      color: $color-placeholder;
+    }
   }
 }

@@ -1,0 +1,5 @@
+mixin radio(label, radioId, radioName, radioValue)
+  +b.radio&attributes(attributes)
+    +e.INPUT(type="radio" id=radioId name=radioName value=radioValue)
+    +e.LABEL(for=radioId).label= label
+      block
