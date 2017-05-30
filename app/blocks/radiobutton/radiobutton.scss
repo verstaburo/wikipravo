@@ -1,0 +1,137 @@
+.radio {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  input {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 15px;
+    min-width: 100%;
+    font-size: 14px;
+    line-height: 1.43em;
+    letter-spacing: .035em;
+    color: $color-font;
+    white-space: nowrap;
+
+    a {
+      border-bottom: 1px solid $color-font;
+      letter-spacing: .035em;
+      padding-bottom: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba($color-font, .6);
+        border-color: rgba($color-font, .6);
+      }
+    }
+  }
+
+  &__check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    border-radius: 100%;
+    transform: translate3d(0, -50%, 0);
+
+    &:hover {
+      border-color: $color-font;
+    }
+  }
+
+  &__check-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border-radius: 100%;
+  }
+
+  input:checked ~ label {
+
+    .radio__check {
+      border-color: $color-font;
+    }
+
+    .radio__check-img {
+      background: #3593ea;
+    }
+  }
+
+  &_grey {
+
+    .radio {
+
+      &__label {
+        color: rgba($color-font, .5);
+        letter-spacing: .025em;
+
+        a {
+          color: rgba($color-font, .4);
+          border-color: rgba($color-font, .4);
+          letter-spacing: .025em;
+
+          &:hover {
+            color: rgba($color-font, .8);
+            border-color: rgba($color-font, .8);
+          }
+        }
+      }
+
+      &__check {
+        border-color: rgba($color-font, .15);
+      }
+    }
+  }
+
+  &_big {
+
+    .radio {
+
+      &__label {
+        padding-left: 45px;
+      }
+
+      &__check {
+        width: 25px;
+        height: 25px;
+      }
+
+      &__check-img {
+        width: 17px;
+        height: 14px;
+      }
+    }
+  }
+
+  &_red {
+
+    input:checked ~ label {
+
+      .radio__check {
+        background: #d93a37;
+        border-color: #d93a37;
+      }
+
+      .radio__check-img {
+        fill: #fff;
+      }
+    }
+  }
+}

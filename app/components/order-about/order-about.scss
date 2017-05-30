@@ -1,0 +1,101 @@
+.order-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 25px 38px 27px;
+  width: 100%;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 19px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: $color-bg-index;
+    padding: 13px 22px 0;
+    width: 100%;
+    max-width: 740px;
+    margin-bottom: 24px;
+  }
+
+  .radio {
+    margin-bottom: 18px;
+
+    &__label {
+      white-space: normal;
+    }
+
+    &__inner-text {
+      color: #988a8a;
+    }
+  }
+
+  &__order-label {
+    font-size: 13px;
+    margin-bottom: 19px;
+    font-weight: 500;
+  }
+  
+  &__order-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__first {
+    width: 60%;
+    margin-right: 20px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__second {
+    width: calc(40% - 20px);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__order-col {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    &_inner {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .selectbox_light .selectbox__button, .input {
+    border-color: transparent;
+  }
+
+  &__sublabel {
+    font-size: 13px;
+    color: $color-placeholder;
+    margin: 0 15px;
+  }
+
+  &__checkbox {
+    width: 40%;
+  }
+}

@@ -1,0 +1,9 @@
+include ../icon/icons
+
+mixin radio(label, id, name)
+  +b.radio&attributes(attributes)
+    +e.INPUT(type="radio" id= id name= name)
+    +e.LABEL.label(for= id)= label
+      +e.check
+        +e.__check-img
+      block
