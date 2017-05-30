@@ -5,6 +5,13 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 35px;
+
+  &_hide-header {
+    .entitled-text  {
+      display: none;
+    }
+  }
 
   &__title {
     width: 50%;

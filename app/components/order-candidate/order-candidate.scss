@@ -5,7 +5,8 @@
   align-items: flex-start;
   box-sizing: border-box;
   padding: 25px 38px 27px;
-  width: 100%;
+    width: 100%;
+    max-width: 740px;
   background-color: #fff;
 
   &__title {
@@ -20,7 +21,8 @@
     box-sizing: border-box;
     background-color: $color-bg-index;
     padding: 13px 22px 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 740px;
     margin-bottom: 24px;
   }
 
