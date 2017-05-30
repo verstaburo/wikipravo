@@ -1,4 +1,4 @@
-.order-settings {
+.order-about {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -7,13 +7,6 @@
   padding: 25px 38px 27px;
   width: 100%;
   background-color: #fff;
-
-  h4 {
-    font-weight: 600;
-    font-size: 14px;
-    color: #151827;
-    margin: 0 0 25px 0;
-  }
 
   &__title {
     margin-bottom: 19px;
@@ -47,7 +40,7 @@
   &__order-label {
     font-size: 13px;
     margin-bottom: 19px;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   &__order-row {

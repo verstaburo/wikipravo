@@ -1,0 +1,11 @@
+include ../../blocks/block-title/block-title
+include ../../blocks/radiobutton/radiobutton
+include ../../blocks/label-field/label-field
+include ../../blocks/input/input
+include ../../blocks/checkbox/checkbox
+include ../../blocks/selectbox/selectbox
+
+mixin order-about()
+  +b.order-about&attributes(attributes)
+    +block-title("Какой вид услуги вам нужен вам нужен?").__title
+        

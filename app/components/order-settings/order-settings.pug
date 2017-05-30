@@ -5,10 +5,10 @@ include ../../blocks/input/input
 include ../../blocks/checkbox/checkbox
 include ../../blocks/selectbox/selectbox
 
-mixin order-about()
-  +b.order-about&attributes(attributes)
+mixin order-settings()
+  +b.order-settings&attributes(attributes)
     +block-title("Настройки публикации").__title
-    +e('h3') Заявка будет видна
+    +e('h4') Заявка будет видна
     +radio('Только отобранным юристам', 'r1', 'test')
       +e.inner-text (Только юристы из списка кандидатов смогут увидеть заявку)
     +radio('Юристам по заданным условиям', 'r2', 'test')
