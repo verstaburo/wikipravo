@@ -4,7 +4,7 @@ mixin file-input(btnName, emptyText, btnAddClass)
   +b.file-input&attributes(attributes)
     +e.OUTPUT(for="files").output
       +e.SPAN.placeholder= emptyText
-      +b.files-list.__files-list
+      +b.UL.files-list.__files-list
     +e.buttons
       block
       +e.LABEL(for="files" class="fileselect " + btnClass)= btnName

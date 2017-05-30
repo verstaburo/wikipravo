@@ -12,12 +12,6 @@ export function FileListControl() {
 
     var outputUl = output.querySelector('.files-list');
 
-    output.querySelector('.files-list').addEventListener('change', function () {
-      if(!(this.hasChildNodes)) {
-        output.querySelector('.message__placeholder').setAttribute('style', 'display: block');
-      }
-    }, false);
-
     input.addEventListener('change', function() {
       var files = this.files;
       var outputList = [];
@@ -85,7 +79,7 @@ export function FileListControl() {
 
       OutputFile();
 
-      output.querySelector('.message__placeholder').setAttribute('style', 'display: none');
+      output.querySelector('.file-input__placeholder').setAttribute('style', 'display: none');
     }, false);
   }
 
@@ -95,5 +89,9 @@ export function FileListControl() {
     if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
     $(this).parents('li').remove();
     $('input[name^=file][data-file-id="' + fileId + '"]').remove();
+
+    if(document.querySelector('.file-input__files-list').childElementCount == 0) {
+      output.querySelector('.file-input__placeholder').setAttribute('style', 'display: block');
+    }
   });
 };

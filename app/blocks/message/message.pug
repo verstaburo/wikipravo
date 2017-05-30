@@ -1,17 +1,11 @@
 include ../button/button
 include ../textarea/textarea
-include ../files-list/files-list
+include ../file-input/file-input
 
 mixin message(title, textareaPlaceholder)
   +b.message&attributes(attributes)
     +e.H3.title= title
     +e.FORM.__form#message
       +textarea(placeholder= textareaPlaceholder class=" ").__textarea
-      +e.OUTPUT.__files-output(for="files" id="filelist")
-        +e.SPAN.placeholder Нет выбранных файлов
-        +b.UL.files-list.message__files-list
-      +e.__buttons
-        +button("button")(type="submit")._blue.__button Отправить
-        +e.LABEL(for="files" class=" message__fileselect button_transparent_second")
-          | Прикрепить файлы
-          +e.INPUT(type="file" id="files" name="files[]" multiple).__files
+      +file-input("Прикрепить файлы", "Нет приклепленных файлов").files
+        +button("button")(type="submit")._blue.message__button Отправить
