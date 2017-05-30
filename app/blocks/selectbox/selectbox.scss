@@ -326,6 +326,19 @@
       }
     }
 
+    &_light {
+      .selectbox {
+
+        &__button-name {
+          color: #7ab5f1;
+        }
+
+        &__right-icon {
+          color: rgba($color-main, .4);
+        }
+      }
+    }
+
     &_noborder {
 
       .selectbox {
