@@ -4,8 +4,19 @@ include ../../blocks/label-field/label-field
 include ../../blocks/input/input
 include ../../blocks/checkbox/checkbox
 include ../../blocks/selectbox/selectbox
+include ../../blocks/textarea/textarea
 
 mixin order-about()
   +b.order-about&attributes(attributes)
     +block-title("Какой вид услуги вам нужен вам нужен?").__title
+    +e.row
+      +e.order-label Категория права 
+        +e('span').sublabel (Правильный выбор категории поможет быстрее найти специалистов в нужной вам области)
+      +selectbox(getData('order-about'))._light._height._scrollable
+    +e.row
+      +e.order-label Ваш вопрос
+      +input(type="text", placeholder="Кратко опишите задачу")
+    +e.row
+      +e.order-label Подробное описание
+      +textarea(placeholder="Чем подробнее вы опишите требования к документу, тем точнее юристы смогут оценить его стоимость")
         

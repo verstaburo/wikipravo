@@ -12,90 +12,35 @@
     margin-bottom: 19px;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    box-sizing: border-box;
-    background-color: $color-bg-index;
-    padding: 13px 22px 0;
-    width: 100%;
-    max-width: 740px;
-    margin-bottom: 24px;
-  }
+  .textarea {
+    border: 1px solid $color-border-input;
+    transition: all .25s ease-in-out;
+    height: 160px;
 
-  .radio {
-    margin-bottom: 18px;
-
-    &__label {
-      white-space: normal;
-    }
-
-    &__inner-text {
-      color: #988a8a;
+    &:hover {
+      border-color: $color-font;
     }
   }
 
   &__order-label {
     font-size: 13px;
     margin-bottom: 19px;
-    font-weight: 500;
-  }
-  
-  &__order-row {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    width: 100%;
-
-    @include tablet {
-      flex-direction: column;
-    }
-  }
-
-  &__first {
-    width: 60%;
-    margin-right: 20px;
-
-    @include tablet {
-      width: 100%;
-    }
-  }
-
-  &__second {
-    width: calc(40% - 20px);
-
-    @include tablet {
-      width: 100%;
-    }
-  }
-
-  &__order-col {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-
-    &_inner {
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 0;
-    }
-  }
-
-  .selectbox_light .selectbox__button, .input {
-    border-color: transparent;
+    font-weight: 600;
   }
 
   &__sublabel {
     font-size: 13px;
     color: $color-placeholder;
-    margin: 0 15px;
+    font-weight: 300;
   }
 
-  &__checkbox {
-    width: 40%;
+  &__row {
+    margin-bottom: 25px;
+    max-width: 740px;
+    width: 100%;
+
+    .selectbox, .input, .textarea {
+      width: 100%;
+    }
   }
 }
