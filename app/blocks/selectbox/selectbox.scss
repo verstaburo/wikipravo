@@ -325,5 +325,15 @@
         }
       }
     }
+
+    &_noborder {
+
+      .selectbox {
+
+        &__button-name {
+          border-bottom: none;
+        }
+      }
+    }
   }
 }
