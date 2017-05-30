@@ -1,8 +1,11 @@
-mixin selectbox(data, label)
+mixin selectbox(data, label, required)
+  -var req = false
   -var placeholder = data.option[0].name
-  -if(data.placeholder) {placeholder = data.placeholder}
+  -var defaultValue = ""
+  -if(data.placeholder) {placeholder = data.placeholder} else {defaultValue = data.option[0].name}
+  -if(required) {req= true}
   +b.selectbox&attributes(attributes)
-    +e.INPUT.input(type='hidden' value=placeholder placeholder=placeholder)
+    +e.INPUT.input(type='hidden' value=defaultValue placeholder=placeholder required=req)
     +e.button
       -if(label)
         +e.SPAN.label= label

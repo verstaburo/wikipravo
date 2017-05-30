@@ -209,6 +209,10 @@
         }
       }
 
+      &__input:required:invalid ~ .selectbox__button {
+        border-color: $color-error;
+      }
+
       &__option {
         color: $color-placeholder;
         background-color: #fff;

@@ -13,4 +13,9 @@
   &::placeholder { color: $color-placeholder; }
 
   &:hover, &:focus { border: 1px solid $color-font; }
+
+  &:required:invalid {
+    border-color: $color-error;
+    outline: none;
+  }
 }
