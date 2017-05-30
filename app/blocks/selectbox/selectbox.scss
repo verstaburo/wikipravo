@@ -179,6 +179,14 @@
     transform: translateY(-50%);
   }
 
+  &.valid .selectbox__button {
+    border-color: $color-green;
+  }
+
+  &.invalid .selectbox__button {
+    border-color: $color-error;
+  }
+
   &_light {
 
     .selectbox {
@@ -207,10 +215,6 @@
           color: $color-font;
           background-color: #fff;
         }
-      }
-
-      &__input:required:invalid ~ .selectbox__button {
-        border-color: $color-error;
       }
 
       &__option {
@@ -331,6 +335,7 @@
     }
 
     &_light {
+
       .selectbox {
 
         &__button-name {

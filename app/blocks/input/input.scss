@@ -15,7 +15,16 @@
   &:hover, &:focus { border: 1px solid $color-font; }
 
   &:required:invalid {
-    border-color: $color-error;
+    border-color: #e1e1e1;
+    box-shadow: none;
     outline: none;
+  }
+
+  &.valid {
+    border-color: $color-green;
+  }
+
+  &.invalid {
+    border-color: $color-error;
   }
 }

@@ -20,6 +20,7 @@ import {AvatarLoad} from '../blocks/avatar-browse/avatar-browse';
 import {CandidateAddEmulation} from '../components/order-candidate/order-candidate';
 import {ProfileActivation} from '../blocks/header-profile/header-profile';
 import {specs} from '../components/specs/specs';
+import {ValidationOrder} from '../components/order-form/order-form';
 
 $(function () {
 
@@ -44,5 +45,6 @@ $(function () {
   AvatarLoad();
   CandidateAddEmulation();
   ProfileActivation();
+  ValidationOrder();
   specs();
 });

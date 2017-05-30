@@ -40,6 +40,20 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 /* ##########
+Убираем очистку input и просмотр пароля в IE
+######## */
+
+::-ms-reveal {
+  width: 0;
+  height: 0;
+}
+
+::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+/* ##########
 Основные стили
 ########## */
 

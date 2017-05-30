@@ -6,7 +6,7 @@
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  
+
   &__list {
     display: none;
     position: absolute;
@@ -14,23 +14,23 @@
     top: calc(100% + 24px);
     width: 100%;
     border-radius: 2px;
-    box-shadow: 0 0 32px rgba(27, 52, 176, 0.2);
+    box-shadow: 0 0 32px rgba(27, 52, 176, .2);
     background-color: #fff;
     z-index: 15;
-    
+
     &.active {
       display: block;
     }
   }
-  
+
   &__item {
     width: 100%;
-    
+
     &:not(:last-of-type) {
       border-bottom: 1px solid rgba($color-font, .15);
     }
   }
-  
+
   &__link {
     display: inline-block;
     box-sizing: border-box;
@@ -42,7 +42,7 @@
     line-height: 1em;
     letter-spacing: .04em;
     color: $color-placeholder;
-    
+
     &:hover {
       color: $color-main;
     }

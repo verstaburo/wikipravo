@@ -1,0 +1,16 @@
+.error-message {
+  box-sizing: border-box;
+  font-size: 13px;
+  letter-spacing: .04em;
+  line-height: 1.5em;
+  font-weight: 300;
+  color: $color-error;
+
+  &_big {
+    font-size: 16px;
+  }
+
+  &_bold {
+    font-weight: 500;
+  }
+}

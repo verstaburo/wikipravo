@@ -7,17 +7,17 @@ include ../../blocks/block-title/block-title
 include ../../blocks/section-title/section-title
 
 mixin order-document()
-  +b.order-document&attributes(attributes)
+  +b.FIELDSET.order-document&attributes(attributes)
     +block-title("Какой документ вам нужен?").__title
     +e.row_half
       +section-title("Тип документа")._bold.__label
       +selectbox(getData("selectbox-order-documents"))._light._visible.__doctype
     +e.row_half
       +section-title("Мне нужно")._bold.__label
-      +input(type="text" placeholder="Кратко опишите задачу").__input
+      +input(type="text" placeholder="Кратко опишите задачу")#short-describe.__input
     +e.row_half
       +section-title("Подробное описание")._bold.__label
-      +textarea(placeholder="Чем подробнее вы опишите требования к документу, тем точнее юристы смогут оценить его стоимость")._grey.__textarea
+      +textarea(placeholder="Чем подробнее вы опишите требования к документу, тем точнее юристы смогут оценить его стоимость")#describe._grey.__textarea
     +e.row_half
       +section-title("Если нужно, прикрепите файл")._bold.__label
       +file-input("Загрузить еще файл", "Нет приклепленных файлов").__files

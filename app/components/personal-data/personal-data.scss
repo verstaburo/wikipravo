@@ -86,7 +86,6 @@
     }
 
     &:not(:last-of-type) {
-
       @include s-desktop {
         margin-bottom: 20px;
       }
@@ -135,7 +134,6 @@
     }
 
     &_phone {
-
       @include s-desktop {
         order: 2;
         margin-bottom: 0;
@@ -143,12 +141,10 @@
     }
 
     &_password-repeat {
-
       @include s-desktop {
         order: 1;
         margin-bottom: 20px;
       }
-
     }
   }
 
@@ -248,7 +244,6 @@
         }
 
         &_visible-on1920 {
-
           @include s-desktop {
             display: none;
           }
