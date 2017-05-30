@@ -12,7 +12,7 @@ import {NoteTextareaFocus} from '../blocks/note/note';
 import {FilterOpened} from '../blocks/filter-controls/filter-controls';
 import {LocationPopup} from '../components/popup-location/popup-location';
 import {FilterReset} from '../blocks/filter-controls/filter-controls';
-import {FileListControl} from '../blocks/message/message';
+import {FileListControl} from '../blocks/file-input/file-input';
 import {FavoritesSwitch} from '../blocks/action-controls/action-controls';
 import {JuristColorChange} from '../components/system-regform/system-regform';
 import {ViewPassword} from '../blocks/input-password/input-password';

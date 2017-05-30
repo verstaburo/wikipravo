@@ -12,16 +12,6 @@
     margin-bottom: 19px;
   }
 
-  .textarea {
-    border: 1px solid $color-border-input;
-    transition: all .25s ease-in-out;
-    height: 160px;
-
-    &:hover {
-      border-color: $color-font;
-    }
-  }
-
   &__order-label {
     font-size: 13px;
     margin-bottom: 19px;

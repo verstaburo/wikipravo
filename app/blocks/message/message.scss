@@ -28,39 +28,15 @@
     margin-bottom: 20px;
   }
 
-  &__placeholder {
-    font-size: 13px;
-    line-height: 1.5em;
-    letter-spacing: .06em;
-    font-weight: 400;
-    color: rgba(#afafaf, .8);
-  }
+  &__files {
 
-  &__files-output {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 872px;
-  }
-
-  &__buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    box-sizing: border-box;
+    .file-input__output {
+      max-width: 872px;
+    }
   }
 
   &__button {
     min-width: 320px;
     margin-right: 30px;
-  }
-
-  &__fileselect {
-    min-width: 250px;
-  }
-
-  &__files {
-    display: none;
   }
 }
