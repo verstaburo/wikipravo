@@ -29,9 +29,9 @@ mixin order-settings()
           +e.order-label Стаж работы
           +e.order-col_inner
             +e.sublabel От
-            +input(type="text")
+            +input(type="text" id="exp-start" pattern="[0-9]")
             +e.sublabel До
-            +input(type="text")
+            +input(type="text" id="exp-end" pattern="[0-9]")
       +e.order-row
         +e.order-col.__checkbox
           +checkbox('Только адвокаты', 'c1')
@@ -46,4 +46,3 @@ mixin order-settings()
       +e.inner-text (Юристы смогут просматривать вашу завку и откливаться на нее)
     +radio('Всем', 'r4', 'test2')
       +e.inner-text (Любой посетитель сайта сможет просмотреть вашу заявку. Юристы смогут откликаться на нее)
-        

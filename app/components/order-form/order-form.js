@@ -23,6 +23,10 @@ export function ValidationOrder() {
       popup.setAttribute('style', 'display: block');
     }
 
+    /*##########
+    Верификация секции выбора документа
+    ##########*/
+
     if($('.order-document__doctype').find('input').val() == '') {
       $('.order-document__doctype').addClass('invalid').removeClass('valid');
       if($('.order-document__doctype').siblings('.error-message').length == 0) {
@@ -77,12 +81,14 @@ export function ValidationOrder() {
     });
 
     if(priceInvalid) {
+      $(priceRadio).parents('.order-document__col').find('.order-document__label').addClass('invalid').removeClass('valid');
       if($(priceRadio).parents('.order-document__col').find('.order-document__label').find('.error-message').length == 0) {
         $(priceRadio).parents('.order-document__col').find('.order-document__label').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
         //$(priceRadio).parents('.order-document__col').find('.order-document__label').append('<p class="error-message">Это поле обязательно. Должно быть выбрано одно из значений</p>');
       }
       validationSteps.push(true);
     } else {
+      $(priceRadio).parents('.order-document__col').find('.order-document__label').removeClass('invalid').addClass('valid');
       $(priceRadio).parents('.order-document__col').find('.order-document__label').find('.error-message').remove();
       validationSteps.push(false);
     }
@@ -100,22 +106,98 @@ export function ValidationOrder() {
     });
 
     if(timeInvalid) {
+      $(timeRadio).parents('.order-document__col').find('.order-document__label').addClass('invalid').removeClass('valid');
       if($(timeRadio).parents('.order-document__col').find('.order-document__label').find('.error-message').length == 0) {
         $(timeRadio).parents('.order-document__col').find('.order-document__label').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
         //$(timeRadio).parents('.order-document__col').find('.order-document__label').append('<p class="error-message">Это поле обязательно. Должно быть выбрано одно из значений</p>');
       }
       validationSteps.push(true);
     } else {
+      $(timeRadio).parents('.order-document__col').find('.order-document__label').removeClass('invalid').addClass('valid');
       $(timeRadio).parents('.order-document__col').find('.order-document__label').find('.error-message').remove();
       validationSteps.push(false);
     }
 
     if($('.order-document').find('.invalid').length > 0) {
-      if($('.order-document').find('.block-title').siblings('.error-message').length == 0) {
+      if($('.order-document').find('.block-title').find('.error-message').length == 0) {
         $('.order-document').find('.block-title').append('<p class="error-message">Не все обязательные поля заполнены верно</p>');
       }
     } else {
-      $('.order-document').find('.block-title').find('error-message').remove();
+      $('.order-document').find('.block-title').find('.error-message').remove();
+    }
+
+    /*##########
+    Верификация секции настройки публикации
+    ##########*/
+
+    var testInvalid, testChecker = [];
+    var testRadio = $('input[type="radio"][name="test"]');
+
+    for(var i = 0 ; i < testRadio.length; i++) {
+      testChecker.push(testRadio[i].checked);
+    }
+
+    testInvalid = testChecker.every(function(item) {
+      return !item;
+    });
+
+    if(testInvalid) {
+      $(testRadio).parents('.order-settings').find('h4').addClass('invalid').removeClass('valid');
+      if($(testRadio).parents('.order-settings').find('h4').find('.error-message').length == 0) {
+        $(testRadio).parents('.order-settings').find('h4').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
+        //$(timeRadio).parents('.order-document__col').find('.order-document__label').append('<p class="error-message">Это поле обязательно. Должно быть выбрано одно из значений</p>');
+      }
+      validationSteps.push(true);
+    } else {
+      $(testRadio).parents('.order-settings').find('h4').removeClass('invalid').addClass('valid');
+      $(testRadio).parents('.order-settings').find('h4').find('.error-message').remove();
+      validationSteps.push(false);
+    }
+
+    if($('.order-settings .selectbox').find('input').val() == '') {
+      $('.order-settings .selectbox').addClass('invalid').removeClass('valid');
+      if($('.order-settings .selectbox').siblings('.error-message').length == 0) {
+        $('.order-settings .selectbox').siblings('.order-settings__order-label').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
+        $('.order-settings .selectbox').after('<p class="error-message">Это поле обязательно и не может быть пустым</p>');
+      }
+      validationSteps.push(true);
+    } else {
+      $('.order-settings .selectbox').removeClass('invalid').addClass('valid');
+      $('.order-settings .selectbox').siblings('.error-message').remove();
+      $('.order-settings .selectbox').siblings('.order-settings__order-label').find('.error-message').remove();
+      validationSteps.push(false);
+    }
+
+    if($('.order-settings').find('.invalid').length > 0) {
+      if($('.order-settings').find('.block-title').find('.error-message').length == 0) {
+        $('.order-settings').find('.block-title').append('<p class="error-message">Не все обязательные поля заполнены верно</p>');
+      }
+    } else {
+      $('.order-settings').find('.block-title').find('.error-message').remove();
+    }
+
+    if($('#exp-start').val() == '') {
+      $('#exp-start').addClass('invalid').removeClass('valid');
+      if($('#exp-start').parents('.order-settings__order-col').find('.order-settings__order-label').find('.error-message').length == 0) {
+        $('#exp-start').parents('.order-settings__order-col').find('.order-settings__order-label').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
+      }
+      validationSteps.push(true);
+    } else {
+      $('#exp-start').removeClass('invalid').addClass('valid');
+      $('#exp-start').parents('.order-settings__order-col').find('.order-settings__order-label').find('.error-message').remove();
+      validationSteps.push(false);
+    }
+
+    if($('#exp-end').val() == '') {
+      $('#exp-end').addClass('invalid').removeClass('valid');
+      if($('#exp-end').parents('.order-settings__order-col').find('.order-settings__order-label').find('.error-message').length == 0) {
+        $('#exp-end').parents('.order-settings__order-col').find('.order-settings__order-label').prepend('<span class="error-message error-message_big error-message_bold">*</span>');
+      }
+      validationSteps.push(true);
+    } else {
+      $('#exp-end').removeClass('invalid').addClass('valid');
+      $('#exp-end').parents('.order-settings__order-col').find('.order-settings__order-label').find('.error-message').remove();
+      validationSteps.push(false);
     }
 
     stopSubmit = validationSteps.some(function(item) {

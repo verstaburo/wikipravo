@@ -179,12 +179,12 @@
     transform: translateY(-50%);
   }
 
-  &.valid .selectbox__button {
-    border-color: $color-green;
+  &.invalid {
+    border: 1px solid $color-error;
   }
 
   &.invalid .selectbox__button {
-    border-color: $color-error;
+    border: none;
   }
 
   &_light {
