@@ -5,6 +5,7 @@
   line-height: 1.5em;
   font-weight: 300;
   color: $color-error;
+  margin-top: 5px;
 
   &_big {
     font-size: 16px;
@@ -12,5 +13,31 @@
 
   &_bold {
     font-weight: 500;
+  }
+
+  &_popup {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border: 1px solid #e1e1e1;
+      transform: rotate(45deg)translate(0, -50%);
+      border: 1px solid #e1e1e1;
+      border-bottom-width: 0;
+      border-right-width: 0;
+    }
   }
 }
