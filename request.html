@@ -305,17 +305,19 @@
                         <h3 class="message__title">Ваш ответ</h3>
                         <form class="message__form" id="message">
                             <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
-                            <output class="message__files-output" for="files" id="filelist">
-                                <span class="message__placeholder">Нет выбранных файлов</span>
-                                <ul class="files-list message__files-list"></ul>
-                            </output>
-                            <div class="message__buttons">
-                                <BUTTON class="button button_blue message__button" type="submit">
-                                    <span class="button__name">Отправить</span>
-                                </BUTTON>
-                                <label class="message__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                    <input class="message__files" type="file" id="files" name="files[]" multiple="multiple" />
-                                </label>
+                            <div class="file-input files">
+                                <output class="file-input__output" for="files">
+                                    <span class="file-input__placeholder">Нет приклепленных файлов</span>
+                                    <ul class="files-list file-input__files-list"></ul>
+                                </output>
+                                <div class="file-input__buttons">
+                                    <BUTTON class="button button_blue message__button" type="submit">
+                                        <span class="button__name">Отправить</span>
+                                    </BUTTON>
+                                    <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
+                                        <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                                    </label>
+                                </div>
                             </div>
                         </form>
                     </div>

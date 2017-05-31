@@ -49,12 +49,12 @@
                         <div class="personal-data__row personal-data__row_table">
                             <div class="label-field personal-data__field personal-data__field_second">
                                 <label class="label-field__label" for="userlogin">Латинские буквы и цифры, от 8 до 32 символов</label>
-                                <input class="input" type="text" id="userlogin" placeholder="Логин" required="required" />
+                                <input class="input" type="text" id="userlogin" placeholder="Логин" pattern="[A-Za-z0-9]{8,32}" required="required" />
                             </div>
                             <div class="label-field personal-data__field personal-data__field_second">
                                 <label class="label-field__label" for="password">Латинские буквы и цифры, от 10 до 32 символов</label>
                                 <div class="input-password">
-                                    <input class="input input-password__password" type="password" id="password" placeholder="Пароль" required="required" />
+                                    <input class="input input-password__password" type="password" id="password" placeholder="Пароль" pattern="[A-Za-z0-9]{10,32}" required="required" />
                                     <svg class="input-password__button"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </div>
                             </div>
@@ -62,11 +62,11 @@
                         <div class="personal-data__row">
                             <div class="label-field personal-data__field personal-data__field_second personal-data__field_phone">
                                 <label class="label-field__label" for="phone">Требуется для восстановления пароля и входа</label>
-                                <input class="input" type="tel" id="phone" placeholder="Телефон" required="required" />
+                                <input class="input" type="tel" id="phone" placeholder="Телефон" pattern="[0-9]{11}" required="required" />
                             </div>
                             <div class="personal-data__field personal-data__field_second personal-data__field_password-repeat">
                                 <div class="input-password personal-data__nolabel">
-                                    <input class="input input-password__password" type="password" id="password-repeat" placeholder="Повторить пароль" required="required" />
+                                    <input class="input input-password__password" type="password" id="password-repeat" placeholder="Повторить пароль" pattern="[A-Za-z0-9]{10,32}" required="required" />
                                     <svg class="input-password__button"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                         <h4 class="section-title personal-data__title">Местоположение</h4>
                         <div class="personal-data__row">
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_second">
-                                <input class="selectbox__input" type="hidden" value="Федеральный округ" placeholder="Федеральный округ" />
+                                <input class="selectbox__input" type="hidden" value="" placeholder="Федеральный округ" />
                                 <div class="selectbox__button">
                                     <span class="selectbox__button-name">Федеральный округ</span>
                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
@@ -86,7 +86,7 @@
                                 </ul>
                             </div>
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_second">
-                                <input class="selectbox__input" type="hidden" value="Город" placeholder="Город" />
+                                <input class="selectbox__input" type="hidden" value="" placeholder="Город" />
                                 <div class="selectbox__button">
                                     <span class="selectbox__button-name">Город</span>
                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
@@ -102,7 +102,7 @@
                         <h4 class="section-title personal-data__title">Дата рождения</h4>
                         <div class="personal-data__row">
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_third">
-                                <input class="selectbox__input" type="hidden" value="День" placeholder="День" />
+                                <input class="selectbox__input" type="hidden" value="" placeholder="День" />
                                 <div class="selectbox__button">
                                     <span class="selectbox__button-name">День</span>
                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
@@ -124,7 +124,7 @@
                                 </ul>
                             </div>
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_third">
-                                <input class="selectbox__input" type="hidden" value="Месяц" placeholder="Месяц" />
+                                <input class="selectbox__input" type="hidden" value="" placeholder="Месяц" />
                                 <div class="selectbox__button">
                                     <span class="selectbox__button-name">Месяц</span>
                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
@@ -145,7 +145,7 @@
                                 </ul>
                             </div>
                             <div class="selectbox selectbox_light selectbox_height selectbox_scrollable personal-data__field personal-data__field_third">
-                                <input class="selectbox__input" type="hidden" value="Год" placeholder="Год" />
+                                <input class="selectbox__input" type="hidden" value="" placeholder="Год" />
                                 <div class="selectbox__button">
                                     <span class="selectbox__button-name">Год</span>
                                     <i class="selectbox__right-icon fa fa-angle-down"></i>

@@ -165,7 +165,7 @@
                             <p>Если у вас есть вопрос, на который вы хотите получить ответ от юриста, заполните заявку и получите предложения юристов со всей России!</p>
                         </div>
                         <form class="form order-form__form">
-                            <div class="order-candidate">
+                            <fieldset class="order-candidate">
                                 <h3 class="block-title order-candidate__title">Кандидаты</h3>
                                 <div class="order-candidate__content">
                                     <p class="order-candidate__message">Юристы из этого списка получит уведомление и сразу будут назначены кандидатами по заявке</p>
@@ -173,7 +173,235 @@
                                 <BUTTON class="button button_blue order-candidate__button">
                                     <span class="button__name">Добавить еще</span>
                                 </BUTTON>
+                            </fieldset>
+                            <fieldset class="order-document">
+                                <h3 class="block-title order-document__title">Какой документ вам нужен?</h3>
+                                <div class="order-document__row order-document__row_half">
+                                    <h4 class="section-title section-title_bold order-document__label">Тип документа</h4>
+                                    <div class="selectbox selectbox_light selectbox_visible order-document__doctype">
+                                        <input class="selectbox__input" type="hidden" value="" placeholder="Работает с документами" />
+                                        <div class="selectbox__button">
+                                            <span class="selectbox__button-name">Работает с документами</span>
+                                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                        </div>
+                                        <ul class="selectbox__list">
+                                            <li class="selectbox__option">Конституционное право</li>
+                                            <li class="selectbox__option">Интеллектуальная собственность
+                                                <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                <ul class="selectbox__sublist">
+                                                    <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
+                                                    <li class="selectbox__option">Гражданское право</li>
+                                                </ul>
+                                            </li>
+                                            <li class="selectbox__option">Военное право</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="order-document__row order-document__row_half">
+                                    <h4 class="section-title section-title_bold order-document__label">Мне нужно</h4>
+                                    <input class="input order-document__input" type="text" placeholder="Кратко опишите задачу" id="short-describe" />
+                                </div>
+                                <div class="order-document__row order-document__row_half">
+                                    <h4 class="section-title section-title_bold order-document__label">Подробное описание</h4>
+                                    <textarea class="textarea textarea_grey order-document__textarea" placeholder="Чем подробнее вы опишите требования к документу, тем точнее юристы смогут оценить его стоимость" id="describe"></textarea>
+                                </div>
+                                <div class="order-document__row order-document__row_half">
+                                    <h4 class="section-title section-title_bold order-document__label">Если нужно, прикрепите файл</h4>
+                                    <div class="file-input order-document__files">
+                                        <output class="file-input__output" for="files">
+                                            <span class="file-input__placeholder">Нет приклепленных файлов</span>
+                                            <ul class="files-list file-input__files-list"></ul>
+                                        </output>
+                                        <div class="file-input__buttons">
+                                            <label class="file-input__fileselect button button_transparent_second" for="files">Загрузить еще файл
+                                                <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-document__row order-document__row_row order-document__row_half">
+                                    <div class="order-document__col order-document__col_price">
+                                        <h4 class="section-title section-title_bold order-document__label">Стоимость документа</h4>
+                                        <div class="radio order-document__radio">
+                                            <input type="radio" id="price-1" name="price" value="1" />
+                                            <label class="radio__label" for="price-1">По договоренности с юристом</label>
+                                        </div>
+                                        <div class="order-document__radiofield">
+                                            <div class="radio order-document__radio">
+                                                <input type="radio" id="price-2" name="price" value="2" />
+                                                <label class="radio__label" for="price-2">Я планирую заплатить</label>
+                                            </div>
+                                            <input class="input order-document__input order-document__input_short" type="numeric" />
+                                            <span class="order-document__doptext">руб</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-document__col order-document__col_time">
+                                        <h4 class="section-title section-title_bold order-document__label">Сроки выполнения</h4>
+                                        <div class="radio order-document__radio">
+                                            <input type="radio" id="time-1" name="time" value="1" />
+                                            <label class="radio__label" for="time-1">По договоренности с юристом</label>
+                                        </div>
+                                        <div class="order-document__radiofield">
+                                            <div class="radio order-document__radio">
+                                                <input type="radio" id="time-2" name="time" value="2" />
+                                                <label class="radio__label" for="time-2">Должно быть сделано за</label>
+                                            </div>
+                                            <input class="input order-document__input order-document__input_short" type="numeric" />
+                                            <div class="selectbox selectbox_link selectbox_link_noborder selectbox_link_light selectbox_scrollable order-document__timeduration">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="дней" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">дней</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">часов</li>
+                                                    <li class="selectbox__option">дней</li>
+                                                    <li class="selectbox__option">недель</li>
+                                                    <li class="selectbox__option">месяцев</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="order-settings">
+                                <h3 class="block-title order-settings__title">Настройки публикации</h3>
+                                <h4>Заявка будет видна</h4>
+                                <div class="radio">
+                                    <input type="radio" id="r1" name="test" />
+                                    <label class="radio__label" for="r1">Только отобранным юристам
+                                        <span class="radio__inner-text">(Только юристы из списка кандидатов смогут увидеть заявку)</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="r2" name="test" />
+                                    <label class="radio__label" for="r2">Юристам по заданным условиям
+                                        <span class="radio__inner-text">(Юристы подходящие под условия смогут увидеть заявку)</span>
+                                    </label>
+                                </div>
+                                <div class="order-settings__content">
+                                    <div class="order-settings__order-row">
+                                        <div class="order-settings__order-col order-settings__first">
+                                            <div class="order-settings__order-label">Специалист в категории права</div>
+                                            <div class="selectbox selectbox_light selectbox_height selectbox_scrollable">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Не задано" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Не задано</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Специалист №1</li>
+                                                    <li class="selectbox__option">Специалист №2</li>
+                                                    <li class="selectbox__option">Специалист №3</li>
+                                                    <li class="selectbox__option">Специалист №4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="order-settings__order-col order-settings__second">
+                                            <div class="order-settings__order-label">Регион</div>
+                                            <div class="selectbox selectbox_light selectbox_height selectbox_scrollable">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Все" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Все</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Регион №1</li>
+                                                    <li class="selectbox__option">Регион №2</li>
+                                                    <li class="selectbox__option">Регион №3</li>
+                                                    <li class="selectbox__option">Регион №4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-settings__order-row">
+                                        <div class="order-settings__order-col order-settings__first">
+                                            <div class="order-settings__order-label">Работает с документами</div>
+                                            <div class="selectbox selectbox_light selectbox_height selectbox_scrollable order-settings__field order-settings__field_second">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Не задано" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Не задано</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Документ №1</li>
+                                                    <li class="selectbox__option">Документ №2</li>
+                                                    <li class="selectbox__option">Документ №3</li>
+                                                    <li class="selectbox__option">Документ №4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="order-settings__order-col order-settings__second">
+                                            <div class="order-settings__order-label">Стаж работы</div>
+                                            <div class="order-settings__order-col order-settings__order-col_inner">
+                                                <div class="order-settings__sublabel">От</div>
+                                                <input class="input" type="text" />
+                                                <div class="order-settings__sublabel">До</div>
+                                                <input class="input" type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-settings__order-row">
+                                        <div class="order-settings__order-col order-settings__checkbox">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="c1" />
+                                                <label class="checkbox__label" for="c1">Только адвокаты
+                                                    <span class="checkbox__check">
+                                                        <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="order-settings__order-col order-settings__checkbox">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="c2" />
+                                                <label class="checkbox__label" for="c2">Опыт работы в Гос.Структурах
+                                                    <span class="checkbox__check">
+                                                        <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-settings__order-row">
+                                        <div class="order-settings__order-col order-settings__checkbox">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="c3" />
+                                                <label class="checkbox__label" for="c3">Есть кабинет в здании суда
+                                                    <span class="checkbox__check">
+                                                        <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="order-settings__order-col order-settings__checkbox">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="c4" />
+                                                <label class="checkbox__label" for="c4">Есть профиль на РосПравосудие
+                                                    <span class="checkbox__check">
+                                                        <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="r3" name="test2" />
+                                    <label class="radio__label" for="r3">Всем юристам
+                                        <span class="radio__inner-text">(Юристы смогут просматривать вашу завку и откливаться на нее)</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="r4" name="test2" />
+                                    <label class="radio__label" for="r4">Всем
+                                        <span class="radio__inner-text">(Любой посетитель сайта сможет просмотреть вашу заявку. Юристы смогут откликаться на нее)</span>
+                                    </label>
+                                </div>
                             </div>
+                            <BUTTON class="button button_blue order-form__button" type="submit">
+                                <span class="button__name">Готово</span>
+                            </BUTTON>
                         </form>
                     </div>
                 </div>
