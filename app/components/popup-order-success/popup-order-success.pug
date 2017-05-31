@@ -1,0 +1,24 @@
+include ../../blocks/popup/popup
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+
+mixin popup-order-success()
+ +popup#popup-order-success.popup-order-success&attributes(attributes)
+   +e.__title.popup-order-success__title Завершение публикации
+   +e(class=" popup-order-success__thank")
+     +block-title("Спасибо за публикацию заявки!")(class="_small _dark _bolder popup-order-success__head")
+     +e.P На адрес указанной вами электронной почты направлено письмо подтверждения. Пройдите, пожалуйста по ссылке, чтобы завершить регистрацию. После завершения регистрации, вы сможете видеть вашу заявку в личном кабинете.
+   +e(class=" popup-order-success__content")
+     +e(class=" popup-order-success__row_mail")
+       +e(class=" popup-order-success__col_title")
+         +block-title("Письмо не пришло?")(class="_small _dark _bolder popup-order-success__question")
+       +e(class=" popup-order-success__col_content")
+         +e(class=" popup-order-success__link" href="#") Выслать повторно
+     +e(class=" popup-order-success__row_support")
+       +e(class=" popup-order-success__col_title")
+         +block-title("Возникли проблемы?")(class="_small _dark _bolder popup-order-success__question")
+       +e(class=" popup-order-success__col_content")
+         +e(class=" popup-order-success__link" href="mailto:") Обратитесь в службу технической поддержки
+   +button._text._text_dark._border._border_dark._big.popup-order-success__button.js-popup-close Закрыть
+
+

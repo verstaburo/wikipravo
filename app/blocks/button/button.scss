@@ -32,6 +32,10 @@
     padding: 0;
     background-color: transparent;
     border: none;
+
+    &_dark {
+      color: $color-font;
+    }
   }
 
   &_border {
@@ -41,6 +45,19 @@
       color: rgba($color-main, .6);
       border-color: rgba($color-main, .2);
     }
+
+    &_dark {
+      border-bottom: 1px solid rgba(#000, .2);
+
+      &:hover {
+        color: rgba($color-font, .6);
+        border-color: rgba(#000, .4);
+      }
+    }
+  }
+
+  &_big {
+    font-size: 20px;
   }
 
   &_blue {

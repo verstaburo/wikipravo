@@ -7,4 +7,4 @@ mixin order-form()
     +entitled-text([{"title" : "Заказать консультацию", "paragraph" : [{"text": "Если у вас есть вопрос, на который вы хотите получить ответ от юриста, заполните заявку и получите предложения юристов со всей России!"}]}])._title._grey.__title
     +form.__form
       block
-      +button("button")(type="submit")._blue.order-form__button Готово
+      +button("button")(type="submit" data-open-popup="popup-order-success")._blue.order-form__button.js-popup-open Готово

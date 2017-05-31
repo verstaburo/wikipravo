@@ -31,9 +31,9 @@ export function VerstaPopups() {
       hidePopups();
     });
 
-    popup.click(function(e) {
+    /*popup.click(function(e) {
       e.stopPropagation();
-    });
+    });*/
 
     // #####################
     // Показ конкретного попапа
