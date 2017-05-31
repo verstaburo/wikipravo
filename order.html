@@ -335,9 +335,9 @@
                                             <div class="order-settings__order-label">Стаж работы</div>
                                             <div class="order-settings__order-col order-settings__order-col_inner">
                                                 <div class="order-settings__sublabel">От</div>
-                                                <input class="input" type="text" />
+                                                <input class="input" type="text" id="exp-start" pattern="[0-9]" />
                                                 <div class="order-settings__sublabel">До</div>
-                                                <input class="input" type="text" />
+                                                <input class="input" type="text" id="exp-end" pattern="[0-9]" />
                                             </div>
                                         </div>
                                     </div>
@@ -399,7 +399,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <BUTTON class="button button_blue order-form__button" type="submit">
+                            <BUTTON class="button button_blue order-form__button js-popup-open" type="submit" data-open-popup="popup-order-success">
                                 <span class="button__name">Готово</span>
                             </BUTTON>
                         </form>
@@ -519,6 +519,36 @@
                         <span class="icon-link__text">Забыли пароль?</span>
                     </a>
                 </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-order-success" id="popup-order-success">
+                <div class="popup__title popup-order-success__title">Завершение публикации</div>
+                <div class="popup-order-success__thank">
+                    <h3 class="block-title block-title_small block-title_dark block-title_bolder popup-order-success__head">Спасибо за публикацию заявки!</h3>
+                    <p>На адрес указанной вами электронной почты направлено письмо подтверждения. Пройдите, пожалуйста по ссылке, чтобы завершить регистрацию. После завершения регистрации, вы сможете видеть вашу заявку в личном кабинете.</p>
+                </div>
+                <div class="popup-order-success__content">
+                    <div class="popup-order-success__row popup-order-success__row_mail">
+                        <div class="popup-order-success__col popup-order-success__col_title">
+                            <h3 class="block-title block-title_small block-title_dark block-title_bolder popup-order-success__question">Письмо не пришло?</h3>
+                        </div>
+                        <div class="popup-order-success__col popup-order-success__col_content">
+                            <a class="popup-order-success__link" href="#">Выслать повторно</a>
+                        </div>
+                    </div>
+                    <div class="popup-order-success__row popup-order-success__row_support">
+                        <div class="popup-order-success__col popup-order-success__col_title">
+                            <h3 class="block-title block-title_small block-title_dark block-title_bolder popup-order-success__question">Возникли проблемы?</h3>
+                        </div>
+                        <div class="popup-order-success__col popup-order-success__col_content">
+                            <a class="popup-order-success__link" href="mailto:">Обратитесь в службу технической поддержки</a>
+                        </div>
+                    </div>
+                </div>
+                <A class="button button_text button_text_dark button_border button_border_dark button_big popup-order-success__button js-popup-close">
+                    <span class="button__name">Закрыть</span>
+                </A>
             </div>
         </div>
     </div>
