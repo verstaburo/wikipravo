@@ -1,16 +1,9 @@
 $(document).ready(function () {
-    var c_right = $('.specs__slide').find('.specs__slide-right input[type="checkbox"]');
-    var c_left = $('.specs__slide').find('.specs__slide-left input[type="checkbox"]');
     var checkbox = $('.specs__slide').find('input[type="checkbox"]');
 
     $(checkbox).change(function () {
       var siblings = $(this).closest('.slide-parent').find('input[type="checkbox"]').not($(this));
-      // siblings.prop('checked', true);
-      if(siblings.attr('checked') == 'checked') { 
-        siblings.prop('checked', false);
-      }else{
-        siblings.prop('checked', true);
-      }
+      siblings.prop('checked', $(this).prop("checked"))
     });
 
     $('.specs__slide-head').click(function () {
