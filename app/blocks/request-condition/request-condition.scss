@@ -22,7 +22,11 @@
   }
 
   &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
     margin-right: 10px;
+    transform: translate(0, -50%);
 
     &_time {
       width: 15px;
@@ -32,7 +36,7 @@
     }
 
     &_money {
-      width: 14px;
+      width: 20px;
       height: 16px;
       fill: rgba($color-font, .8);
     }
@@ -42,11 +46,21 @@
     margin-right: 43px;
   }
 
-  &__time, &_price {
+  &__time, &__price {
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  &__time {
+    padding-left: 25px;
+  }
+
+  &__price {
+    padding-left: 30px;
   }
 }

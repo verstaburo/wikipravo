@@ -31,7 +31,7 @@ export function FileListControl() {
       this.value = '';
 
       function OutputFile() {
-        var icons = {"doc" : "assets/images/doc.png", "pdf" : "assets/images/pdf.png", "other" : "https://placehold.it/18x24"};
+        var icons = {"doc" : "assets/images/doc.svg", "docx" : "assets/images/doc.svg", "pdf" : "assets/images/pdf.svg", "xls" : "assets/images/xls.svg", "xlsx" : "assets/images/xls.svg", "txt" : "assets/images/txt.svg", "other" : "assets/images/other.svg"};
 
         while(queue.length != 0) {
           var file = queue.pop();

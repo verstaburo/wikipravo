@@ -27,13 +27,11 @@ export function VerstaPopups() {
 
     // #####################
     // Скрытие попапа по клику по пустому месту
-    popups.click(function() {
-      hidePopups();
+    popups.click(function(e) {
+      if(!$(popup).is(e.target) && $(popup).has(e.target).length === 0) {
+        hidePopups();
+      }
     });
-
-    /*popup.click(function(e) {
-      e.stopPropagation();
-    });*/
 
     // #####################
     // Показ конкретного попапа
