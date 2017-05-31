@@ -27,12 +27,12 @@ mixin order-document()
         +radio("По договоренности с юристом", "price-1", "price", "1").__radio
         +e.radiofield
           +radio("Я планирую заплатить", "price-2", "price", "2").__radio
-          +input(type="text").__input_short
+          +input(type="numeric").__input_short
           +e.SPAN.__doptext руб
       +e.col_time
         +section-title("Сроки выполнения")._bold.__label
         +radio("По договоренности с юристом", "time-1", "time", "1").__radio
         +e.radiofield
           +radio("Должно быть сделано за", "time-2", "time", "2").__radio
-          +input(type="text").__input_short
+          +input(type="numeric").__input_short
           +selectbox(getData("selectbox-timeduration"))._link._link_noborder._link_light._scrollable.__timeduration
