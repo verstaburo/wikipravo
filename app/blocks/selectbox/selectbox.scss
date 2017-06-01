@@ -193,6 +193,7 @@
       color: $color-placeholder;
 
       &__list {
+        background-color: #fff;
         box-shadow: 0 0 32px rgba($color-searchform-selectbox-shadow, .2);
       }
 

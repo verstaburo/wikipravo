@@ -19,8 +19,6 @@ export function AvatarLoad() {
         removeBtn.setAttribute('type', 'button');
         removeBtn.innerHTML = '<svg class="avatar-browse__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
 
-        container.appendChild(removeBtn);
-
         if(fileNameOutput) {
           var errMsg;
           var spanName = document.createElement('SPAN');
@@ -40,6 +38,8 @@ export function AvatarLoad() {
           fileNameOutput.textContent = '';
           fileNameOutput.classList.add('avatar-browse__file-output_dark');
           fileNameOutput.appendChild(spanName);
+        } else {
+          container.appendChild(removeBtn);
         }
 
         var reader = new FileReader();

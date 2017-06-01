@@ -24,6 +24,7 @@
       letter-spacing: .04em;
       font-weight: 400;
       color: #212121;
+      width: 100%;
     }
   }
 
@@ -76,6 +77,11 @@
     }
   }
 
+  &__question {
+    width: 100%;
+    text-align: left;
+  }
+
   &__link {
     font-size: 14px;
     line-height: 1.43em;
@@ -83,7 +89,9 @@
     font-weight: 400;
     color: $color-main;
     cursor: pointer;
+    text-align: left;
     transition: all .25s ease-in-out;
+    width: 100%;
 
     &:hover {
       color: rgba($color-main, .6);

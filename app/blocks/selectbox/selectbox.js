@@ -39,6 +39,13 @@ export function VerstaSelectBox() {
     });
   }
 
+  // #####################
+  // Скрытие списка при уходе с него указателя мыши
+
+  $('.' + listClass).mouseleave(function() {
+    $(this).parents("." + mainClass).removeClass(activeClass);
+  });
+
   selectBoxClick();
 
   // #####################
@@ -68,7 +75,7 @@ export function VerstaSelectBox() {
       el.parents("." + mainClass).find("." + listClass).removeClass(selectTopListClass);
     }
   }
-  
+
   selectBoxPosition( $("." + buttonClass) );
 
   // #####################
