@@ -39,4 +39,15 @@
     min-width: 320px;
     margin-right: 30px;
   }
+
+  &_border {
+
+    .message__textarea {
+      border: 1px solid #bbbbbe;
+
+      &:hover {
+        border-color: $color-font;
+      }
+    }
+  }
 }

@@ -1,0 +1,25 @@
+.correspondence {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 27px 40px 6px;
+  width: 100%;
+  background-color: #fff;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__comment {
+    max-width: 872px;
+    width: 100%;
+    margin-bottom: 51px;
+  }
+  
+  &__message {
+    margin-top: -19px;
+  }
+}

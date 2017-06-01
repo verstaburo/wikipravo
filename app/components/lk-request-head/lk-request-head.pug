@@ -11,42 +11,41 @@ mixin lk-request-head(status)
     +control-link("back", "К моим заказам").__nav
     +page-title("Не справедливая оплата труда").__title
     +e.conditions
-      +action-controls-nonote("", "", true).actions
-      +request-condition("Другая услуга", "По договоренности", "По договоренности")
+      +action-controls-nonote("", "", true).__actions
+      +request-condition("Другая услуга", "По договоренности", "По договоренности").__text
     +e.status
       -if(status === 'refused1') {
         +e.describe
-          +block-title("Вам отказали")
-          +e.P
+          +block-title("Вам отказали")._little._bolder.__header
+          +e.P Ваше предложение не подошло клиенту
         +button("button")._blue.__button В корзину
       -}
       -if(status === 'refused2') {
         +e.describe
-          +block-title("Вы отказались от заказа")
-          +e.P
+          +block-title("Вы отказались от заказа")._little._bolder.__header
         +button("button")._blue.__button В корзину
       -}
       -if(status === 'invite') {
         +e.describe
-          +block-title("Вас пригласили")
-          +e.P
+          +block-title("Вас пригласили")._little._bolder.__header
+          +e.P Напишите заказчику, чтобы уточнить детали сотрудничества. Если заявка вам неинтересна, вы можете отказаться от приглашения
         +button("button")._blue.__button Отказаться
       -}
       -if(status === 'candidate') {
         +e.describe
-          +block-title("Вас выбрали кандидатом")
-          +e.P
+          +block-title("Вас выбрали кандидатом")._little._bolder.__header
+          +e.P Вы прошли предварительный отбор. Возможно, вас выберут исполнителем по этому заказу
         +button("button")._blue.__button Отказаться
       -}
       -if(status === 'answer') {
         +e.describe
-          +block-title("Вы откликнулись")
-          +e.P
+          +block-title("Вы откликнулись")._little._bolder.__header
+          +e.P Ожидайте ответа заказчика
         +button("button")._blue.__button Отказаться
       -}
       -if(status === 'remove') {
         +e.describe
-          +block-title("Вы удалили заявку")
+          +block-title("Вы удалили заявку")._little._bolder.__header
         +button("button")._transparent_second.__button Восстановить
       -}
 

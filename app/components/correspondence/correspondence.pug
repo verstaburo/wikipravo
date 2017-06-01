@@ -1,0 +1,14 @@
+include ../../blocks/message/message
+include ../../blocks/comment/comment
+include ../../blocks/block-title/block-title
+
+mixin correspondence()
+  +b.correspondence&attributes(attributes)
+    +block-title("Переписка с заказчиком")._little._bolder.__title
+    +comment("Евгений", "(12.10.2016 | 09:20)", false, false).__comment
+      +e.P &mdash; Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу
+    +comment("Ксения", "(12.10.2016 | 09:20)", true, true).__comment
+      +e.P &mdash; Добрый день, Евгений! Ок. Увеличила срок. Подтвердите, пожалуйста условия
+    +comment("Евгений", "(12.10.2016 | 09:20)", false, true).__comment
+      +e.P &mdash; Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу
+    +message("", "Введите сообщение")._border.__message

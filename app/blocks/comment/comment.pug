@@ -1,0 +1,21 @@
+include ../button/button
+
+mixin comment(author, date, editable, button)
+  -var addClass = ""
+  -if(editable) {addClass = '_mine'} else {addClass = '_another'}
+  +b(class="comment" + addClass)&attributes(attributes)
+    -if(button)
+      +e.buttons
+        -if(editable) {
+          +button('button')(type='button')._text._noborder.__button_edit Редактировать
+          +button('button')(type='button')._text._noborder.__button_remove Удалить
+        -} else {
+          +button('button')(type='button')._text._noborder.__button_complain Пожаловаться
+        -}
+    +e.BLOCKQUOUTE.content
+      +e.CITE.info
+        +e.SPAN.author= author
+        +e.TIME.date= date
+      +e.text
+        block
+

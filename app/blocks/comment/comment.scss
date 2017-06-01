@@ -1,0 +1,98 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+  }
+  
+  &__button {
+    
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+  
+  &__content {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 17px 30px;
+    border-radius: 2px;
+    background-color: $color-bg-index;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      border-width: 8px 10px;
+      border-style: solid;
+      border-color: transparent;
+      border-right-color: $color-bg-index;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  &__info, &__text, &__text p {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $color-font;
+    width: 100%;
+    box-sizing: border-box;
+    font-style: normal;
+  }
+
+  &__info {
+    margin-bottom: 10px;
+  }
+
+  &__author {
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &__date {
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &_mine {
+
+    .comment {
+
+      &__content {
+        background-color: $color-bg-comment;
+
+        &::before {
+          left: auto;
+          right: 0;
+          border-right-color: transparent;
+          border-left-color: $color-bg-comment;
+          transform: translate(100%, -50%);
+        }
+      }
+    }
+  }
+}
