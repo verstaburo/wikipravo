@@ -399,6 +399,44 @@
                                     </label>
                                 </div>
                             </div>
+                            <div class="order-registration">
+                                <h3 class="block-title order-registration__title">О вас</h3>
+                                <p class="order-registration__desc">Для вас будет создана учетная запись, по которой вы сможете входить на сайт и просматривать свои заявки. Если у вас уже есть учетная запись, войдите в систему, чтобы завершить публикацию заявки:</p>
+                                <div class="order-registration__content">
+                                    <div class="order-registration__col">
+                                        <BUTTON class="button button_transparent_second order-registration__button">
+                                            <span class="button__name">Войти</span>
+                                        </BUTTON>
+                                    </div>
+                                    <div class="order-registration__col">
+                                        <div class="order-registration__or">Или</div>
+                                    </div>
+                                    <div class="order-registration__col order-registration__col_third">
+                                        <div class="order-registration__order-label">Регистрация</div>
+                                        <div class="order-registration__form-field">
+                                            <input class="input" type="text" placeholder="Ваше имя *" />
+                                        </div>
+                                        <div class="order-registration__form-field">
+                                            <input class="input" type="email" placeholder="E-mail *" />
+                                        </div>
+                                        <div class="order-registration__form-field">
+                                            <div class="selectbox selectbox_light selectbox_height selectbox_scrollable">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Москва" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Москва</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Город №1</li>
+                                                    <li class="selectbox__option">Город №2</li>
+                                                    <li class="selectbox__option">Город №3</li>
+                                                    <li class="selectbox__option">Город №4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <BUTTON class="button button_blue order-form__button js-popup-open" type="submit" data-open-popup="popup-order-success">
                                 <span class="button__name">Готово</span>
                             </BUTTON>
@@ -512,7 +550,7 @@
                 <form class="form form_vertical">
                     <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
                     <input class="input form__input" type="password" placeholder="Ваш пароль" />
-                    <BUTTON class="button button_blue">
+                    <BUTTON class="button button_blue js-popup-close">
                         <span class="button__name">Войти</span>
                     </BUTTON>
                     <a class="icon-link icon-link_small form__bottom-link" href="#">
