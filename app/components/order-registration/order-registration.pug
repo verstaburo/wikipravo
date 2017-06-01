@@ -1,0 +1,23 @@
+include ../../blocks/block-title/block-title
+include ../../blocks/label-field/label-field
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/selectbox/selectbox
+
+mixin order-registration()
+  +b.order-registration&attributes(attributes)
+    +block-title("О вас").__title
+    +e('p').desc Для вас будет создана учетная запись, по которой вы сможете входить на сайт и просматривать свои заявки. Если  у вас уже есть учетная запись, войдите в систему, чтобы завершить публикацию заявки:
+    +e.content
+      +e.col
+        +button("button")._transparent.__button Войти
+      +e.col 
+        +e.or Или
+      +e.col._third
+        +e.order-label Регистрация
+        +e.form-field
+          +input(type="text")
+        +e.form-field
+          +input(type="text")
+        +e.form-field
+          +selectbox(getData('order-registr'))._light._height._scrollable
