@@ -10,6 +10,7 @@ export function AvatarLoad() {
       var files = this.files;
       var file = files[0];
       var message = "";
+      var fileNameOutput = document.querySelector('.avatar-browse__file-output');
 
       function ImgPreview(img) {
         var removeBtn = document.createElement('BUTTON');
@@ -19,6 +20,27 @@ export function AvatarLoad() {
         removeBtn.innerHTML = '<svg class="avatar-browse__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
 
         container.appendChild(removeBtn);
+
+        if(fileNameOutput) {
+          var errMsg;
+          var spanName = document.createElement('SPAN');
+          var newRemoveBtn = document.createElement('BUTTON');
+
+          newRemoveBtn.setAttribute('class', 'avatar-browse__remove');
+          newRemoveBtn.setAttribute('type', 'button');
+          newRemoveBtn.innerHTML = '<svg class="avatar-browse__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
+
+          spanName.setAttribute('class', 'avatar-browse__filename avatar-browse__filename_green');
+          spanName.innerHTML = 'Выбран файл: ' + file.name;
+          spanName.appendChild(newRemoveBtn);
+
+          errMsg = fileNameOutput.textContent;
+
+          fileNameOutput.setAttribute('data-err-msg', errMsg);
+          fileNameOutput.textContent = '';
+          fileNameOutput.classList.add('avatar-browse__file-output_green');
+          fileNameOutput.appendChild(spanName);
+        }
 
         var reader = new FileReader();
         reader.readAsDataURL(img);
@@ -36,10 +58,21 @@ export function AvatarLoad() {
   }
 
   $(document).on('click', '.avatar-browse__remove', function() {
-    $(this).parents('.avatar-browse').find('.avatar-browse__input').value = '';
-    $(this).parents('.avatar-browse').find('.avatar-browse__img').remove();
-    $(this).parents('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");
-    $(this).remove();
+    var fileNameOutput = $('.avatar-browse__file-output');
+    var msg= $(fileNameOutput).attr('data-err-msg');
+    if(!fileNameOutput) {
+      $(this).parents('.avatar-browse').find('.avatar-browse__input').value = '';
+      $(this).parents('.avatar-browse').find('.avatar-browse__img').remove();
+      $(this).parents('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");
+      $(this).remove();
+    } else {
+      $(fileNameOutput).find('.avatar-browse__filename').remove();
+      $(fileNameOutput).removeClass('avatar-browse__file-output_green').text(msg);
+      $('.avatar-browse').find('.avatar-browse__input').value = '';
+      $('.avatar-browse').find('.avatar-browse__img').remove();
+      $('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");
+      $('.avatar-browse__remove').remove();
+    }
     return false;
   });
 };

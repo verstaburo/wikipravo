@@ -78,4 +78,36 @@
     margin: auto;
     object-fit: cover;
   }
+
+  &__file-output_green {
+    color: $color-green !important;
+
+    &::before {
+      color: $color-green !important;
+      border-color: $color-green !important;
+    }
+  }
+
+  &__filename {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: inherit;
+    letter-spacing: .04em;
+    font-weight: 400;
+    padding-right: 20px;
+
+    .avatar-browse__remove {
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translate(0, -50%);
+    }
+
+    .avatar-browse__icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }

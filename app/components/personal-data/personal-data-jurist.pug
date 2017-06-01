@@ -43,7 +43,7 @@ mixin personal-data-jurist()
       +avatar-browse("Выберите файл").__avatar
       +e.describe
         +section-title("Ваше фото")._left._bold.__title_photo
-        +warning("Файл не выбран").__photo-warning
+        +warning("Файл не выбран").__photo-warning.avatar-browse__file-output
         +e.P
           | Загружайте реальное фото, оно будет отображаться в Вашем профиле Размер фото не должен превышать 5 Мб, доступные форматы  jpg, jpeg, png, bmp
     +section-title("Специализации")._left._bold.__title_specs
