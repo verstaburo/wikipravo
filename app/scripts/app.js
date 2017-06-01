@@ -19,7 +19,7 @@ import {ViewPassword} from '../blocks/input-password/input-password';
 import {AvatarLoad} from '../blocks/avatar-browse/avatar-browse';
 import {CandidateAddEmulation} from '../components/order-candidate/order-candidate';
 import {ProfileActivation} from '../blocks/header-profile/header-profile';
-import {specs} from '../components/specs/specs';
+import {SpecsCheckboxActions} from '../components/specs/specs';
 import {ValidationOrder} from '../components/order-form/order-form';
 
 $(function () {
@@ -46,5 +46,5 @@ $(function () {
   CandidateAddEmulation();
   ProfileActivation();
   ValidationOrder();
-  specs();
+  SpecsCheckboxActions();
 });

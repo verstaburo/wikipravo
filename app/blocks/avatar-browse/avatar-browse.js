@@ -38,7 +38,7 @@ export function AvatarLoad() {
 
           fileNameOutput.setAttribute('data-err-msg', errMsg);
           fileNameOutput.textContent = '';
-          fileNameOutput.classList.add('avatar-browse__file-output_green');
+          fileNameOutput.classList.add('avatar-browse__file-output_dark');
           fileNameOutput.appendChild(spanName);
         }
 
@@ -67,7 +67,7 @@ export function AvatarLoad() {
       $(this).remove();
     } else {
       $(fileNameOutput).find('.avatar-browse__filename').remove();
-      $(fileNameOutput).removeClass('avatar-browse__file-output_green').text(msg);
+      $(fileNameOutput).removeClass('avatar-browse__file-output_dark').text(msg);
       $('.avatar-browse').find('.avatar-browse__input').value = '';
       $('.avatar-browse').find('.avatar-browse__img').remove();
       $('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");

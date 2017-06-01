@@ -79,12 +79,12 @@
     object-fit: cover;
   }
 
-  &__file-output_green {
-    color: $color-green !important;
+  &__file-output_dark {
+    color: $color-font !important;
 
     &::before {
-      color: $color-green !important;
-      border-color: $color-green !important;
+      color: $color-font !important;
+      border-color: $color-font !important;
     }
   }
 
