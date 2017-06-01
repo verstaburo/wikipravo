@@ -30,6 +30,14 @@
     }
   }
 
+  &__desc {
+    color: #151827;
+    font-size: 13px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    max-width: 740px;
+  }
+
   &__col {
     @include s-desktop {
       width: 100%;
