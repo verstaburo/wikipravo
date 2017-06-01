@@ -16,8 +16,8 @@ mixin order-registration()
       +e.col._third
         +e.order-label Регистрация
         +e.form-field
-          +input(type="text" placeholder="Ваше имя *")
+          +input(type="text" placeholder="Ваше имя *")._noborder
         +e.form-field
-          +input(type="email" placeholder="E-mail *")
+          +input(type="email" placeholder="E-mail *")._noborder
         +e.form-field
-          +selectbox(getData('order-registr'))._light._height._scrollable
+          +selectbox(getData('order-registr'))._light._height._scrollable._noborder

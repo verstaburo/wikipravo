@@ -28,6 +28,10 @@
   &__button {
     margin-top: 50px;
     min-width: 340px;
+
+    @include s-desktop {
+      width: 100%;
+    }
   }
 
   fieldset {

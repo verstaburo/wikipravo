@@ -353,8 +353,12 @@
 
       .selectbox {
 
+        &__button {
+          border-color: transparent;
+        }
+
         &__button-name {
-          border-bottom: none;
+          border-color: transparent;
         }
       }
     }

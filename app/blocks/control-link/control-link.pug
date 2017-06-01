@@ -1,12 +1,13 @@
 include ../icon/icons
 
-mixin control-link(control)
+mixin control-link(control, text)
   -var addClass = "_" + control
   -var controlName = ""
   -var controlIcon = ""
   +b.A(class="control-link" + addClass)&attributes(attributes)
     -if(control == "back") {controlName = "Назад"; controlIcon = "left"}
     -if(control == "next") {controlName = "Вперед"; controlIcon = "right"}
+    -if(text) {controlName = text}
     +e.I(class="icon fa fa-angle-" + controlIcon)
     //+icon(controlIcon).__icon
     +e.SPAN.name= controlName

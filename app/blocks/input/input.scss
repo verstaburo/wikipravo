@@ -15,12 +15,15 @@
   &:hover, &:focus { border: 1px solid $color-font; }
 
   &:required:invalid {
-    border-color: #e1e1e1;
     box-shadow: none;
     outline: none;
   }
 
   &.invalid {
     border: 1px solid $color-error !important;
+  }
+
+  &_noborder {
+    border-color: transparent;
   }
 }

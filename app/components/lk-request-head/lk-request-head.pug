@@ -1,0 +1,52 @@
+include ../../blocks/control-link/control-link
+include ../../blocks/page-title/page-title
+include ../../blocks/action-controls/action-controls-nonote
+include ../../blocks/request-condition/request-condition
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+
+
+mixin lk-request-head(status)
+  +b.lk-request-head&attributes(attributes)
+    +control-link("back", "К моим заказам").__nav
+    +page-title("Не справедливая оплата труда").__title
+    +e.conditions
+      +action-controls-nonote("", "", true).actions
+      +request-condition("Другая услуга", "По договоренности", "По договоренности")
+    +e.status
+      -if(status === 'refused1') {
+        +e.describe
+          +block-title("Вам отказали")
+          +e.P
+        +button("button")._blue.__button В корзину
+      -}
+      -if(status === 'refused2') {
+        +e.describe
+          +block-title("Вы отказались от заказа")
+          +e.P
+        +button("button")._blue.__button В корзину
+      -}
+      -if(status === 'invite') {
+        +e.describe
+          +block-title("Вас пригласили")
+          +e.P
+        +button("button")._blue.__button Отказаться
+      -}
+      -if(status === 'candidate') {
+        +e.describe
+          +block-title("Вас выбрали кандидатом")
+          +e.P
+        +button("button")._blue.__button Отказаться
+      -}
+      -if(status === 'answer') {
+        +e.describe
+          +block-title("Вы откликнулись")
+          +e.P
+        +button("button")._blue.__button Отказаться
+      -}
+      -if(status === 'remove') {
+        +e.describe
+          +block-title("Вы удалили заявку")
+        +button("button")._transparent_second.__button Восстановить
+      -}
+
