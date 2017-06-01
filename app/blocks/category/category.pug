@@ -1,9 +1,9 @@
 include ../menulist/menulist
+include ../icon/icons
 
 mixin category(data)
   +b.category&attributes(attributes)
     +e.title
-      +e.img
-        +e.IMG(src= data.image)
+      +icon(data.image)(class="img_" + data.image)
       +e.P= data.title
     +menulist(data.list).__list

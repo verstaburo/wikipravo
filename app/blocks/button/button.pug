@@ -1,7 +1,7 @@
 mixin button(type, target)
-  -var btnType = 'A';
+  -var btnType = 'a';
 
-  -if (type === 'button') {btnType = 'BUTTON'}
+  -if (type === 'button') {btnType = 'button'}
 
   +b(btnType)(class="button" data-tab-target=target)&attributes(attributes)
     +e.SPAN.name

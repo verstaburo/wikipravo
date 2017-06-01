@@ -21,7 +21,7 @@
       color: inherit;
       line-height: inherit;
       letter-spacing: inherit;
-      padding-left: 52px;
+      padding-left: 50px;
       box-sizing: border-box;
       width: 100%;
     }
@@ -29,13 +29,33 @@
 
   &__img {
     position: absolute;
-    top: -3px;
+    top: 50%;
     left: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    transform: translate(0, -50%);
+    fill: $color-categories-icon;
+
+    &_corporate {
+      width: 32px;
+      height: 26px;
+    }
+
+    &_family {
+      width: 31px;
+      height: 32px;
+    }
+
+    &_labor {
+      width: 20px;
+      height: 32px;
+    }
+
+    &_civil {
+      width: 31px;
+      height: 31px;
+    }
   }
 
   &__list {

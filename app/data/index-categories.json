@@ -12,7 +12,7 @@
       "active" : true,
       "categories" : [
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "corporate",
           "title" : "Корпоративное право",
           "list" : [
             {"href" : "#", "text" : "Регистрация юридических лиц"},
@@ -22,7 +22,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "family",
           "title" : "Семейное право",
           "list" : [
             {"href" : "#", "text" : "Заключение и расторжения брака"},
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "labor",
           "title" : "Трудовое право",
           "list" : [
             {"href" : "#", "text" : "Арбитражный спор"},
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "civil",
           "title" : "Гражданское право",
           "list" : [
             {"href" : "#", "text" : "Договорное право"},
@@ -51,7 +51,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "labor",
           "title" : "Трудовое право 2",
           "block" : "categories-toggle-1",
           "list" : [
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "civil",
           "title" : "Гражданское право 2",
           "block" : "categories-toggle-1",
           "list" : [
@@ -77,7 +77,7 @@
     {
       "categories" : [
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "corporate",
           "title" : "Корпоративное право 2",
           "list" : [
             {"href" : "#", "text" : "Регистрация юридических лиц"},
@@ -87,7 +87,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "family",
           "title" : "Семейное право 2",
           "list" : [
             {"href" : "#", "text" : "Заключение и расторжения брака"},
@@ -97,7 +97,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "labor",
           "title" : "Трудовое право 2",
           "list" : [
             {"href" : "#", "text" : "Арбитражный спор"},
@@ -106,7 +106,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "civil",
           "title" : "Гражданское право 2",
           "list" : [
             {"href" : "#", "text" : "Договорное право"},
@@ -116,7 +116,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "labor",
           "title" : "Трудовое право 2",
           "block" : "categories-toggle-2",
           "list" : [
@@ -126,7 +126,7 @@
           ]
         },
         {
-          "image" : "http://placehold.it/30x30",
+          "image" : "civil",
           "title" : "Гражданское право 2",
           "block" : "categories-toggle-2",
           "list" : [
