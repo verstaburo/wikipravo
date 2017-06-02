@@ -5,17 +5,18 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
-  
+
   &__nav {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
-  
+
   &__title {
     width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
+    letter-spacing: .04em;
   }
-  
+
   &__conditions {
     box-sizing: border-box;
     padding: 22px 37px;
@@ -25,46 +26,81 @@
     align-items: stretch;
     width: 100%;
     background-color: #fff;
+
+    @include desktop {
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+    }
   }
-  
+
   &__actions {
     margin-right: auto;
+
+    @include desktop {
+      margin-right: 50px;
+      margin-bottom: 10px;
+    }
+
+    .action-controls__button {
+
+      &:not(:last-of-type) {
+        margin-right: 86px;
+
+        @media (max-width: 1700px) {
+          margin-right: 40px;
+        }
+      }
+    }
+
+    .profile-control__title {
+      margin-left: 14px;
+      overflow: visible;
+    }
   }
-  
+
   &__text {
     margin-left: 50px;
+
+    @include desktop {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
   }
-  
+
   &__status {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     box-sizing: border-box;
-    padding: 50px 37px;
+    padding: 38px 58px 44px;
     width: 100%;
     background-color: #fff;
   }
-  
+
   &__describe {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-right: 62px;
-    
+    margin-right: 54px;
+
     p {
       font-size: 13px;
       font-weight: 400;
-      letter-spacing: .04em;
+      letter-spacing: .03em;
       color: #c6c6c6;
       line-height: 1.9em;
     }
   }
-  
+
+  &__header {
+    letter-spacing: .025em;
+  }
+
   &__button {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     min-width: 150px;
   }
 }

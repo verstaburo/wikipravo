@@ -12,16 +12,15 @@
     justify-content: flex-end;
     align-items: center;
     box-sizing: border-box;
-    margin-bottom: 4px;
   }
-  
+
   &__button {
-    
+
     &:not(:last-of-type) {
-      margin-right: 30px;
+      margin-right: 26px;
     }
   }
-  
+
   &__content {
     position: relative;
     width: 100%;
@@ -30,7 +29,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 17px 30px;
+    padding: 18px 28px;
     border-radius: 2px;
     background-color: $color-bg-index;
 
@@ -49,7 +48,7 @@
 
   &__info, &__text, &__text p {
     font-size: 14px;
-    letter-spacing: .04em;
+    letter-spacing: .035em;
     line-height: 1.5em;
     font-weight: 400;
     color: $color-font;
@@ -59,7 +58,7 @@
   }
 
   &__info {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   &__author {

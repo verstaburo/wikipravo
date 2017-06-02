@@ -171,4 +171,29 @@
     color: rgba(#a1a1a1, .85);
     width: 100%;
   }
+
+  &_lk {
+
+    .request-card {
+
+      &__request-body {
+        padding: 10px 38px 8px;
+      }
+
+      &__text {
+        padding: 8px 0;
+        letter-spacing: .078em;
+        line-height: 1.9em;
+        margin-bottom: 9px;
+      }
+
+      &__publication {
+        margin-right: 78px;
+
+        @media (max-width: 1700px) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
 }

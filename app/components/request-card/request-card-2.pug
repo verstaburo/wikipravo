@@ -9,14 +9,14 @@ include ../../blocks/publication-date/publication-date
 include ../../blocks/action-controls/action-controls-quadro
 
 mixin request-card-2(authorization)
-  +b.request-card&attributes(attributes)
+  +b.request-card_lk&attributes(attributes)
     +e.jurist
       +e.info
-        +jurist-name("Алексей Михайлович", true, true).__title
+        +jurist-name("Алексей Михайлович", true, true, true).__title
         +e.info-content
           +avatar("assets/images/lawyer-avatar.jpg")._big.__img
           +e.status
-            +status-list(true).__status-list
+            +status-list(false, true).__status-list
             +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
         -if(authorization) {
           +button("a")(href="mailto:").button_text._centered._small.__mail Написать сообщение
@@ -30,8 +30,8 @@ mixin request-card-2(authorization)
     +e.request-body
       +e.text_white Работаю менеджером по работе с клиентами! Нас 3 девочки работаем 4/2 168 часов в месяц! Одна из нас собралась увольняться! Получится что мы будем работать 210 часов! Начальство сказало что 168 часов нам оплатят по нашему тарифу, а остальные 42 часа по 15% , за час нам платят 122 рубля, то есть 168 часов по 122 рубля а остальные 42 часа по 18 рублей!!! Как отказаться от таких подработок???
       +e.describe
-        +publication-date("26 Января 2017, 12:21", "Опубликовано:").__publication
-        +subject("Категория права:", "Миграционное право").subject_nomargin.__subject
+        +publication-date("26 Января 2017, 12:21", "Опубликованно:").__publication
+        +subject("Категория права:", "Миграционное право").subject.__subject
         +e.request-status
           +e.open Открыта
           +browse("395", "4").__browse

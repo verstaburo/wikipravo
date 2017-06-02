@@ -1,12 +1,18 @@
 include ../icon/icons
 
-mixin status-list(data)
+mixin status-list(data, online)
   -var status = ""
   +b.UL.status-list&attributes(attributes)
     +e.LI.item.__item_location
       +e.IMG.__img(src="assets/images/menu-14.svg")
       +e.SPAN.name Москва
-    -if(data)
+    -if(data) {
       +e.LI.item.__item_free.__item_free_false
         +e.SPAN.__img
         +e.SPAN.name Занят
+    -}
+    -if(online) {
+      +e.LI.item.__item_free.__item_free_true
+        +e.SPAN.__img
+        +e.SPAN.name На сайте
+    -}

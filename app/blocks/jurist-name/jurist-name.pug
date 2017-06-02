@@ -1,6 +1,6 @@
 include ../icon/icons
 
-mixin jurist-name(name, online, checked)
+mixin jurist-name(name, online, checked, onlineHidden)
   -var onlineStatus = "_" + online
   -var check = "_" + checked
   +b.jurist-name&attributes(attributes)
@@ -8,4 +8,5 @@ mixin jurist-name(name, online, checked)
       +icon("check").__icon
     +e.SPAN.lawyername
       a(href="#")= name
-    +e.SPAN(class= "online" + onlineStatus)
+    -if(!onlineHidden)
+      +e.SPAN(class= "online" + onlineStatus)
