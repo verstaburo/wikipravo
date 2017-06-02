@@ -1,0 +1,9 @@
+include ../button/button
+include ../block-title/block-title
+
+mixin request-status(status, describe, button)
+  +b.request-status&attributes(attributes)
+    +block-title(status)._little._bolder.__title
+    +e.describe= describe
+    -if(button)
+      +button('button')(type="button")._text._noborder._bold.__button= button

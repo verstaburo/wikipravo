@@ -8,7 +8,7 @@ include ../../blocks/browse/browse
 include ../../blocks/publication-date/publication-date
 include ../../blocks/action-controls/action-controls-quadro
 
-mixin request-card(authorization)
+mixin request-card(authorization, requestBodyInvisible)
   +b.request-card&attributes(attributes)
     +e.jurist
       +e.info
@@ -27,11 +27,12 @@ mixin request-card(authorization)
         -}
         +e.P.reginfo Зарегистрирован на сайте:
           +e.SPAN.regtime меньше месяца
-    +e.request-body
-      +e.text &mdash; Добрый день. Нужно подготовить все необходимые документы для регистрации ООО. Компания занимается интернет-торговлей.
-      +e.describe
-        +publication-date("26 Января 2017, 12:21", "Опубликовано:").__publication
-        +subject("Категория права:", "Регистрация ООО").subject_nomargin.__subject
-        +e.request-status
-          +e.open Открыта
-          +browse("395", "4").__browse
+    -if(!requestBodyInvisible)
+      +e.request-body
+        +e.text &mdash; Добрый день. Нужно подготовить все необходимые документы для регистрации ООО. Компания занимается интернет-торговлей.
+        +e.describe
+          +publication-date("26 Января 2017, 12:21", "Опубликовано:").__publication
+          +subject("Категория права:", "Регистрация ООО").subject_nomargin.__subject
+          +e.request-status
+            +e.open Открыта
+            +browse("395", "4").__browse

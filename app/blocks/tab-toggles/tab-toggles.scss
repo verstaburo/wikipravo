@@ -57,6 +57,40 @@
     }
   }
 
+  &_transparent_second {
+
+    .tab-toggles__button {
+      color: $color-placeholder;
+      border: 1px solid transparent;
+      border-right-color: rgba(#000, .15);
+
+      &:hover, &:active {
+        color: rgba($color-main, .5);
+      }
+
+      &.active {
+        color: $color-main;
+        border-color: rgba($color-main, .5);
+        background-color: transparent;
+      }
+
+      &:not(:first-child) {
+        margin-left: -1px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &_big {
+
+    .tab-toggles__button {
+
+      .button__name {
+        font-size: 18px;
+      }
+    }
+  }
+
   &_link {
 
     .tab-toggles__button {

@@ -1,0 +1,103 @@
+.client-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+
+  &__controls {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid rgba($color-font, .15);
+    width: 100%;
+
+    .tab-toggles__button {
+      width: 194px;
+      min-width: 194px;
+      margin-bottom: -1px;
+    }
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 16px 40px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 29px;
+  }
+
+  &__name {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: $color-font;
+    margin-right: 40px;
+  }
+
+  &__button {
+
+    &:not(:last-of-type) {
+      margin-right: 90px;
+    }
+
+    &:hover {
+      color: $color-font;
+      font-weight: 500;
+    }
+
+    &.active {
+      font-weight: 500;
+    }
+  }
+
+  &__request-list, &__review-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__request-item {
+    background-color: #fff;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__review-list {
+    border: 1px solid #e7e7e9;
+  }
+
+  &__review-item {
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 40px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba($color-font, .1);
+    }
+  }
+}

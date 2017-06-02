@@ -43,4 +43,36 @@
     line-height: 1.42em;
     width: 100%;
   }
+
+  &__date {
+    font-size: 13px;
+    font-weight: 400;
+    color: #b9b9b9;
+    letter-spacing: .04em;
+    margin-left: 15px;
+  }
+
+  &__subject {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .035em;
+    line-height: 1.42em;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &_big {
+
+    .short-review__author {
+      font-size: 18px;
+    }
+  }
 }

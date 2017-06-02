@@ -1,0 +1,4 @@
+[
+  {"name" : "Проекты", "target" : "info1", "main" : true},
+  {"name" : "Отзывы", "target" : "info2"}
+]

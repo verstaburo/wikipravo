@@ -40,7 +40,7 @@
       color: #000;
     }
 
-    .active &, .active &:hover {
+    .paginator__item.active &, .paginator__item.active &:hover {
       background-color: $color-main;
       color: #fff;
       box-shadow: none;

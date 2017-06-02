@@ -1,11 +1,18 @@
 include ../avatar/avatar
 include ../like-button/like-button
 
-mixin short-review(data)
+mixin short-review(data, full)
   +b.ARTICLE.short-review&attributes(attributes)
     +avatar(data.image).__avatar
     +e.review
       +e.H4.title
         +e.SPAN.author= data.author
         +like-button(data.like)(class="_" + data.like.name).__like
+        -if(full)
+          +e.TIME.date 2 месяца назад
+      -if(full)
+        +e.subject
+          +e.B.type Консультация:
+          +e.text  правомерность штрафа ГИБДД на сумму
+            +e.B 3000 Р
       +e.P.content= data.review

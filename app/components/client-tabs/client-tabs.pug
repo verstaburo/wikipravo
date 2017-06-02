@@ -1,0 +1,43 @@
+include ../../blocks/tab-toggles/tab-toggles
+include ../../blocks/short-review/short-review
+include ../page-navigation/page-navigation
+include ../../blocks/short-request/short-request
+include ../../blocks/button/button
+include ../../blocks/request-status/request-status
+
+mixin client-tabs()
+  +b.SECTION.client-tabs&attributes(attributes)
+    -var requestStatusList = getData('request-status-list')
+    +tab-toggles(getData("client-tabs"))._transparent_second._big.__controls
+    +e.tabs-container(data-tab-group-container="info")
+      +e.content(class=" active" data-tab-group="info" data-tab-id="info1")
+        +e.filter
+          +e.name Статус:
+          +button('a')._text._noborder.__button Все
+            +e.SPAN.count (100)
+          +button('a')._text._noborder.__button Открыт
+            +e.SPAN.count (3)
+          +button('a')._text._noborder.__button В работе
+            +e.SPAN.count (2)
+          +button('a')._text._noborder.__button Закрыт
+            +e.SPAN.count (1)
+        +e.UL.request-list
+          each status in requestStatusList
+            +e.LI.request-item
+              +request-status(status.status, status.describe, status.button)
+              +short-request(getData('short-request'))
+        +page-navigation(getData("page-navigation"))
+      +e.content(data-tab-group="info" data-tab-id="info2")
+        +e.filter
+          +button('a')._text._noborder.__button Все отзывы
+            +e.SPAN.count (100)
+          +button('a')._text._noborder.__button  Положительные
+            +e.SPAN.count (3)
+          +button('a')._text._noborder.__button Отрицательные
+            +e.SPAN.count (2)
+        +e.UL.review-list
+          -for (var k = 0; k < 9; k++) {
+            +e.LI.review-item
+              +short-review(getData("jurist-short-review"), true)._big.__review
+          -}
+        +page-navigation(getData("page-navigation"))
