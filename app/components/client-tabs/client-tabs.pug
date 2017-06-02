@@ -26,9 +26,9 @@ mixin client-tabs()
             +e.LI.request-item
               +request-status(status.status, status.describe, status.button)
               +short-request(getData('short-request'))
-        +page-navigation(getData("page-navigation"))
+        +page-navigation(getData("page-navigation")).__paginator
       +e.content(data-tab-group="info" data-tab-id="info2")
-        +e.filter
+        +e.filter_padding
           +button('a')._text._noborder.__button Все отзывы
             +e.SPAN.count (100)
           +button('a')._text._noborder.__button  Положительные
@@ -38,6 +38,6 @@ mixin client-tabs()
         +e.UL.review-list
           -for (var k = 0; k < 9; k++) {
             +e.LI.review-item
-              +short-review(getData("jurist-short-review"), true)._big.__review
+              +short-review(getData("client-short-review"), true)._big._full.__review
           -}
-        +page-navigation(getData("page-navigation"))
+        +page-navigation(getData("page-navigation")).__paginator

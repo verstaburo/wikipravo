@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
 
   &__avatar {
     margin-right: 31px;
@@ -22,9 +22,13 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 20px;
     font-weight: 400;
+  }
+
+  &__like {
+    margin-right: 8px;
   }
 
   &__author {
@@ -49,7 +53,6 @@
     font-weight: 400;
     color: #b9b9b9;
     letter-spacing: .04em;
-    margin-left: 15px;
   }
 
   &__subject {
@@ -61,12 +64,18 @@
     width: 100%;
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: .035em;
+    letter-spacing: .04em;
     line-height: 1.42em;
+    margin-bottom: 12px;
 
     b {
       font-weight: 700;
+      letter-spacing: .04em;
     }
+  }
+
+  &__type {
+    margin-right: 4px;
   }
 
   &_big {

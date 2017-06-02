@@ -13,10 +13,16 @@
     width: 100%;
 
     .tab-toggles__button {
+      padding-top: 15px;
+      padding-bottom: 15px;
       width: 194px;
       min-width: 194px;
       margin-bottom: -1px;
     }
+  }
+
+  &__tabs-container {
+    width: 100%;
   }
 
   &__content {
@@ -36,26 +42,31 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 16px 40px;
+    padding: 14px 40px;
     width: 100%;
     background-color: #fff;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
 
   &__name {
     font-size: 14px;
-    letter-spacing: .04em;
+    letter-spacing: .025em;
     line-height: 1.5em;
     font-weight: 500;
     color: $color-font;
-    margin-right: 40px;
+    margin-right: 38px;
   }
 
   &__button {
 
     &:not(:last-of-type) {
-      margin-right: 90px;
+      margin-right: 85px;
+
+      @include s-desktop {
+        margin-right: 35px;
+      }
     }
 
     &:hover {
@@ -82,22 +93,29 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 37px;
     }
   }
 
   &__review-list {
     border: 1px solid #e7e7e9;
+    margin-top: -2px;
+    margin-bottom: 8px;
   }
 
   &__review-item {
     background-color: #fff;
     width: 100%;
     box-sizing: border-box;
-    padding: 25px 40px;
+    padding: 24px 30px;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid rgba($color-font, .1);
     }
+  }
+
+  &__paginator {
+    padding-left: 87px !important;
+    padding-right: 87px !important;
   }
 }
