@@ -5,14 +5,14 @@ export function ValidationOrder() {
     var patternNumeric = /[0-9]/;
     var errorMessage;
 
-    function popupCheckFieldPosition(field) {
+    function PopupCheckFieldPosition(field) {
       var coordinates = {};
       coordinates.top = $(field).offset().top + $(field).outerHeight() + 15;
       coordinates.left = $(field).offset().left;
       return coordinates;
     }
 
-    function createErrorPopup(field, text) {
+    function CreateErrorPopup(field, text) {
       var popup = document.createElement('P');
       var coordinates = popupCheckFieldPosition(field);
       popup.setAttribute('class', 'error-message error-message_popup');

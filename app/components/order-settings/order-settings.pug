@@ -6,7 +6,7 @@ include ../../blocks/checkbox/checkbox
 include ../../blocks/selectbox/selectbox
 
 mixin order-settings()
-  +b.order-settings&attributes(attributes)
+  +b.FIELDSET.order-settings&attributes(attributes)
     +block-title("Настройки публикации").__title
     +e('h4') Заявка будет видна
     +radio('Только отобранным юристам', 'r1', 'test')
@@ -29,9 +29,9 @@ mixin order-settings()
           +e.order-label Стаж работы
           +e.order-col_inner
             +e.sublabel От
-            +input(type="text" id="exp-start" pattern="[0-9]")
+            +input(type="numeric" id="exp-start" pattern="[0-9]")
             +e.sublabel До
-            +input(type="text" id="exp-end" pattern="[0-9]")
+            +input(type="numeric" id="exp-end" pattern="[0-9]")
       +e.order-row
         +e.order-col.__checkbox
           +checkbox('Только адвокаты', 'c1')

@@ -5,7 +5,7 @@ include ../../blocks/button/button
 include ../../blocks/selectbox/selectbox
 
 mixin order-registration()
-  +b.order-registration&attributes(attributes)
+  +b.FIELDSET.order-registration&attributes(attributes)
     +block-title("О вас").__title
     +e('p').desc Для вас будет создана учетная запись, по которой вы сможете входить на сайт и просматривать свои заявки. Если  у вас уже есть учетная запись, войдите в систему, чтобы завершить публикацию заявки:
     +e.content
@@ -16,7 +16,7 @@ mixin order-registration()
       +e.col._third
         +e.order-label Регистрация
         +e.form-field
-          +input(type="text" placeholder="Ваше имя *")._noborder
+          +input(type="text" placeholder="Ваше имя *" pattern="{3,}")._noborder
         +e.form-field
           +input(type="email" placeholder="E-mail *")._noborder
         +e.form-field

@@ -38,7 +38,7 @@ mixin personal-data-jurist()
         +input(type="url" id="rospravosudie" placeholder="Профиль на РосПравосудие")
       +section-title("Стаж работы")._left._bold.__title_hidden
       +label-field("Укажите стаж", "experience")._reverse.__field_experience
-        +input(type="text" id="experience" placeholder="Стаж работы" pattern="[0-9]{1,2}")
+        +input(type="numeric" id="experience" placeholder="Стаж работы")
     +e.row_photo
       +avatar-browse("Выберите файл").__avatar
       +e.describe

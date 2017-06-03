@@ -20,7 +20,6 @@ export function VerstaSelectBox() {
       e.stopPropagation();
       selectBoxPosition($(this));
       $(this).parents("." + mainClass).toggleClass(activeClass);
-      console.log("клик по кнопке " + $(this).attr("class"));
     });
 
     // Клик по элементу списка
