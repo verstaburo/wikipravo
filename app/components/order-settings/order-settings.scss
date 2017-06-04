@@ -7,6 +7,7 @@
   padding: 25px 38px 27px;
   width: 100%;
   background-color: #fff;
+  overflow: hidden;
 
   h4 {
     font-weight: 600;
@@ -27,20 +28,30 @@
     box-sizing: border-box;
     background-color: $color-bg-index;
     padding: 13px 22px 0;
-    width: 100%;
-    max-width: 740px;
+    width: 50%;
+    min-width: 740px;
     margin-bottom: 24px;
+
+    @include s-desktop {
+      min-width: 66%;
+      width: 66%;
+    }
   }
 
-  .radio {
-    margin-bottom: 18px;
+  &__radio-group {
+    width: 100%;
 
-    &__label {
-      white-space: normal;
-    }
+    .radio {
+      margin-bottom: 18px;
+      width: 100%;
 
-    &__inner-text {
-      color: #988a8a;
+      &__label {
+        white-space: normal;
+      }
+
+      &__inner-text {
+        color: #988a8a;
+      }
     }
   }
 
@@ -58,7 +69,7 @@
     align-items: stretch;
     width: 100%;
 
-    @include tablet {
+    @include s-desktop {
       flex-direction: column;
     }
   }
@@ -67,7 +78,7 @@
     width: 60%;
     margin-right: 20px;
 
-    @include tablet {
+    @include s-desktop {
       width: 100%;
     }
   }
@@ -75,7 +86,7 @@
   &__second {
     width: calc(40% - 20px);
 
-    @include tablet {
+    @include s-desktop {
       width: 100%;
     }
   }
@@ -104,5 +115,11 @@
 
   &__checkbox {
     width: 40%;
+  }
+
+  &__selectbox {
+    @include s-desktop {
+      width: 100%;
+    }
   }
 }

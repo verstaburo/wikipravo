@@ -8,23 +8,24 @@ include ../../blocks/selectbox/selectbox
 mixin order-settings()
   +b.FIELDSET.order-settings&attributes(attributes)
     +block-title("Настройки публикации").__title
-    +e('h4') Заявка будет видна
-    +radio('Только отобранным юристам', 'r1', 'test')
-      +e.inner-text (Только юристы из списка кандидатов смогут увидеть заявку)
-    +radio('Юристам по заданным условиям', 'r2', 'test')
-      +e.inner-text (Юристы подходящие под условия смогут увидеть заявку)
+    +e.radio-group
+      +e('h4') Заявка будет видна
+      +radio('Только отобранным юристам', 'r1', 'test')
+        +e.inner-text (Только юристы из списка кандидатов смогут увидеть заявку)
+      +radio('Юристам по заданным условиям', 'r2', 'test')
+        +e.inner-text (Юристы подходящие под условия смогут увидеть заявку)
     +e.content
       +e.order-row
         +e.order-col.__first
           +e.order-label Специалист в категории права
-          +selectbox(getData('order-about'))._light._height._scrollable
+          +selectbox(getData('selectbox-law-category'))._light._visible._half.__selectbox
         +e.order-col.__second
           +e.order-label Регион
           +selectbox(getData('order-region'))._light._height._scrollable
       +e.order-row
         +e.order-col.__first
           +e.order-label Работает с документами
-          +selectbox(getData('order-doc'))._light._height._scrollable.__field_second
+          +selectbox(getData('selectbox-documents'))._light._visible._half.__selectbox
         +e.order-col.__second
           +e.order-label Стаж работы
           +e.order-col_inner
@@ -42,7 +43,8 @@ mixin order-settings()
           +checkbox('Есть кабинет в здании суда', 'c3')
         +e.order-col.__checkbox
           +checkbox('Есть профиль на РосПравосудие', 'c4')
-    +radio('Всем юристам', 'r3', 'test2')
-      +e.inner-text (Юристы смогут просматривать вашу завку и откливаться на нее)
-    +radio('Всем', 'r4', 'test2')
-      +e.inner-text (Любой посетитель сайта сможет просмотреть вашу заявку. Юристы смогут откликаться на нее)
+    +e.radio-group
+      +radio('Всем юристам', 'r3', 'test2')
+        +e.inner-text (Юристы смогут просматривать вашу завку и откливаться на нее)
+      +radio('Всем', 'r4', 'test2')
+        +e.inner-text (Любой посетитель сайта сможет просмотреть вашу заявку. Юристы смогут откликаться на нее)

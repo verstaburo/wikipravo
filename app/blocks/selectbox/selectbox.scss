@@ -348,19 +348,29 @@
         }
       }
     }
+  }
 
-    &_noborder {
+  &_noborder {
 
-      .selectbox {
+    .selectbox {
 
-        &__button {
-          border-color: transparent;
-        }
+      &__button {
+        border-color: transparent;
+      }
 
-        &__button-name {
-          border-color: transparent;
-        }
+      &__button-name {
+        border-color: transparent;
       }
     }
   }
+
+  /*&_half {
+
+    .selectbox__list {
+
+      @include s-desktop {
+        width: 50%;
+      }
+    }
+  }*/
 }
