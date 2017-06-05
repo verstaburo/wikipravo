@@ -95,5 +95,11 @@
     &__button-name {
       color: #0d0d0d;
     }
+
+    &__list {
+      @include tablet {
+        width: 50%;
+      }
+    }
   }
 }

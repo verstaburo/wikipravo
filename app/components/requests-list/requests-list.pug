@@ -1,6 +1,6 @@
 include ../../blocks/short-request/short-request
 
-mixin requests-list(data)
+mixin requests-list(data, status)
   +b.requests-list&attributes(attributes)
     each item in data
-      +short-request(item, true).__item
+      +short-request(item, true, true).__item

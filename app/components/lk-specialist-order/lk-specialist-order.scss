@@ -1,0 +1,84 @@
+.lk-specialist-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 20px 50px 48px;
+  background-color: #f1f5f8;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 22px;
+    letter-spacing: .04em;
+  }
+
+  &__status {
+    background: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    
+    @include s-desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__request-item {
+    margin-bottom: 30px;
+  }
+  
+  &__status-text {
+    margin-right: 40px;
+    font-weight: medium;
+    
+    @include s-desktop {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    @include s-desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__li {
+    color: $color-main;
+    cursor: pointer;
+    
+    @include s-desktop {
+      margin: 10px 0;
+    }
+  }
+
+  &__request-head {
+    padding: 15px 40px;
+    background: #fff;
+    display: flex;
+    border-bottom: 1px solid  $color-bg-index;
+  }
+
+  &__request-a {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &_first {
+      color: #000;
+      margin-right: 50px;
+    }
+
+    &_second {
+      color: $color-main;
+    }
+  }
+}

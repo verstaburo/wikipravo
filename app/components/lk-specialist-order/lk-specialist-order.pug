@@ -1,0 +1,33 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/short-request/short-request
+
+mixin lk-specialist-order(status)
+  +b.lk-specialist-order&attributes(attributes)
+    +page-title("Мои заказы").__title
+    +e.status
+      +e.status-text Статус: 
+      +e('ul').ul
+        +e('li').li Все
+          +e('span').count (2)
+        +e('li').li Откликнулся
+          +e('span').count (2)
+        +e('li').li Приглашен
+          +e('span').count (2)
+        +e('li').li Кандидат
+          +e('span').count (2)
+        +e('li').li Исполнитель
+          +e('span').count (2)
+        +e('li').li Отказали
+          +e('span').count (2)
+        +e('li').li Отказался
+          +e('span').count (2)
+        +e('li').li В корзине
+          +e('span').count (2)
+    +e.list
+      - var data = getData('requests');
+      each item in data
+        +e.request-item
+          +e.request-head 
+            +e.request-a._first Откликнуться
+            +e.request-a._second Отказаться
+          +short-request(item, true).__item
