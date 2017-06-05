@@ -81,6 +81,33 @@
     }
   }
 
+  &_transparent_third {
+
+    .tab-toggles__button {
+      color: $color-main;
+      border: 1px solid transparent;
+      background-color: transparent;
+      border-right-color: rgba(#858585, .15);
+
+      &:hover, &:active {
+        background-color: transparent;
+        border-color: transparent;
+        color: rgba($color-main, 6);
+      }
+
+      &.active {
+        border-color: $color-main;
+        background-color: $color-main;
+        color: white;
+      }
+
+      &:not(:first-child) {
+        margin-left: -1px;
+        z-index: 2;
+      }
+    }
+  }
+
   &_big {
 
     .tab-toggles__button {

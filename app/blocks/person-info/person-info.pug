@@ -1,0 +1,22 @@
+include ../../blocks/jurist-name/jurist-name
+include ../../blocks/avatar/avatar
+include ../../blocks/button/button
+include ../../blocks/vote-block/vote-block
+include ../../blocks/status-list/status-list
+
+mixin person-info(name, message, newMessage, location)
+  +b.SECTION.person-info&attributes(attributes)
+    +jurist-name(name, true, true, true)._border.__title
+    +e.info
+      +avatar("assets/images/lawyer-avatar.jpg")._big.__img
+      +e.status
+        +status-list(false, true, location).__status-list
+    +e.message
+      -if(message) {
+        +button("a")(href="mailto:").button_text._border._left.__read Сообщения
+          +e(class=" person-info__count") (3)
+        -if(newMessage)
+          +e.SPAN.informer +20 новых сообщений
+      -} else {
+        +button("a")(href="mailto:").button_text._centered._small.__write Написать сообщение
+      -}

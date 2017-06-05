@@ -1,0 +1,9 @@
+include ../person-info/person-info
+
+mixin person-card(name, infoName, infoContent, message, newMessage, location)
+  +b.person-card&attributes(attributes)
+    +person-info(name, message, newMessage, location).__person
+    +e.describe
+      +action-controls-quadro("", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.").__action-controls
+      +e.P.info= infoName
+        +e.SPAN= infoContent

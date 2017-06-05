@@ -1,0 +1,4 @@
+[
+  {"name" : "Все (3)", "target" : "message1", "main" : true},
+  {"name" : "Непрочитанные (3)", "target" : "message2"}
+]

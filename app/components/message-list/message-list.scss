@@ -1,0 +1,154 @@
+.message-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  @media (max-width: 1600px) {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    margin-right: 40px;
+
+    @media (max-width: 1600px) {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  &__person {
+    width: 100%;
+    border-bottom: 1px solid #e4e8ea;
+  }
+
+  &__controls {
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid rgba(#000, .1);
+
+    .tab-toggles__button {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      width: 220px;
+      min-width: 220px;
+      margin-bottom: -1px;
+    }
+  }
+
+  &__tabs-container {
+    height: auto;
+    width: 100%;
+  }
+
+  &__tab-content {
+    height: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+  }
+
+  &__filter {
+    min-width: 345px;
+
+    @media (max-width: 1700px) {
+      max-width: 345px;
+      min-width: 160px;
+    }
+
+    @media (max-width: 1600px) {
+      max-width: 100%;
+      width: 100%;
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    @media (max-width: 1600px) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid rgba($color-font, .1);
+
+    @include s-desktop {
+      border-bottom-color: transparent;
+      border-right: 1px solid rgba($color-font, .1);
+      flex: 1;
+
+      &:last-of-type {
+        border-right-color: transparent;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background-color: transparent;
+    }
+
+    &.active {
+      padding-left: 6px;
+
+      &::before {
+        background-color: $color-main;
+      }
+
+      &:not(:first-of-type) {
+        @include s-desktop {
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    padding: 16px 20px;
+    width: 100%;
+    color: $color-main;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      color: $color-font;
+    }
+  }
+}

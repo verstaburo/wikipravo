@@ -1,0 +1,31 @@
+include ../../blocks/tab-toggles/tab-toggles
+include ../../blocks/person-card/person-card
+include ../page-navigation/page-navigation
+
+mixin message-list()
+  +b.message-list&attributes(attributes)
+    +e.SECTION.content
+      +tab-toggles(getData("messages-tabs"))._transparent_third.__controls
+      +e.tabs-container(data-tab-group-container="messages")
+        +e.tab-content(class=" active" data-tab-group="messages" data-tab-id="message1")
+          -for(var k = 1; k < 6; k++) {
+            -var nmsg;
+            -if(k%2 === 0) { nmsg = false } else {nmsg = true}
+              +person-card("Юрий Петров", "", "55 минут назад (последние изменения: 29.09.2016 | 00:50)", true, nmsg, "Карачаево-Черкесская республика").__person
+          -}
+          +page-navigation(getData('page-navigation-request')).__nav
+        +e.tab-content(data-tab-group="messages" data-tab-id="message2")
+          -for(var k = 1; k < 6; k++) {
+            -var nmsg;
+            -if(k%2 === 0) { nmsg = false } else {nmsg = true}
+              +person-card("Юрий Петров", "", "55 минут назад (последние изменения: 29.09.2016 | 00:50)", true, nmsg, "Карачаево-Черкесская республика").__person
+          -}
+          +page-navigation(getData('page-navigation-request')).__nav
+    +e.ASIDE.filter
+      +e.UL.list
+        +e.LI.item.active
+          +e.A.link(href="#") Все
+        +e.LI.item
+          +e.A.link(href="#") Избранное
+        +e.LI.item
+          +e.A.link(href="#") Черный список

@@ -1,0 +1,22 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Мои сообщения'
+
+block content
+  +b.lk-messages
+    +page-title("Мои сообщения").__title
+    +message-list.__content
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
