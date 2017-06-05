@@ -21,8 +21,8 @@
     box-sizing: border-box;
     background-color: $color-bg-index;
     padding: 20px 30px 30px;
-    width: 100%;
-    max-width: 740px;
+    width: 50%;
+    min-width: 740px;
     margin-bottom: 24px;
 
     @include s-desktop {
@@ -37,7 +37,13 @@
     font-size: 13px;
     margin-bottom: 30px;
     line-height: 25px;
-    max-width: 740px;
+    width: 50%;
+    min-width: 740px;
+
+    @include s-desktop {
+      width: 100%;
+      min-width: 100%;
+    }
   }
 
   &__col {
