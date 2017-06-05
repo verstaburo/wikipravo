@@ -31,6 +31,14 @@
     font-weight: 400;
     color: #010101;
     margin-right: 12px;
+
+    a {
+      font-size: 13px;
+      line-height: 1em;
+      letter-spacing: .04em;
+      font-weight: 400;
+      color: #010101;
+    }
   }
 
   &__remove {
@@ -57,5 +65,22 @@
     fill: transparent;
     stroke: #afafaf;
     transition: all .25s ease-in-out;
+  }
+
+  &_attach {
+
+    .files-list {
+
+      &__filename {
+        margin-right: 9px;
+      }
+
+      &__icon {
+        width: 18px;
+        height: 17px;
+        stroke: transparent;
+        fill: rgba($color-font, .5);
+      }
+    }
   }
 }

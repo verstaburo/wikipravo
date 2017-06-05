@@ -1,0 +1,43 @@
+include ../files-list/files-list-attach
+include ../avatar/avatar
+include ../button/button
+include ../icon/icons
+
+mixin user-message(author, text, status, files)
+  +b.user-message&attributes(attributes)
+    +e.img
+      +avatar("assets/images/lawyer-avatar.jpg")._smallest
+    +e.ARTICLE.post
+      +e.header
+        +e.H4.author= author
+        +e.buttons
+          case status
+            when "edit"
+              +button("button")(type="button")._text._noborder.__button_edit Редактировать
+              +button("button")(type="button")._text._noborder.__button_remove Удалить
+            when "recovery"
+              +button("button")(type="button")._text._noborder.__button_recovery Восстановить сообщение
+            default
+              +button("button")(type="button")._text._noborder.__button_complain Пожаловаться
+      +e.content
+        case status
+          when "recovery"
+            +e.remove
+              +icon('basket').__remove-icon
+              +e.SPAN Сообщение удалено
+          default
+            +e.P= text
+      +e.footer
+        -if(files)
+          +files-list-attach.__files
+        +e.info
+          +e.TIME.create 12.10.2016 | 09:29
+            case status
+              when "edit"
+                -break
+              when "recovery"
+                +e.SPAN.status было удалено
+                +e.TIME.modification 12.10.2016 | 09:30
+              default
+                +e.SPAN.status последнее изменение:
+                +e.TIME.modification 12.10.2016 | 09:30

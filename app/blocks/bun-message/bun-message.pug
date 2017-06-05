@@ -1,0 +1,6 @@
+include ../icon/icons
+
+mixin bun-message(text)
+  +b.bun-message&attributes(attributes)
+    +icon("lock").__img
+    +e.SPAN= text

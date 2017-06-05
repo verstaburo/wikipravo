@@ -1,0 +1,130 @@
+.user-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 18px 20px;
+  background-color: #fff;
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 50px;
+    width: 50px;
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__author {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.43em;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    white-space: nowrap;
+  }
+
+  &__button {
+    white-space: nowrap;
+
+    &_remove {
+      margin-right: 20px;
+    }
+  }
+
+  &__content {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.54em;
+    width: 100%;
+    color: $color-font;
+    margin-bottom: 12px;
+
+    p {
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: .04em;
+      line-height: 1.54em;
+      color: $color-font;
+    }
+  }
+
+  &__remove {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1.54em;
+    width: 100%;
+    color: rgba($color-font, .5);
+    margin-bottom: 15px;
+  }
+
+  &__remove-icon {
+    width: 15px;
+    height: 16px;
+    margin-right: 8px;
+    fill: rgba($color-font, .5);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__files {
+    width: 100%;
+  }
+
+  &__info {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: .04em;
+    line-height: 1.54em;
+    font-weight: 400;
+    color: #b1b1b1;
+  }
+
+  &_blue {
+    background-color: #cee9fe;
+  }
+}
