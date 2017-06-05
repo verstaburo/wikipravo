@@ -22,7 +22,7 @@
     background-color: $color-bg-index;
     padding: 20px 30px 30px;
     width: 100%;
-    min-width: 740px;
+    max-width: 740px;
     margin-bottom: 24px;
 
     @include s-desktop {
@@ -88,6 +88,12 @@
 
     &__button-name {
       color: #0d0d0d;
+    }
+
+    &__list {
+      @include tablet {
+        width: 50%;
+      }
     }
   }
 }

@@ -1,0 +1,20 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Личный кабинет специалиста - Мои заказы'
+
+block content
+  +lk-specialist-order
+    
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
