@@ -23,6 +23,11 @@ mixin lk-specialist-order(status)
           +e('span').count (2)
         +e('li').li В корзине
           +e('span').count (2)
-    - var data = getData('requests');
-    each item in data
-      +short-request(item, true).__item
+    +e.list
+      - var data = getData('requests');
+      each item in data
+        +e.request-item
+          +e.request-head 
+            +e.request-a._first Откликнуться
+            +e.request-a._second Отказаться
+          +short-request(item, true).__item

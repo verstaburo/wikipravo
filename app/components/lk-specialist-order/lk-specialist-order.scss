@@ -22,25 +22,63 @@
     width: 100%;
     padding: 20px 40px;
     margin-bottom: 30px;
+    
+    @include s-desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__request-item {
+    margin-bottom: 30px;
   }
   
   &__status-text {
     margin-right: 40px;
     font-weight: medium;
+    
+    @include s-desktop {
+      margin-bottom: 10px;
+    }
   }
 
   &__ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    
+    @include s-desktop {
+      flex-direction: column;
+    }
   }
 
   &__li {
     color: $color-main;
     cursor: pointer;
+    
+    @include s-desktop {
+      margin: 10px 0;
+    }
   }
 
-  &__request-list {
-    padding: 0 !important;
+  &__request-head {
+    padding: 15px 40px;
+    background: #fff;
+    display: flex;
+    border-bottom: 1px solid  $color-bg-index;
+  }
+
+  &__request-a {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &_first {
+      color: #000;
+      margin-right: 50px;
+    }
+
+    &_second {
+      color: $color-main;
+    }
   }
 }
