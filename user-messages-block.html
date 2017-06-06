@@ -158,9 +158,9 @@
                 </div>
             </div>
             <div class="page-layout__page-content">
-                <div class="mymessages">
-                    <h2 class="page-title mymessages__title">Сообщения</h2>
-                    <div class="person-card mymessages__person">
+                <div class="user-messages">
+                    <h2 class="page-title user-messages__title">Сообщения</h2>
+                    <div class="person-card user-messages__person">
                         <section class="person-info person-card__person">
                             <div class="jurist-name jurist-name_border person-info__title">
                                 <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
@@ -244,11 +244,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="bun-message mymessages__bun">
-                        <svg class="bun-message__img"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
-                        <span>Пользователь запретил вам отправлять ему сообщения</span>
+                    <div class="user-messages__bun">
+                        <div class="bun-message user-messages__bun-text">
+                            <svg class="bun-message__img"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                            <span>Пользователь запретил вам отправлять ему сообщения</span>
+                        </div>
                     </div>
-                    <div class="user-correspondence mymessages__correspondence">
+                    <div class="user-correspondence user-messages__correspondence">
                         <div class="user-message user-correspondence__message">
                             <div class="user-message__img">
                                 <div class="avatar avatar_smallest">
@@ -259,7 +261,7 @@
                                 <div class="user-message__header">
                                     <h4 class="user-message__author">Константин Станиславович Первозванный</h4>
                                     <div class="user-message__buttons">
-                                        <button class="button button_text button_noborder user-message__button user-message__button_complain" type="button">
+                                        <button class="button button_text button_noborder button_small user-message__button user-message__button_complain" type="button">
                                             <span class="button__name">Пожаловаться</span>
                                         </button>
                                     </div>
@@ -269,12 +271,11 @@
                                         et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
                                 </div>
                                 <div class="user-message__footer">
-                                    <div class="user-message__info">
-                                        <time class="user-message__create">12.10.2016 | 09:29
-                                            <span class="user-message__status">последнее изменение:</span>
-                                            <time class="user-message__modification">12.10.2016 | 09:30</time>
-                                        </time>
-                                    </div>
+                                    <p class="user-message__info">
+                                        <time class="user-message__create">12.10.2016 | 09:29</time>
+                                        <span class="user-message__status">последнее изменение:</span>
+                                        <time class="user-message__modification">12.10.2016 | 09:30</time>
+                                    </p>
                                 </div>
                             </article>
                         </div>
@@ -288,10 +289,10 @@
                                 <div class="user-message__header">
                                     <h4 class="user-message__author">Евгений Непрозванов</h4>
                                     <div class="user-message__buttons">
-                                        <button class="button button_text button_noborder user-message__button user-message__button_edit" type="button">
+                                        <button class="button button_text button_noborder button_small user-message__button user-message__button_edit" type="button">
                                             <span class="button__name">Редактировать</span>
                                         </button>
-                                        <button class="button button_text button_noborder user-message__button user-message__button_remove" type="button">
+                                        <button class="button button_text button_noborder button_small button_small button_small user-message__button user-message__button_remove" type="button">
                                             <span class="button__name">Удалить</span>
                                         </button>
                                     </div>
@@ -301,9 +302,9 @@
                                         et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
                                 </div>
                                 <div class="user-message__footer">
-                                    <div class="user-message__info">
+                                    <p class="user-message__info">
                                         <time class="user-message__create">12.10.2016 | 09:29</time>
-                                    </div>
+                                    </p>
                                 </div>
                             </article>
                         </div>
@@ -317,7 +318,7 @@
                                 <div class="user-message__header">
                                     <h4 class="user-message__author">Евгений Непрозванов</h4>
                                     <div class="user-message__buttons">
-                                        <button class="button button_text button_noborder user-message__button user-message__button_recovery" type="button">
+                                        <button class="button button_text button_noborder button_small button_small user-message__button user-message__button_recovery" type="button">
                                             <span class="button__name">Восстановить сообщение</span>
                                         </button>
                                     </div>
@@ -329,12 +330,11 @@
                                     </div>
                                 </div>
                                 <div class="user-message__footer">
-                                    <div class="user-message__info">
-                                        <time class="user-message__create">12.10.2016 | 09:29
-                                            <span class="user-message__status">было удалено</span>
-                                            <time class="user-message__modification">12.10.2016 | 09:30</time>
-                                        </time>
-                                    </div>
+                                    <p class="user-message__info">
+                                        <time class="user-message__create">12.10.2016 | 09:29</time>
+                                        <span class="user-message__status">было удалено</span>
+                                        <time class="user-message__modification">12.10.2016 | 09:30</time>
+                                    </p>
                                 </div>
                             </article>
                         </div>
@@ -348,7 +348,7 @@
                                 <div class="user-message__header">
                                     <h4 class="user-message__author">Юрий Петров</h4>
                                     <div class="user-message__buttons">
-                                        <button class="button button_text button_noborder user-message__button user-message__button_complain" type="button">
+                                        <button class="button button_text button_noborder button_small user-message__button user-message__button_complain" type="button">
                                             <span class="button__name">Пожаловаться</span>
                                         </button>
                                     </div>
@@ -374,12 +374,11 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="user-message__info">
-                                        <time class="user-message__create">12.10.2016 | 09:29
-                                            <span class="user-message__status">последнее изменение:</span>
-                                            <time class="user-message__modification">12.10.2016 | 09:30</time>
-                                        </time>
-                                    </div>
+                                    <p class="user-message__info">
+                                        <time class="user-message__create">12.10.2016 | 09:29</time>
+                                        <span class="user-message__status">последнее изменение:</span>
+                                        <time class="user-message__modification">12.10.2016 | 09:30</time>
+                                    </p>
                                 </div>
                             </article>
                         </div>
