@@ -1,0 +1,99 @@
+.account-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__balance {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 28px 38px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &_total {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 72px;
+      width: 374px;
+      min-width: 374px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-weight: 700;
+    letter-spacing: .04em;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    letter-spacing: .04em;
+    color: #b2b2b2;
+    margin-right: 32px;
+    min-width: 240px;
+  }
+
+  &__ammount {
+    font-size: 22px;
+    letter-spacing: .04em;
+    color: $color-font;
+    white-space: nowrap;
+  }
+
+  &__button {
+    min-width: 210px;
+    width: 210px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__reserve {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    padding: 24px 38px;
+    width: 100%;
+    letter-spacing: .04em;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  tr, th {
+
+    &:first-child, &:last-child {
+      width: 23.7%;
+    }
+  }
+}

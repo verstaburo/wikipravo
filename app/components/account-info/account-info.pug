@@ -1,0 +1,34 @@
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+include ../../blocks/table/table
+
+mixin account-info(specialist)
+  +b.SECTION.account-info&attributes(attributes)
+    +e.SECTION.balance
+      +e.col_total
+        +e.P.row
+          +e.SPAN.name На счёте:
+          +e.SPAN.ammount 15 800 Р
+        -if(!specialist)
+          +e.P.row
+            +e.SPAN.name Из них зарезервировано:
+            +e.SPAN.ammount 3000 Р
+      +e.col_buttons
+        +button("button")(class="_blue _small account-info__button" data-open-popup="popup-account-replenish" class="js-popup-open") Пополнить счет
+        +button("button")._transparent_second._small.__button Вывести средства
+    -if(!specialist)
+      +e.SECTION.reserve
+        +block-title("Зарезервировано средств")._little._bolder.__title
+        +table.__table
+          +e.THEAD
+            +e.TR
+              +e.TH Сделка
+              +e.TH По заказу
+              +e.TH На сумму
+          +e.TBODY
+            +e.TR
+              +e.TD
+                +e.A(href="#") Cделка от 24.05.2017, 12:45
+              +e.TD
+                +e.A(href="#") Не справедливая оплата труда
+              +e.TD 3000 Р

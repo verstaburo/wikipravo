@@ -1,0 +1,19 @@
+include ../../blocks/form/form
+include ../../blocks/popup/popup
+include ../../blocks/page-title/page-title
+include ../../blocks/input/input
+include ../../blocks/section-title/section-title
+
+mixin popup-account-replenish()
+  +popup(class=" popup-account-replenish" id="popup-account-replenish")&attributes(attributes)
+    +page-title("Пополнить счет")(class=" popup-account-replenish__title")
+    +form(class=" popup-account-replenish__form")
+      +e(class=" popup-account-replenish__field_amount")
+        +e.LABEL(for="amount" class=" popup-account-replenish__label section-title_left section-title_bold") Сумма
+        +input(type="text" id="amount" name="amount" class=" popup-account-replenish__input_amount")
+        +e.SPAN(class=" popup-account-replenish__valuta") руб
+      +e(class=" popup-account-replenish__field_note")
+        +e.LABEL(for="note" class=" popup-account-replenish__label section-title_left section-title_bold") Примечание
+        +input(type="text" id="note" name="note" class=" popup-account-replenish__input_note")
+      +e(class=" popup-account-replenish__paysystem")
+        +section-title("Выберите способ оплаты")._left._bold.popup-account-replenish__subtitle

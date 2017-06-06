@@ -1,0 +1,56 @@
+.popup-account-replenish {
+  width: 652px;
+  height: 522px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 44px 96px;
+  background-color: #fff;
+
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  &__label {
+    width: 94px;
+    min-width: 94px;
+    margin-right: 20px;
+  }
+
+  &__input {
+
+    &_amount {
+      width: 80px;
+      min-width: 80px;
+      margin-right: 13px;
+    }
+
+    &_note {
+      flex: 1;
+    }
+  }
+
+  &__valuta {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: $color-placeholder;
+  }
+
+  &__paysystem {
+    margin-top: 28px;
+    width: 100%;
+  }
+}
