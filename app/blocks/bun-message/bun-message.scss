@@ -6,10 +6,14 @@
   box-sizing: border-box;
   position: relative;
   font-size: 14px;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
   line-height: 1.5em;
   color: $color-red-dark;
   padding-left: 38px;
+
+  span {
+    letter-spacing: .035em;
+  }
 
   &__img {
     position: absolute;

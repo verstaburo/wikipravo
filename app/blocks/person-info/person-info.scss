@@ -29,6 +29,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex: 1;
+  }
+
+  &__status-list {
+    width: 100%;
   }
 
   &__message {

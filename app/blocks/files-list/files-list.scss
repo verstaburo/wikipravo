@@ -13,8 +13,16 @@
     box-sizing: border-box;
     margin-bottom: 10px;
 
+    a {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
     &:not(:last-of-type) {
-      margin-right: 39px;
+      margin-right: 34px;
     }
   }
 
@@ -31,14 +39,6 @@
     font-weight: 400;
     color: #010101;
     margin-right: 12px;
-
-    a {
-      font-size: 13px;
-      line-height: 1em;
-      letter-spacing: .04em;
-      font-weight: 400;
-      color: #010101;
-    }
   }
 
   &__remove {
@@ -70,6 +70,9 @@
   &_attach {
 
     .files-list {
+
+      &__item {
+      }
 
       &__filename {
         margin-right: 9px;

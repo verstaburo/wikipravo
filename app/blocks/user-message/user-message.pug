@@ -13,12 +13,12 @@ mixin user-message(author, text, status, files)
         +e.buttons
           case status
             when "edit"
-              +button("button")(type="button")._text._noborder.__button_edit Редактировать
-              +button("button")(type="button")._text._noborder.__button_remove Удалить
+              +button("button")(type="button")._text._noborder._small.__button_edit Редактировать
+              +button("button")(type="button")._text._noborder._small._small._small.__button_remove Удалить
             when "recovery"
-              +button("button")(type="button")._text._noborder.__button_recovery Восстановить сообщение
+              +button("button")(type="button")._text._noborder._small._small.__button_recovery Восстановить сообщение
             default
-              +button("button")(type="button")._text._noborder.__button_complain Пожаловаться
+              +button("button")(type="button")._text._noborder._small.__button_complain Пожаловаться
       +e.content
         case status
           when "recovery"
@@ -30,14 +30,14 @@ mixin user-message(author, text, status, files)
       +e.footer
         -if(files)
           +files-list-attach.__files
-        +e.info
+        +e.P.info
           +e.TIME.create 12.10.2016 | 09:29
-            case status
-              when "edit"
-                -break
-              when "recovery"
-                +e.SPAN.status было удалено
-                +e.TIME.modification 12.10.2016 | 09:30
-              default
-                +e.SPAN.status последнее изменение:
-                +e.TIME.modification 12.10.2016 | 09:30
+          case status
+            when "edit"
+              -break
+            when "recovery"
+              +e.SPAN.status было удалено
+              +e.TIME.modification 12.10.2016 | 09:30
+            default
+              +e.SPAN.status последнее изменение:
+              +e.TIME.modification 12.10.2016 | 09:30

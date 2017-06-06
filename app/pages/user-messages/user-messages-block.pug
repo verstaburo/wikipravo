@@ -4,10 +4,11 @@ block head
   - var pageTitle = 'Wiki Pravo — Сообщения(блокировка)'
 
 block content
-  +b.mymessages
+  +b.user-messages
     +page-title("Сообщения").__title
     +person-card("Юрий Петров", "", "55 минут назад (последние изменения: 29.09.2016 | 00:50)", true, true, "Карачаево-Черкесская республика").__person
-    +bun-message("Пользователь запретил вам отправлять ему сообщения").__bun
+    +e.bun
+      +bun-message("Пользователь запретил вам отправлять ему сообщения").__bun-text
     +user-correspondence.__correspondence
 
 block page-left

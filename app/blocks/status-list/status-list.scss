@@ -12,6 +12,7 @@
     position: relative;
     box-sizing: border-box;
     padding-left: 20px;
+    width: 100%;
 
     &_location {
       margin: 5px 0;
@@ -82,6 +83,7 @@
     font-size: 13px;
     line-height: 2.31em;
     letter-spacing: .04em;
+    width: 100%;
   }
 
   &_free {

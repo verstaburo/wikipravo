@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: stretch;
   box-sizing: border-box;
-  padding: 18px 20px;
+  padding: 14px 20px;
   background-color: #fff;
 
   &__img {
@@ -12,6 +12,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    box-sizing: border-box;
+    padding: 5px 0;
     min-width: 50px;
     width: 50px;
   }
@@ -39,8 +41,9 @@
   &__author {
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     line-height: 1.43em;
+    margin-right: 50px;
   }
 
   &__buttons {
@@ -49,12 +52,17 @@
     justify-content: flex-start;
     align-items: flex-start;
     white-space: nowrap;
+    margin-left: auto;
   }
 
   &__button {
     white-space: nowrap;
 
-    &_remove {
+    .button__name {
+      letter-spacing: .035em;
+    }
+
+    &_edit {
       margin-right: 20px;
     }
   }
@@ -62,16 +70,16 @@
   &__content {
     font-size: 13px;
     font-weight: 400;
-    letter-spacing: .04em;
+    letter-spacing: .035em;
     line-height: 1.54em;
     width: 100%;
     color: $color-font;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     p {
       font-size: inherit;
       font-weight: inherit;
-      letter-spacing: .04em;
+      letter-spacing: .035em;
       line-height: 1.54em;
       color: $color-font;
     }
@@ -84,17 +92,22 @@
     align-items: center;
     font-size: 13px;
     font-weight: 400;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     line-height: 1.54em;
     width: 100%;
     color: rgba($color-font, .5);
-    margin-bottom: 15px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+
+    span {
+      letter-spacing: .03em;
+    }
   }
 
   &__remove-icon {
     width: 15px;
     height: 16px;
-    margin-right: 8px;
+    margin-right: 6px;
     fill: rgba($color-font, .5);
   }
 
@@ -108,6 +121,7 @@
   }
 
   &__files {
+    margin: 6px 0;
     width: 100%;
   }
 
@@ -118,10 +132,19 @@
     align-items: flex-start;
     width: 100%;
     font-size: 13px;
-    letter-spacing: .04em;
+    letter-spacing: .042em;
     line-height: 1.54em;
     font-weight: 400;
     color: #b1b1b1;
+
+    time, span {
+      font-size: inherit;
+      letter-spacing: .042em;
+      line-height: inherit;
+      font-weight: 400;
+      color: inherit;
+      margin-right: 4px;
+    }
   }
 
   &_blue {
