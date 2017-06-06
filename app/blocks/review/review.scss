@@ -66,6 +66,11 @@
     margin-right: 41px;
     white-space: nowrap;
     letter-spacing: .04em;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+      color: rgba($color-font, .6);
+    }
   }
 
   &__time {

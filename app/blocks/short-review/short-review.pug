@@ -6,7 +6,7 @@ mixin short-review(data, full)
     +avatar(data.image).__avatar
     +e.review
       +e.H4.title
-        +e.SPAN.author= data.author
+        +e.A.author(href="#")= data.author
         +like-button(data.like)(class="_" + data.like.name).__like
         -if(full)
           +e.TIME.date 2 месяца назад

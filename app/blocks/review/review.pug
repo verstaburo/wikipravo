@@ -8,7 +8,7 @@ mixin review(data)
           +e.IMG(src= data.image)
       +e.describe
         +e.H3.title
-          +e.SPAN.name= data.author
+          +e.A.name(href="#")= data.author
           +e.TIME.time= data.time
         +e.UL.list
           each item in data.info
