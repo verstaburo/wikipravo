@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  padding: 38px 50px;
+  padding: 38px 50px 48px;
   background-color: $color-bg-index;
 
   &__title {
@@ -13,7 +13,7 @@
   }
 
   &__info {
-    margin-bottom: 30px;
+    margin-bottom: 34px;
     width: 100%;
   }
 }

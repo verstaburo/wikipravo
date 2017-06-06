@@ -1,0 +1,38 @@
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+include ../../blocks/table/table
+include ../../blocks/selectbox/selectbox
+
+mixin account-history(table)
+  +b.SECTION.account-history&attributes(attributes)
+    +block-title("История операций")._little._bolder.__title
+    +e.FORM.filter
+      +e.label Показано
+      +selectbox(getData('selectbox-account-operations'))._light._scrollable.__selectbox_operations
+      +selectbox(getData('selectbox-account-time'))._light._scrollable.__selectbox_time
+      +button('button')(type="submit")._blue._small.__button Применить
+    -if(table)
+      +table.__table
+        +e.THEAD
+          +e.TR
+            +e.TH Дата
+            +e.TH Событие
+            +e.TH Сумма
+            +e.TH Баланс
+            +e.TH Примечание
+        +e.TBODY
+          -for(var k = 0; k < 6; k++) {
+            +e.TR
+              +e.TD 28.06.2015 11:00
+              +e.TD Оплата заказа
+              +e.TD -3000
+              +e.TD 15 800
+              +e.TD
+                +e.A(href="#") По сделке от 24.05.2017, 12:45
+          -}
+          +e.TR
+            +e.TD 28.06.2015 11:00
+            +e.TD Оплата заказа
+            +e.TD -3000
+            +e.TD 15 800
+            +e.TD На всякий случай
