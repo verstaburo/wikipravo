@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiki Pravo — Счет на сайте</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="page-layout__left-col">
+            <div class="sidebar">
+                <div class="sidebar__row sidebar__row_logo">
+                    <div class="logo-block logo-block_light logo-block">
+                        <div class="logo-block__logo logo-block__logo_light">
+                            <img class="logo-block__image" src="assets/images/wikipravo-logo-light.svg" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_light">
+                            <p class="logo-block__brand logo-block__brand_light">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_light">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row_nav-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Юристы</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-1"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заявки на услуги</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-2"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать документ</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-3"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать консультацию</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-4"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать другую услугу</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-5"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Форум</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-6"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__row sidebar__row_contacts-block">
+                    <div class="contacts-block contacts-block_icons contacts-block_dark">
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-7"></use></svg>
+                            <div class="contacts-block__label">support@pravoved.ru</div>
+                            <div class="contacts-block__text">E-mail поддержка</div>
+                        </div>
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-8"></use></svg>
+                            <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
+                            <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                        </div>
+                    </div>
+                    <div class="selectbox sidebar__selectbox selectbox selectbox_scrollable">
+                        <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                        <div class="selectbox__button">
+                            <span class="selectbox__button-name">Москва</span>
+                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                        </div>
+                        <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                        </ul>
+                    </div>
+                    <div class="popup-location sidebar__popup-location">
+                        <p class="popup-location__bold">Ваш город:
+                            <span class="popup-location__city">Москва</span>
+                        </p>
+                        <p>Угадали?</p>
+                        <div class="popup-location__buttons">
+                            <button class="button button_blue popup-location__button popup-location__button_yes" type="button">
+                                <span class="button__name">Да</span>
+                            </button>
+                            <button class="button button_lightgrey popup-location__button popup-location__button_no" type="button">
+                                <span class="button__name">Нет</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__right-col">
+            <div class="page-layout__page-header">
+                <div class="header">
+                    <form class="searchbar header__searchbar">
+                        <input class="searchbar__input" type="search" placeholder="Поиск интересуещего вас вопроса" />
+                        <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                    </form>
+                    <div class="header__col header__col_order">
+                        <a class="icon-link icon-link_big">
+                            <i class="icon-link__icon-fa fa fa-comment-o"></i>
+                            <span class="icon-link__text">Заказы
+                                <span class="icon-link__counter"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header__col header__col_message">
+                        <a class="icon-link icon-link_big">
+                            <i class="icon-link__icon-fa fa fa-envelope-o"></i>
+                            <span class="icon-link__text">Сообщения
+                                <span class="icon-link__counter">(1)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header__col header__col_profile">
+                        <div class="header-profile header__profile">
+                            <div class="avatar avatar_small avatar_blue-border avatar_dark-bg header-profile__avatar">
+                                <img src="assets/images/profile-avatar.jpg" alt="" role="presentation" />
+                            </div>
+                            <ul class="header-profile__list">
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Профиль</a>
+                                </li>
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Управление учетом</a>
+                                </li>
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-content">
+                <div class="account">
+                    <h2 class="page-title account__title">Счет на сайте</h2>
+                    <section class="account-info account__info">
+                        <section class="account-info__balance">
+                            <div class="account-info__col account-info__col_total">
+                                <p class="account-info__row">
+                                    <span class="account-info__name">На счёте:</span>
+                                    <span class="account-info__ammount">15 800 Р</span>
+                                </p>
+                            </div>
+                            <div class="account-info__col account-info__col_buttons">
+                                <button class="button button_blue button_small account-info__button js-popup-open" data-open-popup="popup-account-replenish">
+                                    <span class="button__name">Пополнить счет</span>
+                                </button>
+                                <button class="button button_transparent_second button_small account-info__button">
+                                    <span class="button__name">Вывести средства</span>
+                                </button>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div class="page-layout__page-footer">
+                <footer class="footer">
+                    <div class="footer__info">
+                        <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
+                            <div class="logo-block__logo logo-block__logo_dark">
+                                <img class="logo-block__image" src="assets/images/wikipravo-logo-dark.svg" width="120" height="100" alt="" role="presentation" />
+                            </div>
+                            <div class="logo-block__describe logo-block__describe_dark">
+                                <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                                <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                            </div>
+                        </div>
+                        <ul class="socials footer__socials">
+                            <li class="socials__item">
+                                <a class="social social_vk" href="#">ВКонтакте
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_fb" href="#">Facebook
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_twitter" href="#">Twitter
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_youtube" href="#">Youtube
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="footer__copyright">Copyright 2016</p>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__category">
+                            <h3 class="footer__title">Wikipravo</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О проекте</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О команде</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Вакансии</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Обратная связь</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Новости</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Клиентам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказать документ</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Получить консультацию</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Найти юриста</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказть другую услугу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Юристам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Стать юристом проекта</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close-button js-popup-close">
+            <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-login" id="popup-login">
+                <div class="popup__title">Вход в систему</div>
+                <form class="form form_vertical">
+                    <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
+                    <input class="input form__input" type="password" placeholder="Ваш пароль" />
+                    <button class="button button_blue js-popup-close">
+                        <span class="button__name">Войти</span>
+                    </button>
+                    <a class="icon-link icon-link_small form__bottom-link" href="#">
+                        <span class="icon-link__text">Забыли пароль?</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-account-replenish" id="popup-account-replenish">
+                <h2 class="page-title popup-account-replenish__title">Пополнить счет</h2>
+                <form class="form popup-account-replenish__form">
+                    <div class="popup-account-replenish__field popup-account-replenish__field_amount">
+                        <label class="popup-account-replenish__label section-title section-title_left section-title section-title_bold" for="amount">Сумма</label>
+                        <input class="input popup-account-replenish__input popup-account-replenish__input_amount" type="text" id="amount" name="amount" />
+                        <span class="popup-account-replenish__valuta">руб</span>
+                    </div>
+                    <div class="popup-account-replenish__field popup-account-replenish__field_note">
+                        <label class="popup-account-replenish__label section-title section-title_left section-title section-title_bold" for="note">Примечание</label>
+                        <input class="input popup-account-replenish__input popup-account-replenish__input_note" type="text" id="note" name="note" />
+                    </div>
+                    <div class="popup-account-replenish__paysystem">
+                        <h4 class="section-title section-title_left section-title_bold popup-account-replenish__subtitle">Выберите способ оплаты</h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/velocity.min.js"></script>
+    <script src="assets/libs/jquery.scrollbar.min.js"></script>
+    <script src="assets/libs/svg4everybody.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
