@@ -242,13 +242,19 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check"></div>
                                     </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Будет использоваться для показа пользователям сервиса</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
                                     <div class="personal-settings__row">
                                         <div class="personal-settings__col personal-settings__col_label">
                                             <label class="personal-settings__label" for="name">
                                                 <span class="personal-settings__require">* </span>Имя:</label>
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
-                                            <span class="personal-settings__help">Будет использоваться для показа пользователям сервиса</span>
                                             <input class="input personal-settings__input" type="text" placeholder="Евгений Михайлов" required="required" id="name" />
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check"></div>
@@ -260,10 +266,9 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
                                             <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
-                                                <input class="selectbox__input" type="hidden" value="" placeholder="День" />
+                                                <input class="selectbox__input" type="hidden" value="8" placeholder="8" required="required" />
                                                 <div class="selectbox__button">
-                                                    <span class="selectbox__label">8</span>
-                                                    <span class="selectbox__button-name">День</span>
+                                                    <span class="selectbox__button-name">8</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
                                                 <ul class="selectbox__list">
@@ -283,10 +288,9 @@
                                                 </ul>
                                             </div>
                                             <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
-                                                <input class="selectbox__input" type="hidden" value="" placeholder="Месяц" />
+                                                <input class="selectbox__input" type="hidden" value="Март" placeholder="Март" required="required" />
                                                 <div class="selectbox__button">
-                                                    <span class="selectbox__label">Март</span>
-                                                    <span class="selectbox__button-name">Месяц</span>
+                                                    <span class="selectbox__button-name">Март</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
                                                 <ul class="selectbox__list">
@@ -305,10 +309,9 @@
                                                 </ul>
                                             </div>
                                             <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
-                                                <input class="selectbox__input" type="hidden" value="" placeholder="Год" />
+                                                <input class="selectbox__input" type="hidden" value="1975" placeholder="1975" required="required" />
                                                 <div class="selectbox__button">
-                                                    <span class="selectbox__label">1975</span>
-                                                    <span class="selectbox__button-name">Год</span>
+                                                    <span class="selectbox__button-name">1975</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
                                                 <ul class="selectbox__list">
@@ -329,20 +332,36 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check"></div>
                                     </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Для восстановления пароля и рассылки уведомлений</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
                                     <div class="personal-settings__row">
                                         <div class="personal-settings__col personal-settings__col_label">
                                             <label class="personal-settings__label" for="email">
                                                 <span class="personal-settings__require">*</span>Email:</label>
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
-                                            <span class="personal-settings__help">Для восстановления пароля и рассылки уведомлений</span>
                                             <input class="input personal-settings__input" type="email" placeholder="Evgeniy255@mail.ru" required="required" id="email" />
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check">
-                                            <div class="personal-settings__check personal-settings__check_false">
-                                                <svg class="personal-settings__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                            <div class="verify verify_red personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Требуется для восстановления пароля и входа в систему</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
                                     </div>
                                     <div class="personal-settings__row">
                                         <div class="personal-settings__col personal-settings__col_label">
@@ -350,16 +369,17 @@
                                                 <span class="personal-settings__require">*</span>Номер телефона:</label>
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
-                                            <span class="personal-settings__help">Требуется для восстановления пароля и входа в систему</span>
-                                            <input class="input personal-settings__input personal-settings__input_phone" type="tel" placeholder="8 (963) 765-43-21" required="required" id="phone"
-                                            />
+                                            <input class="input personal-settings__input personal-settings__input_phone" type="tel" placeholder="8 (963) 765-43-21" required="required" id="phone" />
                                             <a class="button button_text button_border personal-settings__link" href="#">
                                                 <span class="button__name">Отправить SMS</span>
                                             </a>
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check">
-                                            <div class="personal-settings__check personal-settings__check_true">
-                                                <svg class="personal-settings__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                            <div class="verify verify_green personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
                                             </div>
                                         </div>
                                     </div>
@@ -370,9 +390,9 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
                                             <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox">
-                                                <input class="selectbox__input" type="hidden" value="" placeholder="Федеральный округ" />
+                                                <input class="selectbox__input" type="hidden" value="Центральный федеральный округ" placeholder="Центральный федеральный округ" required="required" />
                                                 <div class="selectbox__button">
-                                                    <span class="selectbox__button-name">Федеральный округ</span>
+                                                    <span class="selectbox__button-name">Центральный федеральный округ</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
                                                 <ul class="selectbox__list">
@@ -391,7 +411,7 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
                                             <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox">
-                                                <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                                                <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" required="required" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Москва</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
