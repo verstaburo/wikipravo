@@ -161,56 +161,67 @@
                 <div class="lk-specialist-order">
                     <h2 class="page-title lk-specialist-order__title">Мои заказы</h2>
                     <div class="lk-specialist-order__status">
-                        <div class="lk-specialist-order__status-text">Статус: </div>
-                        <ul class="lk-specialist-order__ul">
-                            <li class="lk-specialist-order__li">Все
-                                <span class="lk-specialist-order__count">(2)</span>
+                        <div class="lk-specialist-order__status-text">Статус:</div>
+                        <ul class="lk-specialist-order__status-list">
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Все
+                                    <span class="lk-specialist-order__count">(7)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Откликнулся
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Откликнулся
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Приглашен
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Приглашен
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Кандидат
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Кандидат
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Исполнитель
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Исполнитель
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Отказали
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Отказали
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">Отказался
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">Отказался
+                                    <span class="lk-specialist-order__count">(1)</span>
+                                </a>
                             </li>
-                            <li class="lk-specialist-order__li">В корзине
-                                <span class="lk-specialist-order__count">(2)</span>
+                            <li class="lk-specialist-order__status-item">
+                                <a href="#">В корзине
+                                    <span class="lk-specialist-order__count">(2)</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="lk-specialist-order__list">
-                        <div class="lk-specialist-order__request-item">
-                            <div class="lk-specialist-order__request-head">
-                                <div class="lk-specialist-order__request-a lk-specialist-order__request-a_first">Откликнуться</div>
-                                <div class="lk-specialist-order__request-a lk-specialist-order__request-a_second">Отказаться</div>
+                    <ul class="lk-specialist-order__list">
+                        <li class="lk-specialist-order__request-item">
+                            <div class="lk-specialist-order__info">
+                                <div class="lk-specialist-order__info-status">
+                                    <div class="lk-specialist-order__info-title">Откликнулся</div>
+                                    <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                        <span class="button__name">Отказаться</span>
+                                    </button>
+                                </div>
+                                <div class="lk-specialist-order__info-message">
+                                    <a class="lk-specialist-order__message">1 новое сообщение</a>
+                                </div>
                             </div>
                             <article class="short-request lk-specialist-order__item">
                                 <h3 class="short-request__header">
                                     <span class="short-request__title">
                                         <a href="#">Помогите мне пожалуйста в регистрации компании</a>
-                                    </span>
-                                    <span class="action-controls action-controls_nonote short-request__action-controls">
-                                        <button class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" title="В избраное">
-                                            <span class="profile-control__img">
-                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                            </span>
-                                        </button>
-                                        <button class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" title="В черный список">
-                                            <span class="profile-control__img">
-                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
-                                            </span>
-                                        </button>
                                     </span>
                                     <span class="request-condition short-request__condition">
                                         <span class="request-condition__type">Консультация</span>
@@ -232,189 +243,52 @@
                                             <time class="publication-date__date">26 Января 2017, 12:21</time>
                                         </div>
                                         <div class="author short-request__author">
-                                            <span class="author__online"></span>
+                                            <span class="author__online author__online_true"></span>
                                             <span class="author__name">Ксения</span>
                                             <span class="author__location">г. Томск</span>
                                         </div>
                                 </div>
-                        </div>
-                        <div class="short-request__footer">
-                            <div class="subject short-request__subject">
-                                <span class="subject__label">Категория права:</span>
-                                <a class="subject__link" href="#">Миграционное право</a>
-                            </div>
-                            <div class="browse short-request__browse">
-                                <span class="browse__views">
-                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
-                                    <span class="browse__viewscount">395</span>
-                                </span>
-                                <span class="browse__reply">
-                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
-                                    <span class="browse__replycount">4</span>
-                                </span>
-                            </div>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="lk-specialist-order__request-item">
-                        <div class="lk-specialist-order__request-head">
-                            <div class="lk-specialist-order__request-a lk-specialist-order__request-a_first">Откликнуться</div>
-                            <div class="lk-specialist-order__request-a lk-specialist-order__request-a_second">Отказаться</div>
-                        </div>
-                        <article class="short-request lk-specialist-order__item">
-                            <h3 class="short-request__header">
-                                <span class="short-request__title">
-                                    <a href="#">Не справедливая оплата труда</a>
-                                </span>
-                                <span class="action-controls action-controls_nonote short-request__action-controls">
-                                    <button class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" title="В избраное">
-                                        <span class="profile-control__img">
-                                            <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                        </span>
-                                    </button>
-                                    <button class="profile-control profile-control_blacklist action-controls__button action-controls__button_blacklist" title="В черный список">
-                                        <span class="profile-control__img">
-                                            <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
-                                        </span>
-                                    </button>
-                                </span>
-                                <span class="request-condition short-request__condition">
-                                    <span class="request-condition__type">Консультация</span>
-                                    <span class="request-condition__time">
-                                        <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
-                                        <span class="request-condition__text">По договоренности</span>
-                                    </span>
-                                    <span class="request-condition__price">
-                                        <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
-                                        <span class="request-condition__text">35 000 Р</span>
-                                    </span>
-                                </span>
-                            </h3>
-                            <div class="short-request__content">
-                                <p>Работаю менеджером по работе с клиентами! Нас 3 девочки работаем 4/2 168 часов в месяц! Одна из нас собралась увольняться! Получится что мы будем работать 210 часов! Начальство сказало что 168 часов нам оплатят по нашему
-                                    тарифу, а остальные 42 часа...</p>
-                                <div class="short-request__data">
-                                    <div class="publication-date short-request__publication">
-                                        <time class="publication-date__date">26 Января 2017, 12:21</time>
-                                    </div>
-                                    <div class="author short-request__author">
-                                        <span class="author__online"></span>
-                                        <span class="author__name">Ксения</span>
-                                        <span class="author__location">г. Томск</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="short-request__footer">
-                                <div class="subject short-request__subject">
-                                    <span class="subject__label">Категория права:</span>
-                                    <a class="subject__link" href="#">Миграционное право</a>
-                                </div>
-                                <div class="browse short-request__browse">
-                                    <span class="browse__views">
-                                        <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
-                                        <span class="browse__viewscount">395</span>
-                                    </span>
-                                    <span class="browse__reply">
-                                        <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
-                                        <span class="browse__replycount">4</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="lk-specialist-order__request-item">
-                        <div class="lk-specialist-order__request-head">
-                            <div class="lk-specialist-order__request-a lk-specialist-order__request-a_first">Откликнуться</div>
-                            <div class="lk-specialist-order__request-a lk-specialist-order__request-a_second">Отказаться</div>
-                        </div>
-                        <article class="short-request lk-specialist-order__item">
-                            <h3 class="short-request__header">
-                                <span class="short-request__title">
-                                    <a href="#">Отчет о доходах</a>
-                                </span>
-                                <span class="action-controls action-controls_nonote short-request__action-controls">
-                                    <button class="profile-control profile-control_favorites active action-controls__button action-controls__button_favorites" title="В избраное">
-                                        <span class="profile-control__img">
-                                            <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                        </span>
-                                    </button>
-                                    <button class="profile-control profile-control_blacklist disabled action-controls__button action-controls__button_blacklist" title="В черный список">
-                                        <span class="profile-control__img">
-                                            <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
-                                        </span>
-                                    </button>
-                                </span>
-                                <span class="request-condition short-request__condition">
-                                    <span class="request-condition__type">Консультация</span>
-                                    <span class="request-condition__time">
-                                        <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
-                                        <span class="request-condition__text">2 месяца</span>
-                                    </span>
-                                    <span class="request-condition__price">
-                                        <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
-                                        <span class="request-condition__text">35 000 Р</span>
-                                    </span>
-                                </span>
-                            </h3>
-                            <div class="short-request__content">
-                                <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
-                                <div
-                                    class="short-request__data">
-                                    <div class="publication-date short-request__publication">
-                                        <time class="publication-date__date">26 Января 2017, 12:21</time>
-                                    </div>
-                                    <div class="author short-request__author">
-                                        <span class="author__online author__online_true"></span>
-                                        <span class="author__name">Ксения</span>
-                                        <span class="author__location">г. Томск</span>
-                                    </div>
-                            </div>
-                    </div>
-                    <div class="short-request__footer">
-                        <div class="subject short-request__subject">
-                            <span class="subject__label">Категория права:</span>
-                            <a class="subject__link" href="#">Миграционное право</a>
-                        </div>
-                        <div class="browse short-request__browse">
-                            <span class="browse__views">
-                                <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
-                                <span class="browse__viewscount">395</span>
-                            </span>
-                            <span class="browse__reply">
-                                <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
-                                <span class="browse__replycount">4</span>
-                            </span>
-                        </div>
-                    </div>
-                    </article>
                 </div>
-                <div class="lk-specialist-order__request-item">
-                    <div class="lk-specialist-order__request-head">
-                        <div class="lk-specialist-order__request-a lk-specialist-order__request-a_first">Откликнуться</div>
-                        <div class="lk-specialist-order__request-a lk-specialist-order__request-a_second">Отказаться</div>
+                <div class="short-request__footer">
+                    <div class="subject short-request__subject">
+                        <span class="subject__label">Категория права:</span>
+                        <a class="subject__link" href="#">Миграционное право</a>
+                    </div>
+                    <div class="browse short-request__browse">
+                        <span class="browse__views">
+                            <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                            <span class="browse__viewscount">395</span>
+                        </span>
+                        <span class="browse__reply">
+                            <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                            <span class="browse__replycount">4</span>
+                        </span>
+                    </div>
+                </div>
+                </article>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">Приглашен</div>
+                            <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                <span class="button__name">Отказаться</span>
+                            </button>
+                        </div>
+                        <div class="lk-specialist-order__info-message">
+                            <a class="lk-specialist-order__message">Сообщение не прочитано</a>
+                        </div>
                     </div>
                     <article class="short-request lk-specialist-order__item">
                         <h3 class="short-request__header">
                             <span class="short-request__title">
-                                <a href="#">Помочь в регистрации компании</a>
-                            </span>
-                            <span class="action-controls action-controls_nonote short-request__action-controls">
-                                <button class="profile-control profile-control_favorites disabled action-controls__button action-controls__button_favorites" title="В избраное">
-                                    <span class="profile-control__img">
-                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                                    </span>
-                                </button>
-                                <button class="profile-control profile-control_blacklist active action-controls__button action-controls__button_blacklist" title="В черный список">
-                                    <span class="profile-control__img">
-                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
-                                    </span>
-                                </button>
+                                <a href="#">Не справедливая оплата труда</a>
                             </span>
                             <span class="request-condition short-request__condition">
-                                <span class="request-condition__type">Составление документов</span>
+                                <span class="request-condition__type">Консультация</span>
                                 <span class="request-condition__time">
                                     <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
-                                    <span class="request-condition__text">2 месяца</span>
+                                    <span class="request-condition__text">По договоренности</span>
                                 </span>
                                 <span class="request-condition__price">
                                     <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
@@ -452,104 +326,389 @@
                             </div>
                         </div>
                     </article>
-                </div>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">Вы исполнитель</div>
+                        </div>
+                    </div>
+                    <article class="short-request lk-specialist-order__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">Вы отказались от заказа</div>
+                            <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                <span class="button__name">В корзину</span>
+                            </button>
+                        </div>
+                    </div>
+                    <article class="short-request lk-specialist-order__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">Кандидат</div>
+                            <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                <span class="button__name">Отказаться</span>
+                            </button>
+                        </div>
+                        <div class="lk-specialist-order__info-message">
+                            <a class="lk-specialist-order__message">Сообщение не прочитано</a>
+                        </div>
+                    </div>
+                    <article class="short-request lk-specialist-order__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">Вам отказали</div>
+                            <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                <span class="button__name">Отказаться</span>
+                            </button>
+                        </div>
+                    </div>
+                    <article class="short-request lk-specialist-order__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="lk-specialist-order__request-item">
+                    <div class="lk-specialist-order__info">
+                        <div class="lk-specialist-order__info-status">
+                            <div class="lk-specialist-order__info-title">В корзине</div>
+                            <button class="button button_text button_noborder button_bold lk-specialist-order__button">
+                                <span class="button__name">Восстановить из корзины</span>
+                            </button>
+                        </div>
+                    </div>
+                    <article class="short-request lk-specialist-order__item">
+                        <h3 class="short-request__header">
+                            <span class="short-request__title">
+                                <a href="#">Не справедливая оплата труда</a>
+                            </span>
+                            <span class="request-condition short-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <span class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </span>
+                                <span class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">35 000 Р</span>
+                                </span>
+                            </span>
+                        </h3>
+                        <div class="short-request__content">
+                            <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
+                            <div class="short-request__data">
+                                <div class="publication-date short-request__publication">
+                                    <time class="publication-date__date">26 Января 2017, 12:21</time>
+                                </div>
+                                <div class="author short-request__author">
+                                    <span class="author__online author__online_true"></span>
+                                    <span class="author__name">Ксения</span>
+                                    <span class="author__location">г. Томск</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-request__footer">
+                            <div class="subject short-request__subject">
+                                <span class="subject__label">Категория права:</span>
+                                <a class="subject__link" href="#">Миграционное право</a>
+                            </div>
+                            <div class="browse short-request__browse">
+                                <span class="browse__views">
+                                    <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                    <span class="browse__viewscount">395</span>
+                                </span>
+                                <span class="browse__reply">
+                                    <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                                    <span class="browse__replycount">4</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="page-layout__page-footer">
-        <footer class="footer">
-            <div class="footer__info">
-                <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
-                    <div class="logo-block__logo logo-block__logo_dark">
-                        <img class="logo-block__image" src="assets/images/wikipravo-logo-dark.svg" width="120" height="100" alt="" role="presentation" />
+        <div class="page-layout__page-footer">
+            <footer class="footer">
+                <div class="footer__info">
+                    <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
+                        <div class="logo-block__logo logo-block__logo_dark">
+                            <img class="logo-block__image" src="assets/images/wikipravo-logo-dark.svg" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_dark">
+                            <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
                     </div>
-                    <div class="logo-block__describe logo-block__describe_dark">
-                        <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
-                        <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                    <ul class="socials footer__socials">
+                        <li class="socials__item">
+                            <a class="social social_vk" href="#">ВКонтакте
+                                <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_fb" href="#">Facebook
+                                <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_twitter" href="#">Twitter
+                                <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social social_youtube" href="#">Youtube
+                                <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__copyright">Copyright 2016</p>
+                </div>
+                <nav class="footer__navigation">
+                    <div class="footer__category">
+                        <h3 class="footer__title">Wikipravo</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">О проекте</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">О команде</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Вакансии</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Обратная связь</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Новости</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <ul class="socials footer__socials">
-                    <li class="socials__item">
-                        <a class="social social_vk" href="#">ВКонтакте
-                            <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="social social_fb" href="#">Facebook
-                            <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="social social_twitter" href="#">Twitter
-                            <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a class="social social_youtube" href="#">Youtube
-                            <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg>
-                        </a>
-                    </li>
-                </ul>
-                <p class="footer__copyright">Copyright 2016</p>
-            </div>
-            <nav class="footer__navigation">
-                <div class="footer__category">
-                    <h3 class="footer__title">Wikipravo</h3>
-                    <ul class="menulist menulist_footer footer__list">
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">О проекте</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">О команде</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Вакансии</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Обратная связь</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Новости</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__category">
-                    <h3 class="footer__title">Клиентам</h3>
-                    <ul class="menulist menulist_footer footer__list">
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Правила сервиса</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Заказать документ</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Получить консультацию</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Найти юриста</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Заказть другую услугу</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__category">
-                    <h3 class="footer__title">Юристам</h3>
-                    <ul class="menulist menulist_footer footer__list">
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Правила сервиса</a>
-                        </li>
-                        <li class="menulist__item">
-                            <a class="menulist__link" href="#">Стать юристом проекта</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </footer>
-    </div>
+                    <div class="footer__category">
+                        <h3 class="footer__title">Клиентам</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Правила сервиса</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Заказать документ</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Получить консультацию</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Найти юриста</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Заказть другую услугу</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__category">
+                        <h3 class="footer__title">Юристам</h3>
+                        <ul class="menulist menulist_footer footer__list">
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Правила сервиса</a>
+                            </li>
+                            <li class="menulist__item">
+                                <a class="menulist__link" href="#">Стать юристом проекта</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </footer>
+        </div>
     </div>
     </div>
     <div class="popups">

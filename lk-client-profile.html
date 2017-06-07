@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiki Pravo — ЛК. Клиент. Профиль</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico?v=2" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="page-layout__left-col">
+            <div class="sidebar">
+                <div class="sidebar__row sidebar__row_logo">
+                    <div class="logo-block logo-block_light logo-block">
+                        <div class="logo-block__logo logo-block__logo_light">
+                            <img class="logo-block__image" src="assets/images/wikipravo-logo-light.svg" width="120" height="100" alt="" role="presentation" />
+                        </div>
+                        <div class="logo-block__describe logo-block__describe_light">
+                            <p class="logo-block__brand logo-block__brand_light">Wiki Pravo</p>
+                            <p class="logo-block__text logo-block__text_light">АНО “Национальная рейтинговая юридическая система”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row_nav-menu">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Юристы</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-1"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заявки на услуги</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-2"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать документ</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-3"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать консультацию</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-4"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Заказать другую услугу</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-5"></use></svg>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a class="nav-menu__link" href="#">
+                                <span>Форум</span>
+                                <svg class="nav-menu__icon"><use xlink:href="assets/images/icon.svg#icon_menu-6"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar__row sidebar__row_contacts-block">
+                    <div class="contacts-block contacts-block_icons contacts-block_dark">
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-7"></use></svg>
+                            <div class="contacts-block__label">support@pravoved.ru</div>
+                            <div class="contacts-block__text">E-mail поддержка</div>
+                        </div>
+                        <div class="contacts-block__item">
+                            <svg class="contacts-block__icon"><use xlink:href="assets/images/icon.svg#icon_menu-8"></use></svg>
+                            <div class="contacts-block__label contacts-block__label_big">8 800 700 60 60</div>
+                            <div class="contacts-block__text">Бесплатные звонки по РФ</div>
+                        </div>
+                    </div>
+                    <div class="selectbox sidebar__selectbox selectbox selectbox_scrollable">
+                        <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                        <div class="selectbox__button">
+                            <span class="selectbox__button-name">Москва</span>
+                            <i class="selectbox__right-icon fa fa-angle-down"></i>
+                        </div>
+                        <ul class="selectbox__list">
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                            <li class="selectbox__option">Москва</li>
+                            <li class="selectbox__option">Санкт-Петербург</li>
+                            <li class="selectbox__option">Новосибирск</li>
+                            <li class="selectbox__option">Тольятти</li>
+                        </ul>
+                    </div>
+                    <div class="popup-location sidebar__popup-location">
+                        <p class="popup-location__bold">Ваш город:
+                            <span class="popup-location__city">Москва</span>
+                        </p>
+                        <p>Угадали?</p>
+                        <div class="popup-location__buttons">
+                            <button class="button button_blue popup-location__button popup-location__button_yes" type="button">
+                                <span class="button__name">Да</span>
+                            </button>
+                            <button class="button button_lightgrey popup-location__button popup-location__button_no" type="button">
+                                <span class="button__name">Нет</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout__right-col">
+            <div class="page-layout__page-header">
+                <div class="header">
+                    <form class="searchbar header__searchbar">
+                        <input class="searchbar__input" type="search" placeholder="Поиск интересуещего вас вопроса" />
+                        <img class="searchbar__icon" src="assets/images/icon-search.svg" alt="" role="presentation" />
+                    </form>
+                    <div class="header__col header__col_order">
+                        <a class="icon-link icon-link_big">
+                            <i class="icon-link__icon-fa fa fa-comment-o"></i>
+                            <span class="icon-link__text">Заказы
+                                <span class="icon-link__counter"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header__col header__col_message">
+                        <a class="icon-link icon-link_big">
+                            <i class="icon-link__icon-fa fa fa-envelope-o"></i>
+                            <span class="icon-link__text">Сообщения
+                                <span class="icon-link__counter">(1)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="header__col header__col_profile">
+                        <div class="header-profile header__profile">
+                            <div class="avatar avatar_small avatar_blue-border avatar_dark-bg header-profile__avatar">
+                                <img src="assets/images/profile-avatar.jpg" alt="" role="presentation" />
+                            </div>
+                            <ul class="header-profile__list">
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Профиль</a>
+                                </li>
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Управление учетом</a>
+                                </li>
+                                <li class="header-profile__item">
+                                    <a class="header-profile__link" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-layout__page-content">
+                <div class="lk-client-profile">
+                    <h2 class="page-title lk-client-profile__title">Констанит Константинов Карамазов</h2>
+                    <section class="client-profile-card lk-client-profile__card">
+                        <div class="client-profile-card__person">
+                            <div class="jurist-name client-profile-card__title">
+                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                </div>
+                                <span class="jurist-name__lawyername">
+                                    <a href="#">Константин Константинов</a>
+                                </span>
+                            </div>
+                            <div class="client-profile-card__info">
+                                <form class="client-profile-card__form" id="avatar-update">
+                                    <label class="avatar-browse avatar-browse_update avatar-browse_small js-update client-profile-card__avatar" for="photofile">
+                                        <span class="avatar-browse__label">Обновить фото</span>
+                                        <input class="avatar-browse__input" type="file" id="photofile" name="photofile" accept="image/jpg, image/jpeg, image/png, image/bmp" />
+                                        <output class="avatar-browse__output" for="photofile">
+                                            <img class="avatar-browse__img" src="assets/images/client-profile.jpg" alt="" role="presentation" />
+                                        </output>
+                                    </label>
+                                </form>
+                                <div class="client-profile-card__status">
+                                    <ul class="status-list client-profile-card__status-list">
+                                        <li class="status-list__item status-list__item status-list__item_location">
+                                            <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                            <span class="status-list__name">Москва</span>
+                                        </li>
+                                    </ul>
+                                    <div class="vote-block client-profile-card__likes">
+                                        <span class="like-button like-button_like">
+                                            <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-12"></use></svg>
+                                            <span class="like-button__count">124</span>
+                                        </span>
+                                        <span class="like-button like-button_dislike">
+                                            <svg class="like-button__img"><use xlink:href="assets/images/icon.svg#icon_menu-13"></use></svg>
+                                            <span class="like-button__count">2</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-profile-card__describe">
+                            <p class="client-profile-card__reginfo">Зарегистрирован на сайте:
+                                <time class="client-profile-card__regtime">меньше месяца</time>
+                            </p>
+                        </div>
+                    </section>
+                    <section class="client-profile-tabs lk-client-profile__tabs">
+                        <div class="tab-toggles tab-toggles_transparent client-profile-tabs__controls">
+                            <a class="button active tab-toggles__button" data-tab-target="tab1">
+                                <span class="button__name">Основное</span>
+                            </a>
+                            <a class="button tab-toggles__button" data-tab-target="tab2">
+                                <span class="button__name">Персональные данные</span>
+                            </a>
+                            <a class="button tab-toggles__button" data-tab-target="tab3">
+                                <span class="button__name">Отзывы</span>
+                            </a>
+                            <a class="button tab-toggles__button" data-tab-target="tab4">
+                                <span class="button__name">Избранное</span>
+                            </a>
+                            <a class="button tab-toggles__button" data-tab-target="tab5">
+                                <span class="button__name">Черный список</span>
+                            </a>
+                            <a class="button tab-toggles__button" data-tab-target="tab6">
+                                <span class="button__name">Настройка уведомлений</span>
+                            </a>
+                        </div>
+                        <div class="client-profile-tabs__container" data-tab-group-container="client-profile">
+                            <div class="client-profile-tabs__content active" data-tab-group="client-profile" data-tab-id="tab1">
+                                <form class="personal-settings client-profile-tabs__maindata">
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="login">Логин:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input input_noborder input_blue personal-settings__input personal-settings__input_login" type="text" value="Evgeniy255" disabled="disabled" id="login" />
+                                            <a class="button button_text button_border personal-settings__link" href="#">
+                                                <span class="button__name">Изменить пароль</span>
+                                            </a>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="name">
+                                                <span class="personal-settings__require">* </span>Имя:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Будет использоваться для показа пользователям сервиса</span>
+                                            <input class="input personal-settings__input" type="text" placeholder="Евгений Михайлов" required="required" id="name" />
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="birthdate">
+                                                <span class="personal-settings__require">*</span>Дата рождения:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="День" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__label">8</span>
+                                                    <span class="selectbox__button-name">День</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">1</li>
+                                                    <li class="selectbox__option">2</li>
+                                                    <li class="selectbox__option">3</li>
+                                                    <li class="selectbox__option">4</li>
+                                                    <li class="selectbox__option">5</li>
+                                                    <li class="selectbox__option">6</li>
+                                                    <li class="selectbox__option">7</li>
+                                                    <li class="selectbox__option">8</li>
+                                                    <li class="selectbox__option">9</li>
+                                                    <li class="selectbox__option">10</li>
+                                                    <li class="selectbox__option">11</li>
+                                                    <li class="selectbox__option">12</li>
+                                                    <li class="selectbox__option">13</li>
+                                                </ul>
+                                            </div>
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Месяц" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__label">Март</span>
+                                                    <span class="selectbox__button-name">Месяц</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Январь</li>
+                                                    <li class="selectbox__option">Февраль</li>
+                                                    <li class="selectbox__option">Март</li>
+                                                    <li class="selectbox__option">Апрель</li>
+                                                    <li class="selectbox__option">Май</li>
+                                                    <li class="selectbox__option">Июнь</li>
+                                                    <li class="selectbox__option">Июль</li>
+                                                    <li class="selectbox__option">Август</li>
+                                                    <li class="selectbox__option">Сентябрь</li>
+                                                    <li class="selectbox__option">Октябрь</li>
+                                                    <li class="selectbox__option">Ноябрь</li>
+                                                    <li class="selectbox__option">Декабрь</li>
+                                                </ul>
+                                            </div>
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Год" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__label">1975</span>
+                                                    <span class="selectbox__button-name">Год</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">2017</li>
+                                                    <li class="selectbox__option">2016</li>
+                                                    <li class="selectbox__option">2015</li>
+                                                    <li class="selectbox__option">2014</li>
+                                                    <li class="selectbox__option">2013</li>
+                                                    <li class="selectbox__option">2012</li>
+                                                    <li class="selectbox__option">2011</li>
+                                                    <li class="selectbox__option">2010</li>
+                                                    <li class="selectbox__option">2009</li>
+                                                    <li class="selectbox__option">2008</li>
+                                                    <li class="selectbox__option">2007</li>
+                                                    <li class="selectbox__option">2006</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="email">
+                                                <span class="personal-settings__require">*</span>Email:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Для восстановления пароля и рассылки уведомлений</span>
+                                            <input class="input personal-settings__input" type="email" placeholder="Evgeniy255@mail.ru" required="required" id="email" />
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check">
+                                            <div class="personal-settings__check personal-settings__check_false">
+                                                <svg class="personal-settings__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="phone">
+                                                <span class="personal-settings__require">*</span>Номер телефона:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Требуется для восстановления пароля и входа в систему</span>
+                                            <input class="input personal-settings__input personal-settings__input_phone" type="tel" placeholder="8 (963) 765-43-21" required="required" id="phone"
+                                            />
+                                            <a class="button button_text button_border personal-settings__link" href="#">
+                                                <span class="button__name">Отправить SMS</span>
+                                            </a>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check">
+                                            <div class="personal-settings__check personal-settings__check_true">
+                                                <svg class="personal-settings__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="region">
+                                                <span class="personal-settings__require">*</span>Регион:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox">
+                                                <input class="selectbox__input" type="hidden" value="" placeholder="Федеральный округ" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Федеральный округ</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Республика Адегея</li>
+                                                    <li class="selectbox__option">Республика Башкортостан</li>
+                                                    <li class="selectbox__option">Республика Бурятия</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="city">
+                                                <span class="personal-settings__require">*</span>Город:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox">
+                                                <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Москва</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Москва</li>
+                                                    <li class="selectbox__option">Санкт-Петербург</li>
+                                                    <li class="selectbox__option">Новосибирск</li>
+                                                    <li class="selectbox__option">Тольятти</li>
+                                                    <li class="selectbox__option">Москва</li>
+                                                    <li class="selectbox__option">Санкт-Петербург</li>
+                                                    <li class="selectbox__option">Новосибирск</li>
+                                                    <li class="selectbox__option">Тольятти</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <button class="button button_blue personal-settings__button" type="submit">
+                                                <span class="button__name">Сохранить изменения</span>
+                                            </button>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="client-profile-tabs__content" data-tab-group="client-profile" data-tab-id="tab2"></div>
+                            <div class="client-profile-tabs__content" data-tab-group="client-profile" data-tab-id="tab3"></div>
+                            <div class="client-profile-tabs__content" data-tab-group="client-profile" data-tab-id="tab4"></div>
+                            <div class="client-profile-tabs__content" data-tab-group="client-profile" data-tab-id="tab5"></div>
+                            <div class="client-profile-tabs__content" data-tab-group="client-profile" data-tab-id="tab6"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="page-layout__page-footer">
+                <footer class="footer">
+                    <div class="footer__info">
+                        <div class="logo-block logo-block_dark logo-block logo-block_row footer__logo">
+                            <div class="logo-block__logo logo-block__logo_dark">
+                                <img class="logo-block__image" src="assets/images/wikipravo-logo-dark.svg" width="120" height="100" alt="" role="presentation" />
+                            </div>
+                            <div class="logo-block__describe logo-block__describe_dark">
+                                <p class="logo-block__brand logo-block__brand_dark">Wiki Pravo</p>
+                                <p class="logo-block__text logo-block__text_dark">АНО “Национальная рейтинговая юридическая система”</p>
+                            </div>
+                        </div>
+                        <ul class="socials footer__socials">
+                            <li class="socials__item">
+                                <a class="social social_vk" href="#">ВКонтакте
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_fb" href="#">Facebook
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_twitter" href="#">Twitter
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a class="social social_youtube" href="#">Youtube
+                                    <svg class="social__img"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="footer__copyright">Copyright 2016</p>
+                    </div>
+                    <nav class="footer__navigation">
+                        <div class="footer__category">
+                            <h3 class="footer__title">Wikipravo</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О проекте</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">О команде</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Вакансии</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Обратная связь</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Новости</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Клиентам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказать документ</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Получить консультацию</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Найти юриста</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Заказть другую услугу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__category">
+                            <h3 class="footer__title">Юристам</h3>
+                            <ul class="menulist menulist_footer footer__list">
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="menulist__item">
+                                    <a class="menulist__link" href="#">Стать юристом проекта</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close-button js-popup-close">
+            <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-login" id="popup-login">
+                <div class="popup__title">Вход в систему</div>
+                <form class="form form_vertical">
+                    <input class="input form__input" type="text" placeholder="Ваш e-mail или телефон" />
+                    <input class="input form__input" type="password" placeholder="Ваш пароль" />
+                    <button class="button button_blue js-popup-close">
+                        <span class="button__name">Войти</span>
+                    </button>
+                    <a class="icon-link icon-link_small form__bottom-link" href="#">
+                        <span class="icon-link__text">Забыли пароль?</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/velocity.min.js"></script>
+    <script src="assets/libs/jquery.scrollbar.min.js"></script>
+    <script src="assets/libs/svg4everybody.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
