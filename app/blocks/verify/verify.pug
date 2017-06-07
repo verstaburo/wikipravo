@@ -1,0 +1,11 @@
+include ../icon/icons
+
+mixin verify(verify)
+  -var icon = "boldcross"
+  -var addClass = "_red"
+  -var text = "Не проверено"
+  -if(verify) {icon = "boldcheck"; addClass = "_green"; text = "Проверено"}
+  +b(class="verify" + addClass)&attributes(attributes)
+    +e.img
+      +icon(icon).__icon
+    +e.SPAN.text= text

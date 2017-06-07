@@ -7,3 +7,4 @@ mixin avatar-browse(label, image, labelLoad)
     +e.SPAN.label(data-label-on-load=lblOnLoad)= label
     +e.INPUT(type="file", id="photofile", name="photofile", accept = "image/jpg, image/jpeg, image/png, image/bmp").input
     +e.OUTPUT(for="photofile").output
+      +e.IMG(class="img" src=imgSrc alt="")

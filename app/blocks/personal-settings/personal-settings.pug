@@ -1,0 +1,89 @@
+include ../button/button
+include ../input/input
+include ../selectbox/selectbox
+include ../icon/icons
+include ../verify/verify
+
+mixin personal-settings()
+  +b.FORM.personal-settings&attributes(attributes)
+    +e.row
+      +e.col_label
+        +e.LABEL(for="login").__label Логин:
+      +e.col_field
+        +input(type="text" value="Evgeniy255" disabled)._noborder._blue#login.__input_login
+        +button('a')(href="#")._text._border.__link Изменить пароль
+      +e.col_check
+    +e.row_help
+      +e.col_label
+      +e.col_field
+        +e.SPAN.help Будет использоваться для показа пользователям сервиса
+      +e.col_check
+    +e.row
+      +e.col_label
+        +e.LABEL(for="name").__label 
+          +e.SPAN.require * 
+          | Имя:
+      +e.col_field
+        +input(type="text" placeholder="Евгений Михайлов" required)#name.__input
+      +e.col_check
+    +e.row
+      +e.col_label
+        +e.LABEL(for="birthdate").__label
+          +e.SPAN.require *
+          | Дата рождения:
+      +e.col_field
+        +selectbox(getData('selectbox-day'), "", true, "8")._light._scrollable.__selectbox_birth
+        +selectbox(getData('selectbox-month'), "", true, "Март")._light._scrollable.__selectbox_birth
+        +selectbox(getData('selectbox-year'), "", true, "1975")._light._scrollable.__selectbox_birth
+      +e.col_check
+    +e.row_help
+      +e.col_label
+      +e.col_field
+        +e.SPAN.help Для восстановления пароля и рассылки уведомлений
+      +e.col_check
+    +e.row
+      +e.col_label
+        +e.LABEL(for="email").__label 
+          +e.SPAN.require *
+          | Email:
+      +e.col_field
+        +input(type="email" placeholder="Evgeniy255@mail.ru" required)#email.__input
+      +e.col_check
+        +verify.__verify
+    +e.row_help
+      +e.col_label
+      +e.col_field
+        +e.SPAN.help Требуется для восстановления пароля и входа в систему
+      +e.col_check
+    +e.row
+      +e.col_label
+        +e.LABEL(for="phone").__label 
+          +e.SPAN.require *
+          | Номер телефона:
+      +e.col_field
+        +input(type="tel" placeholder="8 (963) 765-43-21" required)#phone.__input_phone
+        +button('a')(href="#")._text._border.__link Отправить SMS
+      +e.col_check
+        +verify(true).__verify
+    +e.row
+      +e.col_label
+        +e.LABEL(for="region").__label 
+          +e.SPAN.require *
+          | Регион:
+      +e.col_field
+        +selectbox(getData('selectbox-region'), "", true, "Центральный федеральный округ")._light._scrollable.__selectbox
+      +e.col_check
+    +e.row
+      +e.col_label
+        +e.LABEL(for="city").__label 
+          +e.SPAN.require *
+          | Город:
+      +e.col_field
+        +selectbox(getData('sidebar-city-list'), "", true, "Москва")._light._scrollable.__selectbox
+      +e.col_check
+    +e.row
+      +e.col_label
+      +e.col_field
+        +button('button')(type="submit")._blue.__button Сохранить изменения
+      +e.col_check
+    

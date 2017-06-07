@@ -1,0 +1,15 @@
+include ../../blocks/tab-toggles/tab-toggles
+include ../../blocks/personal-settings/personal-settings
+
+mixin client-profile-tabs()
+  +b.SECTION.client-profile-tabs&attributes(attributes)
+    +tab-toggles(getData("client-profile-tabs"))._transparent.__controls
+    +e.container(data-tab-group-container="client-profile")
+      +e.content(class=" active" data-tab-group="client-profile" data-tab-id="tab1")
+        +personal-settings.__maindata
+      +e.content(data-tab-group="client-profile" data-tab-id="tab2")
+      +e.content(data-tab-group="client-profile" data-tab-id="tab3")
+      +e.content(data-tab-group="client-profile" data-tab-id="tab4")
+      +e.content(data-tab-group="client-profile" data-tab-id="tab5")
+      +e.content(data-tab-group="client-profile" data-tab-id="tab6")
+    

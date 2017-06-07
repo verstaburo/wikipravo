@@ -1,8 +1,9 @@
-mixin selectbox(data, label, required)
+mixin selectbox(data, label, required, def)
   -var req = false
   -var placeholder = data.option[0].name
   -var defaultValue = ""
   -if(data.placeholder) {placeholder = data.placeholder} else {defaultValue = data.option[0].name}
+  -if(def) {placeholder = def; defaultValue = def}
   -if(required) {req= true}
   +b.selectbox&attributes(attributes)
     +e.INPUT.input(type='hidden' value=defaultValue placeholder=placeholder required=req)

@@ -6,4 +6,22 @@
   box-sizing: border-box;
   width: 100%;
   background: $color-bg-index;
+  padding: 44px 50px;
+  
+  &__title {
+    box-sizing: border-box;
+    padding: 30px 33px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  &__card {
+    width: 100%;
+    border: 1px solid #e4e8ea;
+  }
+  
+  &__tabs {
+    width: 100%;
+  }
 }

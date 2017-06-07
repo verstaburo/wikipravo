@@ -38,7 +38,7 @@ export function AvatarLoad() {
           fileNameOutput.textContent = '';
           fileNameOutput.classList.add('avatar-browse__file-output_dark');
           fileNameOutput.appendChild(spanName);
-        } else {
+        } else if(!container.classList.contains('js-update')) {
           container.appendChild(removeBtn);
         }
 
@@ -46,7 +46,8 @@ export function AvatarLoad() {
         reader.readAsDataURL(img);
         reader.onload = (function(theImg) {
           return function(e) {
-            $(output).append('<img class="avatar-browse__img" src="' + e.target.result + '" alt="' + theImg.name + '">');
+            $(output).find('avatar-browse__img').attr('src', e.target.result);
+            $(output).find('avatar-browse__img').attr('alt', theImg.name);
           }
         })(img);
       }
@@ -54,6 +55,10 @@ export function AvatarLoad() {
       ImgPreview(file);
 
       lbl.innerHTML = lbl.getAttribute('data-label-on-load');
+      
+      if($('avatar-browse').hasClass('js-update')) {
+        $('avatar-browse').parents('form#avatar-update').submit();
+      }
     }, false);
   }
 
@@ -62,14 +67,14 @@ export function AvatarLoad() {
     var msg= $(fileNameOutput).attr('data-err-msg');
     if(!fileNameOutput) {
       $(this).parents('.avatar-browse').find('.avatar-browse__input').value = '';
-      $(this).parents('.avatar-browse').find('.avatar-browse__img').remove();
+      $(this).parents('.avatar-browse').find('.avatar-browse__img').attr('src', '');
       $(this).parents('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");
       $(this).remove();
     } else {
       $(fileNameOutput).find('.avatar-browse__filename').remove();
       $(fileNameOutput).removeClass('avatar-browse__file-output_dark').text(msg);
       $('.avatar-browse').find('.avatar-browse__input').value = '';
-      $('.avatar-browse').find('.avatar-browse__img').remove();
+      $('.avatar-browse').find('.avatar-browse__img').attr('src', '');
       $('.avatar-browse').find('.avatar-browse__label').text("Выберите файл");
       $('.avatar-browse__remove').remove();
     }

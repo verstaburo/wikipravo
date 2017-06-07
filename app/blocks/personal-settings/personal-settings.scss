@@ -1,0 +1,110 @@
+.personal-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    
+    &_help {
+      
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
+  }
+  
+  &__col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    
+    &_label {
+      justify-content: flex-end;
+    }
+    
+    &_field {
+      flex: none;
+      min-width: 440px;
+      width: 440px;
+      margin-left: 30px;
+      margin-right: 20px;
+    }
+  }
+  
+  &__help {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    color: rgba(#b1b1b1, .9);
+  }
+  
+  &__require {
+    font-size: 15px;
+    letter-spacing: .04em;
+    font-weight: 500;
+    color: rgba($color-red-cross, .75);
+    margin-right: 4px;
+  }
+  
+  &__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: .04em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: rgba($color-font, .75);
+    white-space: nowrap;
+  }
+  
+  &__input {
+    width: 100%;
+    
+    &_login, &_phone {
+      width: auto;
+      flex: 1;
+      margin-right: 20px;
+    }
+    
+    &_login {
+      font-weight: 700;
+    }
+  }
+  
+  &__link {
+    white-space: nowrap;
+  }
+  
+  &__selectbox {
+    width: 100%;
+    
+    &_birth {
+      width: auto;
+      flex: 1;
+      margin-right: 24px;
+    }
+  }
+  
+  &__button {
+    width: 100%;
+  }
+}

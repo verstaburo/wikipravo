@@ -1,0 +1,8 @@
+[
+  {"name" : "Основное", "target" : "tab1", "main" : true},
+  {"name" : "Персональные данные", "target" : "tab2"},
+  {"name" : "Отзывы", "target" : "tab3"},
+  {"name" : "Избранное", "target" : "tab4"},
+  {"name" : "Черный список", "target" : "tab5"},
+  {"name" : "Настройка уведомлений", "target" : "tab6"}
+]

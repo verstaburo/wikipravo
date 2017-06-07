@@ -3,6 +3,7 @@ include ../../blocks/popup/popup
 include ../../blocks/page-title/page-title
 include ../../blocks/input/input
 include ../../blocks/section-title/section-title
+include ../../blocks/payment/payment
 
 mixin popup-account-replenish()
   +popup(class=" popup-account-replenish" id="popup-account-replenish")&attributes(attributes)
@@ -16,4 +17,17 @@ mixin popup-account-replenish()
         +e.LABEL(for="note" class=" popup-account-replenish__label section-title_left section-title_bold") Примечание
         +input(type="text" id="note" name="note" class=" popup-account-replenish__input_note")
       +e(class=" popup-account-replenish__paysystem")
-        +section-title("Выберите способ оплаты")._left._bold.popup-account-replenish__subtitle
+        +section-title("Выберите способ оплаты")._bold.popup-account-replenish__subtitle
+        +e.UL(class=" popup-account-replenish__list")
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/cards.svg", "Пластиковые карты")._cards
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/yandex.svg", "Яндекс. Деньги")._yandex
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/webmoney.svg", "Web money")._webmoney
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/sber.svg", "Cбербанк онлайн")._sber
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/alfa.svg", "Альфа клик")._alfa
+          +e.LI(class=" popup-account-replenish__item")
+            +payment("assets/images/payafter.svg", "Купить с отсрочкой оплаты")._payafter
