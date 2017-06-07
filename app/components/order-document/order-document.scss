@@ -132,4 +132,23 @@
     font-weight: 400;
     color: $color-placeholder;
   }
+
+  &_half {
+
+    .order-document {
+
+      &__row {
+
+        &_half {
+          width: 50%;
+          min-width: 0;
+
+          @include s-desktop {
+            width: 50%;
+            min-width: 0;
+          }
+    }
+      }
+    }
+  }
 }

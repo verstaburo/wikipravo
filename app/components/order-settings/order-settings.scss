@@ -76,7 +76,7 @@
     align-items: stretch;
     width: 100%;
 
-    @include s-desktop {
+    @include desktop {
       flex-direction: column;
     }
   }
@@ -85,7 +85,7 @@
     width: 60%;
     margin-right: 20px;
 
-    @include s-desktop {
+    @include desktop {
       width: 100%;
       margin-right: 0;
     }
@@ -94,7 +94,7 @@
   &__second {
     width: calc(40% - 20px);
 
-    @include s-desktop {
+    @include desktop {
       width: 100%;
     }
   }
@@ -128,6 +128,22 @@
   &__selectbox {
     @include s-desktop {
       width: 100%;
+    }
+  }
+
+  &_half {
+
+    .order-settings {
+
+      &__content {
+        width: 50%;
+        min-width: 0;
+
+        @include desktop {
+          width: 50%;
+          min-width: 0;
+        }
+      }
     }
   }
 }

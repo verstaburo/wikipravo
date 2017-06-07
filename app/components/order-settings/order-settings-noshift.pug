@@ -1,0 +1,54 @@
+include ../../blocks/block-title/block-title
+include ../../blocks/radiobutton/radiobutton
+include ../../blocks/label-field/label-field
+include ../../blocks/input/input
+include ../../blocks/checkbox/checkbox
+include ../../blocks/selectbox/selectbox
+
+mixin order-settings-noshift()
+  +b.FIELDSET.order-settings&attributes(attributes)
+    +block-title("Настройки публикации").__title
+    +e.radio-group
+      +e('h4') Заявка будет видна
+      +e.radio
+        +radio('Только отобранным юристам', 'r1', 'test')
+        +e.SPAN.inner-text (Только юристы из списка кандидатов смогут увидеть заявку)
+      +e.radio
+        +radio('Юристам по заданным условиям', 'r2', 'test')
+        +e.SPAN.inner-text (Юристы подходящие под условия смогут увидеть заявку)
+    +e.content
+      +e.order-row
+        +e.order-col.__first
+          +e.order-label Специалист в категории права
+          +selectbox(getData('selectbox-law-category'))._light._visible.__selectbox
+        +e.order-col.__second
+          +e.order-label Регион
+          +selectbox(getData('order-region'))._light._height._scrollable
+      +e.order-row
+        +e.order-col.__first
+          +e.order-label Работает с документами
+          +selectbox(getData('selectbox-documents'))._light._visible.__selectbox
+        +e.order-col.__second
+          +e.order-label Стаж работы
+          +e.order-col_inner
+            +e.sublabel От
+            +input(type="numeric" id="exp-start" pattern="[0-9]")
+            +e.sublabel До
+            +input(type="numeric" id="exp-end" pattern="[0-9]")
+      +e.order-row
+        +e.order-col.__checkbox
+          +checkbox('Только адвокаты', 'c1')
+        +e.order-col.__checkbox
+          +checkbox('Опыт работы в Гос.Структурах', 'c2')
+      +e.order-row
+        +e.order-col.__checkbox
+          +checkbox('Есть кабинет в здании суда', 'c3')
+        +e.order-col.__checkbox
+          +checkbox('Есть профиль на РосПравосудие', 'c4')
+    +e.radio-group
+      +e.radio
+        +radio('Всем юристам', 'r3', 'test2')
+        +e.SPAN.inner-text (Юристы смогут просматривать вашу завку и откливаться на нее)
+      +e.radio
+        +radio('Всем', 'r4', 'test2')
+        +e.SPAN.inner-text (Любой посетитель сайта сможет просмотреть вашу заявку. Юристы смогут откликаться на нее)

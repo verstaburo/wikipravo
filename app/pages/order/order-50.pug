@@ -1,0 +1,26 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Заказать'
+
+block content
+  +b.order
+    +order-form
+      +order-candidate._half
+      +order-document-noshift._half
+      +order-settings-noshift._half
+      +order-registration._half
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
+    +popup-order-success
