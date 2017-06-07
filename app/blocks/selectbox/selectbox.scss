@@ -364,13 +364,18 @@
     }
   }
 
-  /*&_half {
+  &_shift {
 
-    .selectbox__list {
+    .selectbox {
 
-      @include s-desktop {
-        width: 50%;
+      &__arrow {
+        transform: rotate(90deg);
+      }
+
+      &__sublist {
+        top: 100%;
+        left: 80px;
       }
     }
-  }*/
+  }
 }

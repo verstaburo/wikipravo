@@ -27,8 +27,8 @@
 
     @include s-desktop {
       flex-direction: column;
-      width: 66%;
-      min-width: 66%;
+      width: 100%;
+      min-width: 0%;
     }
   }
 

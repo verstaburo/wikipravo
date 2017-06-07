@@ -14,71 +14,136 @@
   }
 
   &__status {
-    background: #fff;
-    font-size: 14px;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
-    padding: 20px 40px;
+    padding: 16px 40px 0;
     margin-bottom: 30px;
-    
-    @include s-desktop {
-      flex-direction: column;
+  }
+
+  &__status-text {
+    font-size: 14px;
+    margin-right: 36px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+  }
+
+  &__status-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__status-item {
+    font-size: 14px;
+    letter-spacing: .04em;
+    color: $color-main;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include s-desktop {
+        margin-right: 30px;
+      }
     }
+
+    a {
+      font-size: inherit;
+      letter-spacing: .04em;
+      color: $color-main;
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        color: rgba($color-main, .8);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
   }
 
   &__request-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
     margin-bottom: 30px;
   }
-  
-  &__status-text {
-    margin-right: 40px;
-    font-weight: medium;
-    
-    @include s-desktop {
-      margin-bottom: 10px;
-    }
-  }
 
-  &__ul {
+  &__info {
+    box-sizing: border-box;
+    padding: 10px 40px 4px;
+    background-color: #fff;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    
-    @include s-desktop {
-      flex-direction: column;
-    }
-  }
-
-  &__li {
-    color: $color-main;
-    cursor: pointer;
-    
-    @include s-desktop {
-      margin: 10px 0;
-    }
-  }
-
-  &__request-head {
-    padding: 15px 40px;
-    background: #fff;
-    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
     border-bottom: 1px solid  $color-bg-index;
+    width: 100%;
   }
 
-  &__request-a {
+  &__info-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    box-sizing: border-box;
+    margin-right: 50px;
+
+    @include s-desktop {
+      margin-right: 30px;
+    }
+  }
+
+  &__info-title {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin-right: 50px;
+    color: $color-font;
+
+    @include s-desktop {
+      margin-right: 30px;
+    }
+  }
+
+  &__info-message {
+    margin-left: auto;
+  }
+
+  &__message {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: $color-main;
+    transition: all .25s ease-in-out;
     cursor: pointer;
 
-    &_first {
-      color: #000;
-      margin-right: 50px;
+    &:hover {
+      color: rgba($color-main, .8);
     }
+  }
 
-    &_second {
-      color: $color-main;
-    }
+  &__item {
+    width: 100%;
   }
 }
