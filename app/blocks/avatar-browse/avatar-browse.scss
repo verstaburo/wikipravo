@@ -111,15 +111,15 @@
       height: 10px;
     }
   }
-  
+
   &_small {
     min-width: 106px;
     width: 106px;
     height: 106px;
   }
-  
+
   &_update {
-    
+
     &::before {
       position: absolute;
       content: '';
@@ -131,9 +131,9 @@
       background-color: rgba($color-font, .5);
       z-index: 3;
     }
-    
+
     .avatar-browse {
-      
+
       &__label {
         color: #fff;
         font-weight: 700;

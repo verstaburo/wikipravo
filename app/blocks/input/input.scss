@@ -18,7 +18,7 @@
     box-shadow: none;
     outline: none;
   }
-  
+
   &:disabled {
     background-color: transparent;
   }
@@ -30,10 +30,10 @@
   &_noborder {
     border-color: transparent;
   }
-  
+
   &_blue {
     background-color: #f1f5f8;
-    
+
     &:disabled {
       background-color: #f1f5f8;
     }

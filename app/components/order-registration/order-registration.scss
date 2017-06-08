@@ -102,11 +102,11 @@
     .order-registration {
 
       &__content {
-        flex-direction: column;
         width: 50%;
         min-width: 0;
 
         @include desktop {
+          flex-direction: column;
           width: 50%;
           min-width: 0;
         }

@@ -5,20 +5,20 @@
   align-items: flex-start;
   box-sizing: border-box;
   background-color: #fff;
-  
+
   &__controls {
     width: 100%;
     flex-wrap: wrap;
-    
+
     .tab-toggles__button {
       width: 25%;
     }
   }
-  
+
   &__container {
     width: 100%;
   }
-  
+
   &__content {
     width: 100%;
     display: none;
@@ -26,7 +26,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    
+
     &.active {
       display: flex;
     }

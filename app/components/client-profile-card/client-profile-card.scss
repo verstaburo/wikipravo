@@ -5,7 +5,7 @@
   align-items: stretch;
   box-sizing: border-box;
   background-color: #fff;
-  
+
   &__person {
     width: 390px;
     min-width: 390px;
@@ -17,11 +17,11 @@
     border-right: 1px solid rgba($color-font, .1);
     padding: 30px 38px 30px 30px;
   }
-  
+
   &__title {
     margin-bottom: 30px;
   }
-  
+
   &__info {
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@
     box-sizing: border-box;
     width: 100%;
   }
-  
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     min-width: 106px;
     margin-right: 26px;
   }
-  
+
   &__status {
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
     align-items: flex-start;
     flex: 1;
   }
-  
+
   &__describe {
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@
     box-sizing: border-box;
     padding: 30px 38px;
   }
-  
+
   &__reginfo {
     font-size: 14px;
     font-weight: 400;
@@ -65,7 +65,7 @@
     line-height: 1.5em;
     color: rgba($color-font, .5);
   }
-  
+
   &__regtime {
     font-size: inherit;
     font-weight: inherit;
