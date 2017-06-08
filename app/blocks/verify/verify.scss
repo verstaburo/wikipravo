@@ -28,15 +28,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 14px;
-    min-width: 14px;
-    height: 14px;
+    width: 13px;
+    min-width: 13px;
+    height: 13px;
     transform: translate(-50%, -50%);
     fill: none;
     stroke-width: 3;
   }
 
-  &_red {
+  &_no {
 
     .verify {
 
@@ -54,7 +54,7 @@
     }
   }
 
-  &_green {
+  &_yes {
 
     .verify {
 
@@ -67,6 +67,7 @@
       }
 
       &__icon {
+        width: 15px;
         stroke: $color-green-dark;
       }
     }

@@ -1,0 +1,15 @@
+include ../../blocks/card-from-list/card-from-list
+include ../../blocks/block-title/block-title
+include ../../blocks/icon/icons
+
+mixin relation-list(title, icon)
+  -var addClass= "";
+  -if(icon === 'lock') {addClass = "_lock"}
+  -if(icon === 'star') {addClass = "_star"}
+  +b.relation-list&attributes(attributes)
+    +e.header
+      +icon(icon)(class=" __icon" + addClass)
+      +block-title(title)._bold.__title
+    +e.list
+      +card-from-list(true).__item
+      +card-from-list(false).__item

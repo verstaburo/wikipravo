@@ -1,0 +1,83 @@
+include ../input/input
+include ../button/button
+include ../selectbox/selectbox
+include ../checkbox/checkbox
+include ../file-drop/file-drop
+
+mixin identification()
+  +b.SECTION.identification&attributes(attributes)
+    +e.P.lead
+      | Клиенты, прошедшие проверку, получают больше доверия со стороны юристов портала. Заполните персональные данные чтобы стать верифицированным пользователем. После заполнения и проверки модератором рядом с вашим профилем будет значок
+      +e.IMG(src="assets/images/verified.svg" width="23" height="23").__verify-img
+    +e.FORM.form
+      +e.row
+        +e.col_label
+          +e.LABEL(for="surname").__label Фамилия:
+        +e.col_field
+          +input(type="text" placeholder="Михайлов")#surname.__input
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.LABEL(for="name").__label Имя:
+        +e.col_field
+          +input(type="text" placeholder="Евгений")#name.__input
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.LABEL(for="patronymic").__label Отчество:
+        +e.col_field
+          +input(type="text" placeholder="Викторович")#patronymic.__input
+        +e.col_empty
+      +e.row_help
+        +e.col_label
+        +e.col_field
+          +e.SPAN.help 10 цифр, без пробелов
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.LABEL(for="passport").__label Серия и номер паспорта:
+        +e.col_field
+          +input(type="text" placeholder="4608082405")#passport.__input
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.SPAN.__label Дата выдачи паспорта:
+        +e.col_field
+          +selectbox(getData('selectbox-day'), "", true, "8")._light._scrollable.__selectbox_date
+          +selectbox(getData('selectbox-month'), "", true, "Января")._light._scrollable.__selectbox_date
+          +selectbox(getData('selectbox-year'), "", true, "1975")._light._scrollable.__selectbox_date
+        +e.col_empty
+      +e.row_help
+        +e.col_label
+        +e.col_field
+          +e.SPAN.help 12 цифр, без пробелов
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.LABEL(for="inn").__label ИНН:
+        +e.col_field
+          +input(type="numeric" placeholder="4608082405")#inn.__input
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.SPAN.__label Загрузить копию паспорта:
+        +e.col_field
+          +file-drop.__file_passport
+        +e.col_empty
+      +e.row
+        +e.col_label
+          +e.SPAN.__label Загрузить копию ИНН:
+        +e.col_field
+          +file-drop.__file_inn
+        +e.col_empty
+      +e.row
+        +e.col_label
+        +e.col_field
+          +checkbox("Я подтверждаю достоверность введенных данных и принимаю", "agreement")._darkgrey.__checkbox
+            +e.A условия соглашения
+        +e.col_empty
+      +e.row
+        +e.col_label
+        +e.col_field
+          +button('button')(type="submit")._blue._button Отправить на проверку
+        +e.col_empty

@@ -4,19 +4,27 @@
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: $color-bg-index;
 
   &__controls {
     width: 100%;
     flex-wrap: wrap;
+    background-color: #fff;
 
     .tab-toggles__button {
       width: 25%;
+      margin-bottom: 8px;
     }
   }
 
   &__container {
+    box-sizing: border-box;
     width: 100%;
+    height: auto;
+  }
+
+  &__maindata, &__identification, {
+    height: auto;
   }
 
   &__content {
@@ -26,9 +34,105 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
+    padding: 30px 40px;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
 
     &.active {
       display: flex;
     }
+
+    &_maindata {
+      padding-top: 32px;
+    }
+
+    &_identification {
+      padding-top: 60px;
+    }
+
+    &_reviews {
+      padding: 30px 0 0;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 40px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__button {
+    flex: none;
+
+    &:not(:last-child) {
+      margin-right: 86px;
+    }
+
+    &.active {
+
+      .button__name {
+        color: $color-font;
+        font-weight: 500;
+      }
+
+      border-color: transparent;
+    }
+  }
+
+  &__review-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  &__review-item {
+    box-sizing: border-box;
+    min-width: 40%;
+    flex: 1;
+    margin-bottom: 50px;
+
+    &:not(:nth-of-type(2n)) {
+      margin-right: 98px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__paginator {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100%;
+    background-color: $color-bg-index;
+  }
+
+  &__noreviews {
+    margin-top: 60px;
+    font-size: 18px;
+    letter-spacing: .04em;
+    line-height: 1.67em;
+    font-weight: 400;
+    color: #b2b2b2;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__notice {
+    width: 400px;
+    min-width: 400px;
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,55 @@
+.relation-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__icon {
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
+    margin-right: 11px;
+
+    &_lock {
+      min-height: 18px;
+      width: 18px;
+      height: 21px;
+      fill: $color-red;
+    }
+
+    &_star {
+      min-width: 22px;
+      width: 22px;
+      height: 21px;
+      fill: $color-green-dark;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 17px;
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

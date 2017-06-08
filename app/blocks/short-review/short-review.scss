@@ -59,6 +59,10 @@
     font-weight: 400;
     color: #b9b9b9;
     letter-spacing: .04em;
+
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
   }
 
   &__subject {

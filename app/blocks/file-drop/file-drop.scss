@@ -1,0 +1,25 @@
+.file-drop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 55px;
+  border: 1px dashed rgba($color-main, .7);
+
+  &__label {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $color-main;
+  }
+
+  &__output {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+}

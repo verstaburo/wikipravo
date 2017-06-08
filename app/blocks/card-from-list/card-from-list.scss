@@ -1,0 +1,97 @@
+.card-from-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 48px 40px 20px;
+
+  &__remove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(27, 52, 176, 0.25);
+    background-color: #fff;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(27, 52, 176, 0.5);
+
+      .card-from-list__icon {
+
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    transition: all .25s ease-in-out;
+    stroke: #afafaf;
+    fill: transparent;
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-top: 12px;
+    width: 340px;
+    min-width: 340px;
+    margin-right: 20px;
+  }
+
+  &__avatar {
+    min-width: 82px;
+    margin-right: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+  }
+
+  &__notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  &__note {
+    position: relative;
+    display: none;
+    width: 555px;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__button {
+    margin: auto 5px;
+    display: none;
+
+    &.visible {
+      display: inline-block;
+    }
+  }
+}

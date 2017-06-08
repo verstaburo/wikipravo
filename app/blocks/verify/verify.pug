@@ -2,9 +2,9 @@ include ../icon/icons
 
 mixin verify(verify)
   -var icon = "boldcross"
-  -var addClass = "_red"
+  -var addClass = "_no"
   -var text = "Не проверено"
-  -if(verify) {icon = "boldcheck"; addClass = "_green"; text = "Проверено"}
+  -if(verify) {icon = "boldcheck"; addClass = "_yes"; text = "Проверено"}
   +b(class="verify" + addClass)&attributes(attributes)
     +e.img
       +icon(icon).__icon

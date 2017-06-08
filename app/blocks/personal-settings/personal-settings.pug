@@ -20,15 +20,15 @@ mixin personal-settings()
       +e.col_check
     +e.row
       +e.col_label
-        +e.LABEL(for="name").__label 
-          +e.SPAN.require * 
+        +e.LABEL(for="name").__label
+          +e.SPAN.require *
           | Имя:
       +e.col_field
         +input(type="text" placeholder="Евгений Михайлов" required)#name.__input
       +e.col_check
     +e.row
       +e.col_label
-        +e.LABEL(for="birthdate").__label
+        +e.SPAN.__label
           +e.SPAN.require *
           | Дата рождения:
       +e.col_field
@@ -43,7 +43,7 @@ mixin personal-settings()
       +e.col_check
     +e.row
       +e.col_label
-        +e.LABEL(for="email").__label 
+        +e.LABEL(for="email").__label
           +e.SPAN.require *
           | Email:
       +e.col_field
@@ -57,7 +57,7 @@ mixin personal-settings()
       +e.col_check
     +e.row
       +e.col_label
-        +e.LABEL(for="phone").__label 
+        +e.LABEL(for="phone").__label
           +e.SPAN.require *
           | Номер телефона:
       +e.col_field
@@ -67,7 +67,7 @@ mixin personal-settings()
         +verify(true).__verify
     +e.row
       +e.col_label
-        +e.LABEL(for="region").__label 
+        +e.SPAN.__label
           +e.SPAN.require *
           | Регион:
       +e.col_field
@@ -75,7 +75,7 @@ mixin personal-settings()
       +e.col_check
     +e.row
       +e.col_label
-        +e.LABEL(for="city").__label 
+        +e.SPAN.__label
           +e.SPAN.require *
           | Город:
       +e.col_field
@@ -86,4 +86,3 @@ mixin personal-settings()
       +e.col_field
         +button('button')(type="submit")._blue.__button Сохранить изменения
       +e.col_check
-    

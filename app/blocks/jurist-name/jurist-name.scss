@@ -83,4 +83,18 @@
       }
     }
   }
+
+  &_bold {
+
+    .jurist-name__lawyername {
+      font-weight: 500;
+    }
+  }
+
+  &_bolder {
+
+    .jurist-name__lawyername {
+      font-weight: 700;
+    }
+  }
 }

@@ -1,15 +1,39 @@
 include ../../blocks/tab-toggles/tab-toggles
 include ../../blocks/personal-settings/personal-settings
+include ../../blocks/identification/identification
+include ../../blocks/button/button
+include ../../blocks/short-review/short-review
+include ../page-navigation/page-navigation
+include ../relation-list/relation-list
+include ../notice-settings/notice-settings
 
-mixin client-profile-tabs()
+mixin client-profile-tabs(noreviews)
   +b.SECTION.client-profile-tabs&attributes(attributes)
     +tab-toggles(getData("client-profile-tabs"))._transparent.__controls
     +e.container(data-tab-group-container="client-profile")
-      +e.content(class=" active" data-tab-group="client-profile" data-tab-id="tab1")
+      +e.content_maindata(class=" active" data-tab-group="client-profile" data-tab-id="tab1")
         +personal-settings.__maindata
-      +e.content(data-tab-group="client-profile" data-tab-id="tab2")
-      +e.content(data-tab-group="client-profile" data-tab-id="tab3")
-      +e.content(data-tab-group="client-profile" data-tab-id="tab4")
-      +e.content(data-tab-group="client-profile" data-tab-id="tab5")
-      +e.content(data-tab-group="client-profile" data-tab-id="tab6")
-    
+      +e.content_identification(data-tab-group="client-profile" data-tab-id="tab2")
+        +identification.__identification
+      +e.content_reviews(data-tab-group="client-profile" data-tab-id="tab3")
+        +e.filter
+          +button('a')(href="#")._text._border._small.__button.active Все отзывы
+            +e.SPAN.count (128)
+          +button('a')(href="#")._text._border._small.__button Положительные
+            +e.SPAN.count (127)
+          +button('a')(href="#")._text._border._small.__button Отрицательные
+            +e.SPAN.count (2)
+        -if(noreviews)
+          +e.P.noreviews У вас нет отзывов
+        +e.UL.review-list
+          -for(var k = 0; k < 12; k++) {
+            +e.LI.review-item
+              +short-review(getData('client-short-review'), true, true)._big.__item
+          -}
+        +page-navigation(getData("page-navigation")).__paginator
+      +e.content_favorites(data-tab-group="client-profile" data-tab-id="tab4")
+        +relation-list.__favorites
+      +e.content_blacklist(data-tab-group="client-profile" data-tab-id="tab5")
+        +relation-list("Юристы", "lock").__blacklist
+      +e.content_notice(data-tab-group="client-profile" data-tab-id="tab6")
+        +notice-settings.__notice

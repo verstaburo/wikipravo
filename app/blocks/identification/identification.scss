@@ -1,10 +1,38 @@
-.personal-settings {
+.identification {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
+
+  &__lead {
+    max-width: 910px;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 2em;
+    font-weight: 400;
+    color: $color-font;
+    margin-bottom: 64px;
+  }
+
+  &__verify-img {
+    display: inline;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    margin-left: 4px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+  }
 
   &__row {
     display: flex;
@@ -55,14 +83,6 @@
     color: rgba(#b1b1b1, .9);
   }
 
-  &__require {
-    font-size: 15px;
-    letter-spacing: .04em;
-    font-weight: 500;
-    color: rgba($color-red-cross, .75);
-    margin-right: 4px;
-  }
-
   &__label {
     display: flex;
     flex-direction: row;
@@ -76,17 +96,15 @@
     white-space: nowrap;
   }
 
-  &__input {
+  &__input, &__file, &__checkbox {
     width: 100%;
+  }
 
-    &_login, &_phone {
-      width: auto;
-      flex: 1;
-      margin-right: 20px;
-    }
+  &__checkbox {
+    white-space: normal;
 
-    &_login {
-      font-weight: 700;
+    .checkbox__label {
+      white-space: normal;
     }
   }
 
@@ -97,7 +115,7 @@
   &__selectbox {
     width: 100%;
 
-    &_birth {
+    &_date {
       width: auto;
       flex: 1;
 

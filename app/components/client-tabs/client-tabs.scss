@@ -23,6 +23,7 @@
 
   &__tabs-container {
     width: 100%;
+    height: auto;
   }
 
   &__content {
@@ -31,6 +32,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    height: auto;
+    overflow: hidden;
 
     &.active {
       display: flex;

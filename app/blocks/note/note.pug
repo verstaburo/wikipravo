@@ -1,17 +1,20 @@
 include ../button/button
 
-mixin note(text)
+mixin note(text, edit)
+  -var editable = true;
   -var content = false;
   -var addClass = "_empty"
-  -if(text) {content = true}
+  -if(text) {content = true; editable = false}
   -if(content) {addClass = "_noempty"}
   +b.FORM(class="note" + addClass)&attributes(attributes)
     +e.TEXTAREA.text
-    +e.P.content(contenteditable="true" tabindex="1")= text
+    +e.P.content(contenteditable=editable tabindex="1")= text
     +e.SPAN.placeholder
       +e.I(class="icon fa fa-pencil")
       |  Напишите заметку
     +e.buttons
       +button("button")._text.__button_save(type="submit") Сохранить
       +button("button")._text.__button_cancel(type="reset") Отмена
+      -if(edit)
+        +button("button")(type="button")._text.__button_edit Редактировать
       +button("button")._text.__button_remove(type="button") Удалить

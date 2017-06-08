@@ -1,0 +1,25 @@
+include ../../blocks/checkbox/checkbox
+include ../../blocks/block-title/block-title
+
+mixin notice-settings()
+  -var data =  getData('notice-settings')
+  +b.FORM.notice-settings&attributes(attributes)
+    +block-title("Настройки уведомлений")._little._centered.__title
+    +e.row
+      +e.col_label
+      +e.col_mail
+        +e.SPAN.thead Почта
+      +e.col_sms
+        +e.SPAN.thead SMS
+    -var i = 1, id1, id2;
+    each label in data
+      - id1 = "mail" + i;
+      - id2 = "sms" + i;
+      - i++;
+      +e.row
+        +e.col_label
+          +e.SPAN.label= label
+        +e.col_mail
+          +checkbox("", id1).__checkbox
+        +e.col_sms
+          +checkbox("", id2).__checkbox

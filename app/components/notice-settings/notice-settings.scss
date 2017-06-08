@@ -1,0 +1,74 @@
+.notice-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    &_label {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    &_mail, &_sms {
+      min-width: 50px;
+      width: 50px;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__thead {
+    font-size: 13px;
+    letter-spacing: .04em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: rgba(#000, .65);
+  }
+
+  &__label {
+    font-size: 13px;
+    letter-spacing: .04em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: $color-font;
+  }
+
+  &__checkbox {
+    width: 20px;
+    min-width: 20px;
+  }
+}
