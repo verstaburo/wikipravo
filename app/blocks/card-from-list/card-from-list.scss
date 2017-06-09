@@ -14,16 +14,16 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(27, 52, 176, 0.25);
+    box-shadow: 0 0 10px rgba(27, 52, 176, .25);
     background-color: #fff;
     transition: all .25s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0 0 10px rgba(27, 52, 176, 0.5);
+      box-shadow: 0 0 10px rgba(27, 52, 176, .5);
 
       .card-from-list__icon {
-
+        stroke: #9f9f9f;
       }
     }
   }
