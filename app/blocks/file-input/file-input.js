@@ -81,17 +81,17 @@ export function FileListControl() {
 
       output.querySelector('.file-input__placeholder').setAttribute('style', 'display: none');
     }, false);
+
+    $(document).on('click', '.files-list__remove', function () {
+      var fileId = $(this).parents('li').attr('data-file-id');
+
+      if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
+      $(this).parents('li').remove();
+      $('input[name^=file][data-file-id="' + fileId + '"]').remove();
+
+      if(document.querySelector('.file-input__files-list').childElementCount == 0) {
+        output.querySelector('.file-input__placeholder').setAttribute('style', 'display: block');
+      }
+    });
   }
-
-  $(document).on('click', '.files-list__remove', function () {
-    var fileId = $(this).parents('li').attr('data-file-id');
-
-    if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
-    $(this).parents('li').remove();
-    $('input[name^=file][data-file-id="' + fileId + '"]').remove();
-
-    if(document.querySelector('.file-input__files-list').childElementCount == 0) {
-      output.querySelector('.file-input__placeholder').setAttribute('style', 'display: block');
-    }
-  });
 };

@@ -21,6 +21,7 @@ import {CandidateAddEmulation} from '../components/order-candidate/order-candida
 import {ProfileActivation} from '../blocks/header-profile/header-profile';
 import {SpecsCheckboxActions} from '../components/specs/specs';
 import {ValidationOrder} from '../components/order-form/order-form';
+import {FileDrop} from '../blocks/file-drop/file-drop';
 
 $(function () {
 
@@ -47,4 +48,5 @@ $(function () {
   ProfileActivation();
   ValidationOrder();
   SpecsCheckboxActions();
+  FileDrop();
 });
