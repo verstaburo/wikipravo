@@ -49,6 +49,13 @@
       color: $color-offline;
     }
 
+    &_edit {
+      text-align: left;
+      justify-content: flex-start;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     &_remove {
       text-align: left;
       justify-content: flex-start;
@@ -95,6 +102,34 @@
 
     .note__button_save, .note__button_cancel {
       display: none;
+    }
+  }
+
+  &_noshadow {
+    box-shadow: none;
+  }
+
+  &_big {
+
+    p {
+      font-size: 14px;
+      line-height: 1.57em;
+      letter-spacing: .04em;
+    }
+  }
+
+  &_btn-left {
+
+    .note__buttons {
+      justify-content: flex-start;
+    }
+
+    .note__button {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-right: 26px;
+      }
     }
   }
 }

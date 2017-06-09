@@ -5,7 +5,22 @@
   justify-content: flex-start;
   align-items: stretch;
   box-sizing: border-box;
-  padding: 48px 40px 20px;
+  width: 100%;
+  z-index: 1;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(16, 30, 98, .1);
+    flex: 1;
+
+    @include s-desktop {
+      flex-direction: column;
+    }
+  }
 
   &__remove {
     position: absolute;
@@ -16,8 +31,10 @@
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(27, 52, 176, .25);
     background-color: #fff;
+    transform: translate(-50%, -50%);
     transition: all .25s ease-in-out;
     cursor: pointer;
+    z-index: 2;
 
     &:hover {
       box-shadow: 0 0 10px rgba(27, 52, 176, .5);
@@ -46,15 +63,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding-top: 12px;
-    width: 340px;
-    min-width: 340px;
-    margin-right: 20px;
+    padding: 50px 20px 24px;
+    width: 384px;
+    min-width: 384px;
   }
 
   &__avatar {
     min-width: 82px;
-    margin-right: 20px;
+    margin-right: 18px;
   }
 
   &__info {
@@ -65,33 +81,63 @@
   }
 
   &__name {
+    padding-left: 30px;
     margin-bottom: 20px;
   }
 
+  &__list {
+
+    .specialization__item {
+      padding-left: 20px !important;
+      padding-right: 0 !important;
+    }
+
+    .specialization__sublist {
+      padding: 0 !important;
+    }
+  }
+
   &__notice {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-  }
+    overflow: hidden;
+    padding-top: 14px;
+    padding-right: 26px;
+    border-left: 1px solid rgba(#000, .15);
+    flex: 1;
 
-  &__note {
-    position: relative;
-    display: none;
-    width: 555px;
+    @include s-desktop {
+      border-left-width: 0;
+      border-top: 1px solid rgba(#000, .15);
+    }
 
     &.active {
       display: flex;
     }
   }
 
-  &__button {
-    margin: auto 5px;
-    display: none;
+  &__note {
+    position: relative !important;
+    display: flex !important;
+    width: 100% !important;
+    max-width: 550px !important;
+  }
 
-    &.visible {
-      display: inline-block;
+  &__control {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 24px;
+    overflow: hidden;
+    flex: 2;
+
+    &.active {
+      display: flex;
     }
   }
 }

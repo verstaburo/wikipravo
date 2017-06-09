@@ -4,7 +4,8 @@ include ../button/button
 
 mixin short-review(data, full, complain)
   +b.ARTICLE.short-review&attributes(attributes)
-    +avatar(data.image).__avatar
+    +e.avatar
+      +avatar(data.image).__img
     +e.review
       +e.H4.title
         +e.A.author(href="#")= data.author

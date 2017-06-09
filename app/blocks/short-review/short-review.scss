@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
 
   &__avatar {
+    min-width: 82px;
+    padding-top: 16px;
     margin-right: 31px;
   }
 
@@ -22,13 +24,16 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: baseline;
-    margin-bottom: 20px;
+    align-content: flex-start;
+    margin-bottom: 14px;
     font-weight: 400;
   }
 
   &__like {
     margin-right: 8px;
+    margin-bottom: 6px;
   }
 
   &__author {
@@ -40,6 +45,8 @@
     margin-right: 14px;
     transition: all .25s ease-in-out;
     cursor: pointer;
+    white-space: nowrap;
+    margin-bottom: 6px;
 
     &:hover {
       color: rgba($color-font, .6);
@@ -59,10 +66,16 @@
     font-weight: 400;
     color: #b9b9b9;
     letter-spacing: .04em;
+    white-space: nowrap;
+    margin-bottom: 6px;
 
     &:not(:last-child) {
       margin-right: 29px;
     }
+  }
+
+  &__complain {
+    margin-bottom: 6px;
   }
 
   &__subject {

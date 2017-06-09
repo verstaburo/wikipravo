@@ -10,11 +10,11 @@
     max-width: 910px;
     width: 100%;
     font-size: 14px;
-    letter-spacing: .04em;
+    letter-spacing: .045em;
     line-height: 2em;
     font-weight: 400;
     color: $color-font;
-    margin-bottom: 64px;
+    margin-bottom: 58px;
   }
 
   &__verify-img {
@@ -42,14 +42,19 @@
     box-sizing: border-box;
     width: 100%;
 
+    @include s-desktop {
+      align-content: center;
+      flex-wrap: wrap;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     &_help {
 
       &:not(:last-child) {
-        margin-bottom: 7px;
+        margin-bottom: 6px;
       }
     }
   }
@@ -63,6 +68,13 @@
 
     &_label {
       justify-content: flex-end;
+
+      @include s-desktop {
+        width: 100%;
+        flex: none;
+        margin-bottom: 8px;
+        justify-content: flex-start;
+      }
     }
 
     &_field {
@@ -71,6 +83,22 @@
       width: 440px;
       margin-left: 30px;
       margin-right: 20px;
+
+      @include desktop {
+        margin-right: 0;
+        flex: 2;
+      }
+
+      @include desktop {
+        margin-left: 0;
+        flex: 1;
+      }
+    }
+
+    &_empty {
+      @include desktop {
+        flex: none;
+      }
     }
   }
 
@@ -102,6 +130,7 @@
 
   &__checkbox {
     white-space: normal;
+    margin-bottom: 6px;
 
     .checkbox__label {
       white-space: normal;

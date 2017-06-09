@@ -15,11 +15,11 @@
     align-items: flex-start;
     box-sizing: border-box;
     border-right: 1px solid rgba($color-font, .1);
-    padding: 30px 38px 30px 30px;
+    padding: 32px 40px 26px 32px;
   }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   &__info {
@@ -38,7 +38,11 @@
     align-items: flex-start;
     width: 106px;
     min-width: 106px;
-    margin-right: 26px;
+    margin-right: 24px;
+  }
+
+  &__status-list {
+    margin-bottom: 6px;
   }
 
   &__status {
@@ -50,18 +54,21 @@
   }
 
   &__describe {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 30px 38px;
+    padding: 32px 40px 26px;
   }
 
   &__reginfo {
+    width: 100%;
+    margin-top: 4px;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     line-height: 1.5em;
     color: rgba($color-font, .5);
   }
@@ -69,7 +76,7 @@
   &__regtime {
     font-size: inherit;
     font-weight: inherit;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     line-height: inherit;
     color: inherit;
   }

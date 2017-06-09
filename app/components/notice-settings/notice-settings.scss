@@ -7,7 +7,7 @@
 
   &__title {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     text-align: center;
   }
 
@@ -20,11 +20,11 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     &:first-child {
-      margin-bottom: 16px;
+      margin-bottom: 15px !important;
     }
   }
 
@@ -41,12 +41,12 @@
     }
 
     &_mail, &_sms {
-      min-width: 50px;
-      width: 50px;
+      min-width: 52px;
+      width: 52px;
       align-items: center;
 
       &:not(:last-child) {
-        margin-right: 8px;
+        margin-right: 20px;
       }
     }
   }

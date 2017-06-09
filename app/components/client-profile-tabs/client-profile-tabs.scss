@@ -14,7 +14,15 @@
 
     .tab-toggles__button {
       width: 25%;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+
+      @include desktop {
+        width: 33.3%;
+      }
+
+      @include s-desktop {
+        width: 50%;
+      }
     }
   }
 
@@ -22,6 +30,7 @@
     box-sizing: border-box;
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
 
   &__maindata, &__identification, {
@@ -39,21 +48,31 @@
     height: auto;
     overflow: hidden;
     background-color: #fff;
+    border: 1px solid #e4e8ea;
 
     &.active {
       display: flex;
     }
 
-    &_maindata {
-      padding-top: 32px;
-    }
-
     &_identification {
-      padding-top: 60px;
+      padding-top: 52px;
     }
 
     &_reviews {
-      padding: 30px 0 0;
+      padding: 32px 0 0;
+      border: none;
+    }
+
+    &_favorites {
+      padding-top: 44px;
+    }
+
+    &_blacklist {
+      padding-top: 26px;
+    }
+
+    &_notice {
+      padding-top: 32px;
     }
   }
 
@@ -66,23 +85,32 @@
     padding: 0 40px;
     margin-bottom: 30px;
     width: 100%;
+    border: 1px solid $color-bg-index;
+    border-bottom-width: 0;
   }
 
   &__button {
     flex: none;
 
+    .button__name {
+      letter-spacing: .04em;
+    }
+
     &:not(:last-child) {
-      margin-right: 86px;
+      margin-right: 90px;
+
+      @include desktop {
+        margin-right: 45px;
+      }
     }
 
     &.active {
+      border-color: transparent;
 
       .button__name {
         color: $color-font;
         font-weight: 500;
       }
-
-      border-color: transparent;
     }
   }
 
@@ -94,18 +122,28 @@
     align-content: stretch;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 0 40px;
     width: 100%;
+    border: 1px solid $color-bg-index;
+    border-bottom-width: 0;
   }
 
   &__review-item {
     box-sizing: border-box;
     min-width: 40%;
     flex: 1;
-    margin-bottom: 50px;
+    padding: 24px 40px;
+    border-bottom: 1px solid $color-bg-index;
+
+    @include desktop {
+      min-width: 100%;
+    }
 
     &:not(:nth-of-type(2n)) {
-      margin-right: 98px;
+      border-right: 1px solid $color-bg-index;
+
+      @include desktop {
+        border-right-width: 0;
+      }
     }
   }
 
@@ -132,8 +170,13 @@
   }
 
   &__notice {
-    width: 400px;
-    min-width: 400px;
+    width: 410px;
+    min-width: 410px;
     margin: 0 auto;
+  }
+
+  &__favorites, &__blacklist {
+    max-width: 1082px;
+    width: 100%;
   }
 }

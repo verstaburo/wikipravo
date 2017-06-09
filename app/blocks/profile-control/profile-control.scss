@@ -188,4 +188,13 @@
       }
     }
   }
+
+  &_title-vision {
+
+    .profile-control__title {
+      @include s-desktop {
+        display: inline-block;
+      }
+    }
+  }
 }

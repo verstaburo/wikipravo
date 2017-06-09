@@ -125,6 +125,22 @@
     }
   }
 
+  &_middle {
+
+    .checkbox {
+
+      &__check {
+        width: 22px;
+        height: 22px;
+      }
+
+      &__check-img {
+        width: 14px;
+        height: 11px;
+      }
+    }
+  }
+
   &_big {
 
     .checkbox {
