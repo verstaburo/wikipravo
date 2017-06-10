@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wiki Pravo — Личный кабинет специалиста - Заявка</title>
+    <title>Wiki Pravo — Заявка со сделками (исполнитель)</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico?v=2" rel="shortcut icon">
@@ -158,16 +158,15 @@
                 </div>
             </div>
             <div class="page-layout__page-content">
-                <div class="lk-specialist-request">
-                    <div class="lk-request-head">
-                        <a class="control-link control-link_back lk-request-head__nav">
+                <div class="request-deals">
+                    <div class="request-deal-head">
+                        <a class="control-link control-link_back request-deal-head__nav">
                             <i class="control-link__icon fa fa-angle-left"></i>
                             <!--+icon(controlIcon).__icon-->
                             <span class="control-link__name">К моим заказам</span>
                         </a>
-                        <h2 class="page-title lk-request-head__title">Не справедливая оплата труда</h2>
-                        <div class="lk-request-head__conditions">
-                            <div class="action-controls action-controls_nonote lk-request-head__actions">
+                        <div class="request-deal-head__conditions">
+                            <div class="action-controls action-controls_nonote request-deal-head__actions">
                                 <button class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" title="В избраное">
                                     <span class="profile-control__img">
                                         <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
@@ -181,7 +180,7 @@
                                     <span class="profile-control__title">В черный список</span>
                                 </button>
                             </div>
-                            <div class="request-condition lk-request-head__text">
+                            <div class="request-condition request-deal-head__text">
                                 <span class="request-condition__type">Другая услуга</span>
                                 <div class="request-condition__time">
                                     <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
@@ -193,14 +192,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="lk-request-head__status">
-                            <div class="lk-request-head__describe">
-                                <h3 class="block-title block-title_little block-title_bolder lk-request-head__header">Вам отказали</h3>
-                                <p>Ваше предложение не подошло клиенту</p>
-                            </div>
-                            <button class="button button_blue lk-request-head__button">
-                                <span class="button__name">В корзину</span>
-                            </button>
+                        <div class="request-deal-head__deals">
+                            <h3 class="block-title block-title_little block-title_bold request-deal-head__title">Вы исполнитель по этому заказу
+                                <span class="request-deal-head__subtitle">(Перейдите в сделку для согласования условий и выполнения работы)</span>
+                            </h3>
+                            <ul class="request-deal-head__list">
+                                <li class="request-deal-head__item">
+                                    <div class="deal-link">
+                                        <a class="deal-link__text" href="#new">Сделка от: 24.05.2017, 12:45</a>
+                                        <span class="deal-link__status">Новая</span>
+                                    </div>
+                                </li>
+                                <li class="request-deal-head__item">
+                                    <div class="deal-link">
+                                        <a class="deal-link__text" href="#complete">Сделка от: 18.02.2017, 10:30</a>
+                                        <span class="deal-link__status deal-link__status_green">Решено</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="request-card request-card_lk">
@@ -319,75 +328,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="correspondence">
-                        <h3 class="block-title block-title_little block-title_bolder correspondence__title">Переписка с заказчиком</h3>
-                        <div class="comment comment_lightblue correspondence__comment">
-                            <blockquoute class="comment__content">
-                                <cite class="comment__info">
-                                    <span class="comment__author">Евгений</span>
-                                    <time class="comment__date">(12.10.2016 | 09:20)</time>
-                                </cite>
-                                <div class="comment__text">
-                                    <p>&mdash; Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу</p>
-                                </div>
-                            </blockquoute>
-                        </div>
-                        <div class="comment comment_blue correspondence__comment">
-                            <div class="comment__buttons">
-                                <button class="button button_text button_noborder comment__button comment__button_edit" type="button">
-                                    <span class="button__name">Редактировать</span>
-                                </button>
-                                <button class="button button_text button_noborder comment__button comment__button_remove" type="button">
-                                    <span class="button__name">Удалить</span>
-                                </button>
-                            </div>
-                            <blockquoute class="comment__content">
-                                <cite class="comment__info">
-                                    <span class="comment__author">Ксения</span>
-                                    <time class="comment__date">(12.10.2016 | 09:20)</time>
-                                </cite>
-                                <div class="comment__text">
-                                    <p>&mdash; Добрый день, Евгений! Ок. Увеличила срок. Подтвердите, пожалуйста условия</p>
-                                </div>
-                            </blockquoute>
-                        </div>
-                        <div class="comment comment_lightblue correspondence__comment">
-                            <div class="comment__buttons">
-                                <button class="button button_text button_noborder comment__button comment__button_complain" type="button">
-                                    <span class="button__name">Пожаловаться</span>
-                                </button>
-                            </div>
-                            <blockquoute class="comment__content">
-                                <cite class="comment__info">
-                                    <span class="comment__author">Евгений</span>
-                                    <time class="comment__date">(12.10.2016 | 09:20)</time>
-                                </cite>
-                                <div class="comment__text">
-                                    <p>&mdash; Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу</p>
-                                </div>
-                            </blockquoute>
-                        </div>
-                        <div class="message message_border correspondence__message">
-                            <h3 class="message__title"></h3>
-                            <form class="message__form" id="message">
-                                <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
-                                <div class="file-input files">
-                                    <output class="file-input__output" for="files">
-                                        <span class="file-input__placeholder">Нет приклепленных файлов</span>
-                                        <ul class="files-list file-input__files-list"></ul>
-                                    </output>
-                                    <div class="file-input__buttons">
-                                        <button class="button button_blue message__button" type="submit">
-                                            <span class="button__name">Отправить</span>
-                                        </button>
-                                        <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                            <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
-                                        </label>
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
