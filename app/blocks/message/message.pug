@@ -1,10 +1,13 @@
 include ../button/button
 include ../textarea/textarea
 include ../file-input/file-input
+include ../checkbox/checkbox
 
-mixin message(title, textareaPlaceholder)
+mixin message(title, textareaPlaceholder, check, checkTitle, checkId)
   +b.message&attributes(attributes)
     +e.H3.title= title
+      -if(check)
+        +checkbox(checkTitle, checkId)._middle._lightgray._bold.__checkbox
     +e.FORM.__form#message
       +textarea(placeholder= textareaPlaceholder class=" ").__textarea
       +file-input("Прикрепить файлы", "Нет приклепленных файлов").files

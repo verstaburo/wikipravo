@@ -1,8 +1,9 @@
 include ../button/button
 
-mixin comment(author, date, editable, button)
+mixin comment(author, date, editable, button, hide, arbitr)
   -var addClass = ""
-  -if(editable) {addClass = '_mine'} else {addClass = '_another'}
+  -if(editable) {addClass = '_blue'} else {addClass = '_lightblue'}
+  -if(arbitr) {addClass = '_yellow'}
   +b(class="comment" + addClass)&attributes(attributes)
     -if(button)
       +e.buttons
@@ -10,12 +11,15 @@ mixin comment(author, date, editable, button)
           +button('button')(type='button')._text._noborder.__button_edit Редактировать
           +button('button')(type='button')._text._noborder.__button_remove Удалить
         -} else {
-          +button('button')(type='button')._text._noborder.__button_complain Пожаловаться
+          -if(!arbitr)
+            +button('button')(type='button')._text._noborder.__button_complain Пожаловаться
         -}
     +e.BLOCKQUOUTE.content
       +e.CITE.info
         +e.SPAN.author= author
         +e.TIME.date= date
+        -if(hide)
+          +e.SPAN.hide= hide
       +e.text
         block
 

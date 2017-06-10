@@ -1,0 +1,13 @@
+include ../../blocks/comment/comment
+include ../../blocks/spoiler/spoiler
+include ../../blocks/block-title/block-title
+
+mixin dialog(data, title, message)
+  +b.dialog&attributes(attributes)
+    -if(title)
+      +block-title(title)._little._bolder.__title
+    +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr).__comment
+    +spoiler("Развернуть переписку", "Свернуть переписку", "js-comment-counter")._bottom.__spoiler
+      for(var i = 1; i < data.length; i++) {
+        +comment(data[i].author, data[i].date, data[i].editable, data[i].button, data[i].hide, data[i].arbitr)(class=" dialog__comment")
+      -}

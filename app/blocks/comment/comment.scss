@@ -77,7 +77,15 @@
     font-size: inherit;
   }
 
-  &_mine {
+  &__hide {
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: inherit;
+    color: $color-registration-red;
+    font-size: inherit;
+  }
+
+  &_blue {
 
     .comment {
 
@@ -89,6 +97,42 @@
           right: 0;
           border-right-color: transparent;
           border-left-color: $color-bg-comment;
+          transform: translate(100%, -50%);
+        }
+      }
+    }
+  }
+
+  &_lightblue {
+
+    .comment {
+
+      &__content {
+        background-color: $color-bg-index;
+
+        &::before {
+          left: auto;
+          right: 0;
+          border-right-color: transparent;
+          border-left-color: $color-bg-index;
+          transform: translate(100%, -50%);
+        }
+      }
+    }
+  }
+
+  &_yellow {
+
+    .comment {
+
+      &__content {
+        background-color: #f6fbdd;
+
+        &::before {
+          left: auto;
+          right: 0;
+          border-right-color: transparent;
+          border-left-color: #f6fbdd;
           transform: translate(100%, -50%);
         }
       }

@@ -1,0 +1,47 @@
+.deal-link {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  box-sizing: border-box;
+  font-size: 14px;
+  letter-spacing: .04em;
+  font-weight: 400;
+  line-height: 1.8em;
+
+  a, &__text {
+    font-size: 14px;
+    letter-spacing: .04em;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: $color-main;
+    border-bottom: 1px solid rgba($color-main, .5);
+    transition: all .25s ease-in-out;
+    margin-right: 19px;
+
+    &:hover {
+      color: rgba($color-main, .8);
+      border-color: rgba($color-main, .4);
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    letter-spacing: .04em;
+    font-weight: 500;
+    line-height: 1.8em;
+    color: $color-font;
+
+    &_green {
+      color: $color-green-dark;
+    }
+
+    &_gray {
+      color: #646464;
+    }
+
+    &_red {
+      color: $color-registration-red;
+    }
+  }
+}

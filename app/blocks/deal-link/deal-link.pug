@@ -1,0 +1,20 @@
+mixin deal-link(title, href, status)
+  +b.deal-link&attributes(attributes)
+    +e.A.text(href= href)= title
+    case status
+      when 'new'
+        +e.SPAN.status Новая
+      when 'working'
+        +e.SPAN.status Выполняется
+      when 'complete'
+        +e.SPAN.status_green Решено
+      when 'close'
+        +e.SPAN.status_gray Закрыта
+      when 'color-mainest'
+        +e.SPAN.status Проверка
+      when 'arbitr'
+        +e.SPAN.status_red Арбитраж
+      when 'arbitrcomplete'
+        +e.SPAN.status_green Решена через Арбитраж
+      default
+        - break

@@ -1,0 +1,18 @@
+include ../../blocks/button-arrow/button-arrow
+include ../../blocks/button/button
+
+mixin spoiler(title, openTitle, counterClass, button)
+  -var addClass = ""
+  -if(counterClass) {addClass = " " + counterClass}
+  +b.spoiler&attributes(attributes)
+    +e.control
+      -if(button)
+        case button
+          when 'answer'
+            +button('a')(href="#")._transparent_second.__answer Написать ответ
+          default
+            - break
+      +button-arrow('down', 'button')(type="button" data-open-title= opentTitle data-close-title= title)._text._noborder.__button= title
+        +e.SPAN(class="counter" + addClass)
+    +e.content
+      block

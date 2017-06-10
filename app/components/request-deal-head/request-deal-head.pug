@@ -1,0 +1,20 @@
+include ../../blocks/deal-link/deal-link
+include ../../blocks/block-title/block-title
+include ../../blocks/action-controls/action-controls-nonote
+include ../../blocks/request-condition/request-condition
+include ../../blocks/control-link/control-link
+
+mixin request-deal-head(href1, status1, href2, status2)
+  +b.request-deal-head&attributes(attributes)
+    +control-link("back", "К моим заказам").__nav
+    +e.conditions
+      +action-controls-nonote("", "", true).__actions
+      +request-condition("Другая услуга", "По договоренности", "По договоренности").__text
+    +e.deals
+      +block-title("Вы исполнитель по этому заказу")._little._bold.__title
+        +e.SPAN(class=" request-deal-head__subtitle") (Перейдите в сделку для согласования условий и выполнения работы)
+      +e.UL.list
+        +e.LI.item
+          +deal-link("Сделка от: 24.05.2017, 12:45", href1, status1)
+        +e.LI.item
+          +deal-link("Сделка от: 18.02.2017, 10:30", href2, status2)

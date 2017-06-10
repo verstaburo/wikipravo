@@ -1,0 +1,22 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Заявка со сделками (в работе)'
+
+block content
+  +b.request-deals
+    +request-deal-head('#working', 'working', '#complete', 'complete')
+    +request-card-2(true)
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
