@@ -19,9 +19,8 @@ mixin card-from-list(note)
         +e.info
           +jurist-name("Иван Ковалев", true, true, true)._border._bold._small.__name
           +specialization-mark(getData('card-from-list-specialization'))._marked.__list
-      -if(note)
-        +e(class="notice" + noteActiveClass)
-          +note(text, true)._noshadow._big._btn-left.__note
+      +e(class="notice" + noteActiveClass)
+        +note(text, true)._noshadow._big._btn-left.__note
     -if(!note)
       +e(class="control" + buttonActiveClass)
         +profile-control("note", "Создать заметку", "pencil", "", true)._title-vision.__button

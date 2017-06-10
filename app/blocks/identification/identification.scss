@@ -68,6 +68,7 @@
 
     &_label {
       justify-content: flex-end;
+      min-width: 250px;
 
       @include s-desktop {
         width: 100%;
@@ -89,7 +90,7 @@
         flex: 2;
       }
 
-      @include desktop {
+      @include s-desktop {
         margin-left: 0;
         flex: 1;
       }

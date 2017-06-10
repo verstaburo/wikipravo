@@ -195,6 +195,10 @@
       @include s-desktop {
         display: inline-block;
       }
+
+      @include tablet {
+        display: none !important;
+      }
     }
   }
 }

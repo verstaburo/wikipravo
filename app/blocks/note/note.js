@@ -26,7 +26,7 @@ export function NoteTextareaFocus () {
   $("." + btnSave).click(function(e) {
     e.preventDefault();
     var text = $("." + textContainer).text();
-    $(this).siblings("." + textarea)[0].value = text;
+    $(this).parents('.'+ mainClass).find("." + textarea)[0].value = text;
     $(this).parents("." + mainClass).removeClass("note_empty").addClass("note_noempty");
     $(this).parents("." + mainClass).find("." + textContainer).attr("contenteditable", false);
     $(this).parents("form")[0].submit();

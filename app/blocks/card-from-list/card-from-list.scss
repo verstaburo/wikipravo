@@ -78,6 +78,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex: 1;
   }
 
   &__name {
@@ -86,13 +87,16 @@
   }
 
   &__list {
+    width: 100%;
 
     .specialization__item {
+      width: 100%;
       padding-left: 20px !important;
       padding-right: 0 !important;
     }
 
     .specialization__sublist {
+      width: 100%;
       padding: 0 !important;
     }
   }
@@ -110,8 +114,10 @@
     flex: 1;
 
     @include s-desktop {
+      flex: none;
       border-left-width: 0;
       border-top: 1px solid rgba(#000, .15);
+      width: 100%;
     }
 
     &.active {
@@ -124,6 +130,10 @@
     display: flex !important;
     width: 100% !important;
     max-width: 550px !important;
+
+    @include s-desktop {
+      max-width: auto !important;
+    }
   }
 
   &__control {
@@ -133,8 +143,7 @@
     align-items: flex-start;
     box-sizing: border-box;
     padding-left: 24px;
-    overflow: hidden;
-    flex: 2;
+    width: calc(100% - 384px);
 
     &.active {
       display: flex;

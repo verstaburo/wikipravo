@@ -22,6 +22,8 @@ import {ProfileActivation} from '../blocks/header-profile/header-profile';
 import {SpecsCheckboxActions} from '../components/specs/specs';
 import {ValidationOrder} from '../components/order-form/order-form';
 import {FileDrop} from '../blocks/file-drop/file-drop';
+import {ShowNoteForListMember} from '../blocks/card-from-list/card-from-list';
+import {RemovePersonFromRelationList} from '../blocks/card-from-list/card-from-list';
 
 $(function () {
 
@@ -49,4 +51,6 @@ $(function () {
   ValidationOrder();
   SpecsCheckboxActions();
   FileDrop();
+  ShowNoteForListMember();
+  RemovePersonFromRelationList();
 });

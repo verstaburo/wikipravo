@@ -62,9 +62,14 @@
       }
 
       @include s-desktop {
+        min-width: 340px;
         margin-left: 0;
-        flex: 2;
+        flex: 1;
       }
+    }
+
+    &_check {
+      min-width: 165px;
     }
   }
 
@@ -125,6 +130,13 @@
 
       &:not(:last-child) {
         margin-right: 24px;
+      }
+    }
+
+    &_city {
+
+      .selectbox__list {
+        height: 150px;
       }
     }
   }

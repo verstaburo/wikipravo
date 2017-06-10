@@ -12,10 +12,10 @@ export function FileDrop () {
     e.stopPropagation();
   })
   .on('dragover dragenter', function() {
-    $('.' + mainClass).addClass('dragover');
+    $(this).addClass('dragover');
   })
   .on('dragleave dragend drop', function() {
-    $('.' + mainClass).removeClass('dragover');
+    $(this).removeClass('dragover');
   })
   .on('drop', function(e) {
     droppedFiles = e.originalEvent.dataTransfer.files;
