@@ -2,13 +2,16 @@ export function LocationPopup() {
 
   $(".popup-location__button_yes").click(function() {
     $(".popup-location").css({"display" : "none"});
+    clearInterval(locationPopupTimer);
   });
   $(".popup-location__button_no").click(function() {
     $(".popup-location").css({"display" : "none"});
+    clearInterval(locationPopupTimer);
   });
   $("html").click(function(e) {
       if(!$(".popup-location").is(e.target) && $(".popup-location").has(e.target).length === 0) {
         $(".popup-location").css({"display" : "none"});
+        clearInterval(locationPopupTimer);
       }
   });
 
@@ -35,7 +38,9 @@ export function LocationPopup() {
     $(".popup-location").offset(locationPopupPosition).css({"visibility" : "visible"});
   }
 
-  if(document.querySelector(".sidebar__selectbox")) {
-    popupLocationPosition();
-  }
+  var locationPopupTimer = setInterval( function () {
+    if(document.querySelector(".sidebar__selectbox")) {
+      popupLocationPosition();
+    }
+  }, 500);
 };

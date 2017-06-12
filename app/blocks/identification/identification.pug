@@ -9,7 +9,7 @@ mixin identification()
     +e.P.lead
       | Клиенты, прошедшие проверку, получают больше доверия со стороны юристов портала. Заполните персональные данные чтобы стать верифицированным пользователем. После заполнения и проверки модератором рядом с вашим профилем будет значок
       +e.IMG(src="assets/images/verified.svg" width="23" height="23").__verify-img
-    +e.FORM.form(action="https://echo.htmlacademy.ru" method="post")
+    +e.FORM.form
       +e.row
         +e.col_label
           +e.LABEL(for="surname").__label Фамилия:
