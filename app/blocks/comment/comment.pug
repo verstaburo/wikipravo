@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin comment(author, date, editable, button, hide, arbitr)
+mixin comment(author, date, editable, button, hide, arbitr, attach)
   -var addClass = ""
   -if(editable) {addClass = '_blue'} else {addClass = '_lightblue'}
   -if(arbitr) {addClass = '_yellow'}
@@ -22,4 +22,5 @@ mixin comment(author, date, editable, button, hide, arbitr)
           +e.SPAN.hide= hide
       +e.text
         block
-
+      -if(attach)
+        +files-list-attach(true).__files

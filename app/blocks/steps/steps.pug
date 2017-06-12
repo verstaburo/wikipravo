@@ -1,0 +1,9 @@
+mixin steps(data)
+  -var addClass = ""
+  +b.UL.steps&attributes(attributes)
+    -for( var k = 0; k < data.length; k++) {
+      -if(data[k].class) { addClass = "_" + data[k].class}
+      +e.LI(class= "item" + addClass)
+        +e.mark= (k+1)
+        #{data[k].text}
+    -}

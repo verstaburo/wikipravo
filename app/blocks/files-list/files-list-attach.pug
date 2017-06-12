@@ -1,14 +1,15 @@
 include ../icon/icons
 
-mixin files-list-attach()
+mixin files-list-attach(oneFile)
   +b.UL.files-list_attach&attributes(attributes)
     +e.LI.item
       +e.A(href="#")
         +e.IMG(src="assets/images/doc.svg").__img
         +e.SPAN.filename User_mail.doc
         +icon("clip").__icon
-    +e.LI.item
-      +e.A(href="#")
-        +e.IMG(src="assets/images/pdf.svg").__img
-        +e.SPAN.filename User_mail.pdf
-        +icon("clip").__icon
+    -if(!oneFile)
+      +e.LI.item
+        +e.A(href="#")
+          +e.IMG(src="assets/images/pdf.svg").__img
+          +e.SPAN.filename User_mail.pdf
+          +icon("clip").__icon

@@ -1,0 +1,42 @@
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__item {
+    font-size: 14px;
+    letter-spacing: .04em;
+    font-weight: 700;
+    line-height: 1.43em;
+    color: #c6c6c6;
+    margin-right: 40px;
+
+    &.complete {
+      color: $color-green-dark;
+    }
+  }
+
+  &__mark {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    font-size: 25px;
+    letter-spacing: .04em;
+    line-height: 62px;
+    font-weight: 400;
+    border-radius: 50%;
+    color: #c6c6c6;
+    border: 1px solid #bdbdbd;
+    margin-right: 20px;
+
+    .steps__item.complete & {
+      color: $color-green-dark;
+      border-color: $color-green-dark;
+    }
+  }
+}

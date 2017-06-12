@@ -5,8 +5,9 @@ block head
 
 block content
   +b.request-deals
-    +request-deal-head('#complete1', 'complete', '#complete2', 'complete')
-    +request-card-2(true)
+    +request-deal-head('#complete1', 'complete', '#complete2', 'complete').__head
+    +request-card-2(true).__card
+    +dialog(getData('deal-dialog-short'), "Переписка с заказчиком").__dialog
 
 block page-left
   +sidebar

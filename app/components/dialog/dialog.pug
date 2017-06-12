@@ -1,13 +1,30 @@
 include ../../blocks/comment/comment
 include ../../blocks/spoiler/spoiler
 include ../../blocks/block-title/block-title
+include ../../blocks/message/message
 
-mixin dialog(data, title, message)
+mixin dialog(data, title, message, hiddenCommentCheck)
+  -var checkLabel = ""
+  -var checkId = ""
+  -var check = ""
   +b.dialog&attributes(attributes)
     -if(title)
       +block-title(title)._little._bolder.__title
-    +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr).__comment
+    -if(message)
+      case hiddenCommentFrom
+        when 'client'
+          - checkLabel = "Скрыть комментарий от Клиента"
+          - checkId = "clinentHidden"
+          - check = true
+        when 'specialist'
+          - checkLabel = "Скрыть комментарий от Исполнителя"
+          - checkId = "specialistHidden"
+          - check = true
+        default
+          - check = false
+      +message("", "Введите сообщение", check, checkLabel, checkId).__message
+    +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr, data[0].attach).__comment= data[0].text
     +spoiler("Развернуть переписку", "Свернуть переписку", "js-comment-counter")._bottom.__spoiler
-      for(var i = 1; i < data.length; i++) {
-        +comment(data[i].author, data[i].date, data[i].editable, data[i].button, data[i].hide, data[i].arbitr)(class=" dialog__comment")
+      -for(var i = 1; i < data.length; i++) {
+        +comment(data[i].author, data[i].date, data[i].editable, data[i].button, data[i].hide, data[i].arbitr, data[i].attach)(class=" dialog__comment")= data[i].text
       -}

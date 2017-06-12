@@ -42,6 +42,7 @@ export function NoteTextareaFocus () {
 
   $('.' + btnEdit).click(function(e) {
     $(this).parents("." + mainClass).removeClass("note_noempty").addClass("note_empty");
+    $(this).parents("." + mainClass).find(".note__placeholder").css({"display" : "none"});
     $(this).parents("." + mainClass).find("." + textContainer).attr("contenteditable", true);
   });
 }

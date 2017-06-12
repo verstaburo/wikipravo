@@ -12,7 +12,7 @@ mixin spoiler(title, openTitle, counterClass, button)
             +button('a')(href="#")._transparent_second.__answer Написать ответ
           default
             - break
-      +button-arrow('down', 'button')(type="button" data-open-title= opentTitle data-close-title= title)._text._noborder.__button= title
+      +button-arrow('down', 'button')(type="button", data-close-title= title data-open-title= openTitle)._text._noborder.__button= title
         +e.SPAN(class="counter" + addClass)
     +e.content
       block

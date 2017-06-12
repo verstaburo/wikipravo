@@ -15,7 +15,7 @@
   }
 
   &__content {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -25,6 +25,23 @@
 
   &__button {
     margin-right: auto;
+  }
+
+  &.opened {
+
+    .spoiler {
+
+      &__content {
+        display: flex;
+      }
+
+      &__button {
+
+        .button__arrow {
+          transform: rotate(-180deg);
+        }
+      }
+    }
   }
 
   &_bottom {

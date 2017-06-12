@@ -1,0 +1,22 @@
+[
+  {
+    "author" : "Евгений",
+    "date" : "(12.10.2016 | 09:20)",
+    "editable" : true,
+    "button" : false,
+    "hide" : false,
+    "arbitr" : false,
+    "attach" : false,
+    "text" : "— Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу"
+  },
+  {
+    "author" : "Ксения",
+    "date" : "(12.10.2016 | 09:20)",
+    "editable" : false,
+    "button" : true,
+    "hide" : false,
+    "arbitr" : false,
+    "attach" : false,
+    "text" : "— Добрый день, Евгений! Ок. Увеличила срок. Подтвердите, пожалуйста условия"
+  }
+]

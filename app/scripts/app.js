@@ -24,6 +24,8 @@ import {ValidationOrder} from '../components/order-form/order-form';
 import {FileDrop} from '../blocks/file-drop/file-drop';
 import {ShowNoteForListMember} from '../blocks/card-from-list/card-from-list';
 import {RemovePersonFromRelationList} from '../blocks/card-from-list/card-from-list';
+import {SpoilerOpened} from '../blocks/spoiler/spoiler';
+import {CounterComments} from '../blocks/spoiler/spoiler';
 
 $(function () {
 
@@ -53,4 +55,6 @@ $(function () {
   FileDrop();
   ShowNoteForListMember();
   RemovePersonFromRelationList();
+  SpoilerOpened();
+  CounterComments();
 });

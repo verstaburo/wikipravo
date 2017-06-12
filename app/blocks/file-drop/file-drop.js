@@ -1,11 +1,7 @@
 export function FileDrop () {
   var mainClass = 'file-drop',
       label = mainClass + '__label',
-      outputClass = mainClass + '__output',
-      droppedFiles = false,
-      selectedFiles = {},
-      queue = [],
-      output, outputUl;
+      outputClass = mainClass + '__output';
 
   $('.' + mainClass).on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
     e.preventDefault();
@@ -18,6 +14,7 @@ export function FileDrop () {
     $(this).removeClass('dragover');
   })
   .on('drop', function(e) {
+    var droppedFiles , selectedFiles = {}, queue = [], output, outputUl;
     droppedFiles = e.originalEvent.dataTransfer.files;
 
     outputUl = $(this).find('.files-list');
@@ -64,6 +61,7 @@ export function FileDrop () {
         spanName.setAttribute('class', 'files-list__filename');
         spanName.textContent = fileName;
         removeButton.setAttribute('class', 'files-list__remove');
+        removeButton.setAttribute('type', 'button');
         removeButton.innerHTML = '<svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
 
         li.appendChild(img);
@@ -86,18 +84,19 @@ export function FileDrop () {
 
     $(this).find('.' + label).hide();
     $(this).find('.' + outputClass).show().css({'display' : 'flex'});
-  });
 
-  $(document).on('click', '.files-list__remove', function () {
-    var fileId = $(this).parents('li').attr('data-file-id');
+    $(document).on('click', '.files-list__remove', function () {
+      var fileId = $(this).parents('li').attr('data-file-id');
+      var dropField = $(this).parents('.file-drop');
 
-    if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
-    $(this).parents('li').remove();
-    $('input[name^=file][data-file-id="' + fileId + '"]').remove();
+      if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
+      $(this).parents('li').remove();
+      $('input[name^=file][data-file-id="' + fileId + '"]').remove();
 
-    if(document.querySelector('.file-drop .files-list').childElementCount == 0) {
-      $('.file-drop').find('.file-drop__label').show();
-      $('.file-drop').find('.file-drop__output').hide();
-    }
+      if($(dropField).find('.files-list').children('li').length === 0) {
+        $(dropField).find('.file-drop__label').show();
+        $(dropField).find('.file-drop__output').hide();
+      }
+    });
   });
 };
