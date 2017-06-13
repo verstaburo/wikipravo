@@ -24,4 +24,12 @@
   &_dark {
     color: #212121;
   }
+
+  &_red {
+    color: $color-registration-red;
+  }
+
+  &_green {
+    color: $color-green-dark;
+  }
 }

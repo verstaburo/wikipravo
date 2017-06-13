@@ -6,12 +6,17 @@
   box-sizing: border-box;
 
   &__item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 0 20px 82px;
     font-size: 14px;
     letter-spacing: .04em;
     font-weight: 700;
     line-height: 1.43em;
     color: #c6c6c6;
     margin-right: 40px;
+    width: 240px;
+    min-width: 240px;
 
     &.complete {
       color: $color-green-dark;
@@ -19,10 +24,13 @@
   }
 
   &__mark {
+    position: absolute;
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    top: 50%;
+    left: 0;
     width: 62px;
     height: 62px;
     font-size: 25px;
@@ -32,7 +40,7 @@
     border-radius: 50%;
     color: #c6c6c6;
     border: 1px solid #bdbdbd;
-    margin-right: 20px;
+    transform: translate(0, -50%);
 
     .steps__item.complete & {
       color: $color-green-dark;

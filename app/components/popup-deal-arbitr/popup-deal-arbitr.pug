@@ -1,0 +1,16 @@
+include ../../blocks/form/form
+include ../../blocks/popup/popup
+include ../../blocks/textarea/textarea
+include ../../blocks/button/button
+include ../../blocks/page-title/page-title
+include ../../blocks/file-input/file-input
+
+mixin popup-deal-arbitr()
+  +popup(class= " popup-deal-arbitr" id= "popup-deal-arbitr")&attributes(attributes)
+    +page-title("Обратиться в арбитраж")(class= " popup-deal-arbitr__title")
+    +form(class= " popup-deal-arbitr__form")
+      +textarea(placeholder= "Опишите суть проблемы Арбитру" class=" popup-deal-arbitr__textarea")
+      +file-input("Прикрепить файлы", "Нет прикрепленных файлов")(class=" popup-deal-arbitr__files")
+      +e(class = " popup-deal-arbitr__buttons")
+        +button("button")(class= "_big _text _border popup-deal-arbitr__button_save js-popup-close" type = "submit") Отправить
+        +button("button")(class= "_big _text_dark _border_dark popup-deal-arbitr__button_save js-popup-close" type = "reset") Отменить

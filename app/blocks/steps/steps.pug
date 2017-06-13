@@ -1,9 +1,31 @@
-mixin steps(data)
-  -var addClass = ""
+mixin steps(finalCount)
+  -var classCount1 = "", classCount2 = "", classCount3 = "", classCount4 = "", classCount5 = "";
   +b.UL.steps&attributes(attributes)
-    -for( var k = 0; k < data.length; k++) {
-      -if(data[k].class) { addClass = "_" + data[k].class}
-      +e.LI(class= "item" + addClass)
-        +e.mark= (k+1)
-        #{data[k].text}
-    -}
+    case finalCount
+      when 1
+        - classCount1 = " complete";
+      when 2
+        - classCount1 = " complete"; classCount2 = " complete";
+      when 3
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete";
+      when 4
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete"; classCount4 = " complete";
+      when 5
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete"; classCount4 = " complete"; classCount5 = " complete";
+      default
+        - break
+    +e.LI(class= "item" + classCount1)
+        +e.mark 1
+        | Согласование условий
+    +e.LI(class= "item" + classCount2)
+        +e.mark 2
+        | Фиксация условий и резервирование суммы
+    +e.LI(class= "item" + classCount3)
+        +e.mark 3
+        | Выполнение работ
+    +e.LI(class= "item" + classCount3)
+        +e.mark 4
+        | Проверка
+    +e.LI(class= "item" + classCount3)
+        +e.mark 5
+        | Оплата и завершение

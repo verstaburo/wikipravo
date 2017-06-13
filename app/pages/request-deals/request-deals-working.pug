@@ -8,6 +8,7 @@ block content
     +request-deal-head('#working', 'working', '#complete', 'complete').__head
     +request-card-2(true).__card
     +dialog(getData('deal-dialog-short'), "Переписка с заказчиком").__dialog
+    +deal-list('working').__deals
 
 block page-left
   +sidebar
@@ -21,3 +22,5 @@ block page-bottom
 block page-popups
   +popups
     +popup-login
+    +popup-deal-review
+    +popup-deal-arbitr

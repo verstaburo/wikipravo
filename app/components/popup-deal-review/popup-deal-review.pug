@@ -1,0 +1,14 @@
+include ../../blocks/form/form
+include ../../blocks/popup/popup
+include ../../blocks/textarea/textarea
+include ../../blocks/button/button
+include ../../blocks/page-title/page-title
+
+mixin popup-deal-review()
+  +popup(class= " popup-deal-review" id= "popup-deal-review")&attributes(attributes)
+    +page-title("Оставить отзыв")(class= " popup-deal-review__title")
+    +form(class= " popup-deal-review__form")
+      +textarea(placeholder= "Напишите ваш отзыв о работе исполнителя" class=" popup-deal-review__textarea")
+      +e(class = " popup-deal-review__buttons")
+        +button("button")(class= "_big _text _border popup-deal-review__button_save js-popup-close" type = "submit") Отправить
+        +button("button")(class= "_big _text _border _dark popup-deal-review__button_save js-popup-close" type = "reset") Отменить

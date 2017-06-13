@@ -25,6 +25,10 @@
     text-align: left;
   }
 
+  &_narrow {
+    padding: 14px 20px;
+  }
+
   &_text {
     color: $color-main;
     letter-spacing: .04em;
@@ -39,6 +43,10 @@
 
     &_dark {
       color: $color-font;
+
+      &:hover {
+        color: rgba($color-font, .6)
+      }
     }
   }
 

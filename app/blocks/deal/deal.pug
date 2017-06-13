@@ -1,0 +1,115 @@
+include ../button-arrow/button-arrow
+include ../button/button
+include ../block-title/block-title
+include ../steps/steps
+include ../../components/dialog/dialog
+include ../icon/icons
+
+mixin deal(title, status)
+  -var statusName = ""
+  -var stepsCount = ""
+  -var statusColor = ""
+  -var dialogData = getData("deal-dialog-short")
+  -var messageCheckbox = ""
+  case status
+    when 'new'
+      - statusName = "Новая"
+      - stepsCount = 1
+    when 'working'
+      - statusName = "Выполняется"
+      - stepsCount = 3
+    when 'complete'
+      - statusName = "Решено"
+      - stepsCount = 5
+      - statusColor = "_green"
+    when 'close'
+      - statusName = "Закрыта"
+      - stepsCount = 2
+      - statusColor = "_gray"
+    when 'test'
+      - statusName = "Проверка"
+      - stepsCount = 4
+    when 'arbitr'
+      - statusName = "Арбитраж"
+      - stepsCount = 4
+      - dialogData = getData("deal-dialog-arbitr")
+      - messageCheckbox = "client"
+      - statusColor = "_red"
+    when 'arbitrcomplete'
+      - statusName = "Решена через Арбитраж"
+      - stepsCount = 5
+      - statusColor = "_green"
+    default
+      - break
+  +b(class="deal spoiler")&attributes(attributes)
+    +e(class=" deal__header")
+      +e(class=" deal__describe")
+        +block-title(title)._bolder._little.__title
+        +e.SPAN(class=" deal__status" + statusColor)= statusName
+      +e(class=" deal__control spoiler__control")
+        +button-arrow('down', 'button')(type="button", data-open-title="Развернуть", data-close-title="Свернуть" class="_text _noborder spoiler__button") Развернуть
+    +e(class=" deal__content spoiler__content")
+      +steps(stepsCount)(class=" deal__steps")
+      +e(class=" deal__conditions")
+        +e(class=" deal__condition-head")
+          +e.SPAN(class=" deal__condition-title") Условия
+          +e(class=" deal__condition-item_price")
+            +icon('money').__icon
+            +e.SPAN 3000 Р
+          +e(class=" deal__condition-item_time")
+            +icon('time').__icon
+            +e.SPAN 5 дней
+        +e.P Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.
+      +e(class=" deal__stage")
+        case status
+          when 'new'
+            +e(class=" deal__stage-describe")
+              +block-title("Клиент ожидает принятия условий")(class="_little _bolder deal__stage-title")
+              +e.P Клиент предложил вам сделку. Вы можете принять условия, отказаться или написать клиенту, чтобы уточинть условия.
+            +e(class=" deal__stage-buttons")
+              +button("button")(type="button")._blue._narrow.__stage-button  Принять условия
+              +button("button")(type="button")._transparent_second._narrow.__stage-button  Отказаться
+          when 'working'
+            +e(class=" deal__stage-describe")
+              +block-title("Клиент зарезервировал сумму. Сделка исполняется")(class="_little _bolder deal__stage-title")
+              +e.P Вы можете обсуждать детали работ в переписке ниже. После завершения работ сообщите клиенту о готовности. При возникновении проблем обратитесь в Арбитраж.
+            +e(class=" deal__stage-buttons")
+              +button("button")(type="button")._blue._narrow.__stage-button Сообщить о завершение работы
+              +button("button")(type="button" data-open-popup="popup-deal-arbitr")._transparent_second._narrow.__stage-button.js-popup-open Обратиться в Арбитраж
+          when 'complete'
+            +e(class=" deal__stage-describe")
+              +block-title("Сделка завершена")(class="_little _bolder deal__stage-title")
+              +e.P Спасибо за сотруднечество!
+            +e(class=" deal__stage-buttons")
+              +button("button")(type="button" data-open-popup="popup-deal-review")._blue._narrow.__stage-button.js-popup-open Оставить отзыв
+              +button("button")(type="button")._transparent_second._narrow.__stage-button Отзыв клиента
+          when 'close'
+            +e(class=" deal__stage-describe")
+              +block-title("Сделка закрыта")(class="_little _bolder deal__stage-title")
+              +e.P Клиент отказался от работы с вами по этой сделке и закрыл ее.
+          when 'test'
+            +e(class=" deal__stage-describe")
+              +block-title("Вы завершили работу")(class="_little _bolder deal__stage-title")
+              +e.P Работа находится на проверке у клиента. Если его все устроит, он завершит сделку и вам будет переведена зарезервированная сумма. Если у него возникнут вопросы, он может вернуть сделку в работу. Если у вас возникли сложностис завершением работ, вы можете обратиться в Арбитраж.
+            +e(class=" deal__stage-buttons")
+              +button("button")(type="button" data-open-popup="popup-deal-arbitr")._blue._narrow.__stage-button.js-popup-open Обратиться в Арбитраж
+          when 'arbitr'
+            +e(class=" deal__stage-describe")
+              +block-title("Сделка находится на рассмотрении арбитров")(class="_little _bolder _red deal__stage-title")
+              +e.P Ожидайте решения арбитров по сделке. Арбитр видит всю переписку по сделке. Вы можете написать сообщение арбитру в диалоге обсуждения сделки. Если нужно, скройте его от клиента.
+          when 'arbitrcomplete'
+            +e(class=" deal__stage-describe")
+              +block-title("Сделка завершена по Арбитражу")(class="_little _bolder _green deal__stage-title")
+              +e.P Спасибо за сотруднечество!
+            +e(class=" deal__stage-arbitr")
+              +block-title("Решение Арбитражного суда")(class="_little deal__stage-title")
+              +e.P Распределение суммы сделки:
+                +e.B 50% - Клиент, 50% - Исполнитель
+              +e.P Обмен отзывами:
+                +e.B Клиент - запрещено, Исполнитель - запрещено
+            +e(class=" deal__stage-buttons")
+              +button("button")(type="button" data-open-popup="popup-deal-review")._blue._narrow.__stage-button.js-popup-open Оставить отзыв
+              +button("button")(type="button")._transparent_second._narrow.__stage-button Отзыв клиента
+          default
+            - break
+      +dialog(dialogData, "Обсуждение сделки", true, messageCheckbox)

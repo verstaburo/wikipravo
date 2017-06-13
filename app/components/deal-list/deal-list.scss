@@ -1,0 +1,14 @@
+.deal-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__item {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
