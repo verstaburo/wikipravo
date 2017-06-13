@@ -8,12 +8,12 @@
 
   &__nav {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   &__conditions {
     box-sizing: border-box;
-    padding: 22px 37px;
+    padding: 18px 37px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -63,20 +63,25 @@
   }
 
   &__deals {
+    box-sizing: border-box;
+    padding: 44px 56px 48px;
     width: 100%;
     background-color: #fff;
     border: 1px solid #e4e8ea;
   }
 
   &__title {
+    letter-spacing: .032em;
     width: 100%;
+    margin-bottom: 14px;
   }
 
   &__subtitle {
     font-size: 13px;
-    letter-spacing: .04em;
+    letter-spacing: .035em;
     font-weight: 400;
     color: #c6c6c6;
+    margin-left: 8px;
   }
 
   &__list {

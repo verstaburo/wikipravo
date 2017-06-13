@@ -3,8 +3,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  box-sizing: border-box;
+  padding: 40px 0;
 
   &__item {
+    box-sizing: border-box;
     width: 100%;
 
     &:not(:last-child) {

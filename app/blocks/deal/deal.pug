@@ -43,14 +43,13 @@ mixin deal(title, status)
       - break
   +b(class="deal spoiler")&attributes(attributes)
     +e(class=" deal__header")
-      +e(class=" deal__describe")
-        +block-title(title)._bolder._little.__title
-        +e.SPAN(class=" deal__status" + statusColor)= statusName
+      +block-title(title)._bolder._little.__title
+      +e(class=" deal__status" + statusColor)= statusName
       +e(class=" deal__control spoiler__control")
         +button-arrow('down', 'button')(type="button", data-open-title="Развернуть", data-close-title="Свернуть" class="_text _noborder spoiler__button") Развернуть
     +e(class=" deal__content spoiler__content")
       +steps(stepsCount)(class=" deal__steps")
-      +e(class=" deal__conditions")
+      +e(class=" deal__condition")
         +e(class=" deal__condition-head")
           +e.SPAN(class=" deal__condition-title") Условия
           +e(class=" deal__condition-item_price")
@@ -112,4 +111,4 @@ mixin deal(title, status)
               +button("button")(type="button")._transparent_second._narrow.__stage-button Отзыв клиента
           default
             - break
-      +dialog(dialogData, "Обсуждение сделки", true, messageCheckbox)
+      +dialog(dialogData, "Обсуждение сделки", true, messageCheckbox)._long.__dialog

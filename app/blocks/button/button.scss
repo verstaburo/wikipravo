@@ -26,7 +26,7 @@
   }
 
   &_narrow {
-    padding: 14px 20px;
+    padding: 9px 20px;
   }
 
   &_text {
@@ -42,6 +42,7 @@
     }
 
     &_dark {
+      background-color: transparent;
       color: $color-font;
 
       &:hover {
@@ -55,15 +56,16 @@
 
     &:hover {
       color: rgba($color-main, .6);
-      border-color: rgba($color-main, .2);
+      border-bottom-color: rgba($color-main, .2);
     }
 
     &_dark {
+      background-color: transparent;
       border-bottom: 1px solid rgba(#000, .2);
 
       &:hover {
         color: rgba($color-font, .6);
-        border-color: rgba(#000, .4);
+        border-bottom-color: rgba(#000, .4);
       }
     }
   }

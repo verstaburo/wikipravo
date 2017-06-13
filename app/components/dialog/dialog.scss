@@ -1,0 +1,25 @@
+.dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__comment {
+    max-width: 710px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &_long {
+
+    .dialog__comment {
+      min-width: 870px;
+      width: 100%;
+    }
+  }
+}

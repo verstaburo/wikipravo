@@ -7,7 +7,32 @@
   padding: 19px 0 44px;
   width: 100%;
 
+  &_bold {
+
+    .message__title {
+      font-weight: 500;
+    }
+  }
+
+  &_bolder {
+
+    .message__title {
+      font-weight: 700;
+    }
+  }
+
+   &_small {
+
+    .message__title {
+      font-size: 18px;
+    }
+  }
+
   &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
     box-sizing: border-box;
     font-size: 20px;
     line-height: 1.5em;
@@ -15,6 +40,10 @@
     font-weight: 400;
     color: $color-font;
     margin-bottom: 20px;
+  }
+
+  &__checkbox {
+    margin-left: 50px;
   }
 
   &__form {

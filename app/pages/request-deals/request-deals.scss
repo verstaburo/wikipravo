@@ -11,4 +11,9 @@
   &__head, &__card, &__dialog, &__deals {
     width: 100%;
   }
+
+  &__dialog {
+    background-color: #fff;
+    padding: 26px 37px 22px;
+  }
 }

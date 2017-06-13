@@ -27,23 +27,6 @@
     margin-right: auto;
   }
 
-  &.opened {
-
-    .spoiler {
-
-      &__content {
-        display: flex;
-      }
-
-      &__button {
-
-        .button__arrow {
-          transform: rotate(-180deg);
-        }
-      }
-    }
-  }
-
   &_bottom {
 
     .spoiler {
