@@ -1,0 +1,18 @@
+include ../../blocks/vote-block/vote-block
+include ../../blocks/status-list/status-list
+include ../../blocks/jurist-name/jurist-name
+include ../../blocks/avatar-browse/avatar-browse
+include ../../blocks/profile-note/profile-note
+
+mixin client-profile-card-specialist()
+  +b.SECTION.client-profile-card&attributes(attributes)
+    +e.person
+      +jurist-name("Константин Константинов", false, true, true).__title
+      +e.info
+        +e.FORM#avatar-update.__form
+          +avatar-browse("Обновить фото", "assets/images/client-profile.jpg", "Обновить фото")._update._small.js-update.__avatar
+        +e.status
+          +status-list().__status-list
+          +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
+    +e.describe
+      +profile-note('note').__note

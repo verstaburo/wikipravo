@@ -1,0 +1,23 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — ЛК. Клиент. Профиль'
+
+block content
+  +b.lk-specialist-profile
+    +page-title("Констанит Константинов Карамазов").__title
+    +client-profile-card-specialist.__card
+    +client-profile-tabs-specialist.__tabs
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login

@@ -4,12 +4,15 @@ include ../specialization/specialization-mark
 include ../profile-control/profile-control
 include ../note/note
 include ../icon/icons
+include ../button/button
 
-mixin card-from-list(note)
+mixin card-from-list(note, remove)
   -var text = ""
   -var noteActiveClass = ""
   -var buttonActiveClass = " active"
+  -var removeActiveClass = ""
   -if(note) {text = "Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими формами отдельно отображается количество символов количес"; noteActiveClass= " active"; buttonActiveClass = ""}
+  -if(remove) {noteActiveClass = ""; buttonActiveClass = ""; removeActiveClass = " active"}
   +b.SECTION.card-from-list&attributes(attributes)
     +e.BUTTON.remove
       +icon('cross').__icon
@@ -21,7 +24,9 @@ mixin card-from-list(note)
           +specialization-mark(getData('card-from-list-specialization'))._marked.__list
       +e(class="notice" + noteActiveClass)
         +note(text, true)._noshadow._big._btn-left.__note
-    -if(!note)
       +e(class="control" + buttonActiveClass)
         +profile-control("note", "Создать заметку", "pencil", "", true)._title-vision.__button
+      +e(class="restore" + removeActiveClass)
+        +e.P Заметка была удалена
+        +button('button')._text.__restore Восстановить
 

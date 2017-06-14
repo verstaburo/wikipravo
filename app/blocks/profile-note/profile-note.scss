@@ -1,0 +1,54 @@
+.profile-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__notice {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__note {
+    position: relative !important;
+    display: flex !important;
+    width: 100% !important;
+    max-width: 425px !important;
+  }
+
+  &__control, &__restore {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__restore {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      letter-spacing: .04em;
+      font-weight: 400;
+      line-height: 1.57em;
+      color: rgba($color-font, .5);
+      margin-right: 30px;
+    }
+  }
+}

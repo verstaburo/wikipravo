@@ -38,6 +38,21 @@ export function NoteTextareaFocus () {
     $(this).parents("." + mainClass).removeClass("note_noempty").addClass("note_empty");
     $(this).parents("." + mainClass).find("." + textContainer).attr("contenteditable", true);
     $(this).parents("." + mainClass).removeClass('.active');
+    
+    if ( $(this).parents('.profile-note').length !== 0 ) {
+      $(this).parents('.profile-note__notice').removeClass('active');
+      $(this).parents('.profile-note').find('.profile-note__restore').addClass('active');
+    }
+
+    if ( $(this).parents('.profile-note').length !== 0 ) {
+      $(this).parents('.profile-note__notice').removeClass('active');
+      $(this).parents('.profile-note').find('.profile-note__restore').addClass('active');
+    }
+
+    if ( $(this).parents('.card-from-list').length !== 0 ) {
+      $(this).parents('.card-from-list__notice').removeClass('active');
+      $(this).parents('.card-from-list').find('.card-from-list__restore').addClass('active');
+    }
   });
 
   $('.' + btnEdit).click(function(e) {

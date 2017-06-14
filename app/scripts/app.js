@@ -27,6 +27,7 @@ import {RemovePersonFromRelationList} from '../blocks/card-from-list/card-from-l
 import {SpoilerOpened} from '../blocks/spoiler/spoiler';
 import {CounterComments} from '../blocks/spoiler/spoiler';
 import {DealLinkOpen} from '../blocks/deal-link/deal-link';
+import {ShowNoteForProfile} from '../blocks/profile-note/profile-note';
 
 $(function () {
 
@@ -59,4 +60,5 @@ $(function () {
   SpoilerOpened();
   CounterComments();
   DealLinkOpen();
+  ShowNoteForProfile();
 });

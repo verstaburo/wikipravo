@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin note(text, edit)
+mixin note(text, edit, placeholder)
   -var editable = "true";
   -var content = false;
   -var addClass = "_empty"
@@ -10,8 +10,12 @@ mixin note(text, edit)
     +e.TEXTAREA.text
     +e.P.content(contenteditable= editable, tabindex="1")= text
     +e.SPAN.placeholder
-      +e.I(class="icon fa fa-pencil")
-      |  Напишите заметку
+      -if(!placeholder) {
+        +e.I(class="icon fa fa-pencil")
+        |  Напишите заметку
+      -} else {
+        | Напишите комментарий, который будет отображаться в вашем профиле
+      -}
     +e.buttons
       +button("button")._text.__button_save(type="submit") Сохранить
       +button("button")._text.__button_cancel(type="reset") Отмена

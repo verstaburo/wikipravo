@@ -136,7 +136,7 @@
     }
   }
 
-  &__control {
+  &__control, &__restore {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -147,6 +147,21 @@
 
     &.active {
       display: flex;
+    }
+  }
+
+  &__restore {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      letter-spacing: .04em;
+      font-weight: 400;
+      line-height: 1.57em;
+      color: rgba($color-font, .5);
+      margin-right: 30px;
     }
   }
 }

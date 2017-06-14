@@ -1,0 +1,9 @@
+mixin work-status()
+  +b.work-status&attributes(attributes)
+    +e.INPUT.input(type="hidden" value="Свободен")
+    +e.button(data-type="free")
+      +e.SPAN.name Свободен
+      +e.I.right-icon(class='fa fa-angle-down')
+    +e.UL.list
+      +e.LI.item_free.active(data-value="free") Свободен
+      +e.LI.item_busy(data-value="busy") Занят
