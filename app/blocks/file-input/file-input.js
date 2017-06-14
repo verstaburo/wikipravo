@@ -1,97 +1,96 @@
 export function FileListControl() {
+  var mainClass = 'file-input',
+      outputClass = mainClass + '__output',
+      outputUlClass = mainClass + '__files-list',
+      inputClass = mainClass + '__files',
+      placeholderClass = mainClass + '__placeholder';
 
-  var input = document.getElementById('files');
-  var output = document.querySelector('output[for="files"]');
-  var selectedFiles = {};
-  var queue = [];
-  var isProcessing = false;
-  var outputUl, placeholder;
-  var fileLoad;
+  $('.' + inputClass).change(function () {
+    var files = this.files,
+        mainParent = $(this).closest('.' + mainClass),
+        output = $(mainParent).find('.' + outputClass),
+        outputUl = $(output).find('.' + outputUlClass),
+        placeholder = $(output).find('.' + placeholderClass),
+        selectedFiles = {},
+        queue = [],
+        fileName,
+        fileImg;
 
-  if(input && output) {
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
 
-    var outputUl = output.querySelector('.files-list');
+      fileName = file.name;
 
-    input.addEventListener('change', function() {
-      var files = this.files;
-      var outputList = [];
-      var fileName, fileImg;
+      if(selectedFiles[fileName] != undefined) continue;
 
-      for(var i = 0; i < files.length; i++) {
-        var file = files[i];
+      selectedFiles[fileName] = file;
+      queue.push(file);
+    }
 
-        fileName = file.name;
+    $(this)[0].value = '';
 
-        if(selectedFiles[fileName] != undefined) continue;
+    function OutputFile() {
+      var icons = {"doc" : "assets/images/doc.svg", "docx" : "assets/images/doc.svg", "pdf" : "assets/images/pdf.svg", "xls" : "assets/images/xls.svg", "xlsx" : "assets/images/xls.svg", "txt" : "assets/images/txt.svg", "other" : "assets/images/other.svg"};
 
-        selectedFiles[fileName] = file;
-        queue.push(file);
-      }
+      while(queue.length != 0) {
+        var file = queue.pop();
+        var li = document.createElement('LI');
+        var img = document.createElement('IMG');
+        var spanName = document.createElement('SPAN');
+        var removeButton = document.createElement('BUTTON');
+        var fileName = file.name;
+        var fileType = fileName.split('.').pop();
+        var fileImg;
 
-      this.value = '';
-
-      function OutputFile() {
-        var icons = {"doc" : "assets/images/doc.svg", "docx" : "assets/images/doc.svg", "pdf" : "assets/images/pdf.svg", "xls" : "assets/images/xls.svg", "xlsx" : "assets/images/xls.svg", "txt" : "assets/images/txt.svg", "other" : "assets/images/other.svg"};
-
-        while(queue.length != 0) {
-          var file = queue.pop();
-          var li = document.createElement('LI');
-          var img = document.createElement('IMG');
-          var spanName = document.createElement('SPAN');
-          var removeButton = document.createElement('BUTTON');
-          var fileName = file.name;
-          var fileType = fileName.split('.').pop();
-          var fileImg;
-
-          for (var key in icons) {
-            if(icons[fileType] != undefined) {
-              fileImg = icons[fileType];
-            } else {
-              fileImg = icons.other;
-            }
+        for (var key in icons) {
+          if(icons[fileType] != undefined) {
+            fileImg = icons[fileType];
+          } else {
+            fileImg = icons.other;
           }
-
-          li.setAttribute('class', 'files-list__item');
-          li.setAttribute('data-file-id', file.name);
-          img.setAttribute('class', 'files-list__img');
-          img.setAttribute('src', fileImg);
-          img.setAttribute('alt', '');
-          spanName.setAttribute('class', 'files-list__filename');
-          spanName.textContent = fileName;
-          removeButton.setAttribute('class', 'files-list__remove');
-          removeButton.innerHTML = '<svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
-
-          li.appendChild(img);
-          li.appendChild(spanName);
-          li.appendChild(removeButton);
-
-          outputUl.appendChild(li);
-
-          var reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = (function (file) {
-             return function(e) {
-               $(output).append('<input type="hidden" name="file[]" value="' + e.target.result + '" data-file-id="' + file.name + '">');
-             }
-          })(file);
         }
+
+        li.setAttribute('class', 'files-list__item');
+        li.setAttribute('data-file-id', file.name);
+        img.setAttribute('class', 'files-list__img');
+        img.setAttribute('src', fileImg);
+        img.setAttribute('alt', '');
+        spanName.setAttribute('class', 'files-list__filename');
+        spanName.textContent = fileName;
+        removeButton.setAttribute('class', 'files-list__remove');
+        removeButton.innerHTML = '<svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></svg>';
+
+        li.appendChild(img);
+        li.appendChild(spanName);
+        li.appendChild(removeButton);
+
+        outputUl[0].appendChild(li);
+
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (function (file) {
+           return function(e) {
+             $(output).append('<input type="hidden" name="file[]" value="' + e.target.result + '" data-file-id="' + file.name + '">');
+           }
+        })(file);
       }
+    }
 
-      OutputFile();
+    OutputFile();
 
-      output.querySelector('.file-input__placeholder').setAttribute('style', 'display: none');
-    }, false);
+    $(placeholder).hide();
 
     $(document).on('click', '.files-list__remove', function () {
       var fileId = $(this).parents('li').attr('data-file-id');
+      var fileInput = $(this).closest('.file-input');
 
       if(selectedFiles[fileId] != undefined) delete selectedFiles[fileId];
       $(this).parents('li').remove();
       $('input[name^=file][data-file-id="' + fileId + '"]').remove();
 
-      if(document.querySelector('.file-input__files-list').childElementCount == 0) {
-        output.querySelector('.file-input__placeholder').setAttribute('style', 'display: block');
+      if($(fileInput).find('.files-list').children('li').length === 0) {
+        $(fileInput).find('.file-input__placeholder').show();
       }
     });
-  }
+  });
 };

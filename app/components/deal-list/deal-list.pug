@@ -1,14 +1,14 @@
 include ../../blocks/deal/deal
 
 mixin deal-list(status)
-  -var dealId1 = "#complete"
+  -var dealId1 = "complete"
   -var dealId2 = ""
   case status
     when 'complete'
-      - dealId1 = "#complete2"
-      - dealId2 = "#complete1"
+      - dealId1 = "complete2"
+      - dealId2 = "complete1"
     default
-      - dealId2 = "#" + status
+      - dealId2 = status
   +b.deal-list&attributes(attributes)
     +deal("Сделка от 18.02.2017, 10:30", "complete")(class="__item" id= dealId1)
     +deal("Сделка от 24.05.2017, 12:45", status)(class="__item" id= dealId2)

@@ -37,4 +37,8 @@
   &.invalid {
     border-color: $color-error;
   }
+
+  &_border {
+    border: 1px solid #bbbbbe;
+  }
 }

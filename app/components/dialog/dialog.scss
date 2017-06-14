@@ -15,10 +15,63 @@
     margin-bottom: 16px;
   }
 
+  &__message {
+    width: 100%;
+    padding-bottom: 38px;
+
+    .message__title {
+      @include tablet {
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+    }
+
+    .message__checkbox {
+      @include tablet {
+        margin-left: 20px;
+      }
+    }
+
+    .file-input__fileselect {
+      width: 250px;
+
+      @include tablet {
+        flex: 1;
+        width: auto;
+        max-width: none;
+      }
+    }
+
+    .message__button {
+      @include tablet {
+        min-width: 0;
+        width: auto;
+        max-width: none;
+        flex: 1;
+      }
+    }
+  }
+
+  &__spoiler {
+    width: 100%;
+
+    .spoiler__content {
+      box-sizing: border-box;
+      padding-top: 12px;
+
+      .dialog__comment {
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
   &_long {
 
     .dialog__comment {
-      min-width: 870px;
+      max-width: 872px;
       width: 100%;
     }
   }

@@ -14,5 +14,5 @@ mixin spoiler(title, openTitle, counterClass, button)
             - break
       +button-arrow('down', 'button')(type="button", data-open-title= title data-close-title= openTitle)._text._noborder.__button= title
         +e.SPAN(class="counter" + addClass)
-    +e.content
+    +e.content(data-counter=addClass)
       block

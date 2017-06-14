@@ -44,6 +44,10 @@
 
   &__checkbox {
     margin-left: 50px;
+
+    .checkbox__label {
+      white-space: normal;
+    }
   }
 
   &__form {

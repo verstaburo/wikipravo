@@ -3,12 +3,14 @@ include ../textarea/textarea
 include ../file-input/file-input
 include ../checkbox/checkbox
 
-mixin message(title, textareaPlaceholder, check, checkTitle, checkId)
+mixin message(title, textareaPlaceholder, id, check, checkTitle, checkId)
+  - var inputId = "files"
+  -if(id) {inputId = id}
   +b.message&attributes(attributes)
     +e.H3.title= title
       -if(check)
         +checkbox(checkTitle, checkId)._middle._lightgray._bold.__checkbox
     +e.FORM.__form#message
       +textarea(placeholder= textareaPlaceholder class=" ").__textarea
-      +file-input("Прикрепить файлы", "Нет приклепленных файлов").files
+      +file-input("Прикрепить файлы", "Нет приклепленных файлов", inputId).files
         +button("button")(type="submit")._blue.message__button Отправить

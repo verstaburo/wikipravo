@@ -3,7 +3,7 @@ include ../../blocks/spoiler/spoiler
 include ../../blocks/block-title/block-title
 include ../../blocks/message/message
 
-mixin dialog(data, title, message, hiddenCommentFrom)
+mixin dialog(data, title, message, messageId, hiddenCommentFrom)
   -var checkLabel = ""
   -var checkId = ""
   -var check = ""
@@ -22,7 +22,7 @@ mixin dialog(data, title, message, hiddenCommentFrom)
           - check = true
         default
           - check = false
-      +message(title, "Введите сообщение", check, checkLabel, checkId)._small._bolder._border.__message
+      +message(title, "Введите сообщение", messageId, check, checkLabel, checkId)._small._bolder._border.__message
     +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr, data[0].attach).__comment= data[0].text
     +spoiler("Развернуть переписку", "Свернуть переписку", "js-comment-counter")._bottom.__spoiler
       -for(var i = 1; i < data.length; i++) {
