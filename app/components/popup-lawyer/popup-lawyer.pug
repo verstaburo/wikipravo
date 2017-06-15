@@ -1,6 +1,22 @@
 include ../../blocks/popup/popup
 include ../../blocks/block-title/block-title
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/file-drop/file-drop
+include ../../blocks/radiobutton/radiobutton
 
 mixin popup-lawyer()
   +popup.popup-lawyer#popup-lawyer&attributes(attributes)
-    +block-title("Являетесь ли Вы адвокатом")._bold.__title
+    +block-title("Являетесь ли Вы адвокатом")._bold.popup-lawyer__title
+    +e.FORM.popup-lawyer__form
+      +e.SECTION.popup-lawyer__switches
+        +input(type="radio" id="lawyer" name="lawyer" value="true")
+        +input(type="radio" id="notlawyer" name="lawyer" value="false")
+        +e.LABEL(for="lawyer").popup-lawyer__switch-btn
+        +e.LABEL(for="notlawyer").popup-lawyer__switch-btn
+      +e.SECTION.popup-lawyer__lawyer
+      +e.SECTION.popup-lawyer__notlawyer
+      +e.popup-lawyer__buttons
+      +e.popup-lawyer__buttons
+        +button('button')(type="submit")._text._border._big.popup-lawyer__button Сохранить
+

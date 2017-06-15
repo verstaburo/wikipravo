@@ -16,17 +16,19 @@ mixin skill-edit(title, data, popupId)
             -} else {
               +profile-control("add", "Добавить", "plus")(data-open-popup= popupId)._notitle.__button.js-popup-open
             -}
-          +e.text
-            each txt in item.text
-              +e.P= txt
           -if(item.text) {
+            +e.text
+              each txt in item.text
+                +e.P= txt
+          -}
+          -if(item.verify) {
             +verify(item.check).__checkdata
           -}
         -if(item.file) {
           +e.files
             case item.file
               when 'doc'
-                +b.UL.file-list_blue.skill__file-list
+                +b.UL.files-list_blue.skill__file-list
                   +e.LI.item
                     +e.A(href="#")
                       +e.IMG(src="assets/images/doc.svg").__img

@@ -1,6 +1,40 @@
 include ../../blocks/popup/popup
 include ../../blocks/block-title/block-title
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/file-drop/file-drop
 
 mixin popup-education()
   +popup.popup-education#popup-education&attributes(attributes)
-    +block-title("Образование")._bold.__title
+    +block-title("Образование")._bold.popup-education__title
+    +e.FORM.popup-education__form
+      +e.popup-education__row
+        +e.popup-education__col_label
+          +e.SPAN.popup-education__required *
+          +e.LABEL(for="university").popup-education__label ВУЗ
+        +e.popup-education__col_field
+          +input(type="text" placeholder="Название ВУЗа" id="university" required).popup-education__input
+      +e.popup-education__row
+        +e.popup-education__col_label
+          +e.SPAN.popup-education__required *
+          +e.LABEL(for="faculty").popup-education__label Факультет
+        +e.popup-education__col_field
+          +input(type="text" placeholder="Факультет" id="faculty" required).popup-education__input
+      +e.popup-education__row
+        +e.popup-education__col_label
+          +e.SPAN.popup-education__required *
+          +e.LABEL.popup-education__label Обучение с
+        +e.popup-education__col_field
+          +input(type="text" required).popup-education__input
+          +e.SPAN.popup-education__label_margin г
+          +e.SPAN.popup-education__label по
+          +input(type="text" required).popup-education__input
+          +e.SPAN.popup-education__label г
+      +e.popup-education__row
+        +e.popup-education__col_label
+          +e.LABEL.popup-education__label Загрузить диплом
+        +e.popup-education__col_field
+          +file-drop("Загрузите подтверждающий документ").popup-education__files
+      +e.popup-education__row_button
+        +button('button')(type="submit")._text._border._big.popup-education__button Сохранить
+

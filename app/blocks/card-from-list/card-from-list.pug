@@ -54,5 +54,5 @@ mixin card-from-list(note, remove, type, name, location)
         +profile-control("note", "Создать заметку", "pencil", "", true)._title-vision.__button
       +e(class="restore" + removeActiveClass)
         +e.P Заметка была удалена
-        +button('button')._text.__restore Восстановить
+        +button('button')(type="button")._text.__button-restore Восстановить
 

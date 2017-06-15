@@ -1,5 +1,7 @@
-mixin file-drop()
+mixin file-drop(placeholder)
+  -var labelText = "Перенесите файл"
+  -if(placeholder) {labelText = placeholder}
   +b.file-drop&attributes(attributes)
-    +e.SPAN.label Перенесите файл
+    +e.SPAN.label= labelText
     +e.OUTPUT.output
       +b.UL.files-list

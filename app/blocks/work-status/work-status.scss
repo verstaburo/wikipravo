@@ -1,5 +1,6 @@
 .work-status {
   position: relative;
+  min-width: 105px;
 
   &__list {
     width: 100%;
@@ -8,7 +9,6 @@
     left: 0;
     z-index: 10;
     opacity: 0;
-    pointer-events: none;
     transition: all .25s ease-in-out;
     background-color: #fff;
     box-shadow: 0 0 25px rgba(16, 30, 98, .1);
@@ -26,6 +26,7 @@
     color: $color-font-gray;
     transition: all .25s ease-in-out;
     border-bottom: 1px solid rgba(#000, .1);
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -44,7 +45,7 @@
       color: #5ec650;
     }
 
-    &_free::before:hover, &_free::before.active {
+    &_free:hover::before, &_free.active::before {
       background-color: #5ec650;
     }
 
@@ -52,7 +53,7 @@
       color: #d82c2c;
     }
 
-    &_busy::before:hover, &_busy::before.active {
+    &_busy:hover::before, &_busy.active::before {
       background-color: #d82c2c;
     }
   }
@@ -63,7 +64,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
-    z-index: 2;
+    z-index: 5;
     width: 100%;
     box-sizing: border-box;
     padding: 5px 13px 5px 19px;
@@ -83,7 +84,7 @@
       transition: all .25s ease-in-out;
     }
 
-    &[data-type="free"] {
+    &[data-type='free'] {
       color: $color-green-dark;
 
       &::before {
@@ -91,7 +92,7 @@
       }
     }
 
-    &[data-type="busy"] {
+    &[data-type='busy'] {
       color: $color-red;
 
       &::before {
