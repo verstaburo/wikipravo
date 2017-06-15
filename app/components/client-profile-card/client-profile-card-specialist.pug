@@ -12,7 +12,7 @@ mixin client-profile-card-specialist()
         +e.FORM#avatar-update.__form
           +avatar-browse("Обновить фото", "assets/images/client-profile.jpg", "Обновить фото")._update._small.js-update.__avatar
         +e.status
-          +status-list().__status-list
+          +status-list("", "", "", true).__status-list
           +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
     +e.describe
       +profile-note('note').__note

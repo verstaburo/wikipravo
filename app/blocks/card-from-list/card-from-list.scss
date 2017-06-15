@@ -101,6 +101,144 @@
     }
   }
 
+  &__order {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 24px 20px;
+    width: 384px;
+    min-width: 384px;
+  }
+
+  &__title {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.8em;
+    font-weight: 500;
+    color: $color-font;
+    margin-bottom: 20px;
+    width: 100%;
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: .04em;
+      color: inherit;
+      border-bottom: 1px solid rgba(#000, .5);
+      cursor: pointer;
+
+      &:hover {
+        color: rgba($color-font, .8);
+        border-bottom-color: rgba(#000, .4);
+      }
+    }
+  }
+
+  &__condition {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    padding: 18px 20px;
+    background-color: $color-bg-index;
+    width: 100%;
+    font-size: 13px;
+    color: $color-font;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 14px;
+
+    &-type {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      font-weight: 500;
+      letter-spacing: .04em;
+      flex: 1;
+      margin-right: 20px;
+
+      span {
+        letter-spacing: .04em;
+        font-weight: 500;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-sizing: border-box;
+      flex: 1;
+    }
+
+    &-item {
+      box-sizing: border-box;
+      position: relative;
+      padding-left: 25px;
+
+      span {
+        letter-spacing: .04em;
+      }
+
+      .card-from-list__condition-icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        fill: transparent;
+        stroke: rgba($color-font, .35);
+      }
+
+      &_time {
+
+        .card-from-list__condition-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &_price {
+
+        .card-from-list__condition-icon {
+          width: 18px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__spec-list {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  &__client {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 100%;
+
+    &-name {
+      font-size: 13px;
+      color: $color-font;
+      font-weight: 500;
+      line-height: 1.5em;
+      letter-spacing: .04em;
+      margin-right: 18px;
+      flex: 1;
+    }
+
+    &-status {
+      flex: 1;
+    }
+  }
+
   &__notice {
     display: none;
     flex-direction: column;

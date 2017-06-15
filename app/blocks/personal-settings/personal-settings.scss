@@ -100,7 +100,20 @@
     font-weight: 500;
     line-height: 1.5em;
     color: rgba($color-font, .75);
-    white-space: nowrap;
+    white-space: normal;
+    text-align: right;
+
+    @include s-desktop {
+      text-align: left;
+    }
+
+    &_small {
+      font-size: 13px;
+    }
+
+    &_experience {
+      margin-right: 20px;
+    }
   }
 
   &__input {
@@ -114,6 +127,11 @@
 
     &_login {
       font-weight: 700;
+    }
+
+    &_experience {
+      width: 110px;
+      margin-right: 18px;
     }
   }
 

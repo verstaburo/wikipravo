@@ -1,0 +1,36 @@
+include ../verify/verify
+include ../profile-control/profile-control
+
+mixin skill-edit(title, data, popupId)
+  -var checkType = "";
+  -var checkText = "";
+  -var checkData = "";
+  -var checkClass = "";
+  +b.SECTION.skill_edit&attributes(attributes)
+      +e.H3.title= title
+      each item in data
+        +e.content
+          +e.control
+            -if (item.control) {
+              +profile-control("edit", "Редактировать", "pencil")(data-open-popup= popupId)._notitle.__button.js-popup-open
+            -} else {
+              +profile-control("add", "Добавить", "plus")(data-open-popup= popupId)._notitle.__button.js-popup-open
+            -}
+          +e.text
+            each txt in item.text
+              +e.P= txt
+          -if(item.text) {
+            +verify(item.check).__checkdata
+          -}
+        -if(item.file) {
+          +e.files
+            case item.file
+              when 'doc'
+                +b.UL.file-list_blue.skill__file-list
+                  +e.LI.item
+                    +e.A(href="#")
+                      +e.IMG(src="assets/images/doc.svg").__img
+                      +e.SPAN.filename Удостоверение
+              default
+                +e.nofiles Нет прикрепленных файлов
+        -}

@@ -49,6 +49,14 @@
         color: rgba($color-font, .6)
       }
     }
+
+    &_gray {
+      color: #b1b1b1;
+
+      &:hover {
+        color: rgba(#b1b1b1, .8);
+      }
+    }
   }
 
   &_border {

@@ -15,7 +15,7 @@
     width: 100%;
   }
 
-  &__content {
+  &__content, &__files {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -24,13 +24,27 @@
     margin-bottom: 16px;
   }
 
+  &__files {
+    box-sizing: border-box;
+    padding-left: 68px;
+  }
+
+  &__control {
+    min-width: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 30px;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 40px;
-    width: 100%;
+    flex: 1;
 
     p {
       font-size: 14px;
@@ -45,56 +59,31 @@
   }
 
   &__checkdata {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     min-width: 165px;
     margin-left: auto;
-
-    span {
-      font-size: 13px;
-      letter-spacing: .065em;
-      white-space: nowrap;
-    }
-
-    &_check {
-
-      .skill__icon-wrapper {
-        border-color: $color-green-dark;
-      }
-
-      i, span {
-        color: $color-green-dark;
-      }
-    }
-
-    &_cross {
-
-      .skill__icon-wrapper {
-        border-color: $color-red-border;
-      }
-
-      i, span {
-        color: $color-red-cross;
-      }
-    }
   }
 
-  &__icon-wrapper {
+  &__nofiles {
+    position: relative;
+    width: 100%;
     box-sizing: border-box;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 40px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    margin-right: 20px;
-  }
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.78em;
+    color: #c2c2c2;
+    padding-left: 30px;
 
-  &__icon {
-    font-size: 18px;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 19px;
+      min-width: 19px;
+      height: 19px;
+      background-color: #c2c2c2;
+      transform: translate(0, -50%);
+    }
   }
 }

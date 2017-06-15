@@ -1,3 +1,5 @@
+include ../verify/verify
+
 mixin skill(data)
   -var checkType = "";
   -var checkText = "";
@@ -10,11 +12,4 @@ mixin skill(data)
           +e.text
             each txt in item.text
               +e.P= txt
-          -if(item.check) {checkData = item.check;
-            -if(checkData == "true") {checkType = "check"; checkText = "Проверено"; checkClass = "check"} else {checkType = "times"; checkText = "Не проверено"; checkClass = "cross"}
-              +e(class="checkdata_" + checkClass)
-                +e.icon-wrapper
-                  +e.I(class="icon " + "fa fa-" + checkType)
-                +e.SPAN= checkText
-          -}
-
+          +verify(item.check).__checkdata

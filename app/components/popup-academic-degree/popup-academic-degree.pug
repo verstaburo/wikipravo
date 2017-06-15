@@ -1,0 +1,6 @@
+include ../../blocks/popup/popup
+include ../../blocks/block-title/block-title
+
+mixin popup-academic-degree()
+  +popup.popup-academic-degree#popup-academic-degree&attributes(attributes)
+    +block-title("Ученая степень")._bold.__title

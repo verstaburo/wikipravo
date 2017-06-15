@@ -19,6 +19,7 @@
       justify-content: flex-start;
       align-items: center;
       box-sizing: border-box;
+      cursor: pointer;
     }
 
     &:not(:last-of-type) {
@@ -80,6 +81,20 @@
         height: 17px;
         stroke: transparent;
         fill: rgba($color-font, .5);
+      }
+    }
+  }
+
+  &_blue {
+
+    .files-list {
+
+      a {
+        color: $color-main;
+
+        &:hover {
+          color: rgba($color-main, .8);
+        }
       }
     }
   }

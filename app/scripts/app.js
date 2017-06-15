@@ -28,6 +28,8 @@ import {SpoilerOpened} from '../blocks/spoiler/spoiler';
 import {CounterComments} from '../blocks/spoiler/spoiler';
 import {DealLinkOpen} from '../blocks/deal-link/deal-link';
 import {ShowNoteForProfile} from '../blocks/profile-note/profile-note';
+import {SmsCodePopupOpen} from '../blocks/popup-sms-verification/popup-sms-verification';
+import {WorkStatusListOpen} from '../blocks/work-status/work-status';
 
 $(function () {
 
@@ -61,4 +63,6 @@ $(function () {
   CounterComments();
   DealLinkOpen();
   ShowNoteForProfile();
+  SmsCodePopupOpen();
+  WorkStatusListOpen();
 });

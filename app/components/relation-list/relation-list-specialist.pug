@@ -1,0 +1,28 @@
+include ../../blocks/card-from-list/card-from-list
+include ../../blocks/block-title/block-title
+include ../../blocks/icon/icons
+
+mixin relation-list-specialist(icon)
+  -var addClass= "";
+  -if(icon === 'lock') {addClass = "_lock"}
+  -if(icon === 'star') {addClass = "_star"}
+  +b.relation-list&attributes(attributes)
+    +e.section_clients
+      +e.header
+        +icon(icon)(class=" __icon" + addClass)
+        +block-title("Клиенты")._bold.__title
+      +e.list
+        +card-from-list(true, "", "", "Константин Константинов", "Кабардино-Балкарии").__item
+        +card-from-list(false, "", "", "Иван Ковалев", "Москва").__item
+    +e.section_jurists
+      +e.header
+        +icon(icon)(class=" __icon" + addClass)
+        +block-title("Юристы")._bold.__title
+      +e.list
+        +card-from-list(true, true).__item
+    +e.section_orders
+      +e.header
+        +icon(icon)(class=" __icon" + addClass)
+        +block-title("Заказы")._bold.__title
+      +e.list
+        +card-from-list(true, "", "order").__item

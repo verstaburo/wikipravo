@@ -1,0 +1,6 @@
+include ../../blocks/popup/popup
+include ../../blocks/block-title/block-title
+
+mixin popup-room-court()
+  +popup.popup-room-court#popup-room-court&attributes(attributes)
+    +block-title("Есть ли у Вас кабинет в здании суда")._bold.__title

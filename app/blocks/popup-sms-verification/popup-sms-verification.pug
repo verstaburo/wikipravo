@@ -1,0 +1,12 @@
+include ../section-title/section-title
+include ../button/button
+include ../input/input
+
+mixin popup-sms-verification()
+  +b.popup-sms-verification&attributes(attributes)
+    +section-title("Введите код подтверждения")._big.__title
+    +e.FORM.form
+      +input(type="text" placeholder="Введите код")._center.__input
+      +e.buttons
+        +button('button')(type="submit")._text._small_.__button_verify Проверить
+        +button('button')(type="button")._text._text_gray._small.__button_close.js-smscode-popup-close Закрыть

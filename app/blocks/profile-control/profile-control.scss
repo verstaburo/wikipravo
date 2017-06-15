@@ -174,7 +174,7 @@
     }
   }
 
-  &_note {
+  &_note, &_edit {
 
     .profile-control__icon {
       width: 21px;
@@ -189,6 +189,14 @@
     }
   }
 
+  &_add {
+
+    .profile-control__icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   &_title-vision {
 
     .profile-control__title {
@@ -199,6 +207,13 @@
       @include tablet {
         display: none !important;
       }
+    }
+  }
+
+  &_notitle {
+
+    .profile-control__title {
+      display: none;
     }
   }
 }

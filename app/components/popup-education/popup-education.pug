@@ -1,0 +1,6 @@
+include ../../blocks/popup/popup
+include ../../blocks/block-title/block-title
+
+mixin popup-education()
+  +popup.popup-education#popup-education&attributes(attributes)
+    +block-title("Образование")._bold.__title

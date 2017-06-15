@@ -1,0 +1,6 @@
+include ../../blocks/popup/popup
+include ../../blocks/block-title/block-title
+
+mixin popup-experience()
+  +popup.popup-experience#popup-experience&attributes(attributes)
+    +block-title("Опыт работы")._bold.__title

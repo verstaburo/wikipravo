@@ -1,6 +1,7 @@
 include ../icon/icons
+include ../work-status/work-status
 
-mixin status-list(data, online, locationName)
+mixin status-list(data, online, locationName, workList)
   -var status = ""
   -var location = "Москва"
   -if(locationName) {location = locationName}
@@ -17,4 +18,7 @@ mixin status-list(data, online, locationName)
       +e.LI.item.__item_free.__item_free_true
         +e.SPAN.__img
         +e.SPAN.name На сайте
+    -}
+    -if (workList){
+      +work-status.__workstatus
     -}

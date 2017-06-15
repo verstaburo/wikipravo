@@ -38,4 +38,8 @@
       background-color: #f1f5f8;
     }
   }
+
+  &_center::placeholder {
+    text-align: center;
+  }
 }

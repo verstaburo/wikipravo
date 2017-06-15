@@ -1,24 +1,9 @@
 .specs {
   background: #fff;
   font-size: 14px;
-
-  h3 {
-    margin-bottom: 15px;
-    font-size: 14px;
-  }
-
-  p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: $color-font-gray;
-    line-height: 24px;
-  }
-
-  &__wrap {
-    border: 1px solid $color-border-input;
-    border-radius: 2px;
-    padding: 30px 35px;
-  }
+  border: 1px solid $color-border-input;
+  border-radius: 2px;
+  padding: 30px 35px;
 
   &__slide {
 
@@ -108,5 +93,65 @@
 
   .checkbox__label {
     white-space: normal;
+  }
+
+  &_red {
+
+    .specs {
+
+      &__slide {
+
+        &_active {
+          color: #d93a37;
+
+          .specs__slide-head .specs__slide-left .checkbox__label {
+            color: #d93a37;
+          }
+        }
+      }
+
+      &__slide-left {
+
+        &:hover {
+          color: #d93a37;
+
+          .checkbox__label {
+            color: #d93a37;
+          }
+        }
+      }
+    }
+  }
+
+  &_blue {
+
+    .specs {
+
+      &__slide {
+
+        &_active {
+          color: $color-main;
+
+          .specs__slide-head .specs__slide-left .checkbox__label {
+            color: $color-main;
+          }
+        }
+      }
+
+      &__slide-left {
+
+        &:hover {
+          color: $color-main;
+
+          .checkbox__label {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  &_noborder {
+    border: none;
   }
 }

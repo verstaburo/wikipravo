@@ -1,0 +1,6 @@
+include ../../blocks/popup/popup
+include ../../blocks/block-title/block-title
+
+mixin popup-lawyer()
+  +popup.popup-lawyer#popup-lawyer&attributes(attributes)
+    +block-title("Являетесь ли Вы адвокатом")._bold.__title

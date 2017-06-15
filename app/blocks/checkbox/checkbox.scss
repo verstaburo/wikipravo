@@ -176,6 +176,21 @@
     }
   }
 
+  &_blue {
+
+    input:checked ~ label {
+
+      .checkbox__check {
+        background: $color-main;
+        border-color: $color-main;
+      }
+
+      .checkbox__check-img {
+        fill: #fff;
+      }
+    }
+  }
+
   &_lightgray {
 
     .checkbox__label {

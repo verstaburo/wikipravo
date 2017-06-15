@@ -3,8 +3,9 @@ include ../input/input
 include ../selectbox/selectbox
 include ../icon/icons
 include ../verify/verify
+include ../popup-sms-verification/popup-sms-verification
 
-mixin personal-settings()
+mixin personal-settings(specialist)
   +b.FORM.personal-settings&attributes(attributes)
     +e.row
       +e.col_label
@@ -62,7 +63,7 @@ mixin personal-settings()
           | Номер телефона:
       +e.col_field
         +input(type="tel" placeholder="8 (963) 765-43-21" required)#phone.__input_phone
-        +button('a')(href="#")._text._border.__link Отправить SMS
+        +button('a')(href="#" data-popup-open="sms-code")._text._border.__link.js-smscode-popup-open#sms Отправить SMS
       +e.col_check
         +verify(true).__verify
     +e.row
@@ -81,8 +82,39 @@ mixin personal-settings()
       +e.col_field
         +selectbox(getData('sidebar-city-list'), "", true, "Москва")._light._scrollable.__selectbox_city
       +e.col_check
+    -if(specialist) {
+      +e.row_help
+        +e.col_label
+        +e.col_field
+          +e.SPAN.help Укажите ссылку, если хотите повысить доверие к вам
+        +e.col_check
+      +e.row
+        +e.col_label
+          +e.SPAN.__label
+            | Профиль на РосПравосудие:
+        +e.col_field
+          +input(type="url" placeholder="https://rospravosudie.com/lawyer-kabinet-i-k-s/")#rospravo.__input_rospravo
+        +e.col_check
+          +verify.__verify
+      +e.row_help
+        +e.col_label
+        +e.col_field
+          +e.SPAN.help Укажите ваш стаж работы
+        +e.col_check
+      +e.row
+        +e.col_label
+          +e.SPAN.__label
+            | Стаж:
+        +e.col_field
+          +input(type="numeric" placeholder="10")._center#experience.__input_experience
+          +e.SPAN.__label_small._experience лет
+          +verify(true).__verify
+        +e.col_check
+    -}
     +e.row
       +e.col_label
       +e.col_field
         +button('button')(type="submit")._blue.__button Сохранить изменения
       +e.col_check
+    +popup-sms-verification#sms-code
+

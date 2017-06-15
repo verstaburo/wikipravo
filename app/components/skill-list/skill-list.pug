@@ -1,0 +1,17 @@
+include ../../blocks/skill/skill-edit
+
+mixin skill-list()
+  -var dataLawyer = [{"control" : true, "text" : ["Да, Адвокатское бюро \"Падва и партнеры\"", "№ удостоверения 1234567890"], "check" : true, "file" : 'doc'}];
+  -var dataRoomAtCourt = [{"control" : true, "text" : ["Да, Мещерский районный суд"], "check" : true, "file" : 'doc'}];
+  -var dataEducation = [{"control" : true, "text" : ["МГЮА Факультет: Правоведение, 2006-2010"], "check" : true, "file" : 'doc'}, {"control" : true, "text" : ["СВВАИУ Факультет: Радиоэлектроника, 1990- 1995"], "check" : false, "file" : 'nofile'}, {"control" : false, "text" : [], "check" : false}];
+  -var dataExperience = [{"control" : true, "text" : ["2000-2002, Адвокатское бюро \"Иванов и партнеры\""], "check" : false}, {"control" : false, "text" : [], "check" : false}];
+  -var dataPublicWork = [{"control" : true, "text" : ["1992-2000, Госдума РФ"], "check" : false}, {"control" : false, "text" : [], "check" : false}];
+  -var dataAcademicDegree = [{"control" : true, "text" : ["Доктор наук", "Тема диссертации: \"Развитие международного сотрудничества, проблемы создания единых пространств в области гуманитарного сотрудничества, экономического и экологического взаимодействия и тенденции в области международного частного права.\""], "check" : false, "file" : 'doc'}];
+  +b.skill-list&attributes(attributes)
+    +skill("Являетесь ли Вы адвокатом", dataLawyer, "popup-lawyer").__item
+    +skill("Есть ли у Вас кабинет в здании суда", dataRoomAtCourt, "popup-room-court").__item
+    +skill("Образование", dataEducation, "popup-education").__item
+    +skill("Опыт работы", dataExperience, "popup-experience").__item
+    +skill("Опыт работы в Госструктурах", dataPublicWork, "popup-public-work").__item
+    +skill("Ученая степень", dataAcademicDegree, "popup-academic-degree").__item
+

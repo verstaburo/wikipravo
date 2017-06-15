@@ -9,7 +9,7 @@ mixin profile-note(status)
   +b.profile-note&attributes(attributes)
     case status
       when 'note'
-        - noteActive = " acitve"
+        - noteActive = " active"
       when 'control'
         - buttonActive = " active"
       when 'remove'
@@ -17,10 +17,10 @@ mixin profile-note(status)
       default
         - break
     +e(class="notice" + noteActive)
-      +note("Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов.", true, true)._noshadow._big._btn-left.__note
+      +note("Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов.", true, true)._big.__note
     +e(class="control" + buttonActive)
       +profile-control("note", "Создать заметку", "pencil", "", true)._title-vision.__button
     +e(class="restore" + restoreActive)
       +e.P Заметка была удалена
       +button('button')._text.__restore Восстановить
-      
+

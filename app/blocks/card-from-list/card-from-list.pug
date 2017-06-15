@@ -6,22 +6,48 @@ include ../note/note
 include ../icon/icons
 include ../button/button
 
-mixin card-from-list(note, remove)
+mixin card-from-list(note, remove, type, name, location)
   -var text = ""
   -var noteActiveClass = ""
   -var buttonActiveClass = " active"
   -var removeActiveClass = ""
+  -var personName = "Иван Ковалев"
+  -if(name) {personName = name}
   -if(note) {text = "Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими формами отдельно отображается количество символов количес"; noteActiveClass= " active"; buttonActiveClass = ""}
   -if(remove) {noteActiveClass = ""; buttonActiveClass = ""; removeActiveClass = " active"}
   +b.SECTION.card-from-list&attributes(attributes)
     +e.BUTTON.remove
       +icon('cross').__icon
     +e.content
-      +e.person
-        +avatar("assets/images/short-review-avatar.jpg").__avatar
-        +e.info
-          +jurist-name("Иван Ковалев", true, true, true)._border._bold._small.__name
-          +specialization-mark(getData('card-from-list-specialization'))._marked.__list
+      case type
+        when 'order'
+          +e.order
+            +e.title
+              +e.A Отчет о доходах
+            +e.condition
+              +e.condition-type
+                +e.SPAN Консультация
+              +e.condition-info
+                +e.condition-item_time
+                  +icon('time').__condition-icon
+                  +e.SPAN По договоренности
+                +e.condition-item_price
+                  +icon('money').__condition-icon
+                  +e.SPAN По договоренности
+            +specialization-mark([{"name" : "Миграционное право", "mark" : "main"}])._marked.__spec-list
+            +e.client
+              +e.SPAN.client-name Ксения Соколова
+              +status-list.__client-status
+        default
+          +e.person
+            +avatar("assets/images/short-review-avatar.jpg").__avatar
+            +e.info
+              +jurist-name(personName, true, true, true)._border._bold._small.__name
+              -if(location) {
+                +status-list("", "", location)
+              -} else {
+                +specialization-mark(getData('card-from-list-specialization'))._marked.__list
+              -}
       +e(class="notice" + noteActiveClass)
         +note(text, true)._noshadow._big._btn-left.__note
       +e(class="control" + buttonActiveClass)
