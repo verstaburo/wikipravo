@@ -370,7 +370,7 @@
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_field">
                                             <input class="input personal-settings__input personal-settings__input_phone" type="tel" placeholder="8 (963) 765-43-21" required="required" id="phone" />
-                                            <a class="button button_text button_border personal-settings__link" href="#">
+                                            <a class="button button_text button_border personal-settings__link js-smscode-popup-open" href="#" data-popup-open="sms-code" id="sms">
                                                 <span class="button__name">Отправить SMS</span>
                                             </a>
                                         </div>
@@ -438,6 +438,20 @@
                                             </button>
                                         </div>
                                         <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="popup-sms-verification" id="sms-code">
+                                        <h4 class="section-title section-title_big popup-sms-verification__title">Введите код подтверждения</h4>
+                                        <form class="popup-sms-verification__form">
+                                            <input class="input input_center popup-sms-verification__input" type="text" placeholder="Введите код" />
+                                            <div class="popup-sms-verification__buttons">
+                                                <button class="button button_text button_small_ popup-sms-verification__button popup-sms-verification__button_verify" type="submit">
+                                                    <span class="button__name">Проверить</span>
+                                                </button>
+                                                <button class="button button_text button_text_gray button_small popup-sms-verification__button popup-sms-verification__button_close js-smscode-popup-close" type="button">
+                                                    <span class="button__name">Закрыть</span>
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </form>
                             </div>
@@ -1238,7 +1252,7 @@
                                                 </div>
                                                 <div class="card-from-list__restore">
                                                     <p>Заметка была удалена</p>
-                                                    <button class="button button_text card-from-list__restore">
+                                                    <button class="button button_text card-from-list__button-restore" type="button">
                                                         <span class="button__name">Восстановить</span>
                                                     </button>
                                                 </div>
@@ -1305,7 +1319,7 @@
                                                 </div>
                                                 <div class="card-from-list__restore">
                                                     <p>Заметка была удалена</p>
-                                                    <button class="button button_text card-from-list__restore">
+                                                    <button class="button button_text card-from-list__button-restore" type="button">
                                                         <span class="button__name">Восстановить</span>
                                                     </button>
                                                 </div>
@@ -1383,7 +1397,7 @@
                                                 </div>
                                                 <div class="card-from-list__restore">
                                                     <p>Заметка была удалена</p>
-                                                    <button class="button button_text card-from-list__restore">
+                                                    <button class="button button_text card-from-list__button-restore" type="button">
                                                         <span class="button__name">Восстановить</span>
                                                     </button>
                                                 </div>
@@ -1450,7 +1464,7 @@
                                                 </div>
                                                 <div class="card-from-list__restore">
                                                     <p>Заметка была удалена</p>
-                                                    <button class="button button_text card-from-list__restore">
+                                                    <button class="button button_text card-from-list__button-restore" type="button">
                                                         <span class="button__name">Восстановить</span>
                                                     </button>
                                                 </div>

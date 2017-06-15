@@ -186,6 +186,17 @@
                                             <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
                                             <span class="status-list__name">Москва</span>
                                         </li>
+                                        <li class="work-status status-list__workstatus">
+                                            <input class="work-status__input" type="hidden" value="Свободен" />
+                                            <div class="work-status__button" data-type="free">
+                                                <span class="work-status__name">Свободен</span>
+                                                <i class="work-status__right-icon fa fa-angle-down"></i>
+                                            </div>
+                                            <ul class="work-status__list">
+                                                <li class="work-status__item work-status__item_free active" data-value="free">Свободен</li>
+                                                <li class="work-status__item work-status__item_busy" data-value="busy">Занят</li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                     <div class="vote-block client-profile-card__likes">
                                         <span class="like-button like-button_like">
@@ -202,8 +213,8 @@
                         </div>
                         <div class="client-profile-card__describe">
                             <div class="profile-note client-profile-card__note">
-                                <div class="profile-note__notice acitve">
-                                    <form class="note note_noempty note_noshadow note_big note_btn-left profile-note__note">
+                                <div class="profile-note__notice active">
+                                    <form class="note note_noempty note_big profile-note__note">
                                         <textarea class="note__text"></textarea>
                                         <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов.</p>
                                         <span class="note__placeholder">Напишите комментарий, который будет отображаться в вашем профиле</span>
@@ -268,7 +279,279 @@
                             </a>
                         </div>
                         <div class="client-profile-tabs__container" data-tab-group-container="client-profile">
-                            <div class="client-profile-tabs__content client-profile-tabs__content_maindata active" data-tab-group="client-profile" data-tab-id="tab1"></div>
+                            <div class="client-profile-tabs__content client-profile-tabs__content_maindata active" data-tab-group="client-profile" data-tab-id="tab1">
+                                <form class="personal-settings client-profile-tabs__maindata">
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="login">Логин:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input input_noborder input_blue personal-settings__input personal-settings__input_login" type="text" value="Evgeniy255" disabled="disabled" id="login" />
+                                            <a class="button button_text button_border personal-settings__link" href="#">
+                                                <span class="button__name">Изменить пароль</span>
+                                            </a>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Будет использоваться для показа пользователям сервиса</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="name">
+                                                <span class="personal-settings__require">*</span>Имя:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input personal-settings__input" type="text" placeholder="Евгений Михайлов" required="required" id="name" />
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <span class="personal-settings__label">
+                                                <span class="personal-settings__require">*</span>Дата рождения:</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="8" placeholder="8" required="required" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">8</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">1</li>
+                                                    <li class="selectbox__option">2</li>
+                                                    <li class="selectbox__option">3</li>
+                                                    <li class="selectbox__option">4</li>
+                                                    <li class="selectbox__option">5</li>
+                                                    <li class="selectbox__option">6</li>
+                                                    <li class="selectbox__option">7</li>
+                                                    <li class="selectbox__option">8</li>
+                                                    <li class="selectbox__option">9</li>
+                                                    <li class="selectbox__option">10</li>
+                                                    <li class="selectbox__option">11</li>
+                                                    <li class="selectbox__option">12</li>
+                                                    <li class="selectbox__option">13</li>
+                                                </ul>
+                                            </div>
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="Март" placeholder="Март" required="required" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Март</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Январь</li>
+                                                    <li class="selectbox__option">Февраль</li>
+                                                    <li class="selectbox__option">Март</li>
+                                                    <li class="selectbox__option">Апрель</li>
+                                                    <li class="selectbox__option">Май</li>
+                                                    <li class="selectbox__option">Июнь</li>
+                                                    <li class="selectbox__option">Июль</li>
+                                                    <li class="selectbox__option">Август</li>
+                                                    <li class="selectbox__option">Сентябрь</li>
+                                                    <li class="selectbox__option">Октябрь</li>
+                                                    <li class="selectbox__option">Ноябрь</li>
+                                                    <li class="selectbox__option">Декабрь</li>
+                                                </ul>
+                                            </div>
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_birth">
+                                                <input class="selectbox__input" type="hidden" value="1975" placeholder="1975" required="required" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">1975</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">2017</li>
+                                                    <li class="selectbox__option">2016</li>
+                                                    <li class="selectbox__option">2015</li>
+                                                    <li class="selectbox__option">2014</li>
+                                                    <li class="selectbox__option">2013</li>
+                                                    <li class="selectbox__option">2012</li>
+                                                    <li class="selectbox__option">2011</li>
+                                                    <li class="selectbox__option">2010</li>
+                                                    <li class="selectbox__option">2009</li>
+                                                    <li class="selectbox__option">2008</li>
+                                                    <li class="selectbox__option">2007</li>
+                                                    <li class="selectbox__option">2006</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Для восстановления пароля и рассылки уведомлений</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="email">
+                                                <span class="personal-settings__require">*</span>Email:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input personal-settings__input" type="email" placeholder="Evgeniy255@mail.ru" required="required" id="email" />
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check">
+                                            <div class="verify verify_no personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Требуется для восстановления пароля и входа в систему</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <label class="personal-settings__label" for="phone">
+                                                <span class="personal-settings__require">*</span>Номер телефона:</label>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input personal-settings__input personal-settings__input_phone" type="tel" placeholder="8 (963) 765-43-21" required="required" id="phone" />
+                                            <a class="button button_text button_border personal-settings__link js-smscode-popup-open" href="#" data-popup-open="sms-code" id="sms">
+                                                <span class="button__name">Отправить SMS</span>
+                                            </a>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check">
+                                            <div class="verify verify_yes personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <span class="personal-settings__label">
+                                                <span class="personal-settings__require">*</span>Регион:</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox">
+                                                <input class="selectbox__input" type="hidden" value="Центральный федеральный округ" placeholder="Центральный федеральный округ" required="required" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Центральный федеральный округ</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Республика Адегея</li>
+                                                    <li class="selectbox__option">Республика Башкортостан</li>
+                                                    <li class="selectbox__option">Республика Бурятия</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <span class="personal-settings__label">
+                                                <span class="personal-settings__require">*</span>Город:</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <div class="selectbox selectbox_light selectbox_scrollable personal-settings__selectbox personal-settings__selectbox_city">
+                                                <input class="selectbox__input" type="hidden" value="Москва" placeholder="Москва" required="required" />
+                                                <div class="selectbox__button">
+                                                    <span class="selectbox__button-name">Москва</span>
+                                                    <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                                </div>
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Москва</li>
+                                                    <li class="selectbox__option">Санкт-Петербург</li>
+                                                    <li class="selectbox__option">Новосибирск</li>
+                                                    <li class="selectbox__option">Тольятти</li>
+                                                    <li class="selectbox__option">Москва</li>
+                                                    <li class="selectbox__option">Санкт-Петербург</li>
+                                                    <li class="selectbox__option">Новосибирск</li>
+                                                    <li class="selectbox__option">Тольятти</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Укажите ссылку, если хотите повысить доверие к вам</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <span class="personal-settings__label">Профиль на РосПравосудие:</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input personal-settings__input personal-settings__input_rospravo" type="url" placeholder="https://rospravosudie.com/lawyer-kabinet-i-k-s/" id="rospravo" />
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check">
+                                            <div class="verify verify_no personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-settings__row personal-settings__row_help">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <span class="personal-settings__help">Укажите ваш стаж работы</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label">
+                                            <span class="personal-settings__label">Стаж:</span>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <input class="input input_center personal-settings__input personal-settings__input_experience" type="numeric" placeholder="10" id="experience" />
+                                            <span class="personal-settings__label personal-settings__label_small personal-settings__label_experience">лет</span>
+                                            <div class="verify verify_yes personal-settings__verify">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="personal-settings__row">
+                                        <div class="personal-settings__col personal-settings__col_label"></div>
+                                        <div class="personal-settings__col personal-settings__col_field">
+                                            <button class="button button_blue personal-settings__button" type="submit">
+                                                <span class="button__name">Сохранить изменения</span>
+                                            </button>
+                                        </div>
+                                        <div class="personal-settings__col personal-settings__col_check"></div>
+                                    </div>
+                                    <div class="popup-sms-verification" id="sms-code">
+                                        <h4 class="section-title section-title_big popup-sms-verification__title">Введите код подтверждения</h4>
+                                        <form class="popup-sms-verification__form">
+                                            <input class="input input_center popup-sms-verification__input" type="text" placeholder="Введите код" />
+                                            <div class="popup-sms-verification__buttons">
+                                                <button class="button button_text button_small_ popup-sms-verification__button popup-sms-verification__button_verify" type="submit">
+                                                    <span class="button__name">Проверить</span>
+                                                </button>
+                                                <button class="button button_text button_text_gray button_small popup-sms-verification__button popup-sms-verification__button_close js-smscode-popup-close" type="button">
+                                                    <span class="button__name">Закрыть</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </form>
+                            </div>
                             <div class="client-profile-tabs__content client-profile-tabs__content_identification" data-tab-group="client-profile" data-tab-id="tab2">
                                 <section class="identification client-profile-tabs__identification">
                                     <p class="identification__lead">Клиенты, прошедшие проверку, получают больше доверия со стороны юристов портала. Заполните персональные данные чтобы стать верифицированным пользователем. После заполнения и проверки модератором рядом с вашим профилем
@@ -462,8 +745,999 @@
                                     </form>
                                 </section>
                             </div>
-                            <div class="client-profile-tabs__content client-profile-tabs__content_skills" data-tab-group="client-profile" data-tab-id="tab3"></div>
-                            <div class="client-profile-tabs__content client-profile-tabs__content_specialization" data-tab-group="client-profile" data-tab-id="tab4"></div>
+                            <div class="client-profile-tabs__content client-profile-tabs__content_skills" data-tab-group="client-profile" data-tab-id="tab3">
+                                <div class="skill-list client-profile-tabs__skills">
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Являетесь ли Вы адвокатом</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-lawyer">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>Да, Адвокатское бюро &quot;Падва и партнеры&quot;</p>
+                                                <p>№ удостоверения 1234567890</p>
+                                            </div>
+                                            <div class="verify verify_yes skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__files">
+                                            <ul class="files-list files-list_blue skill__file-list">
+                                                <li class="files-list__item">
+                                                    <a href="#">
+                                                        <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
+                                                        <span class="files-list__filename">Удостоверение</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Есть ли у Вас кабинет в здании суда</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-room-court">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>Да, Мещерский районный суд</p>
+                                            </div>
+                                            <div class="verify verify_yes skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__files">
+                                            <ul class="files-list files-list_blue skill__file-list">
+                                                <li class="files-list__item">
+                                                    <a href="#">
+                                                        <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
+                                                        <span class="files-list__filename">Удостоверение</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Образование</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-education">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>МГЮА Факультет: Правоведение, 2006-2010</p>
+                                            </div>
+                                            <div class="verify verify_yes skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcheck"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__files">
+                                            <ul class="files-list files-list_blue skill__file-list">
+                                                <li class="files-list__item">
+                                                    <a href="#">
+                                                        <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
+                                                        <span class="files-list__filename">Удостоверение</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-education">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>СВВАИУ Факультет: Радиоэлектроника, 1990- 1995</p>
+                                            </div>
+                                            <div class="verify verify_no skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__files">
+                                            <div class="skill__nofiles">Нет прикрепленных файлов</div>
+                                        </div>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_add profile-control_notitle skill__button js-popup-open" title="Добавить" data-open-popup="popup-education">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Опыт работы</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-experience">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>2000-2002, Адвокатское бюро &quot;Иванов и партнеры&quot;</p>
+                                            </div>
+                                            <div class="verify verify_no skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_add profile-control_notitle skill__button js-popup-open" title="Добавить" data-open-popup="popup-experience">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Опыт работы в Госструктурах</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-public-work">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>1992-2000, Госдума РФ</p>
+                                            </div>
+                                            <div class="verify verify_no skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_add profile-control_notitle skill__button js-popup-open" title="Добавить" data-open-popup="popup-public-work">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="skill skill_edit skill-list__item">
+                                        <h3 class="skill__title">Ученая степень</h3>
+                                        <div class="skill__content">
+                                            <div class="skill__control">
+                                                <button class="profile-control profile-control_edit profile-control_notitle skill__button js-popup-open" title="Редактировать" data-open-popup="popup-academic-degree">
+                                                    <span class="profile-control__img">
+                                                        <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="skill__text">
+                                                <p>Доктор наук</p>
+                                                <p>Тема диссертации: &quot;Развитие международного сотрудничества, проблемы создания единых пространств в области гуманитарного сотрудничества, экономического и экологического взаимодействия и тенденции в области
+                                                    международного частного права.&quot;</p>
+                                            </div>
+                                            <div class="verify verify_no skill__checkdata">
+                                                <div class="verify__img">
+                                                    <svg class="verify__icon"><use xlink:href="assets/images/icon.svg#icon_boldcross"></use></svg>
+                                                </div>
+                                                <span class="verify__text">Не проверено</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill__files">
+                                            <ul class="files-list files-list_blue skill__file-list">
+                                                <li class="files-list__item">
+                                                    <a href="#">
+                                                        <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
+                                                        <span class="files-list__filename">Удостоверение</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="client-profile-tabs__content client-profile-tabs__content_specialization" data-tab-group="client-profile" data-tab-id="tab4">
+                                <form class="client-profile-tabs__specialization">
+                                    <p>Укажите специализации, которыми вы занимаетесь. Вы можете указать не более 3-х основных специализаций и любое количество дополнительных</p>
+                                    <div class="specs specs_blue specs_noborder client-profile-tabs__specs">
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id1" />
+                                                        <label class="checkbox__label" for="id1">Конституционное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id2" />
+                                                        <label class="checkbox__label" for="id2">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id3" />
+                                                            <label class="checkbox__label" for="id3">Конституционное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id4" />
+                                                            <label class="checkbox__label" for="id4">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id5" />
+                                                            <label class="checkbox__label" for="id5">Конституционное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id6" />
+                                                            <label class="checkbox__label" for="id6">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide specs__slide_active">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id7" />
+                                                        <label class="checkbox__label" for="id7">Гражданское право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id8" />
+                                                        <label class="checkbox__label" for="id8">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id9" />
+                                                            <label class="checkbox__label" for="id9">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id10" />
+                                                            <label class="checkbox__label" for="id10">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id11" />
+                                                            <label class="checkbox__label" for="id11">Право собственности
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id12" />
+                                                            <label class="checkbox__label" for="id12">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id13" />
+                                                            <label class="checkbox__label" for="id13">Взыскание задолженности
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id14" />
+                                                            <label class="checkbox__label" for="id14">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id15" />
+                                                            <label class="checkbox__label" for="id15">Кредитование
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id16" />
+                                                            <label class="checkbox__label" for="id16">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id17" />
+                                                        <label class="checkbox__label" for="id17">Семейное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id18" />
+                                                        <label class="checkbox__label" for="id18">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id19" />
+                                                            <label class="checkbox__label" for="id19">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id20" />
+                                                            <label class="checkbox__label" for="id20">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id21" />
+                                                        <label class="checkbox__label" for="id21">Недвижимость
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id22" />
+                                                        <label class="checkbox__label" for="id22">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id23" />
+                                                            <label class="checkbox__label" for="id23">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id24" />
+                                                            <label class="checkbox__label" for="id24">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id25" />
+                                                        <label class="checkbox__label" for="id25">Трудовое право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id26" />
+                                                        <label class="checkbox__label" for="id26">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id27" />
+                                                            <label class="checkbox__label" for="id27">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id28" />
+                                                            <label class="checkbox__label" for="id28">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id29" />
+                                                        <label class="checkbox__label" for="id29">Защита прав потребителей
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id30" />
+                                                        <label class="checkbox__label" for="id30">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id31" />
+                                                            <label class="checkbox__label" for="id31">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id32" />
+                                                            <label class="checkbox__label" for="id32">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id33" />
+                                                        <label class="checkbox__label" for="id33">Нотариат
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id34" />
+                                                        <label class="checkbox__label" for="id34">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id35" />
+                                                            <label class="checkbox__label" for="id35">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id36" />
+                                                            <label class="checkbox__label" for="id36">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id37" />
+                                                        <label class="checkbox__label" for="id37">Наследство
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id38" />
+                                                        <label class="checkbox__label" for="id38">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id39" />
+                                                            <label class="checkbox__label" for="id39">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id40" />
+                                                            <label class="checkbox__label" for="id40">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id41" />
+                                                        <label class="checkbox__label" for="id41">Уголовное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id42" />
+                                                        <label class="checkbox__label" for="id42">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id43" />
+                                                            <label class="checkbox__label" for="id43">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id44" />
+                                                            <label class="checkbox__label" for="id44">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide specs__slide_active">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id45" />
+                                                        <label class="checkbox__label" for="id45">Предпринимательское право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id46" />
+                                                        <label class="checkbox__label" for="id46">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id47" />
+                                                            <label class="checkbox__label" for="id47">Тендеры, контрактная система в сфере закупок
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id47" />
+                                                            <label class="checkbox__label" for="id47">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id48" />
+                                                            <label class="checkbox__label" for="id48">Кредитование
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id50" />
+                                                            <label class="checkbox__label" for="id50">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id51" />
+                                                        <label class="checkbox__label" for="id51">Административное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id52" />
+                                                        <label class="checkbox__label" for="id52">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id53" />
+                                                            <label class="checkbox__label" for="id53">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id54" />
+                                                            <label class="checkbox__label" for="id54">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id55" />
+                                                        <label class="checkbox__label" for="id55">Военное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id56" />
+                                                        <label class="checkbox__label" for="id56">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id57" />
+                                                            <label class="checkbox__label" for="id57">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id57" />
+                                                            <label class="checkbox__label" for="id57">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="specs__slide">
+                                            <div class="specs__slide-head slide-parent">
+                                                <div class="specs__slide-left">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id59" />
+                                                        <label class="checkbox__label" for="id59">Автомобильное право
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="specs__count"></div>
+                                                    <i class="specs__arrow fa fa-angle-down"></i>
+                                                </div>
+                                                <div class="specs__slide-right">
+                                                    <div class="checkbox checkbox_middle checkbox_blue">
+                                                        <input type="checkbox" id="id60" />
+                                                        <label class="checkbox__label" for="id60">(основная)
+                                                            <span class="checkbox__check">
+                                                                <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="specs__slide-content">
+                                                <div class="specs__row slide-parent">
+                                                    <div class="specs__slide-left">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id61" />
+                                                            <label class="checkbox__label" for="id61">Договорное право
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specs__slide-right">
+                                                        <div class="checkbox checkbox_middle checkbox_blue">
+                                                            <input type="checkbox" id="id62" />
+                                                            <label class="checkbox__label" for="id62">(основная)
+                                                                <span class="checkbox__check">
+                                                                    <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button button_blue client-profile-tabs__spec-button" type="submit">
+                                        <span class="button__name">Сохранить изменения</span>
+                                    </button>
+                                </form>
+                            </div>
                             <div class="client-profile-tabs__content client-profile-tabs__content_reviews" data-tab-group="client-profile" data-tab-id="tab5">
                                 <div class="client-profile-tabs__filter">
                                     <a class="button button_text button_border button_small client-profile-tabs__button active" href="#">
@@ -999,8 +2273,612 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="client-profile-tabs__content client-profile-tabs__content_favorites" data-tab-group="client-profile" data-tab-id="tab6"></div>
-                            <div class="client-profile-tabs__content client-profile-tabs__content_blacklist" data-tab-group="client-profile" data-tab-id="tab7"></div>
+                            <div class="client-profile-tabs__content client-profile-tabs__content_favorites" data-tab-group="client-profile" data-tab-id="tab6">
+                                <div class="relation-list client-profile-tabs__favorites">
+                                    <div class="relation-list__section relation-list__section_clients">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_star"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Клиенты</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Константин Константинов</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="status-list">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Кабардино-Балкарии</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice active">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Иван Ковалев</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="status-list">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Москва</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice">
+                                                        <form class="note note_empty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="true" tabindex="1"></p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control active">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="relation-list__section relation-list__section_jurists">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_star"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Юристы</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Иван Ковалев</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="specialization specialization_marked card-from-list__list">
+                                                                <li class="specialization__item specialization__item_main">
+                                                                    <a href="#">Гражданское право</a>
+                                                                    <ul class="specialization__sublist">
+                                                                        <li class="specialization__subitem">Договорное право</li>
+                                                                        <li class="specialization__subitem">Тендеры, контрактная система в сфере закупок</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore active">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="relation-list__section relation-list__section_orders">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_star"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Заказы</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__order">
+                                                        <div class="card-from-list__title">
+                                                            <a>Отчет о доходах</a>
+                                                        </div>
+                                                        <div class="card-from-list__condition">
+                                                            <div class="card-from-list__condition-type">
+                                                                <span>Консультация</span>
+                                                            </div>
+                                                            <div class="card-from-list__condition-info">
+                                                                <div class="card-from-list__condition-item card-from-list__condition-item_time">
+                                                                    <svg class="card-from-list__condition-icon"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                                                    <span>По договоренности</span>
+                                                                </div>
+                                                                <div class="card-from-list__condition-item card-from-list__condition-item_price">
+                                                                    <svg class="card-from-list__condition-icon"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                                                    <span>По договоренности</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="specialization specialization_marked card-from-list__spec-list">
+                                                            <li class="specialization__item specialization__item_main">
+                                                                <a href="#">Миграционное право</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="card-from-list__client">
+                                                            <span class="card-from-list__client-name">Ксения Соколова</span>
+                                                            <ul class="status-list card-from-list__client-status">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Москва</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice active">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="client-profile-tabs__content client-profile-tabs__content_blacklist" data-tab-group="client-profile" data-tab-id="tab7">
+                                <div class="relation-list client-profile-tabs__blacklist">
+                                    <div class="relation-list__section relation-list__section_clients">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_lock"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Клиенты</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Константин Константинов</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="status-list">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Кабардино-Балкарии</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice active">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Иван Ковалев</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="status-list">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Москва</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice">
+                                                        <form class="note note_empty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="true" tabindex="1"></p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control active">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="relation-list__section relation-list__section_jurists">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_lock"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Юристы</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__person">
+                                                        <div class="avatar card-from-list__avatar">
+                                                            <img src="assets/images/short-review-avatar.jpg" alt="" role="presentation" />
+                                                        </div>
+                                                        <div class="card-from-list__info">
+                                                            <div class="jurist-name jurist-name_border jurist-name_bold jurist-name_small card-from-list__name">
+                                                                <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
+                                                                    <svg class="jurist-name__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                                </div>
+                                                                <span class="jurist-name__lawyername">
+                                                                    <a href="#">Иван Ковалев</a>
+                                                                </span>
+                                                            </div>
+                                                            <ul class="specialization specialization_marked card-from-list__list">
+                                                                <li class="specialization__item specialization__item_main">
+                                                                    <a href="#">Гражданское право</a>
+                                                                    <ul class="specialization__sublist">
+                                                                        <li class="specialization__subitem">Договорное право</li>
+                                                                        <li class="specialization__subitem">Тендеры, контрактная система в сфере закупок</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore active">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="relation-list__section relation-list__section_orders">
+                                        <div class="relation-list__header">
+                                            <svg class="relation-list__icon relation-list__icon_lock"><use xlink:href="assets/images/icon.svg#icon_lock"></use></svg>
+                                            <h3 class="block-title block-title_bold relation-list__title">Заказы</h3>
+                                        </div>
+                                        <div class="relation-list__list">
+                                            <section class="card-from-list relation-list__item">
+                                                <button class="card-from-list__remove">
+                                                    <svg class="card-from-list__icon"><use xlink:href="assets/images/icon.svg#icon_cross"></use></svg>
+                                                </button>
+                                                <div class="card-from-list__content">
+                                                    <div class="card-from-list__order">
+                                                        <div class="card-from-list__title">
+                                                            <a>Отчет о доходах</a>
+                                                        </div>
+                                                        <div class="card-from-list__condition">
+                                                            <div class="card-from-list__condition-type">
+                                                                <span>Консультация</span>
+                                                            </div>
+                                                            <div class="card-from-list__condition-info">
+                                                                <div class="card-from-list__condition-item card-from-list__condition-item_time">
+                                                                    <svg class="card-from-list__condition-icon"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                                                    <span>По договоренности</span>
+                                                                </div>
+                                                                <div class="card-from-list__condition-item card-from-list__condition-item_price">
+                                                                    <svg class="card-from-list__condition-icon"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                                                    <span>По договоренности</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="specialization specialization_marked card-from-list__spec-list">
+                                                            <li class="specialization__item specialization__item_main">
+                                                                <a href="#">Миграционное право</a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="card-from-list__client">
+                                                            <span class="card-from-list__client-name">Ксения Соколова</span>
+                                                            <ul class="status-list card-from-list__client-status">
+                                                                <li class="status-list__item status-list__item status-list__item_location">
+                                                                    <img class="status-list__img" src="assets/images/menu-14.svg" alt="" role="presentation" />
+                                                                    <span class="status-list__name">Москва</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-from-list__notice active">
+                                                        <form class="note note_noempty note_noshadow note_big note_btn-left card-from-list__note">
+                                                            <textarea class="note__text"></textarea>
+                                                            <p class="note__content" contenteditable="false" tabindex="1">Мы сделали плагин, который подсчитывает количество символов и слов в тексте в режиме онлайн, причём отдельно отображается количество символов с пробелами и без пробелов. Такими автоматическими
+                                                                формами отдельно отображается количество символов количес</p>
+                                                            <span class="note__placeholder">
+                                                                <i class="note__icon fa fa-pencil"></i> Напишите заметку</span>
+                                                            <div class="note__buttons">
+                                                                <button class="button button_text note__button note__button_save" type="submit">
+                                                                    <span class="button__name">Сохранить</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_cancel" type="reset">
+                                                                    <span class="button__name">Отмена</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_edit" type="button">
+                                                                    <span class="button__name">Редактировать</span>
+                                                                </button>
+                                                                <button class="button button_text note__button note__button_remove" type="button">
+                                                                    <span class="button__name">Удалить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="card-from-list__control">
+                                                        <button class="profile-control profile-control_note profile-control_title-vision card-from-list__button" title="Создать заметку">
+                                                            <span class="profile-control__img">
+                                                                <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_pencil"></use></svg>
+                                                            </span>
+                                                            <span class="profile-control__title">Создать заметку</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-from-list__restore">
+                                                        <p>Заметка была удалена</p>
+                                                        <button class="button button_text card-from-list__button-restore" type="button">
+                                                            <span class="button__name">Восстановить</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="client-profile-tabs__content client-profile-tabs__content_notice" data-tab-group="client-profile" data-tab-id="tab8">
                                 <form class="notice-settings client-profile-tabs__notice">
                                     <h3 class="block-title block-title_little block-title_centered notice-settings__title">Настройки уведомлений</h3>
@@ -1306,6 +3184,153 @@
                     <a class="icon-link icon-link_small form__bottom-link" href="#">
                         <span class="icon-link__text">Забыли пароль?</span>
                     </a>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-lawyer" id="popup-lawyer">
+                <h3 class="block-title block-title_bold popup-lawyer__title">Являетесь ли Вы адвокатом</h3>
+                <form class="popup__popup-lawyer__form">
+                    <section class="popup__popup-lawyer__switches">
+                        <input class="input" type="radio" id="lawyer" name="lawyer" value="true" />
+                        <input class="input" type="radio" id="notlawyer" name="lawyer" value="false" />
+                        <label class="popup__popup-lawyer__switch-btn" for="lawyer"></label>
+                        <label class="popup__popup-lawyer__switch-btn" for="notlawyer"></label>
+                    </section>
+                    <section class="popup__popup-lawyer__lawyer"></section>
+                    <section class="popup__popup-lawyer__notlawyer"></section>
+                    <div class="popup__popup-lawyer__buttons"></div>
+                    <div class="popup__popup-lawyer__buttons">
+                        <button class="button button_text button_border button_big popup-lawyer__button" type="submit">
+                            <span class="button__name">Сохранить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-room-court" id="popup-room-court">
+                <h3 class="block-title block-title_bold popup__title">Есть ли у Вас кабинет в здании суда</h3>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-education" id="popup-education">
+                <h3 class="block-title block-title_bold popup-education__title">Образование</h3>
+                <form class="popup__popup-education__form">
+                    <div class="popup__popup-education__row">
+                        <div class="popup__popup-education__col popup__popup-education__col_label">
+                            <span class="popup__popup-education__required">*</span>
+                            <label class="popup__popup-education__label" for="university">ВУЗ</label>
+                        </div>
+                        <div class="popup__popup-education__col popup__popup-education__col_field">
+                            <input class="input popup-education__input" type="text" placeholder="Название ВУЗа" id="university" required="required" />
+                        </div>
+                    </div>
+                    <div class="popup__popup-education__row">
+                        <div class="popup__popup-education__col popup__popup-education__col_label">
+                            <span class="popup__popup-education__required">*</span>
+                            <label class="popup__popup-education__label" for="faculty">Факультет</label>
+                        </div>
+                        <div class="popup__popup-education__col popup__popup-education__col_field">
+                            <input class="input popup-education__input" type="text" placeholder="Факультет" id="faculty" required="required" />
+                        </div>
+                    </div>
+                    <div class="popup__popup-education__row">
+                        <div class="popup__popup-education__col popup__popup-education__col_label">
+                            <span class="popup__popup-education__required">*</span>
+                            <label class="popup__popup-education__label">Обучение с</label>
+                        </div>
+                        <div class="popup__popup-education__col popup__popup-education__col_field">
+                            <input class="input popup-education__input" type="text" required="required" />
+                            <span class="popup__popup-education__label popup__popup-education__label_margin">г</span>
+                            <span class="popup__popup-education__label">по</span>
+                            <input class="input popup-education__input" type="text" required="required" />
+                            <span class="popup__popup-education__label">г</span>
+                        </div>
+                    </div>
+                    <div class="popup__popup-education__row">
+                        <div class="popup__popup-education__col popup__popup-education__col_label">
+                            <label class="popup__popup-education__label">Загрузить диплом</label>
+                        </div>
+                        <div class="popup__popup-education__col popup__popup-education__col_field">
+                            <div class="file-drop popup-education__files">
+                                <span class="file-drop__label">Загрузите подтверждающий документ</span>
+                                <output class="file-drop__output">
+                                    <ul class="files-list"></ul>
+                                </output>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__popup-education__row popup__popup-education__row_button">
+                        <button class="button button_text button_border button_big popup-education__button" type="submit">
+                            <span class="button__name">Сохранить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-experience" id="popup-experience">
+                <h3 class="block-title block-title_bold popup-experience__title">Опыт работы</h3>
+                <form class="popup__popup-experience__form">
+                    <div class="popup__popup-experience__row">
+                        <div class="popup__popup-experience__col popup__popup-experience__col_label">
+                            <span class="popup__popup-experience__required">*</span>
+                            <label class="popup__popup-experience__label" for="organization">Организация</label>
+                        </div>
+                        <div class="popup__popup-experience__col popup__popup-experience__col_field">
+                            <input class="input popup-experience__input" type="text" placeholder="Название и адрес организации" id="organization" required="required" />
+                        </div>
+                    </div>
+                    <div class="popup__popup-experience__row">
+                        <div class="popup__popup-experience__col popup__popup-experience__col_label">
+                            <span class="popup__popup-experience__required">*</span>
+                            <label class="popup__popup-experience__label">Период работы с</label>
+                        </div>
+                        <div class="popup__popup-experience__col popup__popup-experience__col_field">
+                            <input class="input popup-experience__input" type="text" required="required" />
+                            <span class="popup__popup-experience__label popup__popup-experience__label_margin">год</span>
+                            <span class="popup__popup-experience__label">по</span>
+                            <input class="input popup-experience__input" type="text" required="required" />
+                            <span class="popup__popup-experience__label">год</span>
+                        </div>
+                    </div>
+                    <div class="popup__popup-experience__row">
+                        <div class="popup__popup-experience__col popup__popup-experience__col_label"></div>
+                        <div class="popup__popup-experience__col popup__popup-experience__col_field">
+                            <div class="file-drop popup-experience__files">
+                                <span class="file-drop__label">Загрузите подтверждающий документ</span>
+                                <output class="file-drop__output">
+                                    <ul class="files-list"></ul>
+                                </output>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__popup-experience__row popup__popup-experience__row_button">
+                        <button class="button button_text button_border button_big popup-experience__button" type="submit">
+                            <span class="button__name">Сохранить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-public-work" id="popup-public-work">
+                <h3 class="block-title block-title_bold popup__title">Опыт работы в Гос. структурах</h3>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-academic-degree" id="popup-academic-degree">
+                <h3 class="block-title block-title_bold popup-academic-degree__title">Ученая степень</h3>
+                <form class="popup__popup-academic-degree__form">
+                    <input class="input popup-academic-degree__input" type="text" placeholder="Название степени" />
+                    <textarea class="textarea popup-academic-degree__textarea" placeholder="Тема работы"></textarea>
+                    <div class="file-drop popup-academic-degree__files">
+                        <span class="file-drop__label">Загрузите подтверждающий документ</span>
+                        <output class="file-drop__output">
+                            <ul class="files-list"></ul>
+                        </output>
+                    </div>
                 </form>
             </div>
         </div>
