@@ -15,12 +15,9 @@ export function SmsCodePopupOpen () {
     $('#sms-code').offset(popupPosition);
   }
 
-  setInterval(function () {
-    PopupPosition('.js-smscode-popup-open');
-  });
-
   $('.js-smscode-popup-open').click(function (e) {
     e.preventDefault();
+    PopupPosition(this);
 
     if(! $('#sms-code').hasClass('active')) {
       $('#sms-code').addClass('active');
@@ -28,6 +25,7 @@ export function SmsCodePopupOpen () {
   });
 
   $('.js-smscode-popup-close').click(function () {
+    $('#sms-code').offset({top: 0, left: 0});
     $('#sms-code').removeClass('active');
   });
 }

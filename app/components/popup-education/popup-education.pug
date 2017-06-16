@@ -26,8 +26,8 @@ mixin popup-education()
           +e.LABEL.__label Обучение с
         +e.__col_field
           +input(type="text" required).__input_short
-          +e.SPAN.__label_margin г
-          +e.SPAN.__label_smargin по
+          +e.SPAN.__label_big-margin г
+          +e.SPAN.__label_margin по
           +input(type="text" required).__input_short
           +e.SPAN.__label г
       +e.__row
@@ -36,5 +36,5 @@ mixin popup-education()
         +e.__col_field
           +file-drop("Загрузите подтверждающий документ").__files
       +e.__row_button
-        +button('button')(type="submit")._text._border._big.__button Сохранить
+        +button('button')(type="submit")._text._border._big.__button.js-popup-close Сохранить
 

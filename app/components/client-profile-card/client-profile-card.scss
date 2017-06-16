@@ -6,6 +6,12 @@
   box-sizing: border-box;
   background-color: #fff;
 
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
   &__person {
     width: 390px;
     min-width: 390px;
@@ -16,6 +22,12 @@
     box-sizing: border-box;
     border-right: 1px solid rgba($color-font, .1);
     padding: 32px 40px 26px 32px;
+
+    @include tablet {
+      width: 100%;
+      border-right: 0;
+      border-bottom: 1px solid rgba($color-font, .1);
+    }
   }
 
   &__title {
@@ -61,6 +73,11 @@
     align-items: flex-start;
     box-sizing: border-box;
     padding: 32px 40px 26px;
+
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
   }
 
   &__reginfo {

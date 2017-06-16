@@ -19,14 +19,14 @@ mixin popup-public-work()
           +e.SPAN.__required *
           +e.LABEL.__label Период работы с
         +e.__col_field
-          +input(type="text" required).__input
-          +e.SPAN.__label_margin год
-          +e.SPAN.__label по
-          +input(type="text" required).__input
+          +input(type="text" required).__input_short
+          +e.SPAN.__label_big-margin год
+          +e.SPAN.__label_margin по
+          +input(type="text" required).__input_short
           +e.SPAN.__label год
       +e.__row
         +e.__col_label
         +e.__col_field
           +file-drop("Загрузите подтверждающий документ").__files
       +e.__row_button
-        +button('button')(type="submit")._text._border._big.__button Сохранить
+        +button('button')(type="submit")._text._border._big.__button.js-popup-close Сохранить

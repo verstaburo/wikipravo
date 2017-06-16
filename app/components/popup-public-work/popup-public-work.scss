@@ -4,12 +4,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  width: 668px;
-  height: 532px;
-  padding: 50px;
+  width: 682px;
+  padding: 40px 50px;
 
   &__title {
     width: 100%;
+    letter-spacing: .04em;
+    margin-bottom: 24px;
   }
 
   &__form {
@@ -27,8 +28,14 @@
     justify-content: flex-start;
     align-items: stretch;
     box-sizing: border-box;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     &_button {
+      margin-top: 10px;
       justify-content: center;
     }
   }
@@ -41,9 +48,9 @@
     box-sizing: border-box;
 
     &_label {
-      justify-content: flex-end;
-      margin-right: 28px;
-      min-width: 130px;
+      text-align: left;
+      margin-right: 30px;
+      min-width: 140px;
     }
 
     &_field {
@@ -79,8 +86,12 @@
     font-weight: 400;
     color: rgba(#08090d, .75);
 
+    &_big-margin {
+      margin-right: 55px;
+    }
+
     &_margin {
-      margin-right: 32px;
+      margin-right: 10px;
     }
   }
 }
