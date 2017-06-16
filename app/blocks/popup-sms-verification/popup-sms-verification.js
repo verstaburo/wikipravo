@@ -15,7 +15,9 @@ export function SmsCodePopupOpen () {
     $('#sms-code').offset(popupPosition);
   }
 
-  PopupPosition('.js-smscode-popup-open');
+  setInterval(function () {
+    PopupPosition('.js-smscode-popup-open');
+  });
 
   $('.js-smscode-popup-open').click(function (e) {
     e.preventDefault();

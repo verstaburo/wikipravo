@@ -4,19 +4,65 @@ include ../../blocks/input/input
 include ../../blocks/button/button
 include ../../blocks/file-drop/file-drop
 include ../../blocks/radiobutton/radiobutton
+include ../../blocks/section-title/section-title
 
 mixin popup-lawyer()
-  +popup.popup-lawyer#popup-lawyer&attributes(attributes)
-    +block-title("Являетесь ли Вы адвокатом")._bold.popup-lawyer__title
-    +e.FORM.popup-lawyer__form
-      +e.SECTION.popup-lawyer__switches
-        +input(type="radio" id="lawyer" name="lawyer" value="true")
-        +input(type="radio" id="notlawyer" name="lawyer" value="false")
-        +e.LABEL(for="lawyer").popup-lawyer__switch-btn
-        +e.LABEL(for="notlawyer").popup-lawyer__switch-btn
-      +e.SECTION.popup-lawyer__lawyer
-      +e.SECTION.popup-lawyer__notlawyer
-      +e.popup-lawyer__buttons
-      +e.popup-lawyer__buttons
-        +button('button')(type="submit")._text._border._big.popup-lawyer__button Сохранить
+  +popup.popup-lawyer__#popup-lawyer&attributes(attributes)
+    +block-title("Являетесь ли Вы адвокатом")._bold.__title
+    +e.FORM.__form
+      +e.SECTION.__switches
+        +e.row
+          +e.switch-btn
+            +input(type="radio" id="lawyer" name="lawyer" value="true" data-open-field="lawyer" checked).__switch-radio
+            +e.LABEL(for="lawyer").__text Да
+          +e.switch-btn
+            +input(type="radio" id="notlawyer" name="lawyer" value="false" data-open-field="notlawyer").__switch-radio
+            +e.LABEL(for="notlawyer").__text Нет
+      +e.SECTION(data-field="lawyer" class="__lawyer active")
+        +section-title("Удостоверение адвоката")._biger._dark._left.__subtitle
+        +e.__row
+          +e.__col_field
+            +input(type="text" placeholder="123413240034").__input
+          +e.__col_comment
+            +e.SPAN.__comment (Не будет отображаться на сайте)
+        +e.__row
+          +e.__col_field
+            +file-drop("Загрузите подтверждающий документ").__files
+          +e.__col_comment
+        +section-title("Форма адвокатского образования")._small._dark._left.__subtitle_small
+        +e.__row
+          +e.__col_field
+            +radio("Адвокатский кабинет", "chamber")._blue._dark._large.__radio
+          +e.__col_comment
+        +e.__row
+          +e.__col_field._shift
+            +input(type="text" placeholder="\"Падва и партнеры\"").__input
+          +e.__col_comment
+        +e.__row
+          +e.__col_field
+            +radio("Адвокатское бюро", "buro")._blue._dark._large.__radio
+          +e.__col_comment
+        +e.__row
+          +e.__col_field
+            +radio("Коллегия адвокатов", "collegium")._blue._dark._large.__radio
+          +e.__col_comment
+      +e.SECTION(data-field="notlawyer" class="__notlawyer")
+        +e.__row
+          +e.__col_field
+            +radio("Частнопрактикующий юрист", "private")._blue._dark._large.__radio
+          +e.__col_comment
+        +e.__row
+          +e.__col_field._shift
+            +input(type="text" placeholder="\"Падва и партнеры\"").__input
+          +e.__col_comment
+        +e.__row
+          +e.__col_field
+            +radio("Работодатель", "employer")._blue._dark._large.__radio
+          +e.__col_comment
+        +e.__row
+          +e.__col_field._shift
+            +file-drop("Загрузите подтверждающий документ").__files
+          +e.__col_comment
+      +e.__buttons
+        +button('button')(type="submit")._text._border._big.__button Сохранить
 

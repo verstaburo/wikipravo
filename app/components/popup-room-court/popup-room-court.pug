@@ -1,6 +1,34 @@
 include ../../blocks/popup/popup
 include ../../blocks/block-title/block-title
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/file-drop/file-drop
 
 mixin popup-room-court()
-  +popup.popup-room-court#popup-room-court&attributes(attributes)
-    +block-title("Есть ли у Вас кабинет в здании суда")._bold.__title
+  +popup.popup-room-court__#popup-room-court&attributes(attributes)
+    +block-title("Есть ли у Вас кабинет в здании суда")._bold.popup-room-court__title
+    +e.FORM.__form
+      +e.SECTION.__switches
+        +e.row
+          +e.switch-btn
+            +input(type="radio" id="room" name="court-room" value="true" checked).__switch-radio
+            +e.LABEL(for="room").__text Да
+          +e.switch-btn
+            +input(type="radio" id="noroom" name="court-room" value="false").__switch-radio
+            +e.LABEL(for="noroom").__text Нет
+      +e.SECTION.__inputs
+        +e.__row
+          +e.__col_label
+            +e.SPAN.__required *
+            +e.LABEL(for="court").__label Название суда
+          +e.__col_field
+            +input(type="text" placeholder="Кабинет в здании суда" id="court" required).__input
+        +e.__row
+          +e.__col_label
+            +e.LABEL.__label Загрузить диплом
+          +e.__col_field
+            +file-drop("Загрузите подтверждающий документ").__files
+      +e.__row_button
+        +button('button')(type="submit")._text._border._big.__button Сохранить
+
+

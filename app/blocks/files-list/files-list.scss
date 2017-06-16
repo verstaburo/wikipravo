@@ -20,6 +20,11 @@
       align-items: center;
       box-sizing: border-box;
       cursor: pointer;
+      color: #010101;
+
+      &:hover {
+        color: rgba(#010101, .8);
+      }
     }
 
     &:not(:last-of-type) {
@@ -38,7 +43,7 @@
     line-height: 1em;
     letter-spacing: .04em;
     font-weight: 400;
-    color: #010101;
+    color: inherit;
     margin-right: 12px;
   }
 
@@ -87,7 +92,7 @@
 
   &_blue {
 
-    .files-list {
+    .files-list__item {
 
       a {
         color: $color-main;

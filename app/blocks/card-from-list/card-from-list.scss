@@ -63,9 +63,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 50px 20px 24px;
+    padding: 38px 20px;
     width: 384px;
     min-width: 384px;
+    min-height: 196px;
   }
 
   &__avatar {
@@ -83,7 +84,7 @@
 
   &__name {
     padding-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &__list {
@@ -107,7 +108,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 24px 20px;
+    padding: 34px 20px 34px 24px;
     width: 384px;
     min-width: 384px;
   }
@@ -142,14 +143,14 @@
     justify-content: flex-start;
     align-items: stretch;
     box-sizing: border-box;
-    padding: 18px 20px;
+    padding: 18px 16px;
     background-color: $color-bg-index;
     width: 100%;
     font-size: 13px;
     color: $color-font;
     font-weight: 400;
     line-height: 1.5em;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     &-type {
       display: flex;
@@ -181,7 +182,12 @@
       position: relative;
       padding-left: 25px;
 
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
       span {
+        white-space: nowrap;
         letter-spacing: .04em;
       }
 
@@ -214,7 +220,7 @@
 
   &__spec-list {
     width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   &__client {
@@ -231,7 +237,6 @@
       line-height: 1.5em;
       letter-spacing: .04em;
       margin-right: 18px;
-      flex: 1;
     }
 
     &-status {
@@ -242,7 +247,7 @@
   &__notice {
     display: none;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
     overflow: hidden;
@@ -282,6 +287,10 @@
     box-sizing: border-box;
     padding-left: 24px;
     width: calc(100% - 384px);
+
+    @include s-desktop {
+      width: 100%;
+    }
 
     &.active {
       display: flex;

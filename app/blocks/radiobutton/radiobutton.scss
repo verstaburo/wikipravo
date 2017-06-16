@@ -101,4 +101,33 @@
       }
     }
   }
+
+  &_large {
+    font-size: 14px;
+  }
+
+  &_blue {
+
+    input:checked ~ .radio__label {
+
+      &::before {
+        background-color: #2b7de4;
+        border-color: #2b7de4;
+      }
+    }
+  }
+
+  &_bold {
+
+    .radio__label {
+      font-weight: 500;
+    }
+  }
+
+  &_dark {
+
+    .radio__label {
+      color: #0f1119;
+    }
+  }
 }

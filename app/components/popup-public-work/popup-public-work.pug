@@ -1,6 +1,32 @@
 include ../../blocks/popup/popup
 include ../../blocks/block-title/block-title
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/file-drop/file-drop
 
 mixin popup-public-work()
-  +popup.popup-public-work#popup-public-work&attributes(attributes)
+  +popup.popup-public-work__#popup-public-work&attributes(attributes)
     +block-title("Опыт работы  в Гос. структурах")._bold.__title
+    +e.FORM.__form
+      +e.__row
+        +e.__col_label
+          +e.SPAN.__required *
+          +e.LABEL(for="organization").__label Организация
+        +e.__col_field
+          +input(type="text" placeholder="Название и адрес организации" id="organization" required).__input
+      +e.__row
+        +e.__col_label
+          +e.SPAN.__required *
+          +e.LABEL.__label Период работы с
+        +e.__col_field
+          +input(type="text" required).__input
+          +e.SPAN.__label_margin год
+          +e.SPAN.__label по
+          +input(type="text" required).__input
+          +e.SPAN.__label год
+      +e.__row
+        +e.__col_label
+        +e.__col_field
+          +file-drop("Загрузите подтверждающий документ").__files
+      +e.__row_button
+        +button('button')(type="submit")._text._border._big.__button Сохранить

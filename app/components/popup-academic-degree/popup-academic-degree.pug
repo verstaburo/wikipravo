@@ -5,9 +5,9 @@ include ../../blocks/textarea/textarea
 include ../../blocks/file-drop/file-drop
 
 mixin popup-academic-degree()
-  +popup.popup-academic-degree#popup-academic-degree&attributes(attributes)
-    +block-title("Ученая степень")._bold.popup-academic-degree__title
-    +e.FORM.popup-academic-degree__form
-      +input(type="text" placeholder="Название степени").popup-academic-degree__input
-      +textarea(placeholder="Тема работы").popup-academic-degree__textarea
-      +file-drop("Загрузите подтверждающий документ").popup-academic-degree__files
+  +popup.popup-academic-degree__#popup-academic-degree&attributes(attributes)
+    +block-title("Ученая степень")._bold.__title
+    +e.FORM.__form
+      +input(type="text" placeholder="Название степени").__input
+      +textarea(placeholder="Тема работы")._border.__textarea
+      +file-drop("Загрузите подтверждающий документ").__files

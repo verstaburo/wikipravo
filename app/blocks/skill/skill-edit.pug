@@ -12,9 +12,9 @@ mixin skill-edit(title, data, popupId)
         +e.content
           +e.control
             -if (item.control) {
-              +profile-control("edit", "Редактировать", "pencil")(data-open-popup= popupId)._notitle.__button.js-popup-open
+              +profile-control("edit", "Редактировать", "pencil")(data-open-popup= popupId)._notitle.__button_edit.js-popup-open
             -} else {
-              +profile-control("add", "Добавить", "plus")(data-open-popup= popupId)._notitle.__button.js-popup-open
+              +profile-control("add", "Добавить", "plus")(data-open-popup= popupId)._notitle.__button_add.js-popup-open
             -}
           -if(item.text) {
             +e.text

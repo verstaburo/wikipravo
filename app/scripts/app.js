@@ -30,6 +30,7 @@ import {DealLinkOpen} from '../blocks/deal-link/deal-link';
 import {ShowNoteForProfile} from '../blocks/profile-note/profile-note';
 import {SmsCodePopupOpen} from '../blocks/popup-sms-verification/popup-sms-verification';
 import {WorkStatusListOpen} from '../blocks/work-status/work-status';
+import {LawyerFormChange} from '../components/popup-lawyer/popup-lawyer';
 
 $(function () {
 
@@ -65,4 +66,5 @@ $(function () {
   ShowNoteForProfile();
   SmsCodePopupOpen();
   WorkStatusListOpen();
+  LawyerFormChange();
 });

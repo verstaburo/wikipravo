@@ -5,28 +5,28 @@ include ../../blocks/button/button
 include ../../blocks/file-drop/file-drop
 
 mixin popup-experience()
-  +popup.popup-experience#popup-experience&attributes(attributes)
-    +block-title("Опыт работы")._bold.popup-experience__title
-    +e.FORM.popup-experience__form
-      +e.popup-experience__row
-        +e.popup-experience__col_label
-          +e.SPAN.popup-experience__required *
-          +e.LABEL(for="organization").popup-experience__label Организация
-        +e.popup-experience__col_field
-          +input(type="text" placeholder="Название и адрес организации" id="organization" required).popup-experience__input
-      +e.popup-experience__row
-        +e.popup-experience__col_label
-          +e.SPAN.popup-experience__required *
-          +e.LABEL.popup-experience__label Период работы с
-        +e.popup-experience__col_field
-          +input(type="text" required).popup-experience__input
-          +e.SPAN.popup-experience__label_margin год
-          +e.SPAN.popup-experience__label по
-          +input(type="text" required).popup-experience__input
-          +e.SPAN.popup-experience__label год
-      +e.popup-experience__row
-        +e.popup-experience__col_label
-        +e.popup-experience__col_field
-          +file-drop("Загрузите подтверждающий документ").popup-experience__files
-      +e.popup-experience__row_button
-        +button('button')(type="submit")._text._border._big.popup-experience__button Сохранить
+  +popup.popup-experience__#popup-experience&attributes(attributes)
+    +block-title("Опыт работы")._bold.__title
+    +e.FORM.__form
+      +e.__row
+        +e.__col_label
+          +e.SPAN.__required *
+          +e.LABEL(for="organization").__label Организация
+        +e.__col_field
+          +input(type="text" placeholder="Название и адрес организации" id="organization" required).__input
+      +e.__row
+        +e.__col_label
+          +e.SPAN.__required *
+          +e.LABEL.__label Период работы с
+        +e.__col_field
+          +input(type="text" required).__input
+          +e.SPAN.__label_margin год
+          +e.SPAN.__label по
+          +input(type="text" required).__input
+          +e.SPAN.__label год
+      +e.__row
+        +e.__col_label
+        +e.__col_field
+          +file-drop("Загрузите подтверждающий документ").__files
+      +e.__row_button
+        +button('button')(type="submit")._text._border._big.__button Сохранить

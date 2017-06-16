@@ -26,7 +26,7 @@
 
   &__files {
     box-sizing: border-box;
-    padding-left: 68px;
+    padding-left: 70px;
   }
 
   &__control {
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-right: 30px;
+    margin-right: 32px;
   }
 
   &__text {
@@ -87,11 +87,18 @@
     }
   }
 
+  &__nofiles, &__files {
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+
   &_edit {
 
-    .skill_title {
+    .skill__title {
       box-sizing: border-box;
-      padding-left: 68px;
+      padding-left: 70px;
     }
   }
 }
