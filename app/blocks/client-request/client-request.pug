@@ -1,0 +1,54 @@
+include ../../blocks/short-request/short-request
+include ../../blocks/button/button
+
+mixin client-request(status, message)
+  +b.client-request&attributes(attributes)
+    +e.actions
+      +e.status
+        case status
+          when 'open'
+            +e.status-name Открыт
+            +button('button')._text._noborder._bold.__status-btn_edit Редактировать
+            +button('button')._text._noborder._bold.__status-btn_close Закрыть
+            +button('button')._text._noborder._bold.__status-btn_remove Удалить
+          when 'workingedit'
+            +e.status-name В работе
+            +button('button')._text._noborder._bold.__status-btn_edit Редактировать
+            +button('button')._text._noborder._bold.__status-btn_close Закрыть
+            +button('button')._text._noborder._bold.__status-btn_remove Удалить
+          when 'workingopen'
+            +e.status-name В работе
+            +button('button')._text._noborder._bold.__status-btn_open  Открыть
+            +button('button')._text._noborder._bold.__status-btn_deal Перейти к сделкам
+          when 'bun'
+            +e.status-name_bun Заблокирован модератором
+              +e.bun
+                +e.P.bun-title Ваша заявка заблокирована модератором.
+                +e.P.bun-reason
+                  +e.B Причина:
+                  |  дублирование текста. Устраните ошибку и, после проверки модератором блокировка будет снята.
+            +button('button')._text._noborder._bold.__status-btn_edit Редактировать
+            +button('button')._text._noborder._bold.__status-btn_close Закрыть
+          when 'deal'
+            +e.status-name Открыт, есть активные сделки
+            +button('button')._text._noborder._bold.__status-btn_deal Перейти к сделкам
+          default
+            - break
+      +e.message
+        case message
+          when 'new'
+            +button('a')._text._noborder._bold.__indicator 1 новое сообщение
+          default
+            +button('a')._text._noborder._bold.__indicator Сообщение не прочитано
+    +short-request(getData("client-request")).__request
+    +e.info
+      case status
+        when 'workingopen'
+          +button('A')._blue._bold.__button  Создать на основание
+        when 'bun'
+          - break
+        default
+          +button('A')._blue._bold.__button  Поднять заявку
+      +e.visibility
+        +e.name Область видимости:
+        +e.type Публичная

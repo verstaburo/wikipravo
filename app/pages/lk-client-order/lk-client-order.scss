@@ -1,0 +1,19 @@
+.lk-client-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: $color-bg-index;
+  padding: 20px 50px;
+
+  &__title {
+    margin-bottom: 20px;
+    width: 100%;
+    letter-spacing: .05em;
+  }
+
+  &__orders {
+    width: 100%;
+  }
+}

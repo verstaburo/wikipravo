@@ -1,0 +1,22 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — ЛК Клиент. Мои заказы'
+
+block content
+  +b.lk-client-order
+    +page-title("Мои заказы").__title
+    +client-orders.__orders
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
