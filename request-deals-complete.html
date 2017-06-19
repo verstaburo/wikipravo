@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wiki Pravo — Заявка со сделками (завершена)</title>
+    <title>Wiki Pravo — Заявка со сделками (завершена в арбитраже)</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico?v=2" rel="shortcut icon">
@@ -199,13 +199,13 @@
                             <ul class="request-deal-head__list">
                                 <li class="request-deal-head__item">
                                     <div class="deal-link">
-                                        <a class="deal-link__text" href="#complete1">Сделка от: 24.05.2017, 12:45</a>
-                                        <span class="deal-link__status deal-link__status_green">Решено</span>
+                                        <a class="deal-link__text" href="#arbitrcomplete">Сделка от: 24.05.2017, 12:45</a>
+                                        <span class="deal-link__status deal-link__status_green">Решена через Арбитраж</span>
                                     </div>
                                 </li>
                                 <li class="request-deal-head__item">
                                     <div class="deal-link">
-                                        <a class="deal-link__text" href="#complete2">Сделка от: 18.02.2017, 10:30</a>
+                                        <a class="deal-link__text" href="#complete">Сделка от: 18.02.2017, 10:30</a>
                                         <span class="deal-link__status deal-link__status_green">Решено</span>
                                     </div>
                                 </li>
@@ -369,7 +369,7 @@
                         </div>
                     </div>
                     <div class="deal-list request-deals__deals">
-                        <div class="deal spoiler deal-list__item" id="complete2">
+                        <div class="deal spoiler deal-list__item" id="complete">
                             <div class="deal__header">
                                 <h3 class="block-title block-title_bolder block-title_little deal__title">Сделка от 18.02.2017, 10:30</h3>
                                 <div class="deal__status deal__status_green">Решено</div>
@@ -480,10 +480,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="deal spoiler deal-list__item" id="complete1">
+                        <div class="deal spoiler deal-list__item" id="arbitrcomplete">
                             <div class="deal__header">
                                 <h3 class="block-title block-title_bolder block-title_little deal__title">Сделка от 24.05.2017, 12:45</h3>
-                                <div class="deal__status deal__status_green">Решено</div>
+                                <div class="deal__status deal__status_green">Решена через Арбитраж</div>
                                 <div class="deal__control spoiler__control">
                                     <button class="button button_text button_noborder spoiler__button" type="button" data-open-title="Развернуть" data-close-title="Свернуть">
                                         <span class="button__name">Развернуть</span>
@@ -519,9 +519,18 @@
                                     <p>Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.</p>
                                 </div>
                                 <div class="deal__stage">
-                                    <div class="deal__stage-describe deal__stage-describe_complete">
-                                        <h3 class="block-title block-title_little block-title_bolder deal__stage-title">Сделка завершена</h3>
+                                    <div class="deal__stage-describe deal__stage-describe_arbitrcomplete">
+                                        <h3 class="block-title block-title_little block-title_bolder block-title_green deal__stage-title">Сделка завершена по Арбитражу</h3>
                                         <p>Спасибо за сотруднечество!</p>
+                                    </div>
+                                    <div class="deal__stage-arbitr">
+                                        <h3 class="block-title block-title_little deal__stage-title">Решение Арбитражного суда</h3>
+                                        <p>Распределение суммы сделки:
+                                            <b>50% - Клиент, 50% - Исполнитель</b>
+                                        </p>
+                                        <p>Обмен отзывами:
+                                            <b>Клиент - запрещено, Исполнитель - запрещено</b>
+                                        </p>
                                     </div>
                                     <div class="deal__stage-buttons">
                                         <button class="button button_blue button_narrow deal__stage-button js-popup-open" type="button" data-open-popup="popup-deal-review">
@@ -534,11 +543,20 @@
                                 </div>
                                 <div class="dialog dialog_long deal__dialog">
                                     <div class="message message_small message_bolder message_border dialog__message">
-                                        <h3 class="message__title">Обсуждение сделки</h3>
+                                        <h3 class="message__title">Обсуждение сделки
+                                            <span class="checkbox checkbox_middle checkbox_lightgray checkbox_bold message__checkbox">
+                                                <input type="checkbox" id="clinentHidden" />
+                                                <label class="checkbox__label" for="clinentHidden">Скрыть комментарий от Клиента
+                                                    <span class="checkbox__check">
+                                                        <svg class="checkbox__check-img"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                        </h3>
                                         <form class="message__form" id="message">
                                             <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
                                             <div class="file-input files">
-                                                <output class="file-input__output" for="files3">
+                                                <output class="file-input__output" for="files7">
                                                     <span class="file-input__placeholder">Нет приклепленных файлов</span>
                                                     <ul class="files-list file-input__files-list"></ul>
                                                 </output>
@@ -546,8 +564,8 @@
                                                     <button class="button button_blue message__button" type="submit">
                                                         <span class="button__name">Отправить</span>
                                                     </button>
-                                                    <label class="file-input__fileselect button button_transparent_second" for="files3">Прикрепить файлы
-                                                        <input class="file-input__files" type="file" id="files3" name="files[]" multiple="multiple" />
+                                                    <label class="file-input__fileselect button button_transparent_second" for="files7">Прикрепить файлы
+                                                        <input class="file-input__files" type="file" id="files7" name="files[]" multiple="multiple" />
                                                     </label>
                                                 </div>
                                             </div>
@@ -584,6 +602,70 @@
                                                         <time class="comment__date">(12.10.2016 | 09:20)</time>
                                                     </cite>
                                                     <div class="comment__text">— Добрый день, Евгений! Ок. Увеличила срок. Подтвердите, пожалуйста условия</div>
+                                                </blockquoute>
+                                            </div>
+                                            <div class="comment comment_blue dialog__comment">
+                                                <div class="comment__buttons">
+                                                    <button class="button button_text button_noborder comment__button comment__button_edit" type="button">
+                                                        <span class="button__name">Редактировать</span>
+                                                    </button>
+                                                    <button class="button button_text button_noborder comment__button comment__button_remove" type="button">
+                                                        <span class="button__name">Удалить</span>
+                                                    </button>
+                                                </div>
+                                                <blockquoute class="comment__content">
+                                                    <cite class="comment__info">
+                                                        <span class="comment__author">Евгений</span>
+                                                        <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                                    </cite>
+                                                    <div class="comment__text">— Добрый день! Просьба рассмотреть вопрос взаимодействия с клиентом. Была договоренность о том, что он примет работу сразу после завершения. Уже месяц я не могу до него достучаться. Все время получаю
+                                                        отписки и оправдания. Я вовремя выполнил и сдал свою работу, а ответа до сих пор не получил.</div>
+                                                </blockquoute>
+                                            </div>
+                                            <div class="comment comment_yellow dialog__comment">
+                                                <blockquoute class="comment__content">
+                                                    <cite class="comment__info">
+                                                        <span class="comment__author">Константин (АРБИТР)</span>
+                                                        <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                                    </cite>
+                                                    <div class="comment__text">Добрый день! Ваша заявка принята. Сделка переведена в статус &quot;Арбитраж&quot;. Изучаем материалы темы</div>
+                                                </blockquoute>
+                                            </div>
+                                            <div class="comment comment_blue dialog__comment">
+                                                <div class="comment__buttons">
+                                                    <button class="button button_text button_noborder comment__button comment__button_edit" type="button">
+                                                        <span class="button__name">Редактировать</span>
+                                                    </button>
+                                                    <button class="button button_text button_noborder comment__button comment__button_remove" type="button">
+                                                        <span class="button__name">Удалить</span>
+                                                    </button>
+                                                </div>
+                                                <blockquoute class="comment__content">
+                                                    <cite class="comment__info">
+                                                        <span class="comment__author">Евгений</span>
+                                                        <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                                        <span class="comment__hide">Скрыто от клиента</span>
+                                                    </cite>
+                                                    <div class="comment__text">— Добрый день, Константин! Спасибо, что рассматриваете мою заявку. В доказательство прилагаю архив переписки по skype</div>
+                                                    <ul class="files-list files-list_attach comment__files">
+                                                        <li class="files-list__item">
+                                                            <a href="#">
+                                                                <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
+                                                                <span class="files-list__filename">User_mail.doc</span>
+                                                                <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_clip"></use></svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </blockquoute>
+                                            </div>
+                                            <div class="comment comment_yellow dialog__comment">
+                                                <blockquoute class="comment__content">
+                                                    <cite class="comment__info">
+                                                        <span class="comment__author">Константин (АРБИТР)</span>
+                                                        <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                                    </cite>
+                                                    <div class="comment__text">— Добрый день, Евгений! После разбирательства стало видно, что задержки имели место с обеих сторон. В процессе работы над сделкой вы часто пропадали. И хотя вы дали ответ на вопрос, клиента он не совсем
+                                                        удовлетворил. Решение Арбитров - разделение суммы между Вами и Исполнителем и завершение сделки.</div>
                                                 </blockquoute>
                                             </div>
                                         </div>
