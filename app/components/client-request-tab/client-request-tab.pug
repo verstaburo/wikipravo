@@ -1,0 +1,41 @@
+include ../../blocks/tab-toggles/tab-toggles
+include ../../blocks/filter-list/filter-list
+include ../../blocks/contractor-card/contractor-card
+
+mixin client-request-tab()
+  -var type = "response"
+  -var active = ""
+  -var addClass = ""
+  +b.client-request-tab&attributes(attributes)
+    +tab-toggles(getData("client-request-contractors-deals-tabs"))._transparent_second._big._bold.__controls
+    +e.tabs-container(data-tab-group-container="request-info")
+      +e.content(class=" active" data-tab-group="request-info" data-tab-id="request-info1")
+        +filter-list("Статус:", getData("client-filter-order-status")).__status
+        +filter-list("Тип:", getData("client-filter-order-type")).__type
+        +e.contractors
+          -for (var i = 0; i < 6; i++) {
+            case i
+              when 0
+                - active = "candidate"
+                - type = "response"
+                - addClass = "_blue"
+              when 1
+                - active = "contractor"
+                - type = "response"
+                - addClass = "_green"
+              when 2
+                - active = "reject"
+                - type = "response"
+                - addClass = "_red"
+              when 3
+                - active = ""
+                - type = "invite"
+                - addClass = ""
+              default
+                - active = ""
+                - type = "response"
+                - addClass = ""
+            +contractor-card(type, active)(class=addClass + " __contractor")
+          -}
+      +e.content(data-tab-group="request-info" data-tab-id="request-info2")
+        +filter-list("Тип:", getData("client-filter-deal-status")).__type

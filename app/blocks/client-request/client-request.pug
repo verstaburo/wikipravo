@@ -1,5 +1,6 @@
 include ../../blocks/short-request/short-request
 include ../../blocks/button/button
+include ../../blocks/visibility/visibility
 
 mixin client-request(status, message)
   +b.client-request&attributes(attributes)
@@ -49,6 +50,4 @@ mixin client-request(status, message)
           - break
         default
           +button('A')._blue._bold.__button  Поднять заявку
-      +e.visibility
-        +e.name Область видимости:
-        +e.type Публичная
+      +visibility

@@ -1,0 +1,14 @@
+.contractor-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__button {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

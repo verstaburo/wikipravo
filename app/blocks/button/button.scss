@@ -122,6 +122,22 @@
     }
   }
 
+  &_green {
+    color: white;
+    background-color: $color-green-dark;
+    border-color: $color-green-dark;
+
+    .button__arrow {
+      color: rgba(white, .75);
+    }
+
+    &:hover, &:active {
+      color: white;
+      background-color: rgba($color-green-dark, .75);
+      border-color: rgba($color-green-dark, .75);
+    }
+  }
+
   &_lightgrey {
     color: $color-font;
     background-color: $color-border-search;

@@ -1,0 +1,10 @@
+mixin filter-list(title, data)
+  -var addClass = ""
+  +b.filter-list&attributes(attributes)
+    +e.name= title
+    +e.UL.list
+      each item in data
+        -if(item.active) {addClass= " active"}
+        +e.LI(class="item" + addClass)
+          +e.A(href="#")= item.name
+            +e.SPAN.count= item.count

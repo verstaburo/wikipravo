@@ -1,0 +1,4 @@
+[
+  {"name" : "Юристы", "target" : "request-info1", "main" : true},
+  {"name" : "Сделки", "target" : "request-info2"}
+]

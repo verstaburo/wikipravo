@@ -1,0 +1,19 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/button/button
+include ../../blocks/control-link/control-link
+include ../../blocks/order-status/order-status
+include ../../blocks/request-condition/request-condition
+include ../../blocks/visibility/visibility
+include ../../blocks/short-request/short-request-nohead
+
+mixin client-full-request()
+  +b.SECTION.client-full-request&attributes(attributes)
+    +control-link('back').__back
+    +e.header
+      +page-title("Не справедливая оплата труда").__title
+      +button('a')._blue.__button Поднять заявку
+      +request-condition("Консультация", "По договоренности", "По договоренности").__condition
+    +e.info
+      +order-status.__status
+      +visibility.__visibility
+    +short-request-nohead.__request

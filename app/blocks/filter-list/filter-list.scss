@@ -1,22 +1,9 @@
-.client-orders {
-
-  &__visibility, &__status {
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 16px 40px 6px;
-  }
-
-  &__visibility {
-    border-bottom: 1px solid rgba(#000, .15);
-  }
-
-  &__status {
-    margin-bottom: 30px;
-  }
+.filter-list {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 
   &__name {
     font-size: 14px;
@@ -72,18 +59,5 @@
         color: $color-font;
       }
     }
-  }
-
-  &__order {
-
-    &:not(:last-child) {
-      margin-bottom: 28px;
-    }
-  }
-
-  &__paginator {
-    width: 100%;
-    padding-left: 82px !important;
-    padding-right: 82px !important;
   }
 }

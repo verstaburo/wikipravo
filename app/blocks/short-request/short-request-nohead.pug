@@ -1,0 +1,17 @@
+include ../action-controls/action-controls-nonote
+include ../publication-date/publication-date
+include ../author/author
+include ../subject/subject
+include ../browse/browse
+include ../request-condition/request-condition
+
+mixin short-request-nohead(data)
+  +b.ARTICLE.short-request_nohead&attributes(attributes)
+    +e.content
+      +e.P Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?
+      +e.data
+        +publication-date("26 Января 2017, 12:21").__publication
+        +author("Ксения", "г. Томск", true).__author
+    +e.footer
+      +subject("Категория права:", "Миграционное право").__subject
+      +browse("395", "4").__browse

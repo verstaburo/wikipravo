@@ -1,0 +1,19 @@
+include ../button-icon/button-icon
+
+mixin contractor-controls(active)
+  -var candidateActiveClass = ""
+  -var contractorActiveClass = ""
+  -var rejectActiveClass = ""
+  case active
+    when 'candidate'
+      - candidateActiveClass = " active"
+    when 'contractor'
+      - contractorActiveClass = " active"
+    when 'reject'
+      - rejectActiveClass = " active"
+    default
+      - break
+  +b.contractor-controls&attributes(attributes)
+    +button('smallplus', 'button')(class="_transparent_third _narrow __button_candidate" + candidateActiveClass data-active-name="Кандидат") Кандидат
+    +button('smallplus', 'button')(class="_transparent_third _narrow __button_contractor" + contractorActiveClass data-active-name="Выбран исполнителем") Выбрать исполнителем
+    +button('smallplus', 'button')(class="_transparent_third _narrow __button_reject" + rejectActiveClass data-active-name="Отказано") Отказать

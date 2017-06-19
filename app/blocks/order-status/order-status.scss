@@ -1,0 +1,26 @@
+.order-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__name {
+    font-size: 14px;
+    margin-right: 60px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color: $color-font;
+    line-height: 1.54em;
+  }
+
+  &__button {
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}

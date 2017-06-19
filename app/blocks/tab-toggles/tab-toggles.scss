@@ -118,6 +118,26 @@
     }
   }
 
+  &_bold {
+
+    .tab-toggles__button {
+
+      .button__name {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &_bolder {
+
+    .tab-toggles__button {
+
+      .button__name {
+        font-weight: 700;
+      }
+    }
+  }
+
   &_link {
 
     .tab-toggles__button {

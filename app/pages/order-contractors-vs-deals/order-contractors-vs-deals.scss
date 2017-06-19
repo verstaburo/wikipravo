@@ -1,0 +1,18 @@
+.order-contractors-vs-deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 20px 50px 48px;
+  background-color: $color-bg-index;
+  width: 100%;
+
+  &__request {
+    width: 100%;
+  }
+
+  &__tabs {
+    width: 100%;
+  }
+}

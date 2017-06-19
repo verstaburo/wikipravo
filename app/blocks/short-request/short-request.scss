@@ -111,4 +111,14 @@
     width: 100%;
     padding: 24px 39px;
   }
+
+  &_nohead {
+
+    .short-request {
+
+      &__content {
+        border-top-width: 0;
+      }
+    }
+  }
 }

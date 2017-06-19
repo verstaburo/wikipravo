@@ -1,0 +1,34 @@
+include ../button/button
+include ../vote-block/vote-block
+include ../status-list/status-list
+include ../specialization/specialization
+include ../experience/experience
+include ../icon/icons
+include ../avatar/avatar
+include ../selectbox/selectbox_bluebutton
+include ../jurist-name/jurist-name
+include ../contractor-controls/contractor-controls
+include ../action-controls/action-controls
+
+mixin lawyercard-contractor(active)
+  +b.SECTION.lawyercard_contractor&attributes(attributes)
+    +e.SECTION.about
+      +jurist-name("Дмитрий Петров", true, true)._border.__title_about
+      +e.info
+        +avatar("assets/images/lawyer-avatar.jpg")._big.__img
+        +e.status
+          +status-list(false, true).__status-list
+          +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
+      +e.A.publicwork
+        |Дел на РосПравосудие:
+        +e.SPAN.workcount 10
+      +experience("10").__experience
+    +e.SECTION.order
+      +e.actions
+        +contractor-controls(active).__status
+        +action-controls.__relation
+      +e.specialization
+        +e.H3.title_specialization
+          +e.SPAN Специализации
+          +e.A(href="#") Показать все
+        +specialization([{"name" : "Гражданское право", "expanded" : ["Договорное право", "Право собственности"]}, {"name" : "Защита прав потребителей"}]).__list

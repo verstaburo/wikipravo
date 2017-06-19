@@ -1,0 +1,17 @@
+include ../../components/dialog/dialog-second
+include ../lawyercard/lawyercard-contractor
+include ../section-title/section-title
+
+mixin contractor-card(type, active)
+  -var title = ""
+  case type
+    when 'response'
+      - title = "Отклик"
+    when 'invite'
+      - title = "Приглашение"
+    default
+      - break
+  +b.contractor-card&attributes(attributes)
+    +section-title(title)._biger._bolder.__title
+    +lawyercard-contractor(active).__contractor
+    +dialog-second(getData('contractor-dialog')).__dialog

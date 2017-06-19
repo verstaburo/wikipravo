@@ -1,0 +1,96 @@
+.button {
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    transform: translate(0, -50%);
+  }
+
+  &_text {
+
+    .button__icon {
+      fill: $color-main;
+    }
+  }
+
+  &_blue, &_red, &_green {
+
+    .button__icon {
+      fill: white;
+    }
+
+    &:hover {
+
+      .button__icon {
+        fill: white;
+      }
+    }
+  }
+
+  &_lightgrey {
+
+    .button__icon {
+      fill: $color-font;
+    }
+
+    &:hover {
+
+      .button__icon {
+        fill: $color-font;
+      }
+    }
+  }
+
+  &_transparent {
+
+    .button__icon {
+      fill: $color-main;
+    }
+
+    &:hover {
+
+      .button__icon {
+        fill: #fff;
+      }
+    }
+
+    &_second {
+
+      .button__icon {
+        fill: $color-main;
+      }
+
+      &:hover {
+
+        .button__icon {
+          fill: $color-main;
+        }
+      }
+    }
+
+    &_third {
+
+      .button__icon {
+        fill: $color-main;
+      }
+
+      &:hover {
+
+        .button__icon {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &_icon {
+
+    .button__name {
+      position: relative;
+      padding-left: 20px;
+    }
+  }
+}

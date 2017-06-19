@@ -1,0 +1,34 @@
+.visibility {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+
+  @include tablet {
+    margin-left: 0;
+    order: 1;
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name, &__type {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  &__name {
+    color: $color-font;
+    margin-right: 10px;
+  }
+
+  &__type {
+    color: #b0b0b0;
+  }
+}

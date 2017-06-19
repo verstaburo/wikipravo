@@ -1,0 +1,12 @@
+include ../icon/icons
+
+mixin button(icon, type, target)
+  -var btnType = 'a';
+  -var addClass = '_' + icon;
+
+  -if (type === 'button') {btnType = 'button'}
+
+  +b(btnType)(class="button_icon" data-tab-target=target)&attributes(attributes)
+    +e.SPAN.name
+      +icon(icon)(class="__icon" + addClass)
+      block

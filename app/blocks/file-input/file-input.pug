@@ -1,4 +1,4 @@
-mixin file-input(btnName, emptyText, id, btnAddClass)
+mixin file-input(btnName, emptyText, id, formId, btnAddClass)
   -var btnClass = ""
   -var inputId = "files"
   -if(btnAddClass) {btnClass = btnAddClass} else {btnClass = "button_transparent_second"}
@@ -10,4 +10,4 @@ mixin file-input(btnName, emptyText, id, btnAddClass)
     +e.buttons
       block
       +e.LABEL(for=inputId class="fileselect " + btnClass)= btnName
-        +e.INPUT(type="file" id=inputId name="files[]" multiple).files
+        +e.INPUT(type="file" id=inputId name="files[]" multiple form= formId).files

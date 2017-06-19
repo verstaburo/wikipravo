@@ -98,7 +98,7 @@
         background-color: $color-bg-comment;
 
         &::before {
-          left: auto;
+          left: 0;
           right: 0;
           border-right-color: transparent;
           border-left-color: $color-bg-comment;
@@ -116,11 +116,11 @@
         background-color: $color-bg-index;
 
         &::before {
-          left: auto;
-          right: 0;
-          border-right-color: transparent;
-          border-left-color: $color-bg-index;
-          transform: translate(100%, -50%);
+          left: 0;
+          right: auto;
+          border-left-color: transparent;
+          border-right-color: $color-bg-index;
+          transform: translate(-100%, -50%);
         }
       }
     }
@@ -132,14 +132,6 @@
 
       &__content {
         background-color: #f6fbdd;
-
-        &::before {
-          left: auto;
-          right: 0;
-          border-right-color: transparent;
-          border-left-color: #f6fbdd;
-          transform: translate(100%, -50%);
-        }
       }
     }
   }

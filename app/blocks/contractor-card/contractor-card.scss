@@ -1,0 +1,19 @@
+.contractor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__title {
+    width: 194px;
+  }
+
+  &__contractor {
+    width: 100%;
+  }
+
+  &__dialog {
+    max-width: 870px;
+    width: 100%;
+  }
+}

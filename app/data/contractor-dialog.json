@@ -1,0 +1,32 @@
+[
+  {
+    "author" : "Евгений",
+    "date" : "(12.10.2016 | 09:20)",
+    "editable" : false,
+    "button" : true,
+    "hide" : "",
+    "arbitr" : false,
+    "attach" : false,
+    "text" : "— Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу"
+  },
+  {
+    "author" : "Ксения",
+    "date" : "(12.10.2016 | 09:20)",
+    "editable" : true,
+    "button" : true,
+    "hide" : "",
+    "arbitr" : false,
+    "attach" : false,
+    "text" : "—Добрый день, Ксения! Прошу прощения, сейчас не смогу заняться вашим вопросом."
+  },
+  {
+    "author" : "Евгений",
+    "date" : "(12.10.2016 | 09:20)",
+    "editable" : false,
+    "button" : true,
+    "hide" : "",
+    "arbitr" : false,
+    "attach" : false,
+    "text" : "— Прайс на услуги во вложении"
+  }
+]
