@@ -45,7 +45,9 @@ mixin deal(title, status)
     when 'arbitrcomplete'
       - statusName = "Решена через Арбитраж"
       - stepsCount = 5
+      - dialogData = getData("deal-dialog-arbitrcomplete")
       - statusColor = "_green"
+      - messageCheckbox = "client"
       - messageId = "files7"
     default
       - break

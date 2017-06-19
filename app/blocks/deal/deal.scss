@@ -35,6 +35,7 @@
     line-height: 1.5em;
     color: $color-font;
     margin-right: 40px;
+    white-space: nowrap;
 
     &_red {
       color: $color-registration-red;
@@ -144,10 +145,12 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: stretch;
+    align-content: flex-start;
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 6px;
 
     @include desktop {
       flex-direction: column;
@@ -155,6 +158,7 @@
     }
 
     &-title {
+      width: 100%;
       letter-spacing: .05em;
       margin-bottom: 8px;
     }
@@ -166,7 +170,8 @@
       align-items: flex-start;
       box-sizing: border-box;
       max-width: 750px;
-      width: auto;
+      width: 100%;
+      margin-bottom: 30px;
 
       @include desktop {
         width: 100%;
@@ -192,6 +197,18 @@
         max-width: 750px;
       }
 
+      &_arbitrcomplete {
+        max-width: 350px;
+
+        &:not(:last-child) {
+          margin-right: 70px;
+
+          @include desktop {
+            margin-right: 0;
+          }
+        }
+      }
+
       p {
         width: 100%;
         font-size: 13px;
@@ -207,18 +224,55 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
+      margin-bottom: 30px;
 
       @include desktop {
-        margin-top: 30px;
         width: 100%;
       }
     }
 
     &-button {
       min-width: 160px;
+      width: auto;
 
       &:not(:last-child) {
         margin-right: 8px;
+      }
+    }
+
+    &-arbitr {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-sizing: border-box;
+      margin-right: 72px;
+      margin-bottom: 30px;
+      max-width: 500px;
+      width: 100%;
+
+      @include desktop {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: .04em;
+        line-height: 1.54em;
+        color: #c1c1c1;
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+      }
+
+      b {
+        margin-left: 4px;
+        letter-spacing: .04em;
+        font-weight: 400;
+        color: $color-font;
       }
     }
   }

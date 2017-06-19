@@ -1,14 +1,14 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = 'Wiki Pravo — Заявка со сделками (завершена)'
+  - var pageTitle = 'Wiki Pravo — Заявка со сделками (завершена в арбитраже)'
 
 block content
   +b.request-deals
-    +request-deal-head('#complete1', 'complete', '#complete2', 'complete').__head
+    +request-deal-head('#arbitrcomplete', 'arbitrcomplete', '#complete', 'complete').__head
     +request-card-2(true).__card
     +dialog(getData('deal-dialog-short'), "Переписка с заказчиком").__dialog
-    +deal-list('complete').__deals
+    +deal-list('arbitrcomplete').__deals
 
 block page-left
   +sidebar
