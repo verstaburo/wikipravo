@@ -8,7 +8,7 @@
   font-size: 14px;
   padding: 17px 31px;
   transition: all .25s ease-in-out;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   white-space: nowrap;
   appearance: none;
@@ -104,6 +104,12 @@
       background-color: rgba($color-main, .75);
       border-color: #63abed;
     }
+
+    &:disabled:hover {
+      color: white;
+      background-color: $color-main;
+      border-color: $color-main;
+    }
   }
 
   &_red {
@@ -119,6 +125,12 @@
       color: white;
       background-color: rgba($color-registration-red, .75);
       border-color: #e56a6b;
+    }
+
+    &:disabled:hover {
+      color: white;
+      background-color: $color-registration-red;
+      border-color: $color-registration-red;
     }
   }
 
@@ -136,6 +148,12 @@
       background-color: rgba($color-green-dark, .75);
       border-color: rgba($color-green-dark, .75);
     }
+
+    &:disabled:hover {
+      color: white;
+      background-color: $color-green-dark;
+      border-color: $color-green-dark;
+    }
   }
 
   &_lightgrey {
@@ -151,6 +169,12 @@
       color: #fff;
       background-color: $color-author-status;
       border-color: $color-author-status;
+    }
+
+    &:disabled:hover {
+      color: $color-font;
+      background-color: $color-border-search;
+      border-color: $color-border-search;
     }
   }
 
@@ -173,6 +197,16 @@
       }
     }
 
+    &:disabled:hover {
+      color: $color-main;
+      border: 2px solid rgba($color-main, .2);
+      background-color: transparent;
+
+      .button__arrow {
+        color: rgba($color-main, .6);
+      }
+    }
+
     &_second {
       color: $color-main;
       border: 2px solid rgba($color-main, .2);
@@ -183,17 +217,29 @@
         border-color: rgba($color-main, .8);
         color: $color-main;
       }
+
+      &:disabled:hover {
+        color: $color-main;
+        border: 2px solid rgba($color-main, .2);
+        background-color: transparent;
+      }
     }
 
     &_third {
       color: $color-main;
-      border: 1px solid rgba($color-main, .2);
+      border: 1px solid $color-main;
       background-color: transparent;
 
       &:hover, &:active {
         background-color: rgba($color-main, .75);
         border-color: #65aff0;
         color: #fff;
+      }
+
+      &:disabled:hover {
+        color: $color-main;
+        border: 1px solid $color-main;
+        background-color: transparent;
       }
     }
   }
@@ -205,6 +251,11 @@
 
     &:hover {
       background-color: rgba(white, .4);
+    }
+
+    &:disabled:hover {
+      background-color: rgba(white, .2);
+      color: white;
     }
   }
 

@@ -31,6 +31,7 @@ import {ShowNoteForProfile} from '../blocks/profile-note/profile-note';
 import {SmsCodePopupOpen} from '../blocks/popup-sms-verification/popup-sms-verification';
 import {WorkStatusListOpen} from '../blocks/work-status/work-status';
 import {LawyerFormChange} from '../components/popup-lawyer/popup-lawyer';
+import {ContractorChose} from '../blocks/contractor-controls/contractor-controls';
 
 $(function () {
 
@@ -67,4 +68,5 @@ $(function () {
   SmsCodePopupOpen();
   WorkStatusListOpen();
   LawyerFormChange();
+  ContractorChose();
 });

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   border: 1px solid rgba($color-font, .1);
 
   &__about, &__order {
@@ -28,7 +28,7 @@
     &_specialization {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: baseline;
       flex-wrap: wrap;
       margin-bottom: 6px;
@@ -38,7 +38,7 @@
         font-weight: 400;
         letter-spacing: .06em;
         line-height: 1.5em;
-        margin-right: 20px;
+        margin-right: 26px;
         color: $color-font;
       }
 
@@ -146,7 +146,51 @@
     }
   }
 
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  &__switches {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+
+  &__relation {
+    margin-bottom: 30px;
+  }
+
   &_no-border {
     border: none;
+  }
+
+  &_contractor {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    .lawyercard {
+
+      &__about {
+        padding: 16px 40px;
+        max-width: 390px;
+      }
+
+      &__order {
+        padding: 16px 40px;
+        width: calc(100% - 390px);
+      }
+
+      &__actions {
+
+      }
+    }
   }
 }

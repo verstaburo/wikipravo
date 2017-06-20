@@ -3,9 +3,27 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
 
   &__title {
-    width: 194px;
+    border: 2px solid #fff;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 7px 15px;
+    text-align: center;
+    width: 198px;
+    margin-bottom: -2px;
+    background-color: #fff;
+    z-index: 2;
+  }
+
+  &__body {
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: #fff;
   }
 
   &__contractor {
@@ -13,7 +31,54 @@
   }
 
   &__dialog {
-    max-width: 870px;
+    box-sizing: border-box;
+    padding: 18px 50px 20px;
+    max-width: 970px;
     width: 100%;
+  }
+
+  &_blue {
+
+    .contractor-card {
+
+      &__title {
+        border: 2px solid $color-main;
+        border-bottom-color: #fff;
+      }
+
+      &__body {
+        border: 2px solid $color-main;
+      }
+    }
+  }
+
+  &_green {
+
+    .contractor-card {
+
+      &__title {
+        border: 2px solid $color-green-dark;
+        border-bottom-color: #fff;
+      }
+
+      &__body {
+        border: 2px solid $color-green-dark;
+      }
+    }
+  }
+
+  &_red {
+
+    .contractor-card {
+
+      &__title {
+        border: 2px solid $color-red-border;
+        border-bottom-color: #fff;
+      }
+
+      &__body {
+        border: 2px solid $color-red-border;
+      }
+    }
   }
 }

@@ -4,6 +4,7 @@ include ../section-title/section-title
 
 mixin contractor-card(type, active)
   -var title = ""
+  -var activeClass = ""
   case type
     when 'response'
       - title = "Отклик"
@@ -11,7 +12,17 @@ mixin contractor-card(type, active)
       - title = "Приглашение"
     default
       - break
-  +b.contractor-card&attributes(attributes)
+  case active
+    when 'candidate'
+      - activeClass = '_blue'
+    when 'contractor'
+      - activeClass = '_green'
+    when 'reject'
+      - activeClass = '_red'
+    default
+      - break
+  +b(class="contractor-card" + activeClass)&attributes(attributes)
     +section-title(title)._biger._bolder.__title
-    +lawyercard-contractor(active).__contractor
-    +dialog-second(getData('contractor-dialog')).__dialog
+    +e.body
+      +lawyercard-contractor(active).__contractor
+      +dialog-second(getData('contractor-dialog')).__dialog

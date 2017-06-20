@@ -4,16 +4,43 @@ mixin contractor-controls(active)
   -var candidateActiveClass = ""
   -var contractorActiveClass = ""
   -var rejectActiveClass = ""
+  -var candidateColorClass = " _transparent_third"
+  -var contractorColorClass = " _transparent_third"
+  -var rejectColorClass = " _transparent_third"
+  -var candidateIcon = "smallplus"
+  -var contractorIcon = "smallplus"
+  -var rejectIcon = "smallplus"
+  -var candidateButtonName = "Кандидат"
+  -var contractorButtonName = "Выбрать исполнителем"
+  -var rejectButtonName = "Отказать"
+  -var candidateDisabled = false;
+  -var contractorDisabled = false;
+  -var rejectDisabled = false;
   case active
     when 'candidate'
       - candidateActiveClass = " active"
+      - contractorDisabled = "true"
+      - rejectDisabled = "true"
+      - candidateColorClass = " _blue"
+      - candidateIcon = "smallcheck"
+      - candidateButtonName = "Кандидат"
     when 'contractor'
+      - candidateDisabled = "true"
       - contractorActiveClass = " active"
+      - rejectDisabled = "true"
+      - contractorColorClass = " _green"
+      - contractorIcon = "flag"
+      - contractorButtonName = "Выбран исполнителем"
     when 'reject'
+      - candidateDisabled = "true"
+      - contractorDisabled = "true"
       - rejectActiveClass = " active"
+      - rejectColorClass = " _red"
+      - rejectIcon = "smallcross"
+      - rejectButtonName = "Отказано"
     default
       - break
   +b.contractor-controls&attributes(attributes)
-    +button-icon('smallplus', 'button')(class="_transparent_third _narrow __button_candidate" + candidateActiveClass data-active-name="Кандидат") Кандидат
-    +button-icon('smallplus', 'button')(class="_transparent_third _narrow __button_contractor" + contractorActiveClass data-active-name="Выбран исполнителем") Выбрать исполнителем
-    +button-icon('smallplus', 'button')(class="_transparent_third _narrow __button_reject" + rejectActiveClass data-active-name="Отказано") Отказатьs
+    +button-icon(candidateIcon, 'button')(class="_narrow" + candidateColorClass + " __button_candidate" + candidateActiveClass data-active-name="Кандидат" data-name="Кандидат" data-active-icon="assets/images/icon.svg#icon_smallcheck" data-icon="assets/images/icon.svg#icon_smallplus" disabled= candidateDisabled)= candidateButtonName
+    +button-icon(contractorIcon, 'button')(class="_narrow" + contractorColorClass + " __button_contractor" + contractorActiveClass data-active-name="Выбран исполнителем" data-name="Выбрать исполнителем" data-active-icon="assets/images/icon.svg#icon_flag" data-icon="assets/images/icon.svg#icon_smallplus" disabled= contractorDisabled)= contractorButtonName
+    +button-icon(rejectIcon, 'button')(class="_narrow" + rejectColorClass + " __button_reject" + rejectActiveClass data-active-name="Отказано" data-name="Отказать" data-active-icon="assets/images/icon.svg#icon_smallcross" data-icon="assets/images/icon.svg#icon_smallplus" disabled= rejectDisabled)= rejectButtonName

@@ -8,7 +8,7 @@ mixin client-request-tab()
   -var addClass = ""
   +b.client-request-tab&attributes(attributes)
     +tab-toggles(getData("client-request-contractors-deals-tabs"))._transparent_second._big._bold.__controls
-    +e.tabs-container(data-tab-group-container="request-info")
+    +e.tabs-container.scrollable(data-tab-group-container="request-info")
       +e.content(class=" active" data-tab-group="request-info" data-tab-id="request-info1")
         +filter-list("Статус:", getData("client-filter-order-status")).__filter_status
         +filter-list("Тип:", getData("client-filter-order-type")).__filter_type

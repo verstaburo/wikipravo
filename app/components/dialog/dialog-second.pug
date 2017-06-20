@@ -7,11 +7,11 @@ mixin dialog-second(data)
   -var checkLabel = ""
   -var checkId = ""
   -var check = ""
-  +b.spoiler_bottom.dialog__&attributes(attributes)
+  +b.spoiler_bottom.dialog_second__&attributes(attributes)
     +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr, data[0].attach).__comment= data[0].text
     +e.actions.spoiler__control_bottom
-      +button('a')._transparent_second._narrow.__button_write Написать ответ
-      +file-input("Прикрепить файлы", "Нет приклепленных файлов", "files", "message").files.message__files
+      +button('a')._transparent_third._narrow.__button_write Написать ответ
+      +file-input("Прикрепить файлы", "Нет приклепленных файлов", "files", "message").__files.message__files
         +button("button")(type="submit" form="message")._blue.button_send.message__button Отправить
       +button-arrow('down', 'button')(type="button", data-open-title="Развернуть переписку" data-close-title="Свернуть переписку")._text._noborder.__button_open.spoiler__button Развернуть переписку
         +e.SPAN(class=" spoiler__counter js-comment-counter")
@@ -21,4 +21,4 @@ mixin dialog-second(data)
       -}
       +b.message.dialog__message
         +e.FORM.__form#message
-          +textarea(placeholder="Введите сообщение").__textarea
+          +textarea(placeholder="Введите сообщение")._border.__textarea

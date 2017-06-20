@@ -9,18 +9,65 @@
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid rgba($color-font, .15);
+
+    .tab-toggles__button {
+      height: 50px;
+      min-width: 194px;
+      width: 194px;
+    }
+  }
+
+  &__tabs-container {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    &.active {
+      display: flex;
+    }
   }
 
   &__filter {
+    box-sizing: border-box;
+    padding: 17px 40px 7px;
     width: 100%;
     background-color: #fff;
+    border-bottom: 1px solid rgba($color-font, .15);
 
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba($color-font, .15);
+    &_type {
+      margin-bottom: 30px;
+      border-bottom: none;
+
+      .filter-list__name {
+        margin-right: 60px;
+      }
     }
+  }
+
+  &__contractors {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   &__contractor {
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
   }
 }
