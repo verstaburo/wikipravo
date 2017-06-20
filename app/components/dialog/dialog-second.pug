@@ -7,12 +7,14 @@ mixin dialog-second(data)
   -var checkLabel = ""
   -var checkId = ""
   -var check = ""
+  -var messageId = "message" + Math.round(Math.random()*100);
+  -var filesId = "files" + Math.round(Math.random()*100);
   +b.spoiler_bottom.dialog_second__&attributes(attributes)
     +comment(data[0].author, data[0].date, data[0].editable, data[0].button, data[0].hide, data[0].arbitr, data[0].attach).__comment= data[0].text
     +e.actions.spoiler__control_bottom
       +button('a')._transparent_third._narrow.__button_write Написать ответ
-      +file-input("Прикрепить файлы", "Нет приклепленных файлов", "files", "message").__files.message__files
-        +button("button")(type="submit" form="message")._blue.button_send.message__button Отправить
+      +file-input("Прикрепить файлы", "", filesId, messageId).__files.message__files
+        +button("button")(type="submit" form= messageId)._blue.button_send.message__button Отправить
       +button-arrow('down', 'button')(type="button", data-open-title="Развернуть переписку" data-close-title="Свернуть переписку")._text._noborder.__button_open.spoiler__button Развернуть переписку
         +e.SPAN(class=" spoiler__counter js-comment-counter")
     +e.content.spoiler__content(data-counter="js-comment-counter")
@@ -20,5 +22,5 @@ mixin dialog-second(data)
         +comment(data[i].author, data[i].date, data[i].editable, data[i].button, data[i].hide, data[i].arbitr, data[i].attach)(class=" dialog__comment")= data[i].text
       -}
       +b.message.dialog__message
-        +e.FORM.__form#message
+        +e.FORM(id= messageId).__form
           +textarea(placeholder="Введите сообщение")._border.__textarea

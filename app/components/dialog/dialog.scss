@@ -92,6 +92,17 @@
 
   &__files {
     display: none;
+
+    @include desktop {
+      width: 100%;
+      margin-right: 0;
+
+      .button {
+        flex: 1;
+        min-width: auto;
+        max-width: none;
+      }
+    }
   }
 
   &__button {
@@ -159,7 +170,6 @@
         .message__textarea {
           width: 100%;
           max-width: none;
-          margin-bottom: 0;
         }
       }
 

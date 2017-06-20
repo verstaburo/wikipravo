@@ -28,6 +28,13 @@
     margin-right: auto;
   }
 
+  &.opened {
+
+    .spoiler__counter {
+      display: none;
+    }
+  }
+
   &_bottom {
 
     .spoiler {
