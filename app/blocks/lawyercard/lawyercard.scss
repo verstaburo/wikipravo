@@ -161,6 +161,11 @@
   &__switches {
     margin-right: 50px;
     margin-bottom: 0;
+
+    @include desktop {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__relation {
@@ -181,11 +186,20 @@
       &__about {
         padding: 16px 40px;
         max-width: 390px;
+
+        @include tablet {
+          padding: 16px 20px;
+        }
       }
 
       &__order {
         padding: 16px 40px;
         width: calc(100% - 390px);
+        min-width: 50%;
+
+        @include tablet {
+          padding: 16px 20px;
+        }
       }
     }
   }

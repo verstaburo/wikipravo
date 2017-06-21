@@ -25,7 +25,18 @@
   }
 
   &__button {
+    display: inline-block;
+    white-space: nowrap;
     margin-right: auto;
+
+    .button__name {
+      padding-right: 4px;
+    }
+
+    .button__arrow {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   &.opened {
