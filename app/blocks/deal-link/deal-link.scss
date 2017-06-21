@@ -44,4 +44,18 @@
       color: $color-registration-red;
     }
   }
+
+  &_bold {
+
+    a, .deal-link__text {
+      font-weight: 500;
+    }
+  }
+
+  &_big {
+
+    a, .deal-link__text {
+      font-size: 18px;
+    }
+  }
 }

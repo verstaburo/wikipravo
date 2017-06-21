@@ -41,7 +41,7 @@ mixin client-request-tab()
           -}
       +e.content(data-tab-group="request-info" data-tab-id="request-info2")
         +e.filters
-          +filter-list("Статус:", getData("client-filter-deal-status")).__filter_type
+          +filter-list("Статус:", getData("client-filter-deal-status")).__filter_status
         +e.deals
           -var dealList = ["new", "consider", "reject", "cancel", "agreed", "performed", "check", "arbitration", "complete", "arbitrationcomplete", "close"]
           each deal in dealList

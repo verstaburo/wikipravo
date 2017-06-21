@@ -60,7 +60,7 @@ mixin short-deal(state)
       +request-state(stateName, stateButtons, stateColor).__state-list
     +e.deal
       +e.row_deal
-        +deal-link("Сделка от: 24.05.2017, 12:45", "#").__link
+        +deal-link("Сделка от: 24.05.2017, 12:45", "#")._bold._big.__link
         +e.status
           case state
             when 'new'
@@ -90,11 +90,11 @@ mixin short-deal(state)
             default
               - break
       +e.row_contractor
-        +e.contractor-title
-        +jurist-name("Дмитрий Петров")._border._small.__contractor-name
+        +e.contractor-title Исполнитель:
+        +jurist-name("Дмитрий Петров", true, true)._border._small.__contractor-name
         +e.buttons
           +button("a")._blue._narrow.__button Написать по сделке
-          +button("a")._transparent_second._narrow.__button Написать личное сообщение
+          +button("a")._transparent_third._narrow.__button Написать личное сообщение
       +e.row_condition
         +request-condition("", "5 дней", "500 Р").__condition
     +e.describe

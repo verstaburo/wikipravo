@@ -52,6 +52,38 @@
 }
 
 @font-face {
+  font-family: 'Gotham Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../../assets/fonts/GothamProLightItalic/GothamProLightItalic.eot');
+  src: url('../../assets/fonts/GothamProLightItalic/GothamProLightItalic.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/GothamProLightItalic/GothamProLightItalic.woff') format('woff'), url('../../assets/fonts/GothamProLightItalic/GothamProLightItalic.otf')  format('opentype'), url('../../assets/fonts/GothamProLightItalic/GothamProLightItalic.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../assets/fonts/GothamProRegularItalic/GothamProRegularItalic.eot');
+  src: url('../../assets/fonts/GothamProRegularItalic/GothamProRegularItalic.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/GothamProRegularItalic/GothamProRegularItalic.woff') format('woff'), url('../../assets/fonts/GothamProRegularItalic/GothamProRegularItalic.otf')  format('opentype'), url('../../assets/fonts/GothamProRegularItalic/GothamProRegularItalic.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../../assets/fonts/GothamProMediumItalic/GothamProMediumItalic.eot');
+  src: url('../../assets/fonts/GothamProMediumItalic/GothamProMediumItalic.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/GothamProMediumItalic/GothamProMediumItalic.woff') format('woff'), url('../../assets/fonts/GothamProMediumItalic/GothamProMediumItalic.otf')  format('opentype'), url('../../assets/fonts/GothamProMediumItalic/GothamProMediumItalic.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../../assets/fonts/GothamProBoldItalic/GothamProBoldItalic.eot');
+  src: url('../../assets/fonts/GothamProBoldItalic/GothamProBoldItalic.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/GothamProBoldItalic/GothamProBoldItalic.woff') format('woff'), url('../../assets/fonts/GothamProBoldItalic/GothamProBoldItalic.otf')  format('opentype'), url('../../assets/fonts/GothamProBoldItalic/GothamProBoldItalic.ttf')  format('truetype');
+}
+
+@font-face {
   font-family: 'Warnock Pro';
   font-style: normal;
   font-weight: 600;

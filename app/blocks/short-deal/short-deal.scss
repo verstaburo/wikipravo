@@ -1,0 +1,196 @@
+.short-deal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  &__state {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 23px 40px;
+
+    &-list {
+      width: 100%;
+    }
+  }
+
+  &__deal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  &__link {
+    margin-right: 50px;
+
+    @include s-desktop {
+      margin-bottom: 15px;
+    }
+
+    a {
+      line-height: 1em;
+      padding-bottom: 4px;
+      letter-spacing: .04em;
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    margin-left: auto;
+
+    @include s-desktop {
+      margin-left: 0;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      line-height: 1.5em;
+      color: $color-font;
+      width: 100%;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      line-height: 1.5em;
+      color: #bdbdbd;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+
+    @include desktop {
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    &_deal {
+      padding: 32px 0;
+
+      @include s-desktop {
+        padding-bottom: 17px;
+      }
+    }
+
+    &_contractor {
+      padding: 12px 0;
+
+      @include desktop {
+        padding-bottom: 0;
+      }
+    }
+
+    &_condition {
+      padding: 30px 0;
+    }
+  }
+
+  &__contractor-title {
+    font-size: 14px;
+    letter-spacing: .04em;
+    font-weight: 700;
+    color: rgba($color-font, .45);
+    margin-right: 26px;
+
+    @include desktop {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__contractor-name {
+    padding-left: 26px;
+    margin-right: 92px;
+    white-space: nowrap;
+
+    @include desktop {
+      margin-right: 50px;
+      margin-bottom: 12px;
+    }
+
+    .jurist-name__checkstatus {
+      width: 20px;
+      height: 20px;
+    }
+
+    .jurist-name__icon {
+      width: 8px;
+      height: 6px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include desktop {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__button {
+    padding: 11px 21px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__describe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 26px 40px;
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $color-font;
+    border-top: 1px solid rgba($color-font, .15);
+
+    p {
+      width: 100%;
+      font-size: 14px;
+      letter-spacing: .04em;
+      line-height: 1.5em;
+      font-weight: 400;
+    }
+  }
+
+  &__condition {
+    background-color: transparent;
+
+    .request-condition__time {
+      margin-right: 26px;
+    }
+  }
+}
