@@ -3204,88 +3204,77 @@
                         </div>
                     </section>
                     <section class="popup-lawyer__lawyer active" data-field="lawyer">
-                        <h4 class="section-title section-title_biger section-title_dark section-title_left popup-lawyer__subtitle">Удостоверение адвоката</h4>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
-                                <input class="input popup-lawyer__input" type="text" placeholder="123413240034" />
-                            </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment">
-                                <span class="popup-lawyer__comment">(Не будет отображаться на сайте)</span>
-                            </div>
-                        </div>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
-                                <div class="file-drop popup-lawyer__files">
-                                    <span class="file-drop__label">Загрузите подтверждающий документ</span>
-                                    <output class="file-drop__output">
-                                        <ul class="files-list"></ul>
-                                    </output>
+                        <div class="popup-lawyer__column popup-lawyer__column_left">
+                            <h4 class="section-title section-title_biger section-title_dark section-title_left popup-lawyer__subtitle">Удостоверение адвоката</h4>
+                            <div class="popup-lawyer__row">
+                                <div class="popup-lawyer__col popup-lawyer__col_field">
+                                    <input class="input popup-lawyer__input" type="text" placeholder="123413240034" />
+                                    <span class="popup-lawyer__comment">(Не будет отображаться на сайте)</span>
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
-                        </div>
-                        <h4 class="section-title section-title_small section-title_dark section-title_left popup-lawyer__subtitle popup-lawyer__subtitle_small">Форма адвокатского образования</h4>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
-                                <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="chamber" name="office" value="chamber" />
-                                    <label class="radio__label" for="chamber">Адвокатский кабинет</label>
+                            <div class="popup-lawyer__row">
+                                <div class="popup-lawyer__col popup-lawyer__col_field">
+                                    <div class="file-drop popup-lawyer__files">
+                                        <span class="file-drop__label">Загрузите подтверждающий документ</span>
+                                        <output class="file-drop__output">
+                                            <ul class="files-list"></ul>
+                                        </output>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift">
-                                <input class="input popup-lawyer__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
-                            </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
-                        </div>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
-                                <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="buro" name="office" value="buro" />
-                                    <label class="radio__label" for="buro">Адвокатское бюро</label>
+                        <div class="popup-lawyer__column popup-lawyer__column_right">
+                            <h4 class="section-title section-title_small section-title_dark section-title_left popup-lawyer__subtitle popup-lawyer__subtitle_small">Форма адвокатского образования</h4>
+                            <div class="popup-lawyer__row">
+                                <div class="popup-lawyer__col popup-lawyer__col_field">
+                                    <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
+                                        <input type="radio" id="chamber" name="office" value="chamber" checked="checked" />
+                                        <label class="radio__label" for="chamber">Адвокатский кабинет</label>
+                                        <input class="input radio__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
-                        </div>
-                        <div class="popup-lawyer__row">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
-                                <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="collegium" name="office" value="collegium" />
-                                    <label class="radio__label" for="collegium">Коллегия адвокатов</label>
+                            <div class="popup-lawyer__row">
+                                <div class="popup-lawyer__col popup-lawyer__col_field">
+                                    <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
+                                        <input type="radio" id="buro" name="office" value="buro" />
+                                        <label class="radio__label" for="buro">Адвокатское бюро</label>
+                                        <input class="input radio__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
+                            <div class="popup-lawyer__row">
+                                <div class="popup-lawyer__col popup-lawyer__col_field">
+                                    <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
+                                        <input type="radio" id="collegium" name="office" value="collegium" />
+                                        <label class="radio__label" for="collegium">Коллегия адвокатов</label>
+                                        <input class="input radio__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section class="popup-lawyer__notlawyer" data-field="notlawyer">
-                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
+                        <div class="popup-lawyer__row">
+                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_half">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="private" name="status" value="private" />
+                                    <input type="radio" id="private" name="status" value="private" checked="checked" />
                                     <label class="radio__label" for="private">Частнопрактикующий юрист</label>
+                                    <input class="input radio__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
-                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift">
-                                <input class="input popup-lawyer__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
-                            </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
-                        </div>
-                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
-                            <div class="popup-lawyer__col popup-lawyer__col_field">
+                        <div class="popup-lawyer__row">
+                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_half">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
                                     <input type="radio" id="employer" name="status" value="employer" />
                                     <label class="radio__label" for="employer">Работодатель</label>
+                                    <input class="input radio__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
-                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift">
+                        <div class="popup-lawyer__row">
+                            <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift popup-lawyer__col_half">
                                 <div class="file-drop popup-lawyer__files">
                                     <span class="file-drop__label">Загрузите подтверждающий документ</span>
                                     <output class="file-drop__output">
@@ -3293,7 +3282,6 @@
                                     </output>
                                 </div>
                             </div>
-                            <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
                     </section>
                     <div class="popup-lawyer__buttons">
