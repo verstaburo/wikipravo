@@ -1,0 +1,32 @@
+.request-state {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__name {
+    font-size: 18px;
+    color: $color-font;
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-weight: 500;
+    margin-right: 50px;
+    white-space: nowrap;
+
+    &_green {
+      color: $color-green-dark;
+    }
+
+    &_red {
+      color: $color-registration-red;
+    }
+  }
+
+  &__button {
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}

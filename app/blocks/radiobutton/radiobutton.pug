@@ -1,5 +1,16 @@
+include ../input/input
+
 mixin radio(label, id, name, value)
   +b.radio&attributes(attributes)
     +e.INPUT(type="radio" id= id name= name value= value)
     +e.LABEL.label(for= id)= label
       block
+
+mixin radio-vs-input(label, id, name, value, fildplaceholder, checked)
+  -var check = false
+  -if(checked) {check = true} else {check = false}
+  +b.radio&attributes(attributes)
+    +e.INPUT(type="radio" id= id name= name value= value checked= check)
+    +e.LABEL.label(for= id)= label
+      block
+    +input(type="text" placeholder= fildplaceholder).__input

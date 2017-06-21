@@ -1,9 +1,9 @@
 .radio {
   box-sizing: border-box;
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   input {
     display: none;
@@ -20,6 +20,7 @@
     font-weight: 400;
     color: #1a1a1a;
     white-space: nowrap;
+    text-align: left;
 
     &::before {
       box-sizing: border-box;
@@ -43,11 +44,22 @@
     }
   }
 
+  &__input {
+    display: none;
+    margin-left: 35px;
+    margin-top: 10px;
+    width: calc(100% - 35px);
+  }
+
   input:checked ~ .radio__label {
 
     &::before {
       background-color: $color-main;
     }
+  }
+
+  input:checked ~ .radio__input {
+    display: block;
   }
 
   &_grey {

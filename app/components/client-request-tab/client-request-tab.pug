@@ -1,6 +1,7 @@
 include ../../blocks/tab-toggles/tab-toggles
 include ../../blocks/filter-list/filter-list
 include ../../blocks/contractor-card/contractor-card
+include ../../blocks/short-deal/short-deal
 
 mixin client-request-tab()
   -var type = "response"
@@ -10,8 +11,9 @@ mixin client-request-tab()
     +tab-toggles(getData("client-request-contractors-deals-tabs"))._transparent_second._big._bold.__controls
     +e.tabs-container.scrollable(data-tab-group-container="request-info")
       +e.content(class=" active" data-tab-group="request-info" data-tab-id="request-info1")
-        +filter-list("Статус:", getData("client-filter-order-status")).__filter_status
-        +filter-list("Тип:", getData("client-filter-order-type")).__filter_type
+        +e.filters
+          +filter-list("Статус:", getData("client-filter-order-status")).__filter_status
+          +filter-list("Тип:", getData("client-filter-order-type")).__filter_type
         +e.contractors
           -for (var i = 0; i < 6; i++) {
             case i
@@ -38,4 +40,10 @@ mixin client-request-tab()
             +contractor-card(type, active)(class=addClass + " __contractor")
           -}
       +e.content(data-tab-group="request-info" data-tab-id="request-info2")
-        +filter-list("Тип:", getData("client-filter-deal-status")).__filter_type
+        +e.filters
+          +filter-list("Статус:", getData("client-filter-deal-status")).__filter_type
+        +e.deals
+          -var dealList = ["new", "consider", "reject", "cancel", "agreed", "performed", "check", "arbitration", "complete", "arbitrationcomplete", "close"]
+          each deal in dealList
+            +short-deal(deal).__deal
+

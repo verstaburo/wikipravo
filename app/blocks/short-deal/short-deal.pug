@@ -1,0 +1,104 @@
+include ../jurist-name/jurist-name
+include ../button/button
+include ../request-condition/request-condition
+include ../deal-link/deal-link
+include ../request-state/request-state
+
+mixin short-deal(state)
+  -var stateName = ""
+  -var stateButtons = []
+  -var stateColor = ""
+  case state
+    when 'new'
+      - stateName = "Новая"
+      - stateButtons = ["Отменить", "Изменить условия"]
+      - stateColor = ""
+    when 'consider'
+      - stateName = "Рассматривается"
+      - stateButtons = ["Отменить", "Изменить условия"]
+      - stateColor = ""
+    when 'reject'
+      - stateName = "Отклонено"
+      - stateButtons = ["Закрыть", "Изменить условия"]
+      - stateColor = "red"
+    when 'cancel'
+      - stateName = "Отменена"
+      - stateButtons = ["Вернуть на рассмотрение"]
+      - stateColor = ""
+    when 'agreed'
+      - stateName = "Согласована"
+      - stateButtons = ["Отменить", "Зарезирвировать сумму"]
+      - stateColor = ""
+    when 'performed'
+      - stateName = "Выполняется"
+      - stateButtons = ["Подать в Арбитраж"]
+      - stateColor = ""
+    when 'check'
+      - stateName = "Проверка"
+      - stateButtons = ["Завершить работу", "Вернуть работу", "Подать в Арбитраж"]
+      - stateColor = ""
+    when 'arbitration'
+      - stateName = "Арбитраж"
+      - stateButtons = []
+      - stateColor = "red"
+    when 'complete'
+      - stateName = "Решено"
+      - stateButtons = ["Ваш отзыв", "Отзыв исполнителя"]
+      - stateColor = "green"
+    when 'arbitrationcomplete'
+      - stateName = "Решено через Арбитраж"
+      - stateButtons = []
+      - stateColor = "green"
+    when 'close'
+      - stateName = "Закрыта"
+      - stateButtons = ["Вернуть на рассмотрение"]
+      - stateColor = ""
+    default
+      - break
+  +b.SECTION.short-deal&attributes(attributes)
+    +e.state
+      +request-state(stateName, stateButtons, stateColor).__state-list
+    +e.deal
+      +e.row_deal
+        +deal-link("Сделка от: 24.05.2017, 12:45", "#").__link
+        +e.status
+          case state
+            when 'new'
+              +e.P Исполнитель еще не просмотрел сделку
+            when 'consider'
+              +e.P Ждем ответа исполинетеля
+            when 'reject'
+              +e.P Ждем ответа исполинетеля
+            when 'cancel'
+              +e.P Вы отменили сделку
+            when 'agreed'
+              +e.P Вы отменили сделку
+            when 'performed'
+              +e.P Вы отменили сделку
+            when 'check'
+              +e.P Вы отменили сделку
+            when 'arbitration'
+              +e.P Ожидайте решение арбитров
+            when 'complete'
+              +e.P Вы отменили сделку
+            when 'arbitrationcomplete'
+              +e.P
+                +e.SPAN Решение Арбитра:
+                |  50% Клиенту, 50% - Исполнителю
+            when 'close'
+              +e.P Исполнитель отказался от сделки и вы закрыли ее
+            default
+              - break
+      +e.row_contractor
+        +e.contractor-title
+        +jurist-name("Дмитрий Петров")._border._small.__contractor-name
+        +e.buttons
+          +button("a")._blue._narrow.__button Написать по сделке
+          +button("a")._transparent_second._narrow.__button Написать личное сообщение
+      +e.row_condition
+        +request-condition("", "5 дней", "500 Р").__condition
+    +e.describe
+      +e.P Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.
+
+
+

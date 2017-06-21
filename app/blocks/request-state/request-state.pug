@@ -1,0 +1,9 @@
+include ../button/button
+
+mixin request-state(state, data, color)
+  -var addClass = ""
+  -if(color) {addClass = "_" + color;}
+  +b.request-state&attributes(attributes)
+    +e(class="name" + addClass)= state
+    each button in data
+      +button('button')(type="button" class="_text _bold __button")= button.name
