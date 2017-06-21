@@ -32,6 +32,7 @@ import {SmsCodePopupOpen} from '../blocks/popup-sms-verification/popup-sms-verif
 import {WorkStatusListOpen} from '../blocks/work-status/work-status';
 import {LawyerFormChange} from '../components/popup-lawyer/popup-lawyer';
 import {ContractorChose} from '../blocks/contractor-controls/contractor-controls';
+import {CourtRoomSwitch} from '../components/popup-room-court/popup-room-court';
 
 $(function () {
 
@@ -69,4 +70,5 @@ $(function () {
   WorkStatusListOpen();
   LawyerFormChange();
   ContractorChose();
+  CourtRoomSwitch ();
 });

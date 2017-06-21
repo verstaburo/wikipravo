@@ -34,6 +34,7 @@
   &__inputs {
     width: 100%;
     margin-bottom: 40px;
+    transition: all .25s ease-in-out;
   }
 
   &__switch-btn {
@@ -82,6 +83,11 @@
     &_button {
       justify-content: center;
       align-items: center;
+    }
+
+    &_bigmargin {
+      margin-top: 170px;
+      visibility: visible
     }
   }
 
