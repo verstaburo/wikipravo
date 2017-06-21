@@ -3228,7 +3228,7 @@
                         <div class="popup-lawyer__row">
                             <div class="popup-lawyer__col popup-lawyer__col_field">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="chamber" />
+                                    <input type="radio" id="chamber" name="office" value="chamber" />
                                     <label class="radio__label" for="chamber">Адвокатский кабинет</label>
                                 </div>
                             </div>
@@ -3243,7 +3243,7 @@
                         <div class="popup-lawyer__row">
                             <div class="popup-lawyer__col popup-lawyer__col_field">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="buro" />
+                                    <input type="radio" id="buro" name="office" value="buro" />
                                     <label class="radio__label" for="buro">Адвокатское бюро</label>
                                 </div>
                             </div>
@@ -3252,7 +3252,7 @@
                         <div class="popup-lawyer__row">
                             <div class="popup-lawyer__col popup-lawyer__col_field">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="collegium" />
+                                    <input type="radio" id="collegium" name="office" value="collegium" />
                                     <label class="radio__label" for="collegium">Коллегия адвокатов</label>
                                 </div>
                             </div>
@@ -3260,31 +3260,31 @@
                         </div>
                     </section>
                     <section class="popup-lawyer__notlawyer" data-field="notlawyer">
-                        <div class="popup-lawyer__row">
+                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
                             <div class="popup-lawyer__col popup-lawyer__col_field">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="private" />
+                                    <input type="radio" id="private" name="status" value="private" />
                                     <label class="radio__label" for="private">Частнопрактикующий юрист</label>
                                 </div>
                             </div>
                             <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row">
+                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
                             <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift">
                                 <input class="input popup-lawyer__input" type="text" placeholder="&quot;Падва и партнеры&quot;" />
                             </div>
                             <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row">
+                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
                             <div class="popup-lawyer__col popup-lawyer__col_field">
                                 <div class="radio radio_blue radio_dark radio_large popup-lawyer__radio">
-                                    <input type="radio" id="employer" />
+                                    <input type="radio" id="employer" name="status" value="employer" />
                                     <label class="radio__label" for="employer">Работодатель</label>
                                 </div>
                             </div>
                             <div class="popup-lawyer__col popup-lawyer__col_comment"></div>
                         </div>
-                        <div class="popup-lawyer__row">
+                        <div class="popup-lawyer__row popup-lawyer__row_reverse">
                             <div class="popup-lawyer__col popup-lawyer__col_field popup-lawyer__col_shift">
                                 <div class="file-drop popup-lawyer__files">
                                     <span class="file-drop__label">Загрузите подтверждающий документ</span>
@@ -3509,6 +3509,11 @@
                         <output class="file-drop__output">
                             <ul class="files-list"></ul>
                         </output>
+                    </div>
+                    <div class="popup-academic-degree__buttons">
+                        <button class="button button_text button_border button_big popup-academic-degree__button js-popup-close" type="submit">
+                            <span class="button__name">Сохранить</span>
+                        </button>
                     </div>
                 </form>
             </div>
