@@ -33,11 +33,7 @@
     margin-bottom: 10px;
 
     &:not(:last-child) {
-      margin-right: 84px;
-
-      @include s-desktop {
-        margin-right: 40px;
-      }
+      margin-right: 40px;
     }
 
     a {
@@ -57,6 +53,57 @@
       a {
         font-weight: 500;
         color: $color-font;
+      }
+    }
+  }
+
+  &_button {
+
+    .filter-list {
+
+      &__name {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      &__list {
+        background-color: $color-bg-index;
+      }
+
+      &__item {
+        box-sizing: border-box;
+        padding: 19px 40px;
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          border-right: 1px solid rgba(#858585, .15);
+        }
+
+        a {
+          border-bottom: 1px solid transparent;
+          padding-bottom: 2px;
+
+          &:hover {
+            font-weight: 400;
+            color: $color-main;
+            border-bottom-color: rgba($color-main, .5);
+          }
+        }
+
+        &.active {
+          background-color: $color-main;
+
+          &:not(:last-child) {
+            border-right: none;
+          }
+
+          a {
+            font-weight: 400;
+            color: #fff;
+            border-bottom-color: transparent;
+          }
+        }
       }
     }
   }

@@ -1,0 +1,10 @@
+.deal-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 26px 50px;
+  width: 100%;
+  background-color: $color-bg-index;
+}

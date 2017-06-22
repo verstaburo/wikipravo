@@ -2,10 +2,6 @@
 
   &__visibility, &__status {
     background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     width: 100%;
     padding: 16px 40px 6px;
   }
@@ -16,62 +12,6 @@
 
   &__status {
     margin-bottom: 30px;
-  }
-
-  &__name {
-    font-size: 14px;
-    margin-right: 36px;
-    font-weight: 500;
-    letter-spacing: .04em;
-    margin-bottom: 10px;
-    white-space: nowrap;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  &__item {
-    font-size: 14px;
-    letter-spacing: .04em;
-    color: $color-main;
-    cursor: pointer;
-    white-space: nowrap;
-    margin-bottom: 10px;
-
-    &:not(:last-child) {
-      margin-right: 84px;
-
-      @include s-desktop {
-        margin-right: 40px;
-      }
-    }
-
-    a {
-      font-size: inherit;
-      letter-spacing: .04em;
-      color: $color-main;
-      transition: all .25s ease-in-out;
-
-      &:hover {
-        font-weight: 500;
-        color: $color-font;
-      }
-    }
-
-    &.active {
-
-      a {
-        font-weight: 500;
-        color: $color-font;
-      }
-    }
   }
 
   &__order {

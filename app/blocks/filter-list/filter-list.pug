@@ -4,7 +4,7 @@ mixin filter-list(title, data)
     +e.name= title
     +e.UL.list
       each item in data
-        -if(item.active) {addClass= " active"}
+        -if(item.active) {addClass= " active"} else {addClass = ""}
         +e.LI(class="item" + addClass)
           +e.A(href="#")= item.name
             +e.SPAN.count= item.count

@@ -1,0 +1,17 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/control-link/control-link
+include ../../blocks/steps/steps
+include ../../blocks/button/button
+include ../condition-form/condition-form
+include ../../blocks/contractor-card/contractor-card
+include ../../blocks/short-request/short-request
+
+mixin deal-creating()
+  +b.deal-creating&attributes(attributes)
+    +control-link("back").__back
+    +steps-long(1).__steps
+    +page-title("Создание сделки").__title
+    +short-request-second.__request
+    +condition-form.__form
+    +contractor-card-second.__contractor
+    +button("button")._blue.__button Оформить

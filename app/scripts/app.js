@@ -33,11 +33,13 @@ import {WorkStatusListOpen} from '../blocks/work-status/work-status';
 import {LawyerFormChange} from '../components/popup-lawyer/popup-lawyer';
 import {ContractorChose} from '../blocks/contractor-controls/contractor-controls';
 import {CourtRoomSwitch} from '../components/popup-room-court/popup-room-court';
+import objectFitImages from 'object-fit-images';
 
 $(function () {
 
   // Финальный вызов функций
   svg4everybody();
+  objectFitImages();
   JuristColorChange();
   ViewPassword();
   VerstaSelectBox();

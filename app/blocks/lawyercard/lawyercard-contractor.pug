@@ -32,3 +32,25 @@ mixin lawyercard-contractor(active)
           +e.SPAN Специализации
           +e.A(href="#") Показать все
         +specialization([{"name" : "Гражданское право", "expanded" : ["Договорное право", "Право собственности"]}, {"name" : "Защита прав потребителей"}]).__list
+
+mixin lawyercard-contractor-second()
+  +b.SECTION.lawyercard_contractor_second&attributes(attributes)
+    +e.SECTION.about
+      +jurist-name("Дмитрий Петров", true, true)._border.__title_about
+      +e.info
+        +avatar("assets/images/lawyer-avatar.jpg")._big.__img
+        +e.status
+          +status-list(false, true).__status-list
+          +vote-block([{"type" : "like", "image" : "menu-12", "count" : "124"}, {"type" : "dislike", "image" : "menu-13", "count" : "2"}]).__likes
+      +e.A.publicwork
+        |Дел на РосПравосудие:
+        +e.SPAN.workcount 10
+      +experience("10").__experience
+    +e.SECTION.order
+      +e.actions
+        +action-controls("", "", "", "Хотя для большинства творческих сотрудников редакции не составит значительного труда подготовить информационное сообщение и пресс-релиз, эти тексты в строгом смысле не являются произведениями журналистов.").__relation
+      +e.specialization
+        +e.H3.title_specialization
+          +e.SPAN Специализации
+          +e.A(href="#") Показать все
+        +specialization([{"name" : "Гражданское право", "expanded" : ["Договорное право", "Право собственности"]}, {"name" : "Защита прав потребителей"}]).__list

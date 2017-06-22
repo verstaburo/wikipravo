@@ -26,3 +26,10 @@ mixin contractor-card(type, active)
     +e.body
       +lawyercard-contractor(active).__contractor
       +dialog-second(getData('contractor-dialog')).__dialog
+
+mixin contractor-card-second()
+  +b.contractor-card_second&attributes(attributes)
+    +section-title("Отклик")._biger._bolder.__title
+    +e.body
+      +lawyercard-contractor-second.__contractor
+      +dialog-second(getData('contractor-dialog')).__dialog

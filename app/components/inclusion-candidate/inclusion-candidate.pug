@@ -1,0 +1,21 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/control-link/control-link
+include ../../blocks/short-request/short-request
+include ../../blocks/button/button
+include ../../blocks/filter-list/filter-list
+
+mixin inclusion-candidate()
+  +b.inclusion-candidate&attributes(attributes)
+    +control-link("back").__back
+    +e.header
+      +page-title("Добавить кандидата:").__title
+        +e.B Евгений Михайлов
+      +filter-list("Область видимости:", getData("client-filter-order-visibility"))._button.__filter
+    +e.UL.list
+      -for (var i = 0; i < 2; i++) {
+        +e.LI.item
+          +short-request-without-author("Отчет о доходах").__request
+          +e.buttons
+            +button("button")._blue.__button Добавить юриста в кандидаты
+      -}
+

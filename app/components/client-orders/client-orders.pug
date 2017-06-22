@@ -1,51 +1,12 @@
 include ../../blocks/button/button
 include ../../blocks/client-request/client-request
 include ../page-navigation/page-navigation
+include ../../blocks/filter-list/filter-list
 
 mixin client-orders()
   +b.client-orders&attributes(attributes)
-    +e.visibility
-      +e.name Область видимости:
-      +e.UL.list
-        +e.LI.item
-          +e.A(href="#") Всем
-            +e.SPAN.count (100)
-        +e.LI.item.active
-          +e.A(href="#") Публичная
-            +e.SPAN.count (100)
-        +e.LI.item
-          +e.A(href="#") Только юристам
-            +e.SPAN.count (100)
-        +e.LI.item
-          +e.A(href="#") Юристам по фильтру
-            +e.SPAN.count (100)
-        +e.LI.item
-          +e.A(href="#") Только кандидатам
-            +e.SPAN.count (100)
-    +e.status
-      +e.name Статус:
-      +e.UL.list
-        +e.LI.item
-          +e.A(href="#") Все
-            +e.SPAN.count (7)
-        +e.LI.item
-          +e.A(href="#") На проверке
-            +e.SPAN.count (10)
-        +e.LI.item
-          +e.A(href="#") Открыт
-            +e.SPAN.count (2)
-        +e.LI.item
-          +e.A(href="#") В работе
-            +e.SPAN.count (1)
-        +e.LI.item
-          +e.A(href="#") Закрыт
-            +e.SPAN.count (3)
-        +e.LI.item
-          +e.A(href="#") Заблокирован
-            +e.SPAN.count (1)
-        +e.LI.item
-          +e.A(href="#") В корзине
-            +e.SPAN.count (2)
+    +filter-list("Область видимости:", getData("client-filter-order-visibility")).__visibility
+    +filter-list("Статус:", getData("client-filter-order-state")).__status
     +e.orders
       +client-request('open', 'new').__order
       +client-request('open', 'new').__order

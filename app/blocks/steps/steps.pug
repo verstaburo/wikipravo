@@ -29,3 +29,40 @@ mixin steps(finalCount)
     +e.LI(class= "item" + classCount5)
         +e.mark 5
         | Оплата и завершение
+
+mixin steps-long(finalCount)
+  -var classCount1 = "", classCount2 = "", classCount3 = "", classCount4 = "", classCount5 = ""; classCount6 = ""
+  +b.UL.steps&attributes(attributes)
+    case finalCount
+      when 1
+        - classCount1 = " complete";
+      when 2
+        - classCount1 = " complete"; classCount2 = " complete";
+      when 3
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete";
+      when 4
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete"; classCount4 = " complete";
+      when 5
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete"; classCount4 = " complete"; classCount5 = " complete";
+      when 6
+        - classCount1 = " complete"; classCount2 = " complete"; classCount3 = " complete"; classCount4 = " complete"; classCount5 = " complete"; classCount6 = " complete";
+      default
+        - break
+    +e.LI(class= "item" + classCount1)
+        +e.mark 1
+        | Создание сделки
+    +e.LI(class= "item" + classCount2)
+        +e.mark 2
+        | Согласование условий с Исполнителем
+    +e.LI(class= "item" + classCount3)
+        +e.mark 3
+        | Фиксация условий и резервирование суммы
+    +e.LI(class= "item" + classCount4)
+        +e.mark 4
+        | Выполнение работ
+    +e.LI(class= "item" + classCount5)
+        +e.mark 5
+        | Проверка
+    +e.LI(class= "item" + classCount6)
+        +e.mark 6
+        | Оплата и завершение

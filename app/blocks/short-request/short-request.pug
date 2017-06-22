@@ -4,6 +4,7 @@ include ../author/author
 include ../subject/subject
 include ../browse/browse
 include ../request-condition/request-condition
+include ../files-list/files-list-attach
 
 mixin short-request(data, authorization)
   +b.ARTICLE.short-request&attributes(attributes)
@@ -22,3 +23,32 @@ mixin short-request(data, authorization)
     +e.footer
       +subject("Категория права:", "Миграционное право").__subject
       +browse("395", "4").__browse
+
+mixin short-request-without-author(title)
+  +b.ARTICLE.short-request_noauthor&attributes(attributes)
+    +e.H3.header
+      +e.title
+        +e.A(href="#")= title
+      +request-condition("Консультация", "По договоренности", "По договоренности").__condition
+    +e.content
+      +e.P Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?
+      +e.data
+        +publication-date("26 Января 2017, 12:21").__publication
+    +e.footer
+      +subject("Категория права:", "Миграционное право").__subject
+      +browse("395", "4").__browse
+
+mixin short-request-second()
+  +b.ARTICLE.short-request_second&attributes(attributes)
+    +e.H3.header
+      +e.title_dark По заказу: Отчет о доходах
+      +request-condition("Консультация", "По договоренности", "По договоренности").__condition
+    +e.content
+      +e.P Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?
+      +e.data
+        +files-list-attach.__files
+    +e.footer
+      +publication-date("26 Января 2017, 12:21", "Опубликовано:").__publication
+      +subject("Категория права:", "Миграционное право").__subject
+
+

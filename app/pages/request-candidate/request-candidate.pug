@@ -1,0 +1,21 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — Добавление кандидата в заявку'
+
+block content
+  +b.request-candidate
+    +inclusion-candidate
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
