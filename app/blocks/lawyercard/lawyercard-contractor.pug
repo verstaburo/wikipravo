@@ -34,7 +34,7 @@ mixin lawyercard-contractor(active)
         +specialization([{"name" : "Гражданское право", "expanded" : ["Договорное право", "Право собственности"]}, {"name" : "Защита прав потребителей"}]).__list
 
 mixin lawyercard-contractor-second()
-  +b.SECTION.lawyercard_contractor_second&attributes(attributes)
+  +b.SECTION.lawyercard_contractor._contractor_second&attributes(attributes)
     +e.SECTION.about
       +jurist-name("Дмитрий Петров", true, true)._border.__title_about
       +e.info

@@ -24,6 +24,10 @@
     min-width: 300px;
     margin-right: 50px;
     margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 1.4em;
+    letter-spacing: .06em;
+    font-weight: 400;
 
     a {
       font-size: 20px;
@@ -118,6 +122,39 @@
 
       &__content {
         border-top-width: 0;
+      }
+    }
+  }
+
+  &_second {
+    .short-request {
+
+      &__footer {
+        justify-content: flex-start;
+
+        @include s-desktop {
+          flex-wrap: wrap;
+          align-items: flex-start;
+          padding-bottom: 12px;
+        }
+      }
+
+      &__publication {
+        margin-right: 70px;
+
+        @include s-desktop {
+          margin-bottom: 12px;
+        }
+      }
+
+      &__subject {
+        @include s-desktop {
+          margin-bottom: 12px;
+        }
+      }
+
+      &__files {
+        margin-top: 6px;
       }
     }
   }

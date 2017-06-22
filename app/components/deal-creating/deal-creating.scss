@@ -1,0 +1,54 @@
+.deal-creating {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+
+  &__back {
+    padding: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__steps {
+    box-sizing: border-box;
+    padding: 24px 24px 12px;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    padding: 23px 0;
+    width: 100%;
+  }
+
+  &__request {
+    width: 100%;
+    margin-bottom: 30px;
+
+    .short-request__header {
+      padding: 19px 39px 5px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__contractor {
+    width: 100%;
+    margin-bottom: 30px;
+
+    .contractor-card__dialog {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__button {
+    width: 350px;
+  }
+}

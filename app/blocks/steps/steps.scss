@@ -26,7 +26,7 @@
     min-height: 63px;
     margin-bottom: 10px;
 
-    &:not(:nth-of-type(5n)) {
+    &:not(:last-child) {
       margin-right: 10px;
     }
 
@@ -57,6 +57,21 @@
     .steps__item.complete & {
       color: $color-green-dark;
       border-color: $color-green-dark;
+    }
+  }
+
+  &_long {
+
+    .steps {
+
+      &__item {
+        width: 215px;
+        min-width: 215px;
+        
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
     }
   }
 }

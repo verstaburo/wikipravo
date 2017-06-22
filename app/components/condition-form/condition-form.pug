@@ -3,24 +3,24 @@ include ../../blocks/input/input
 include ../../blocks/textarea/textarea
 include ../../blocks/file-input/file-input
 include ../../blocks/selectbox/selectbox
-include ../../blocks/section-title/section-title
+include ../../blocks/block-title/block-title
 
 mixin condition-form()
   +b.FORM.condition-form&attributes(attributes)
-    +section-title("Условия")._small._bolder.__title
+    +block-title("Условия")._little._bolder.__title
     +e.conditions
       +e.col
         +e.row
           +e.LABEL.__label(for="price") Стоимость
           +input(type="text" required).__input#price
-          +e.SPAN.valuta
+          +e.SPAN.valuta руб
         +e.comment Обязательно для заполнения
       +e.col
         +e.row
-          +e.LABEL.__label(for="time")
+          +e.LABEL.__label(for="time") Срок
           +input(type="text" required).__input#time
-          +selectbox(getData("selectbox-timeduration"))._link._link_noborder._link_light._scrollable.__timeduration
+          +selectbox(getData("selectbox-timeduration"))._link._noborder._link_light._scrollable.__timeduration
         +e.comment Оставьте пустым, если не хотите фиксировать срок
     +textarea(placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом")._border.__textarea
     +file-input("Прикрепить файлы", "", "files").__files
-      +button("button")(type="submit")._blue.condition-form__button Отправить
+      +button("button")(type="submit")._blue.__button.condition-form__button Отправить
