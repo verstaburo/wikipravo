@@ -165,7 +165,7 @@
                             <!--+icon(controlIcon).__icon-->
                             <span class="control-link__name">Назад</span>
                         </a>
-                        <ul class="steps deal-creating__steps">
+                        <ul class="steps steps_long deal-creating__steps">
                             <li class="steps__item complete">
                                 <div class="steps__mark">1</div>Создание сделки</li>
                             <li class="steps__item">
@@ -182,7 +182,7 @@
                         <h2 class="page-title deal-creating__title">Создание сделки</h2>
                         <article class="short-request short-request_second deal-creating__request">
                             <h3 class="short-request__header">
-                                <span class="short-request__title short-request__title_dark">По заказу: Отчет о доходах</span>
+                                <span class="short-request__title">По заказу: Отчет о доходах</span>
                                 <span class="request-condition short-request__condition">
                                     <span class="request-condition__type">Консультация</span>
                                     <span class="request-condition__time">
@@ -229,21 +229,21 @@
                     </div>
                     </article>
                     <form class="condition-form deal-creating__form">
-                        <h4 class="section-title section-title_small section-title_bolder condition-form__title">Условия</h4>
+                        <h3 class="block-title block-title_little block-title_bolder condition-form__title">Условия</h3>
                         <div class="condition-form__conditions">
                             <div class="condition-form__col">
                                 <div class="condition-form__row">
                                     <label class="condition-form__label" for="price">Стоимость</label>
                                     <input class="input condition-form__input" type="text" required="required" id="price" />
-                                    <span class="condition-form__valuta"></span>
+                                    <span class="condition-form__valuta">руб</span>
                                 </div>
                                 <div class="condition-form__comment">Обязательно для заполнения</div>
                             </div>
                             <div class="condition-form__col">
                                 <div class="condition-form__row">
-                                    <label class="condition-form__label" for="time"></label>
+                                    <label class="condition-form__label" for="time">Срок</label>
                                     <input class="input condition-form__input" type="text" required="required" id="time" />
-                                    <div class="selectbox selectbox_link selectbox_link_noborder selectbox_link_light selectbox_scrollable condition-form__timeduration">
+                                    <div class="selectbox selectbox_link selectbox_noborder selectbox_link_light selectbox_scrollable condition-form__timeduration">
                                         <input class="selectbox__input" type="hidden" value="часов" placeholder="часов" />
                                         <div class="selectbox__button">
                                             <span class="selectbox__button-name">часов</span>
@@ -267,7 +267,7 @@
                                 <ul class="files-list file-input__files-list"></ul>
                             </output>
                             <div class="file-input__buttons">
-                                <button class="button button_blue condition-form__button" type="submit">
+                                <button class="button button_blue file-input__button condition-form__button" type="submit">
                                     <span class="button__name">Отправить</span>
                                 </button>
                                 <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
@@ -279,7 +279,7 @@
                     <div class="contractor-card contractor-card_second deal-creating__contractor">
                         <h4 class="section-title section-title_biger section-title_bolder contractor-card__title">Отклик</h4>
                         <div class="contractor-card__body">
-                            <section class="lawyercard lawyercard_contractor_second contractor-card__contractor">
+                            <section class="lawyercard lawyercard_contractor lawyercard_contractor_second contractor-card__contractor">
                                 <section class="lawyercard__about">
                                     <div class="jurist-name jurist-name_border lawyercard__title lawyercard__title_about">
                                         <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
@@ -398,16 +398,16 @@
                                         <span class="button__name">Написать ответ</span>
                                     </a>
                                     <div class="file-input dialog__files message__files">
-                                        <output class="file-input__output" for="files5">
+                                        <output class="file-input__output" for="files6">
                                             <span class="file-input__placeholder"></span>
                                             <ul class="files-list file-input__files-list"></ul>
                                         </output>
                                         <div class="file-input__buttons">
-                                            <button class="button button_blue button button_send message__button" type="submit" form="message86">
+                                            <button class="button button_blue button button_send message__button" type="submit" form="message72">
                                                 <span class="button__name">Отправить</span>
                                             </button>
-                                            <label class="file-input__fileselect button button_transparent_second" for="files5">Прикрепить файлы
-                                                <input class="file-input__files" type="file" id="files5" name="files[]" multiple="multiple" form="message86" />
+                                            <label class="file-input__fileselect button button_transparent_second" for="files6">Прикрепить файлы
+                                                <input class="file-input__files" type="file" id="files6" name="files[]" multiple="multiple" form="message72" />
                                             </label>
                                         </div>
                                     </div>
@@ -451,7 +451,7 @@
                                         </blockquoute>
                                     </div>
                                     <div class="message dialog__message">
-                                        <form class="message__form" id="message86">
+                                        <form class="message__form" id="message72">
                                             <textarea class="textarea textarea_border message__textarea" placeholder="Введите сообщение"></textarea>
                                         </form>
                                     </div>
