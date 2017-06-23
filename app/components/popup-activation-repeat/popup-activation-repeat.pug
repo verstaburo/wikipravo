@@ -1,0 +1,10 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/button/button
+include ../../blocks/popup/popup
+
+mixin popup-activation-repeat()
+  +popup#popup-activation-repeat.popup-activation-repeat__&attributes(attributes)
+    +page-title("Повторное письмо активации отправлено.")._dark._centered.__title
+    +e.P.text  Пройдите по ссылке в письме чтобы завершить регистрацию
+    +e.buttons
+      +button("button")(type="button")._big._text._text_dark._border._border_dark.__button.js-popup-close Закрыть

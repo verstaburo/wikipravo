@@ -1,0 +1,35 @@
+.popup-activation-repeat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 985px;
+  padding: 32px 50px;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 18px;
+    letter-spacing: .04em;
+  }
+
+  &__text {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 36px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

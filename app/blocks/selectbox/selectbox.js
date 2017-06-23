@@ -75,7 +75,9 @@ export function VerstaSelectBox() {
     }
   }
 
-  selectBoxPosition( $("." + buttonClass) );
+  if($('.' + mainClass).length > 0) {
+    selectBoxPosition( $("." + buttonClass) );
+  }
 
   // #####################
   // Инициализация скрипта

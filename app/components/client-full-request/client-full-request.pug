@@ -17,3 +17,14 @@ mixin client-full-request()
       +order-status.__status
       +visibility.__visibility
     +short-request-nohead.__request
+
+mixin client-full-request-deal()
+  +b.SECTION.client-full-request_deal&attributes(attributes)
+    +control-link('back', "К заказам").__back
+    +e.header
+      +page-title("Не справедливая оплата труда").__title
+      +request-condition("Консультация", "По договоренности", "По договоренности").__condition
+    +e.info
+      +order-status-deal.__status
+      +visibility.__visibility
+    +short-request-nohead.__request

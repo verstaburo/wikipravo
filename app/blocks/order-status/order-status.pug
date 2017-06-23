@@ -1,8 +1,13 @@
 include ../button/button
 
-mixin order-status(status)
+mixin order-status()
   +b.order-status&attributes(attributes)
     +e.name В работе
     +button('button')._text._noborder._bold.__button_open Открыть
     +button('button')._text._noborder._bold.__button_close Закрыть
     +button('button')._text._noborder._bold.__button_remove Удалить
+
+mixin order-status-deal()
+  +b.order-status_deal&attributes(attributes)
+    +e.name В работе
+    +button('button')._text._noborder._bold.__button_open Открыть

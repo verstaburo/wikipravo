@@ -129,6 +129,13 @@
         }
       }
 
+      &__col {
+
+        &:not(:last-child) {
+          margin-right: 45px;
+        }
+      }
+
       &__textarea {
         height: 150px;
       }

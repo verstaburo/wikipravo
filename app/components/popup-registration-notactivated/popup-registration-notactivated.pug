@@ -1,0 +1,11 @@
+include ../../blocks/page-title/page-title
+include ../../blocks/button/button
+include ../../blocks/popup/popup
+
+mixin popup-registration-notactivated()
+  +popup#popup-registration-notactivated.popup-registration-notactivated__&attributes(attributes)
+    +page-title("Кто-то уже регистрировался по данному адресу, но адрес не был активирован.")._small._dark._centered.__title
+    +e.P.text Выслать ссылку активации повторно?
+    +e.buttons
+      +button("button")(type="button" data-open-popup="popup-activation-repeat")._blue.__button.js-popup-open Да
+      +button("button")(type="button")._transparent_second.__button.js-popup-close Нет

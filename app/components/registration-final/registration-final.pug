@@ -13,7 +13,7 @@ mixin registration-final(jurist)
       +e.row_horizontal
         +e.P.repeat-send
           | Письмо не пришло?
-          +e.A(href="#") Выслать повторно
+          +e.A(href="#" data-open-popup="popup-registration-notactivated" class=" js-popup-open") Выслать повторно
         +e.P.support
           | Возникли проблемы?
           +e.A(href="mailto:support@mail") Обратитесь в службу поддержки
