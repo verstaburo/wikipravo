@@ -1,0 +1,70 @@
+.deal-condition {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  p {
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: .033em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $color-font;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    margin-right: 42px;
+    font-size: 18px;
+    letter-spacing: .03em;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: $color-font;
+  }
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 20px;
+    letter-spacing: .03em;
+    font-weight: 500;
+    color: $color-font;
+    padding-left: 28px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    fill: $color-green-dark;
+    transform: translate(0, -50%);
+
+    &_price {
+      width: 20px;
+      height: 18px;
+    }
+
+    &_time {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  p {
+    font-size: 14px;
+    letter-spacing: .03em;
+    line-height: 1.57em;
+    font-weight: 400;
+    color: #858585;
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+
+    @include s-desktop {
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+  }
+
+  &__button {
+    @include s-desktop {
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+include ../../blocks/popup/popup
+include ../../blocks/button/button
+include ../../blocks/page-title/page-title
+include ../condition-form/condition-form
+
+mixin popup-conditions()
+  +popup#popup-conditions.popup-conditions__&attributes(attributes)
+    +page-title("Изменить условия сделки").__title
+    +condition-form-popup.__form
+      +e.buttons
+        +button("button")(type="submit")._big._text._border.__button.popup-conditions__button.js-popup-close Сохранить
+        +button("button")(type="button")._big._text._text_dark._border._border_dark.__button.popup-conditions__button.js-popup-close Отменить

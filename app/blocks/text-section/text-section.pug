@@ -1,0 +1,14 @@
+include ../block-title/block-title
+include ../button/button
+
+mixin text-section(title, buttons)
+  -var addClass = ""
+  -var popupId = ""
+  +b.text-section&attributes(attributes)
+    +block-title(title)._little._bolder.__title
+    block
+    -if(buttons)
+      +e.buttons
+        each button in buttons
+          -if(button.popup) {popupId = button.popup; addClass = " js-popup-open"} else {popupId = ""; addClass= ""}
+            +button("a")(href="#" data-open-popup= popupId class="_text _text_bold _left __button" + addClass)= button.name

@@ -24,3 +24,22 @@ mixin condition-form()
     +textarea(placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом")._border.__textarea
     +file-input("Прикрепить файлы", "", "files").__files
       +button("button")(type="submit")._blue.__button.condition-form__button Отправить
+
+mixin condition-form-popup()
+  +b.FORM.condition-form_popup&attributes(attributes)
+    +e.conditions
+      +e.col
+        +e.row
+          +e.LABEL.__label(for="price") Стоимость
+          +input(type="text" required).__input#price
+          +e.SPAN.valuta руб
+        +e.comment Обязательно для заполнения
+      +e.col
+        +e.row
+          +e.LABEL.__label(for="time") Срок
+          +input(type="text" required).__input#time
+          +selectbox(getData("selectbox-timeduration"))._link._noborder._link_light._scrollable.__timeduration
+        +e.comment Оставьте пустым, если не хотите фиксировать срок
+    +textarea(placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом")._border.__textarea
+    +file-input("Прикрепить файлы", "", "files").__files
+    block

@@ -4,6 +4,7 @@ include ../block-title/block-title
 include ../steps/steps
 include ../../components/dialog/dialog
 include ../icon/icons
+include ../deal-condition/deal-condition
 
 mixin deal(title, status)
   -var statusName = ""
@@ -51,24 +52,15 @@ mixin deal(title, status)
       - messageId = "files7"
     default
       - break
-  +b(class="deal spoiler")&attributes(attributes)
-    +e(class=" deal__header")
-      +block-title(title)._bolder._little.__title
-      +e(class=" deal__status" + statusColor)= statusName
-      +e(class=" deal__control spoiler__control")
+  +b.spoiler.deal__&attributes(attributes)
+    +e.__header
+      +block-title(title)._bolder._little.__title.spoiler__title
+      +e(class="__status" + statusColor)= statusName
+      +e(class="__control spoiler__control")
         +button-arrow('down', 'button')(type="button", data-open-title="Развернуть", data-close-title="Свернуть" class="_text _noborder spoiler__button") Развернуть
-    +e(class=" deal__content spoiler__content")
-      +steps(stepsCount)(class=" deal__steps")
-      +e(class=" deal__condition")
-        +e(class=" deal__condition-head")
-          +e.SPAN(class=" deal__condition-title") Условия
-          +e(class=" deal__condition-item_price")
-            +icon('money').__icon
-            +e.SPAN 3000 Р
-          +e(class=" deal__condition-item_time")
-            +icon('time').__icon
-            +e.SPAN 5 дней
-        +e.P Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.
+    +e(class="__content spoiler__content")
+      +steps(stepsCount).__steps
+      +deal-condition.__condition
       +e(class=" deal__stage")
         case status
           when 'new'

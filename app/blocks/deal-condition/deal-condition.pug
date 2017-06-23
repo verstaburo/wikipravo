@@ -1,0 +1,13 @@
+include ../icon/icons
+
+mixin deal-condition()
+  +b.deal-condition&attributes(attributes)
+    +e.__header
+      +e.SPAN.__title Условия
+      +e.__item_price
+        +icon('money').__icon_price
+        +e.SPAN 3000 Р
+      +e.__item_time
+        +icon('time').__icon_time
+        +e.SPAN 5 дней
+    +e.P Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.

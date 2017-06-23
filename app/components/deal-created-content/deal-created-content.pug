@@ -1,0 +1,24 @@
+include ../../blocks/control-link/control-link
+include ../../blocks/steps/steps
+include ../../blocks/short-request/short-request
+include ../../blocks/deal-condition/deal-condition
+include ../../blocks/button/button
+include ../../blocks/block-title/block-title
+include ../../blocks/text-section/text-section
+
+mixin deal-created-content()
+  +b.deal-created-content&attributes(attributes)
+    +control-link("back").__back
+    +steps-long(1).__steps
+    +short-request-second.__request
+    +e.conditions
+      +deal-condition.__condition
+      +button("a")(href="#" data-open-popup="popup-conditions")._transparent_second.__button.js-popup-open Изменить
+    +e.questions
+      +text-section("Что дальше?", getData("question-button-futher-actions")).__text
+        +e.P Ожидайте ответ исполнителя. Он может подтвердить сделку или отклонить ваши условия.
+        +e.P Если Исполнитель подтвердит условия, вы сможете зарезирвировать сумму и начать работу по сделке.
+      +text-section("Передумали? Есть сомнения?", getData("question-button-correction-actions")).__text
+        +e.P Вы можете изменить условия или отменить сделку в любой момент до резервирования суммы.
+      +text-section("Хотите найти еще исполнителей по этому заказу?", [{"name" : "Открыть заказ"}]).__text
+        +e.P Заказ переведен в статус "В работе". Если вы хотите найти еще исполнителей по заказу, вы всегда можете вернуть его в статус "Открыт". Заказ снова будет виден Юристам и вы сможете найти новых исполнителей.
