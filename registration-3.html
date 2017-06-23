@@ -53,7 +53,7 @@
                             </div>
                             <div class="registration-final__row registration-final__row_horizontal">
                                 <p class="registration-final__repeat-send">Письмо не пришло?
-                                    <a href="#">Выслать повторно</a>
+                                    <a class="js-popup-open" href="#" data-open-popup="popup-registration-notactivated">Выслать повторно</a>
                                 </p>
                                 <p class="registration-final__support">Возникли проблемы?
                                     <a href="mailto:support@mail">Обратитесь в службу поддержки</a>
@@ -72,6 +72,31 @@
     <div class="popups">
         <div class="popups__close-button js-popup-close">
             <svg><use xlink:href="assets/images/icon.svg#icon_popup-close"></use></svg>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-registration-notactivated" id="popup-registration-notactivated">
+                <h2 class="page-title page-title_small page-title_dark page-title_centered popup-registration-notactivated__title">Кто-то уже регистрировался по данному адресу, но адрес не был активирован.</h2>
+                <p class="popup-registration-notactivated__text">Выслать ссылку активации повторно?</p>
+                <div class="popup-registration-notactivated__buttons">
+                    <button class="button button_blue popup-registration-notactivated__button js-popup-open" type="button" data-open-popup="popup-activation-repeat">
+                        <span class="button__name">Да</span>
+                    </button>
+                    <button class="button button_transparent_second popup-registration-notactivated__button js-popup-close" type="button">
+                        <span class="button__name">Нет</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-activation-repeat" id="popup-activation-repeat">
+                <h2 class="page-title page-title_dark page-title_centered popup-activation-repeat__title">Повторное письмо активации отправлено.</h2>
+                <p class="popup-activation-repeat__text"> Пройдите по ссылке в письме чтобы завершить регистрацию</p>
+                <div class="popup-activation-repeat__buttons">
+                    <button class="button button_big button_text button_text_dark button_border button_border_dark popup-activation-repeat__button js-popup-close" type="button">
+                        <span class="button__name">Закрыть</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="assets/libs/jquery.min.js"></script>
