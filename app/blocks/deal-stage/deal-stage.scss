@@ -92,16 +92,19 @@
 
   &__controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
     box-sizing: border-box;
     padding-top: 12px;
     flex: 1;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 
     @include desktop {
-      margin-bottom: 8px;
+      width: 100%;
+      flex: none;
     }
 
     &_wide {
@@ -109,8 +112,14 @@
     }
 
     .deal-stage__buttons {
+      flex-wrap: wrap;
+      align-content: flex-start;
       width: 100%;
       margin-bottom: 0;
+    }
+
+    .deal-stage__button {
+      margin-bottom: 8px;
     }
   }
 

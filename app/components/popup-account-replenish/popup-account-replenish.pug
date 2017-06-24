@@ -9,7 +9,7 @@ include ../../blocks/pay-systems/pay-systems
 mixin popup-account-replenish()
   +popup#popup-account-replenish.popup-account-replenish__&attributes(attributes)
     +page-title("Пополнить счет").__title
-    +form.__form
+    +e.FORM.__form
       +e.field_amount
         +e.LABEL(for="amount" class="__label section-title_left section-title_bold") Сумма
         +input(type="text" id="amount" name="amount" class="__input_amount")

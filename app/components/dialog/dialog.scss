@@ -150,6 +150,13 @@
         .file-input__fileselect {
           width: 250px;
           min-width: 250px;
+
+          @include tablet {
+            flex: 1;
+            width: auto;
+            max-width: none;
+            min-width: 0;
+          }
         }
       }
 

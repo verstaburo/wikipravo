@@ -42,9 +42,14 @@
     font-weight: 500;
     color: $color-font;
     padding-left: 28px;
+    white-space: nowrap;
 
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    span {
+      white-space: nowrap;
     }
   }
 
