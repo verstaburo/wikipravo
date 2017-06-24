@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wiki Pravo — ЛК Клиента. Создание сделки</title>
+    <title>Wiki Pravo — ЛК Клиента. Работа со сделкой (Проверка)</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico?v=2" rel="shortcut icon">
@@ -158,128 +158,146 @@
                 </div>
             </div>
             <div class="page-layout__page-content">
-                <div class="deal-create">
-                    <div class="deal-creating">
-                        <a class="control-link control-link_back deal-creating__back">
+                <div class="client-deal">
+                    <section class="client-full-request client-full-request_deal client-deal__header">
+                        <a class="control-link control-link_back client-full-request__back">
                             <i class="control-link__icon fa fa-angle-left"></i>
                             <!--+icon(controlIcon).__icon-->
-                            <span class="control-link__name">Назад</span>
+                            <span class="control-link__name">К заказам</span>
                         </a>
-                        <ul class="steps steps_long deal-creating__steps">
-                            <li class="steps__item complete">
-                                <div class="steps__mark">1</div>Создание сделки</li>
-                            <li class="steps__item">
-                                <div class="steps__mark">2</div>Согласование условий с Исполнителем</li>
-                            <li class="steps__item">
-                                <div class="steps__mark">3</div>Фиксация условий и резервирование суммы</li>
-                            <li class="steps__item">
-                                <div class="steps__mark">4</div>Выполнение работ</li>
-                            <li class="steps__item">
-                                <div class="steps__mark">5</div>Проверка</li>
-                            <li class="steps__item">
-                                <div class="steps__mark">6</div>Оплата и завершение</li>
-                        </ul>
-                        <h2 class="page-title deal-creating__title">Создание сделки</h2>
-                        <article class="short-request short-request_second deal-creating__request">
-                            <h3 class="short-request__header">
-                                <span class="short-request__title">По заказу: Отчет о доходах</span>
-                                <span class="request-condition short-request__condition">
-                                    <span class="request-condition__type">Консультация</span>
-                                    <span class="request-condition__time">
-                                        <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
-                                        <span class="request-condition__text">По договоренности</span>
-                                    </span>
-                                    <span class="request-condition__price">
-                                        <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
-                                        <span class="request-condition__text">По договоренности</span>
-                                    </span>
-                                </span>
-                            </h3>
+                        <div class="client-full-request__header">
+                            <h2 class="page-title client-full-request__title">Не справедливая оплата труда</h2>
+                            <div class="request-condition client-full-request__condition">
+                                <span class="request-condition__type">Консультация</span>
+                                <div class="request-condition__time">
+                                    <svg class="request-condition__icon request-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </div>
+                                <div class="request-condition__price">
+                                    <svg class="request-condition__icon request-condition__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span class="request-condition__text">По договоренности</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-full-request__info">
+                            <div class="order-status order-status_deal client-full-request__status">
+                                <div class="order-status__name">В работе</div>
+                                <button class="button button_text button_noborder button_bold order-status__button order-status__button_open">
+                                    <span class="button__name">Открыть</span>
+                                </button>
+                            </div>
+                            <div class="visibility client-full-request__visibility">
+                                <div class="visibility__name">Область видимости:</div>
+                                <div class="visibility__type">Публичная</div>
+                            </div>
+                        </div>
+                        <article class="short-request short-request_nohead client-full-request__request">
                             <div class="short-request__content">
                                 <p>Здравствуйте. У меня гражданство Украины. Сейчас для подачи на внж нужно отчитаться о доходах, но официально я не работаю. Скажите, пожалуйста, есть ли другие варианты для предоставления в уфмс справки о доходах?</p>
                                 <div
                                     class="short-request__data">
-                                    <ul class="files-list files-list_attach short-request__files">
-                                        <li class="files-list__item">
-                                            <a href="#">
-                                                <img class="files-list__img" src="assets/images/doc.svg" alt="" role="presentation" />
-                                                <span class="files-list__filename">User_mail.doc</span>
-                                                <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_clip"></use></svg>
-                                            </a>
-                                        </li>
-                                        <li class="files-list__item">
-                                            <a href="#">
-                                                <img class="files-list__img" src="assets/images/pdf.svg" alt="" role="presentation" />
-                                                <span class="files-list__filename">User_mail.pdf</span>
-                                                <svg class="files-list__icon"><use xlink:href="assets/images/icon.svg#icon_clip"></use></svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                            </div>
-                    </div>
-                    <div class="short-request__footer">
-                        <div class="publication-date short-request__publication">
-                            <span class="publication-date__label">Опубликовано:</span>
-                            <time class="publication-date__date">26 Января 2017, 12:21</time>
-                        </div>
-                        <div class="subject short-request__subject">
-                            <span class="subject__label">Категория права:</span>
-                            <a class="subject__link" href="#">Миграционное право</a>
-                        </div>
-                    </div>
-                    </article>
-                    <form class="condition-form deal-creating__form">
-                        <h3 class="block-title block-title_little block-title_bolder condition-form__title">Условия</h3>
-                        <div class="condition-form__conditions">
-                            <div class="condition-form__col">
-                                <div class="condition-form__row">
-                                    <label class="condition-form__label" for="price">Стоимость</label>
-                                    <input class="input condition-form__input" type="text" required="required" id="price" />
-                                    <span class="condition-form__valuta">руб</span>
-                                </div>
-                                <div class="condition-form__comment">Обязательно для заполнения</div>
-                            </div>
-                            <div class="condition-form__col">
-                                <div class="condition-form__row">
-                                    <label class="condition-form__label" for="time">Срок</label>
-                                    <input class="input condition-form__input" type="text" required="required" id="time" />
-                                    <div class="selectbox selectbox_link selectbox_noborder selectbox_link_light selectbox_scrollable condition-form__timeduration">
-                                        <input class="selectbox__input" type="hidden" value="часов" placeholder="часов" />
-                                        <div class="selectbox__button">
-                                            <span class="selectbox__button-name">часов</span>
-                                            <i class="selectbox__right-icon fa fa-angle-down"></i>
-                                        </div>
-                                        <ul class="selectbox__list">
-                                            <li class="selectbox__option">часов</li>
-                                            <li class="selectbox__option">дней</li>
-                                            <li class="selectbox__option">недель</li>
-                                            <li class="selectbox__option">месяцев</li>
-                                        </ul>
+                                    <div class="publication-date short-request__publication">
+                                        <time class="publication-date__date">26 Января 2017, 12:21</time>
                                     </div>
+                                    <div class="author short-request__author">
+                                        <span class="author__online author__online_true"></span>
+                                        <span class="author__name">Ксения</span>
+                                        <span class="author__location">г. Томск</span>
+                                    </div>
+                            </div>
+                </div>
+                <div class="short-request__footer">
+                    <div class="subject short-request__subject">
+                        <span class="subject__label">Категория права:</span>
+                        <a class="subject__link" href="#">Миграционное право</a>
+                    </div>
+                    <div class="browse short-request__browse">
+                        <span class="browse__views">
+                            <svg class="browse__icon browse__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                            <span class="browse__viewscount">395</span>
+                        </span>
+                        <span class="browse__reply">
+                            <svg class="browse__icon browse__icon_comment"><use xlink:href="assets/images/icon.svg#icon_comment"></use></svg>
+                            <span class="browse__replycount">4</span>
+                        </span>
+                    </div>
+                </div>
+                </article>
+                </section>
+                <div class="deal-stage-describe client-deal__content">
+                    <a class="control-link control-link_back deal-stage-describe__back">
+                        <i class="control-link__icon fa fa-angle-left"></i>
+                        <!--+icon(controlIcon).__icon-->
+                        <span class="control-link__name">К списку сделок</span>
+                    </a>
+                    <div class="deal-stage-describe__content">
+                        <h3 class="block-title block-title_little block-title_bolder deal-stage-describe__title">Cделка от 24.05.2017, 12:45</h3>
+                        <ul class="steps steps_long deal-stage-describe__steps">
+                            <li class="steps__item complete">
+                                <div class="steps__mark">1</div>Создание сделки</li>
+                            <li class="steps__item complete">
+                                <div class="steps__mark">2</div>Согласование условий с Исполнителем</li>
+                            <li class="steps__item complete">
+                                <div class="steps__mark">3</div>Фиксация условий и резервирование суммы</li>
+                            <li class="steps__item complete">
+                                <div class="steps__mark">4</div>Выполнение работ</li>
+                            <li class="steps__item complete">
+                                <div class="steps__mark">5</div>Проверка</li>
+                            <li class="steps__item">
+                                <div class="steps__mark">6</div>Оплата и завершение</li>
+                        </ul>
+                        <div class="deal-stage deal-stage_test deal-stage-describe__stage">
+                            <div class="deal-stage__describe deal-stage__describe_test">
+                                <h3 class="block-title block-title_little block-title_bolder deal-stage__title">Исполнитель завершил работу</h3>
+                                <p>Исполнитель отчитался о завершении работы.</p>
+                                <p>Проверьте, пожалуйста результат и примите работу.</p>
+                                <p>Если результат вас не устраивает, верните сделку в работу и свяжитесь с исполнителем для обсуждения деталей.</p>
+                            </div>
+                            <div class="deal-stage__controls">
+                                <div class="deal-stage__comment">Если в процессе сотрудничества у вас возникнут проблемы с Исполнителем, рекомендуем обратиться в Арбитраж и урегулировать конфликт с помощью Арбитра.</div>
+                                <div class="deal-stage__buttons">
+                                    <button class="button button_blue button_narrow deal-stage__button deal-stage__button_complete" type="button">
+                                        <span class="button__name">Оплатить и завершить</span>
+                                    </button>
+                                    <button class="button button_blue button_narrow deal-stage__button deal-stage__button_return" type="button">
+                                        <span class="button__name">Вернуть работу</span>
+                                    </button>
+                                    <button class="button button_transparent_second button_narrow deal-stage__button deal-stage__button_message" type="button">
+                                        <span class="button__name">Написать исполнителю</span>
+                                    </button>
+                                    <button class="button button_blue button_narrow deal-stage__button deal-stage__button_arbitration js-popup-open" type="button" data-open-popup="popup-deal-arbitr">
+                                        <span class="button__name">Обратиться в Арбитраж</span>
+                                    </button>
                                 </div>
-                                <div class="condition-form__comment">Оставьте пустым, если не хотите фиксировать срок</div>
                             </div>
                         </div>
-                        <textarea class="textarea textarea_border condition-form__textarea" placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом"></textarea>
-                        <div class="file-input condition-form__files">
-                            <output class="file-input__output" for="files">
-                                <span class="file-input__placeholder"></span>
-                                <ul class="files-list file-input__files-list"></ul>
-                            </output>
-                            <div class="file-input__buttons">
-                                <button class="button button_blue file-input__button condition-form__button" type="submit">
-                                    <span class="button__name">Отправить</span>
-                                </button>
-                                <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                    <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
-                                </label>
+                    </div>
+                    <div class="condition-change deal-stage-describe__condition">
+                        <div class="deal-condition condition-change__condition">
+                            <div class="deal-condition__header">
+                                <span class="deal-condition__title">Условия</span>
+                                <div class="deal-condition__item deal-condition__item_price">
+                                    <svg class="deal-condition__icon deal-condition__icon_price"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                    <span>3000 Р</span>
+                                </div>
+                                <div class="deal-condition__item deal-condition__item_time">
+                                    <svg class="deal-condition__icon deal-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                    <span>5 дней</span>
+                                </div>
                             </div>
+                            <p>Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.</p>
                         </div>
-                    </form>
-                    <div class="contractor-card contractor-card_second deal-creating__contractor">
+                        <a class="button button_transparent_second condition-change__button js-popup-open" href="#" data-open-popup="popup-conditions">
+                            <span class="button__name">Изменить</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="deal-contractor client-deal__contractor">
+                    <h3 class="block-title block-title_little block-title_bolder deal-contractor__title">Исполнитель</h3>
+                    <div class="contractor-card contractor-card_third deal-contractor__contractor">
                         <h4 class="section-title section-title_biger section-title_bolder contractor-card__title">Отклик</h4>
                         <div class="contractor-card__body">
-                            <section class="lawyercard lawyercard_contractor lawyercard_contractor_second contractor-card__contractor">
+                            <section class="lawyercard lawyercard_contractor lawyercard_contractor_third contractor-card__contractor">
                                 <section class="lawyercard__about">
                                     <div class="jurist-name jurist-name_border lawyercard__title lawyercard__title_about">
                                         <div class="jurist-name__checkstatus jurist-name__checkstatus_true">
@@ -325,7 +343,7 @@
                                 </section>
                                 <section class="lawyercard__order">
                                     <div class="lawyercard__actions">
-                                        <div class="action-controls lawyercard__relation">
+                                        <div class="action-controls action-controls_note-right lawyercard__relation">
                                             <button class="profile-control profile-control_favorites action-controls__button action-controls__button_favorites" title="В избраное">
                                                 <span class="profile-control__img">
                                                     <svg class="profile-control__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
@@ -398,16 +416,16 @@
                                         <span class="button__name">Написать ответ</span>
                                     </a>
                                     <div class="file-input dialog__files message__files">
-                                        <output class="file-input__output" for="files26">
+                                        <output class="file-input__output" for="files29">
                                             <span class="file-input__placeholder"></span>
                                             <ul class="files-list file-input__files-list"></ul>
                                         </output>
                                         <div class="file-input__buttons">
-                                            <button class="button button_blue button button_send message__button" type="submit" form="message61">
+                                            <button class="button button_blue button button_send message__button" type="submit" form="message77">
                                                 <span class="button__name">Отправить</span>
                                             </button>
-                                            <label class="file-input__fileselect button button_transparent_second" for="files26">Прикрепить файлы
-                                                <input class="file-input__files" type="file" id="files26" name="files[]" multiple="multiple" form="message61" />
+                                            <label class="file-input__fileselect button button_transparent_second" for="files29">Прикрепить файлы
+                                                <input class="file-input__files" type="file" id="files29" name="files[]" multiple="multiple" form="message77" />
                                             </label>
                                         </div>
                                     </div>
@@ -451,7 +469,7 @@
                                         </blockquoute>
                                     </div>
                                     <div class="message dialog__message">
-                                        <form class="message__form" id="message61">
+                                        <form class="message__form" id="message77">
                                             <textarea class="textarea textarea_border message__textarea" placeholder="Введите сообщение"></textarea>
                                         </form>
                                     </div>
@@ -459,9 +477,51 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button button_blue deal-creating__button">
-                        <span class="button__name">Оформить</span>
-                    </button>
+                    <div class="correspondence correspondence_reverse deal-contractor__correspondence">
+                        <div class="message message_bolder message_small message_border correspondence__message">
+                            <h3 class="message__title">Обсуждение сделки</h3>
+                            <form class="message__form" id="message">
+                                <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
+                                <div class="file-input files">
+                                    <output class="file-input__output" for="files">
+                                        <span class="file-input__placeholder">Нет приклепленных файлов</span>
+                                        <ul class="files-list file-input__files-list"></ul>
+                                    </output>
+                                    <div class="file-input__buttons">
+                                        <button class="button button_blue message__button" type="submit">
+                                            <span class="button__name">Отправить</span>
+                                        </button>
+                                        <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
+                                            <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="comment comment_blue correspondence__comment">
+                            <blockquoute class="comment__content">
+                                <cite class="comment__info">
+                                    <span class="comment__author">Евгений</span>
+                                    <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                </cite>
+                                <div class="comment__text">— Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу</div>
+                            </blockquoute>
+                        </div>
+                        <div class="comment comment_lightblue correspondence__comment">
+                            <div class="comment__buttons">
+                                <button class="button button_text button_noborder comment__button comment__button_complain" type="button">
+                                    <span class="button__name">Пожаловаться</span>
+                                </button>
+                            </div>
+                            <blockquoute class="comment__content">
+                                <cite class="comment__info">
+                                    <span class="comment__author">Ксения</span>
+                                    <time class="comment__date">(12.10.2016 | 09:20)</time>
+                                </cite>
+                                <div class="comment__text">— Добрый день, Евгений! Ок. Увеличила срок. Подтвердите, пожалуйста условия</div>
+                            </blockquoute>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -577,6 +637,156 @@
                     <a class="icon-link icon-link_small form__bottom-link" href="#">
                         <span class="icon-link__text">Забыли пароль?</span>
                     </a>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-amount-reservation" id="popup-amount-reservation">
+                <h2 class="page-title popup-amount-reservation__title">Резервирование суммы</h2>
+                <div class="popup-amount-reservation__amountdue">
+                    <div class="popup-amount-reservation__label">Сумма к оплате:</div>
+                    <div class="popup-amount-reservation__amount">15 800 Р</div>
+                </div>
+                <div class="pay-systems popup-amount-reservation__paysystem">
+                    <h4 class="section-title section-title_bold pay-systems__title">Выберите способ оплаты</h4>
+                    <ul class="pay-systems__list">
+                        <li class="pay-systems__item">
+                            <a class="payment payment_cards">
+                                <img class="payment__image" src="assets/images/cards.svg" alt="" role="presentation" />
+                                <span class="payment__name">Пластиковые карты</span>
+                            </a>
+                        </li>
+                        <li class="pay-systems__item">
+                            <a class="payment payment_yandex">
+                                <img class="payment__image" src="assets/images/yandex.svg" alt="" role="presentation" />
+                                <span class="payment__name">Яндекс. Деньги</span>
+                            </a>
+                        </li>
+                        <li class="pay-systems__item">
+                            <a class="payment payment_webmoney">
+                                <img class="payment__image" src="assets/images/webmoney.svg" alt="" role="presentation" />
+                                <span class="payment__name">Web money</span>
+                            </a>
+                        </li>
+                        <li class="pay-systems__item">
+                            <a class="payment payment_sber">
+                                <img class="payment__image" src="assets/images/sber.svg" alt="" role="presentation" />
+                                <span class="payment__name">Cбербанк онлайн</span>
+                            </a>
+                        </li>
+                        <li class="pay-systems__item">
+                            <a class="payment payment_alfa">
+                                <img class="payment__image" src="assets/images/alfa.svg" alt="" role="presentation" />
+                                <span class="payment__name">Альфа клик</span>
+                            </a>
+                        </li>
+                        <li class="pay-systems__item">
+                            <a class="payment payment_payafter">
+                                <img class="payment__image" src="assets/images/payafter.svg" alt="" role="presentation" />
+                                <span class="payment__name">Купить с отсрочкой оплаты</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-conditions" id="popup-conditions">
+                <h2 class="page-title popup-conditions__title">Изменить условия сделки</h2>
+                <form class="condition-form condition-form_popup popup-conditions__form">
+                    <div class="condition-form__conditions">
+                        <div class="condition-form__col">
+                            <div class="condition-form__row">
+                                <label class="condition-form__label" for="price">Стоимость</label>
+                                <input class="input condition-form__input" type="text" required="required" id="price" />
+                                <span class="condition-form__valuta">руб</span>
+                            </div>
+                            <div class="condition-form__comment">Обязательно для заполнения</div>
+                        </div>
+                        <div class="condition-form__col">
+                            <div class="condition-form__row">
+                                <label class="condition-form__label" for="time">Срок</label>
+                                <input class="input condition-form__input" type="text" required="required" id="time" />
+                                <div class="selectbox selectbox_link selectbox_noborder selectbox_link_light selectbox_scrollable condition-form__timeduration">
+                                    <input class="selectbox__input" type="hidden" value="часов" placeholder="часов" />
+                                    <div class="selectbox__button">
+                                        <span class="selectbox__button-name">часов</span>
+                                        <i class="selectbox__right-icon fa fa-angle-down"></i>
+                                    </div>
+                                    <ul class="selectbox__list">
+                                        <li class="selectbox__option">часов</li>
+                                        <li class="selectbox__option">дней</li>
+                                        <li class="selectbox__option">недель</li>
+                                        <li class="selectbox__option">месяцев</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="condition-form__comment">Оставьте пустым, если не хотите фиксировать срок</div>
+                        </div>
+                    </div>
+                    <textarea class="textarea textarea_border condition-form__textarea" placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом"></textarea>
+                    <div class="file-input condition-form__files">
+                        <output class="file-input__output" for="files">
+                            <span class="file-input__placeholder"></span>
+                            <ul class="files-list file-input__files-list"></ul>
+                        </output>
+                        <div class="file-input__buttons">
+                            <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="condition-form__buttons">
+                        <button class="button button_big button_text button_border condition-form__button popup-conditions__button js-popup-close" type="submit">
+                            <span class="button__name">Сохранить</span>
+                        </button>
+                        <button class="button button_big button_text button_text_dark button_border button_border_dark condition-form__button popup-conditions__button js-popup-close" type="button">
+                            <span class="button__name">Отменить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-deal-review" id="popup-deal-review">
+                <h2 class="page-title popup-deal-review__title">Оставить отзыв</h2>
+                <form class="form popup-deal-review__form">
+                    <textarea class="textarea textarea_border popup-deal-review__textarea" placeholder="Напишите ваш отзыв о работе исполнителя"></textarea>
+                    <div class="popup-deal-review__buttons">
+                        <button class="button button_big button_text button_border popup-deal-review__button popup-deal-review__button_save js-popup-close" type="submit">
+                            <span class="button__name">Отправить</span>
+                        </button>
+                        <button class="button button_big button_text button_text_dark button_border button_border_dark popup-deal-review__button popup-deal-review__button_save js-popup-close" type="reset">
+                            <span class="button__name">Отменить</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-wrapper">
+            <div class="popup popup-deal-arbitr" id="popup-deal-arbitr">
+                <h2 class="page-title popup-deal-arbitr__title">Обратиться в арбитраж</h2>
+                <form class="form popup-deal-arbitr__form">
+                    <textarea class="textarea textarea_border popup-deal-arbitr__textarea" placeholder="Опишите суть проблемы Арбитру"></textarea>
+                    <div class="file-input popup-deal-arbitr__files">
+                        <output class="file-input__output" for="files">
+                            <span class="file-input__placeholder">Нет прикрепленных файлов</span>
+                            <ul class="files-list file-input__files-list"></ul>
+                        </output>
+                        <div class="file-input__buttons">
+                            <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="popup-deal-arbitr__buttons">
+                        <button class="button button_big button_text button_border popup-deal-arbitr__button popup-deal-arbitr__button_save js-popup-close" type="submit">
+                            <span class="button__name">Отправить</span>
+                        </button>
+                        <button class="button button_big button_text button_text_dark button_border button_border_dark popup-deal-arbitr__button popup-deal-arbitr__button_save js-popup-close" type="reset">
+                            <span class="button__name">Отменить</span>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
