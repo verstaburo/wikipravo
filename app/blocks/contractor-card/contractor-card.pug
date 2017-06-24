@@ -33,3 +33,10 @@ mixin contractor-card-second()
     +e.body
       +lawyercard-contractor-second.__contractor
       +dialog-second(getData('contractor-dialog')).__dialog
+
+mixin contractor-card-third()
+  +b.contractor-card_third&attributes(attributes)
+    +section-title("Отклик")._biger._bolder.__title
+    +e.body
+      +lawyercard-contractor-third.__contractor
+      +dialog-second(getData('contractor-dialog')).__dialog

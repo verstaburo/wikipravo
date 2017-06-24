@@ -1,0 +1,27 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Wiki Pravo — ЛК Клиента. Работа со сделкой (Исполнитель отказался)'
+
+block content
+  +b.client-deal
+    +client-full-request-deal.__header
+    +deal-stage-describe("disagreed", 1).__content
+    +deal-contractor("disagreed").__contractor
+
+block page-left
+  +sidebar
+
+block page-top
+  +header(true)
+
+block page-bottom
+  +footer
+
+block page-popups
+  +popups
+    +popup-login
+    +popup-amount-reservation
+    +popup-conditions
+    +popup-deal-review
+    +popup-deal-arbitr

@@ -1,0 +1,19 @@
+include ../../blocks/section-title/section-title
+include ../../blocks/payment/payment
+
+mixin pay-systems()
+  +b.pay-systems&attributes(attributes)
+    +section-title("Выберите способ оплаты")._bold.__title
+    +e.UL.list
+      +e.LI.item
+        +payment("assets/images/cards.svg", "Пластиковые карты")._cards
+      +e.LI.item
+        +payment("assets/images/yandex.svg", "Яндекс. Деньги")._yandex
+      +e.LI.item
+        +payment("assets/images/webmoney.svg", "Web money")._webmoney
+      +e.LI.item
+        +payment("assets/images/sber.svg", "Cбербанк онлайн")._sber
+      +e.LI.item
+        +payment("assets/images/alfa.svg", "Альфа клик")._alfa
+      +e.LI.item
+        +payment("assets/images/payafter.svg", "Купить с отсрочкой оплаты")._payafter

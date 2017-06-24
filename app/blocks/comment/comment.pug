@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin comment(author, date, editable, button, hide, arbitr, attach)
+mixin comment(author, date, editable, button, hide, arbitr, attach, describe)
   -var addClass = ""
   -if(editable) {addClass = '_blue'} else {addClass = '_lightblue'}
   -if(arbitr) {addClass = '_yellow'}
@@ -20,6 +20,8 @@ mixin comment(author, date, editable, button, hide, arbitr, attach)
         +e.TIME.date= date
         -if(hide)
           +e.SPAN.hide= hide
+        -if(describe)
+          +e.SPAN.describe= describe
       +e.text
         block
       -if(attach)

@@ -21,6 +21,7 @@ gulp.task('server', () => {
     },
     directory: false,
     middleware: [debuga()],
+    tunnel: 'verstawikipravo',
   });
 
   bs.watch('dist/**/*.*').on('change', bs.reload);

@@ -4,30 +4,17 @@ include ../../blocks/page-title/page-title
 include ../../blocks/input/input
 include ../../blocks/section-title/section-title
 include ../../blocks/payment/payment
+include ../../blocks/pay-systems/pay-systems
 
 mixin popup-account-replenish()
-  +popup(class=" popup-account-replenish" id="popup-account-replenish")&attributes(attributes)
-    +page-title("Пополнить счет")(class=" popup-account-replenish__title")
-    +form(class=" popup-account-replenish__form")
-      +e(class=" popup-account-replenish__field_amount")
-        +e.LABEL(for="amount" class=" popup-account-replenish__label section-title_left section-title_bold") Сумма
-        +input(type="text" id="amount" name="amount" class=" popup-account-replenish__input_amount")
-        +e.SPAN(class=" popup-account-replenish__valuta") руб
-      +e(class=" popup-account-replenish__field_note")
-        +e.LABEL(for="note" class=" popup-account-replenish__label section-title_left section-title_bold") Примечание
-        +input(type="text" id="note" name="note" class=" popup-account-replenish__input_note")
-      +e(class=" popup-account-replenish__paysystem")
-        +section-title("Выберите способ оплаты")._bold.popup-account-replenish__subtitle
-        +e.UL(class=" popup-account-replenish__list")
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/cards.svg", "Пластиковые карты")._cards
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/yandex.svg", "Яндекс. Деньги")._yandex
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/webmoney.svg", "Web money")._webmoney
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/sber.svg", "Cбербанк онлайн")._sber
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/alfa.svg", "Альфа клик")._alfa
-          +e.LI(class=" popup-account-replenish__item")
-            +payment("assets/images/payafter.svg", "Купить с отсрочкой оплаты")._payafter
+  +popup#popup-account-replenish.popup-account-replenish__&attributes(attributes)
+    +page-title("Пополнить счет").__title
+    +form.__form
+      +e.field_amount
+        +e.LABEL(for="amount" class="__label section-title_left section-title_bold") Сумма
+        +input(type="text" id="amount" name="amount" class="__input_amount")
+        +e.SPAN.valuta руб
+      +e.field_note
+        +e.LABEL(for="note" class="__label section-title_left section-title_bold") Примечание
+        +input(type="text" id="note" name="note" class="__input_note")
+      +pay-systems.__paysystem

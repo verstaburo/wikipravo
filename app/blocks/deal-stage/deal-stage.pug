@@ -1,0 +1,105 @@
+include ../block-title/block-title
+include ../section-title/section-title
+include ../button/button
+
+mixin deal-stage(status)
+  -var addClass = "_" + status
+  +b(class="deal-stage" + addClass)&attributes(attributes)
+    case status
+      when 'agreed'
+        +e.describe_agreed
+          +block-title("Исполнитель согласился на ваши условия")._little._bolder.__title
+          +e.P Пожалуйста, зарезирвируйте сумму, чтобы исполнитель мог начать работу
+        +e.buttons
+          +button("button")(type="button" data-open-popup="popup-amount-reservation")._blue._narrow.__button_reserve.js-popup-open Зарезервировать сумму
+          +button("button")(type="button")._blue._narrow.__button_cancel Отменить сделку
+          +button("button")(type="button")._transparent_second._narrow.__button_message Написать исполнителю
+      when 'arbitrationcomplete'
+        +e.describe_arbitration-complete
+          +block-title("Сделка завершена по Арбитражу")._little._bolder._green.__title
+          +e.P Спасибо за сотруднечество!
+        +e.decision
+          +block-title("Решение Арбитражного суда")._little.__title
+          +e.P Распределение суммы сделки:
+            +e.B 50% - Клиент, 50% - Исполнитель
+          +e.P Обмен отзывами:
+            +e.B Клиент - запрещено, Исполнитель - запрещено
+        +e.buttons
+          +button("button")(type="button" data-open-popup="popup-deal-review")._blue._narrow.__button_review.js-popup-open Оставить отзыв
+          +button("button")(type="button")._transparent_second._narrow.__button_client-review Отзыв исполнителя
+      when 'agreement'
+        +e.describe_agreement
+          +block-title("Исполнитель еще не подтвердил условия сделки.")._little._bolder.__title
+          +e.P Сделка находится на рассмотрении у исполнителя, ожидайте ответа.
+          +e.P Вы можете связаться с исполнителем или изменить условия сделки.
+        +e.buttons
+          +button("button")(type="button")._blue._narrow.__button_cancel Отменить сделку
+          +button("button")(type="button")._transparent_second._narrow.__button_message Написать исполнителю
+      when 'test'
+        +e.describe_test
+          +block-title("Исполнитель завершил работу")._little._bolder.__title
+          +e.P Исполнитель отчитался о завершении работы.
+          +e.P Проверьте, пожалуйста результат и примите работу.
+          +e.P Если результат вас не устраивает, верните сделку в работу и свяжитесь с исполнителем для обсуждения деталей.
+        +e.controls
+          +e.comment Если в процессе сотрудничества у вас возникнут проблемы с Исполнителем, рекомендуем обратиться в Арбитраж и урегулировать конфликт с помощью Арбитра.
+          +e.buttons
+            +button("button")(type="button")._blue._narrow.__button_complete Оплатить и завершить
+            +button("button")(type="button")._blue._narrow.__button_return Вернуть работу
+            +button("button")(type="button")._transparent_second._narrow.__button_message Написать исполнителю
+            +button("button")(type="button" data-open-popup="popup-deal-arbitr")._blue._narrow.__button_arbitration.js-popup-open Обратиться в Арбитраж
+      when 'disagreed'
+        +e.describe_disagreed
+          +block-title("Исполнитель отклонил предложение о сделке")._little._bolder._red.__title
+          +e.P Исполнитель отказался от вашего предложения. Вы можете изменить условия сделки и связаться с Исполнителем для выяснения деталей или закрыть сделку.
+        +e.buttons
+          +button("button")(type="button")._blue._narrow.__button_complete Закрыть сделку
+          +button("button")(type="button" data-open-popup="popup-conditions")._blue._narrow.__button_conditions.js-popup-open Изменить условия
+          +button("button")(type="button")._transparent_second._narrow.__button_message Написать исполнителю
+      when 'close'
+        +e.describe_close
+          +block-title("Закрыта")._little._bolder.__title
+          +e.P Вы отказались от сделки с этим Исполнителем и закрыли ее.
+        +e.buttons
+          +button("a")(type="button")._blue.__button_new Создать еще сделку с этим исполнителем
+      when 'agreement2'
+        +e.describe_agreement
+          +block-title("Исполнитель еще не подтвердил условия сделки.")._little._bolder.__title
+          +e.P Сделка находится на рассмотрении у исполнителя, ожидайте ответа.
+          +e.P Вы можете связаться с исполнителем или изменить условия сделки.
+        +e.buttons
+          +button("button")(type="button")._blue._narrow.__button_agree Принять условия
+          +button("button")(type="button")._transparent_second._narrow.__button_disagree Отказаться
+      when 'execute'
+        +e.describe_execute
+          +block-title("Исполнитель работает над заказом")._little._bolder.__title
+          +e.P Сумма зарезервирована, Ожидайте выполнения работы по заказу.
+          +e.P В процессе сотрудничества вы можете продолжить обсуждение заказа, задания в нем и передаваемых вами результатов
+        +e.controls
+          +e.comment Если в процессе сотрудничества у вас возникнут проблемы с Исполнителем, рекомендуем обратиться в Арбитраж и урегулировать конфликт с помощью Арбитра.
+          +e.buttons
+            +button("button")(type="button")._blue._narrow.__button_complete Оплатить и завершить
+            +button("button")(type="button")._transparent_second._narrow.__button_message Написать исполнителю
+            +button("button")(type="button" data-open-popup="popup-deal-arbitr")._blue._narrow.__button_arbitration.js-popup-open Обратиться в Арбитраж
+      when 'arbitration'
+        +e.describe_arbitration
+          +block-title("Сделка находится в Арбитраже")._little._bolder._red.__title
+          +e.P Сделка находится на рассмотрении в арбитраже.
+          +e.P Все сообщения в переписке по сделке видят Арбитры.
+        +e.controls
+          +e.comment Вы можете оставлять сообщения арбитру в переписке по сделке. Если нужно, скройте сообщение от Исполнителя
+          +e.buttons
+            +button("button")(type="button")._transparent_second._narrow.__button_message Написать сообщение
+      when 'complete'
+        +e.describe_complete
+          +block-title("Сделка завершена")._little._bolder._red._green.__title
+          +e.P Спасибо за сотруднечество!
+        +e.buttons
+          +button("button")(type="button" data-open-popup="popup-deal-review")._blue._narrow.__button_review.js-popup-open Оставить отзыв
+          +button("button")(type="button")._transparent_second._narrow.__button_specialist-review Отзыв исполнителя
+        +e.controls_wide
+          +e.comment Вы можете создать дополнительные сделки с этим же специалистом или другими специалистами по этому заказу. Если ваша задача решена полностью, вы можете закрыть заказ
+          +e.buttons
+            +button("button")(type="button")._blue.__button_new Создать еще сделку с этим исполнителем
+      default
+        - break

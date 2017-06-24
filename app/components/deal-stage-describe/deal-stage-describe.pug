@@ -1,0 +1,14 @@
+include ../../blocks/block-title/block-title
+include ../../blocks/control-link/control-link
+include ../../blocks/steps/steps
+include ../../blocks/condition-change/condition-change
+include ../../blocks/deal-stage/deal-stage
+
+mixin deal-stage-describe(status, steps)
+  +b.deal-stage-describe&attributes(attributes)
+    +control-link("back", "К списку сделок").__back
+    +e.content
+      +block-title("Cделка от 24.05.2017, 12:45")._little._bolder.__title
+      +steps-long(steps).__steps
+      +deal-stage(status).__stage
+    +condition-change.__condition

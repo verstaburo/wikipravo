@@ -132,4 +132,22 @@
       flex: 1;
     }
   }
+
+  &_note-right {
+
+    .action-controls__note {
+
+      &.active {
+        top: 0%;
+        right: auto;
+        left: calc(100% + 10px);
+
+        @media (max-width: 1640px) {
+          left: auto;
+          top: calc(100% + 20px);
+          right: -44px;
+        }
+      }
+    }
+  }
 }

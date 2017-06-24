@@ -1,0 +1,48 @@
+.popup-amount-reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 692px;
+  height: 406px;
+  padding: 36px 38px;
+
+  &__title {
+    width: 100%;
+    margin-bottom: 40px;
+    letter-spacing: .04em;
+  }
+
+  &__amountdue {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding: 0 78px;
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  &__label {
+    font-size: 14px;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: #b3b3b3;
+    margin-right: 70px;
+  }
+
+  &__amount {
+    font-size: 18px;
+    letter-spacing: .04em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: $color-font;
+  }
+
+  &__paysystem {
+    width: 100%;
+  }
+}

@@ -26,4 +26,47 @@
       font-size: 0;
     }
   }
+
+  &_reverse {
+    padding: 22px 40px 36px;
+
+    .correspondence {
+
+      &__message {
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 42px;
+
+        .file-input__placeholder {
+          font-size: 13px;
+          display: inline-block;
+          margin-bottom: 12px;
+        }
+
+        .file-input__fileselect {
+          width: 250px;
+
+          @include s-desktop {
+            flex: 1;
+            max-width: none;
+            width: auto;
+            min-width: 0;
+          }
+        }
+
+        .message__button {
+          @include s-desktop {
+            flex: 1;
+            max-width: none;
+            width: auto;
+            min-width: 0;
+          }
+        }
+      }
+
+      &__comment {
+        margin-bottom: 28px;
+      }
+    }
+  }
 }

@@ -1,0 +1,11 @@
+include ../../blocks/popup/popup
+include ../../blocks/page-title/page-title
+include ../../blocks/pay-systems/pay-systems
+
+mixin popup-amount-reservation()
+  +popup#popup-amount-reservation.popup-amount-reservation__&attributes(attributes)
+    +page-title("Резервирование суммы").__title
+    +e.amountdue
+      +e.label Сумма к оплате:
+      +e.amount 15 800 Р
+    +pay-systems.__paysystem

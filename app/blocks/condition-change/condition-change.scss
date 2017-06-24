@@ -1,0 +1,30 @@
+.condition-change {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  @include desktop {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  &__condition {
+    max-width: 800px;
+    width: 75%;
+    margin-right: 80px;
+
+    @include desktop {
+      max-width: none;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    width: 320px;
+  }
+}

@@ -1,0 +1,20 @@
+include ../../blocks/block-title/block-title
+include ../correspondence/correspondence
+include ../../blocks/contractor-card/contractor-card
+
+mixin deal-contractor(status)
+  -var correspondenceStatus = ""
+  -var nomessageForm = ""
+  case status
+    when 'arbitration'
+      - correspondenceStatus = "arbitr"
+    when 'arbitrationcomplete'
+      - correspondenceStatus = "arbitr"
+      - nomessageForm = "true"
+    default
+      - break
+  +b.deal-contractor&attributes(attributes)
+    +block-title("Исполнитель")._little._bolder.__title
+    +contractor-card-third.__contractor
+    +correspondence-reverse(correspondenceStatus, nomessageForm).__correspondence
+

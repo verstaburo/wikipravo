@@ -1,0 +1,7 @@
+include ../../blocks/deal-condition/deal-condition
+include ../../blocks/button/button
+
+mixin condition-change()
+  +b.condition-change&attributes(attributes)
+    +deal-condition.__condition
+    +button("a")(href="#" data-open-popup="popup-conditions")._transparent_second.__button.js-popup-open Изменить

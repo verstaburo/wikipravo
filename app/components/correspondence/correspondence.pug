@@ -12,3 +12,30 @@ mixin correspondence()
     +comment("Евгений", "(12.10.2016 | 09:20)", false, true).__comment
       +e.P &mdash; Добрый день! Могу помочь. Изучить документы и проконсультировать по вопросу
     +message("", "Введите сообщение")._border.__message
+
+mixin correspondence-reverse(status, nomessage)
+  -var checkLabel = ""
+  -var checkId = ""
+  -var check = ""
+  -var data
+  case status
+    when 'arbitr'
+      - checkLabel = "Скрыть комментарий от Исполнителя"
+      - checkId = "specialistHidden"
+      - check = true
+      - data = getData("deal-discuss-arbitr")
+    default
+      - checkLabel = ""
+      - checkId = ""
+      - check = false
+      - data = getData("deal-dialog-short")
+  +b.correspondence_reverse&attributes(attributes)
+    -if(nomessage)
+      +block-title("Обсуждение сделки")._little._bolder.__title
+    -if(!nomessage) {
+      +message("Обсуждение сделки", "Введите сообщение", "files", check, checkLabel, checkId)._bolder._small._border.__message
+    -}
+    -for(var i = 0; i < data.length; i++) {
+      +comment(data[i].author, data[i].date, data[i].editable, data[i].button, data[i].hide, data[i].arbitr, data[i].attach, data[i].describe).__comment= data[i].text
+    -}
+

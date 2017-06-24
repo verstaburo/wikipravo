@@ -1,0 +1,28 @@
+.client-deal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px 50px;
+  background-color: $color-bg-index;
+
+  &__header {
+    width: 100%;
+    margin-bottom: 28px;
+
+    .client-full-request__header {
+      padding: 20px 40px 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__contractor {
+    width: 100%;
+  }
+}
