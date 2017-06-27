@@ -262,24 +262,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="condition-change deal-stage-describe__condition">
-                        <div class="deal-condition condition-change__condition">
-                            <div class="deal-condition__header">
-                                <span class="deal-condition__title">Условия</span>
-                                <div class="deal-condition__item deal-condition__item_price">
-                                    <svg class="deal-condition__icon deal-condition__icon_price"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
-                                    <span>3000 Р</span>
-                                </div>
-                                <div class="deal-condition__item deal-condition__item_time">
-                                    <svg class="deal-condition__icon deal-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
-                                    <span>5 дней</span>
-                                </div>
+                    <div class="deal-condition deal-stage-describe__condition">
+                        <div class="deal-condition__header">
+                            <span class="deal-condition__title">Условия</span>
+                            <div class="deal-condition__item deal-condition__item_price">
+                                <svg class="deal-condition__icon deal-condition__icon_price"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                                <span>3000 Р</span>
                             </div>
-                            <p>Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.</p>
+                            <div class="deal-condition__item deal-condition__item_time">
+                                <svg class="deal-condition__icon deal-condition__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                                <span>5 дней</span>
+                            </div>
                         </div>
-                        <a class="button button_transparent_second condition-change__button js-popup-open" href="#" data-open-popup="popup-conditions">
-                            <span class="button__name">Изменить</span>
-                        </a>
+                        <p>Исполнитель изучает документы и полученные справки, затем предоставляет ответ в письменном виде.</p>
                     </div>
                 </div>
                 <div class="deal-contractor client-deal__contractor">
@@ -406,16 +401,16 @@
                                         <span class="button__name">Написать ответ</span>
                                     </a>
                                     <div class="file-input dialog__files message__files">
-                                        <output class="file-input__output" for="files28">
+                                        <output class="file-input__output" for="files81">
                                             <span class="file-input__placeholder"></span>
                                             <ul class="files-list file-input__files-list"></ul>
                                         </output>
                                         <div class="file-input__buttons">
-                                            <button class="button button_blue button button_send message__button" type="submit" form="message70">
+                                            <button class="button button_blue button button_send message__button" type="submit" form="message25">
                                                 <span class="button__name">Отправить</span>
                                             </button>
-                                            <label class="file-input__fileselect button button_transparent_second" for="files28">Прикрепить файлы
-                                                <input class="file-input__files" type="file" id="files28" name="files[]" multiple="multiple" form="message70" />
+                                            <label class="file-input__fileselect button button_transparent_second" for="files81">Прикрепить файлы
+                                                <input class="file-input__files" type="file" id="files81" name="files[]" multiple="multiple" form="message25" />
                                             </label>
                                         </div>
                                     </div>
@@ -459,7 +454,7 @@
                                         </blockquoute>
                                     </div>
                                     <div class="message dialog__message">
-                                        <form class="message__form" id="message70">
+                                        <form class="message__form" id="message25">
                                             <textarea class="textarea textarea_border message__textarea" placeholder="Введите сообщение"></textarea>
                                         </form>
                                     </div>
@@ -482,7 +477,7 @@
                             <form class="message__form" id="message">
                                 <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
                                 <div class="file-input files">
-                                    <output class="file-input__output" for="files">
+                                    <output class="file-input__output" for="files15">
                                         <span class="file-input__placeholder">Нет приклепленных файлов</span>
                                         <ul class="files-list file-input__files-list"></ul>
                                     </output>
@@ -490,8 +485,8 @@
                                         <button class="button button_blue message__button" type="submit">
                                             <span class="button__name">Отправить</span>
                                         </button>
-                                        <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                            <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                                        <label class="file-input__fileselect button button_transparent_second" for="files15">Прикрепить файлы
+                                            <input class="file-input__files" type="file" id="files15" name="files[]" multiple="multiple" />
                                         </label>
                                     </div>
                                 </div>
@@ -738,7 +733,7 @@
                             <div class="condition-form__row">
                                 <label class="condition-form__label" for="time">Срок</label>
                                 <input class="input condition-form__input" type="text" required="required" id="time" />
-                                <div class="selectbox selectbox_link selectbox_noborder selectbox_link_light selectbox_scrollable condition-form__timeduration">
+                                <div class="selectbox selectbox_link selectbox_noborder selectbox_link_light selectbox_visible condition-form__timeduration">
                                     <input class="selectbox__input" type="hidden" value="часов" placeholder="часов" />
                                     <div class="selectbox__button">
                                         <span class="selectbox__button-name">часов</span>
@@ -757,13 +752,13 @@
                     </div>
                     <textarea class="textarea textarea_border condition-form__textarea" placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом"></textarea>
                     <div class="file-input condition-form__files">
-                        <output class="file-input__output" for="files">
+                        <output class="file-input__output" for="files93">
                             <span class="file-input__placeholder"></span>
                             <ul class="files-list file-input__files-list"></ul>
                         </output>
                         <div class="file-input__buttons">
-                            <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                            <label class="file-input__fileselect button button_transparent_second" for="files93">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files93" name="files[]" multiple="multiple" />
                             </label>
                         </div>
                     </div>
@@ -800,13 +795,13 @@
                 <form class="form popup-deal-arbitr__form">
                     <textarea class="textarea textarea_border popup-deal-arbitr__textarea" placeholder="Опишите суть проблемы Арбитру"></textarea>
                     <div class="file-input popup-deal-arbitr__files">
-                        <output class="file-input__output" for="files">
+                        <output class="file-input__output" for="files58">
                             <span class="file-input__placeholder">Нет прикрепленных файлов</span>
                             <ul class="files-list file-input__files-list"></ul>
                         </output>
                         <div class="file-input__buttons">
-                            <label class="file-input__fileselect button button_transparent_second" for="files">Прикрепить файлы
-                                <input class="file-input__files" type="file" id="files" name="files[]" multiple="multiple" />
+                            <label class="file-input__fileselect button button_transparent_second" for="files58">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files58" name="files[]" multiple="multiple" />
                             </label>
                         </div>
                     </div>
