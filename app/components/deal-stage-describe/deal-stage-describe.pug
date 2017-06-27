@@ -2,6 +2,7 @@ include ../../blocks/block-title/block-title
 include ../../blocks/control-link/control-link
 include ../../blocks/steps/steps
 include ../../blocks/condition-change/condition-change
+include ../../blocks/deal-condition/deal-condition
 include ../../blocks/deal-stage/deal-stage
 
 mixin deal-stage-describe(status, steps)
@@ -11,4 +12,8 @@ mixin deal-stage-describe(status, steps)
       +block-title("Cделка от 24.05.2017, 12:45")._little._bolder.__title
       +steps-long(steps).__steps
       +deal-stage(status).__stage
-    +condition-change.__condition
+    -if ((status === 'arbitration') || (status === 'arbitrationcomplete')) {
+      +deal-condition.__condition
+    -} else {
+      +condition-change.__condition
+    -}

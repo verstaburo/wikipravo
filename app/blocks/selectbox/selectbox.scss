@@ -378,4 +378,12 @@
       }
     }
   }
+
+  .popup &__list {
+    z-index: 10001;
+  }
+
+  .popup &__sublist {
+    z-index: 10002;
+  }
 }

@@ -1,8 +1,7 @@
 mixin file-input(btnName, emptyText, id, formId, btnAddClass)
   -var btnClass = ""
-  -var inputId = "files"
+  -var inputId = "files" + Math.round(Math.random()*100)
   -if(btnAddClass) {btnClass = btnAddClass} else {btnClass = "button_transparent_second"}
-  -if(id) {inputId = id}
   +b.file-input&attributes(attributes)
     +e.OUTPUT(for=inputId).output
       +e.SPAN.placeholder= emptyText

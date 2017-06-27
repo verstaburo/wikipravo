@@ -38,7 +38,7 @@ mixin condition-form-popup()
         +e.row
           +e.LABEL.__label(for="time") Срок
           +input(type="text" required).__input#time
-          +selectbox(getData("selectbox-timeduration"))._link._noborder._link_light._scrollable.__timeduration
+          +selectbox(getData("selectbox-timeduration"))._link._noborder._link_light._visible.__timeduration
         +e.comment Оставьте пустым, если не хотите фиксировать срок
     +textarea(placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом")._border.__textarea
     +file-input("Прикрепить файлы", "", "files").__files

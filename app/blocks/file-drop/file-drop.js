@@ -17,8 +17,8 @@ export function FileDrop () {
     var droppedFiles , selectedFiles = {}, queue = [], output, outputUl;
     droppedFiles = e.originalEvent.dataTransfer.files;
 
-    outputUl = $(this).find('.files-list');
-    output = $(this).find('.' + outputClass);
+    outputUl = $(this).children('.files-list');
+    output = $(this).children('.' + outputClass);
     var fileName, fileImg;
 
     for(var i = 0; i < droppedFiles.length; i++) {
@@ -82,8 +82,8 @@ export function FileDrop () {
 
     OutputFile();
 
-    $(this).find('.' + label).hide();
-    $(this).find('.' + outputClass).show().css({'display' : 'flex'});
+    $(this).children('.' + label).hide();
+    $(this).children('.' + outputClass).show().css({'display' : 'flex'});
 
     $(document).on('click', '.files-list__remove', function () {
       var fileId = $(this).parents('li').attr('data-file-id');
