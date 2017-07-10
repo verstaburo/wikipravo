@@ -1,8 +1,0 @@
-mixin citylist(data)
-  +b.citylist&attributes(attributes)
-    +e.field
-      +e.SPAN.name Город:
-      +e.SPAN.toggle Москва
-    +e.UL.list
-      each city in data
-        +e.LI.item= city.option
