@@ -86,16 +86,18 @@
                             <span class="selectbox__button-name">Москва</span>
                             <i class="selectbox__right-icon fa fa-angle-down"></i>
                         </div>
-                        <ul class="selectbox__list">
-                            <li class="selectbox__option">Москва</li>
-                            <li class="selectbox__option">Санкт-Петербург</li>
-                            <li class="selectbox__option">Новосибирск</li>
-                            <li class="selectbox__option">Тольятти</li>
-                            <li class="selectbox__option">Москва</li>
-                            <li class="selectbox__option">Санкт-Петербург</li>
-                            <li class="selectbox__option">Новосибирск</li>
-                            <li class="selectbox__option">Тольятти</li>
-                        </ul>
+                        <div class="selectbox__container">
+                            <ul class="selectbox__list">
+                                <li class="selectbox__option">Москва</li>
+                                <li class="selectbox__option">Санкт-Петербург</li>
+                                <li class="selectbox__option">Новосибирск</li>
+                                <li class="selectbox__option">Тольятти</li>
+                                <li class="selectbox__option">Москва</li>
+                                <li class="selectbox__option">Санкт-Петербург</li>
+                                <li class="selectbox__option">Новосибирск</li>
+                                <li class="selectbox__option">Тольятти</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="popup-location sidebar__popup-location">
                         <p class="popup-location__bold">Ваш город:
@@ -416,16 +418,16 @@
                                         <span class="button__name">Написать ответ</span>
                                     </a>
                                     <div class="file-input dialog__files message__files">
-                                        <output class="file-input__output" for="files71">
+                                        <output class="file-input__output" for="files44">
                                             <span class="file-input__placeholder"></span>
                                             <ul class="files-list file-input__files-list"></ul>
                                         </output>
                                         <div class="file-input__buttons">
-                                            <button class="button button_blue button button_send message__button" type="submit" form="message90">
+                                            <button class="button button_blue button button_send message__button" type="submit" form="message8">
                                                 <span class="button__name">Отправить</span>
                                             </button>
-                                            <label class="file-input__fileselect button button_transparent_second" for="files71">Прикрепить файлы
-                                                <input class="file-input__files" type="file" id="files71" name="files[]" multiple="multiple" form="message90" />
+                                            <label class="file-input__fileselect button button_transparent_second" for="files44">Прикрепить файлы
+                                                <input class="file-input__files" type="file" id="files44" name="files[]" multiple="multiple" form="message8" />
                                             </label>
                                         </div>
                                     </div>
@@ -469,7 +471,7 @@
                                         </blockquoute>
                                     </div>
                                     <div class="message dialog__message">
-                                        <form class="message__form" id="message90">
+                                        <form class="message__form" id="message8">
                                             <textarea class="textarea textarea_border message__textarea" placeholder="Введите сообщение"></textarea>
                                         </form>
                                     </div>
@@ -483,7 +485,7 @@
                             <form class="message__form" id="message">
                                 <textarea class="textarea message__textarea" placeholder="Введите сообщение"></textarea>
                                 <div class="file-input files">
-                                    <output class="file-input__output" for="files72">
+                                    <output class="file-input__output" for="files20">
                                         <span class="file-input__placeholder">Нет приклепленных файлов</span>
                                         <ul class="files-list file-input__files-list"></ul>
                                     </output>
@@ -491,8 +493,8 @@
                                         <button class="button button_blue message__button" type="submit">
                                             <span class="button__name">Отправить</span>
                                         </button>
-                                        <label class="file-input__fileselect button button_transparent_second" for="files72">Прикрепить файлы
-                                            <input class="file-input__files" type="file" id="files72" name="files[]" multiple="multiple" />
+                                        <label class="file-input__fileselect button button_transparent_second" for="files20">Прикрепить файлы
+                                            <input class="file-input__files" type="file" id="files20" name="files[]" multiple="multiple" />
                                         </label>
                                     </div>
                                 </div>
@@ -713,12 +715,14 @@
                                         <span class="selectbox__button-name">часов</span>
                                         <i class="selectbox__right-icon fa fa-angle-down"></i>
                                     </div>
-                                    <ul class="selectbox__list">
-                                        <li class="selectbox__option">часов</li>
-                                        <li class="selectbox__option">дней</li>
-                                        <li class="selectbox__option">недель</li>
-                                        <li class="selectbox__option">месяцев</li>
-                                    </ul>
+                                    <div class="selectbox__container">
+                                        <ul class="selectbox__list">
+                                            <li class="selectbox__option">часов</li>
+                                            <li class="selectbox__option">дней</li>
+                                            <li class="selectbox__option">недель</li>
+                                            <li class="selectbox__option">месяцев</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="condition-form__comment">Оставьте пустым, если не хотите фиксировать срок</div>
@@ -726,13 +730,13 @@
                     </div>
                     <textarea class="textarea textarea_border condition-form__textarea" placeholder="Здесь вы можете зафиксировать дополнительные условия, относящиеся к вашей сделке с Юристом"></textarea>
                     <div class="file-input condition-form__files">
-                        <output class="file-input__output" for="files25">
+                        <output class="file-input__output" for="files9">
                             <span class="file-input__placeholder"></span>
                             <ul class="files-list file-input__files-list"></ul>
                         </output>
                         <div class="file-input__buttons">
-                            <label class="file-input__fileselect button button_transparent_second" for="files25">Прикрепить файлы
-                                <input class="file-input__files" type="file" id="files25" name="files[]" multiple="multiple" />
+                            <label class="file-input__fileselect button button_transparent_second" for="files9">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files9" name="files[]" multiple="multiple" />
                             </label>
                         </div>
                     </div>
@@ -769,13 +773,13 @@
                 <form class="form popup-deal-arbitr__form">
                     <textarea class="textarea textarea_border popup-deal-arbitr__textarea" placeholder="Опишите суть проблемы Арбитру"></textarea>
                     <div class="file-input popup-deal-arbitr__files">
-                        <output class="file-input__output" for="files49">
+                        <output class="file-input__output" for="files64">
                             <span class="file-input__placeholder">Нет прикрепленных файлов</span>
                             <ul class="files-list file-input__files-list"></ul>
                         </output>
                         <div class="file-input__buttons">
-                            <label class="file-input__fileselect button button_transparent_second" for="files49">Прикрепить файлы
-                                <input class="file-input__files" type="file" id="files49" name="files[]" multiple="multiple" />
+                            <label class="file-input__fileselect button button_transparent_second" for="files64">Прикрепить файлы
+                                <input class="file-input__files" type="file" id="files64" name="files[]" multiple="multiple" />
                             </label>
                         </div>
                     </div>

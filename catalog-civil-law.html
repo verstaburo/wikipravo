@@ -86,16 +86,18 @@
                             <span class="selectbox__button-name">Москва</span>
                             <i class="selectbox__right-icon fa fa-angle-down"></i>
                         </div>
-                        <ul class="selectbox__list">
-                            <li class="selectbox__option">Москва</li>
-                            <li class="selectbox__option">Санкт-Петербург</li>
-                            <li class="selectbox__option">Новосибирск</li>
-                            <li class="selectbox__option">Тольятти</li>
-                            <li class="selectbox__option">Москва</li>
-                            <li class="selectbox__option">Санкт-Петербург</li>
-                            <li class="selectbox__option">Новосибирск</li>
-                            <li class="selectbox__option">Тольятти</li>
-                        </ul>
+                        <div class="selectbox__container">
+                            <ul class="selectbox__list">
+                                <li class="selectbox__option">Москва</li>
+                                <li class="selectbox__option">Санкт-Петербург</li>
+                                <li class="selectbox__option">Новосибирск</li>
+                                <li class="selectbox__option">Тольятти</li>
+                                <li class="selectbox__option">Москва</li>
+                                <li class="selectbox__option">Санкт-Петербург</li>
+                                <li class="selectbox__option">Новосибирск</li>
+                                <li class="selectbox__option">Тольятти</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="popup-location sidebar__popup-location">
                         <p class="popup-location__bold">Ваш город:
@@ -211,71 +213,77 @@
                                     <div class="filter-controls__row">
                                         <div class="filter-controls__field filter-controls__field_category">
                                             <span class="filter-controls__label">Категория</span>
-                                            <div class="selectbox selectbox_light selectbox_visible">
+                                            <div class="selectbox selectbox_light selectbox_scrollable selectbox_multilevel">
                                                 <input class="selectbox__input" type="hidden" value="" placeholder="Специалист в категории права" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Специалист в категории права</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
-                                                <ul class="selectbox__list">
-                                                    <li class="selectbox__option">Конституционное право</li>
-                                                    <li class="selectbox__option">Интеллектуальная собственность
-                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
-                                                        <ul class="selectbox__sublist">
-                                                            <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
-                                                            <li class="selectbox__option">Гражданское право</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="selectbox__option">Военное право
-                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
-                                                        <ul class="selectbox__sublist">
-                                                            <li class="selectbox__option">Военное право</li>
-                                                            <li class="selectbox__option">Военное право</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <div class="selectbox__container">
+                                                    <ul class="selectbox__list">
+                                                        <li class="selectbox__option">Конституционное право</li>
+                                                        <li class="selectbox__option">Интеллектуальная собственность
+                                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                            <ul class="selectbox__sublist">
+                                                                <li class="selectbox__option">Тендеры, контрактная система в сфере закупок</li>
+                                                                <li class="selectbox__option">Гражданское право</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="selectbox__option">Военное право
+                                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                            <ul class="selectbox__sublist">
+                                                                <li class="selectbox__option">Военное право</li>
+                                                                <li class="selectbox__option">Военное право</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="filter-controls__field filter-controls__field_location">
                                             <span class="filter-controls__label">Местоположение</span>
-                                            <div class="selectbox selectbox_light selectbox_visible">
+                                            <div class="selectbox selectbox_light selectbox_scrollable">
                                                 <input class="selectbox__input" type="hidden" value="" placeholder="Город" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Город</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
-                                                <ul class="selectbox__list">
-                                                    <li class="selectbox__option">Москва</li>
-                                                    <li class="selectbox__option">Санкт-Петербург</li>
-                                                    <li class="selectbox__option">Новосибирск</li>
-                                                    <li class="selectbox__option">Тольятти</li>
-                                                </ul>
+                                                <div class="selectbox__container">
+                                                    <ul class="selectbox__list">
+                                                        <li class="selectbox__option">Москва</li>
+                                                        <li class="selectbox__option">Санкт-Петербург</li>
+                                                        <li class="selectbox__option">Новосибирск</li>
+                                                        <li class="selectbox__option">Тольятти</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="filter-controls__field filter-controls__field_document">
                                             <span class="filter-controls__label">Тип документов</span>
-                                            <div class="selectbox selectbox_light selectbox_visible">
+                                            <div class="selectbox selectbox_light selectbox_scrollable selectbox_multilevel">
                                                 <input class="selectbox__input" type="hidden" value="" placeholder="Работает с документами" />
                                                 <div class="selectbox__button">
                                                     <span class="selectbox__button-name">Работает с документами</span>
                                                     <i class="selectbox__right-icon fa fa-angle-down"></i>
                                                 </div>
-                                                <ul class="selectbox__list">
-                                                    <li class="selectbox__option">Претензии потребителей
-                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
-                                                        <ul class="selectbox__sublist">
-                                                            <li class="selectbox__option">Претензии на возврат денежных средств за товар (услугу) надлежащего качества</li>
-                                                            <li class="selectbox__option">Претензия на страховую компанию</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="selectbox__option">Категория документа
-                                                        <i class="selectbox__arrow fa fa-angle-right"></i>
-                                                        <ul class="selectbox__sublist">
-                                                            <li class="selectbox__option">Категория документа</li>
-                                                            <li class="selectbox__option">Категория документа</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <div class="selectbox__container">
+                                                    <ul class="selectbox__list">
+                                                        <li class="selectbox__option">Претензии потребителей
+                                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                            <ul class="selectbox__sublist">
+                                                                <li class="selectbox__option">Претензии на возврат денежных средств за товар (услугу) надлежащего качества</li>
+                                                                <li class="selectbox__option">Претензия на страховую компанию</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="selectbox__option">Категория документа
+                                                            <i class="selectbox__arrow fa fa-angle-right"></i>
+                                                            <ul class="selectbox__sublist">
+                                                                <li class="selectbox__option">Категория документа</li>
+                                                                <li class="selectbox__option">Категория документа</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="filter-controls__inputfield filter-controls__inputfield_experience">
@@ -325,23 +333,25 @@
                                                 <span class="button__name">Заказать для отобранных</span>
                                                 <i class="button__arrow fa fa-angle-down"></i>
                                             </a>
-                                            <ul class="selectbox__list">
-                                                <li class="selectbox__option">Консультацию
-                                                    <div class="selectbox__title">
-                                                        <span>тип заказа - консультация по одной из тем специализаций</span>
-                                                    </div>
-                                                </li>
-                                                <li class="selectbox__option">Документ
-                                                    <div class="selectbox__title">
-                                                        <span>тип заказа - документ</span>
-                                                    </div>
-                                                </li>
-                                                <li class="selectbox__option">Услугу
-                                                    <div class="selectbox__title">
-                                                        <span>тип заказа - работа</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <div class="selectbox__container">
+                                                <ul class="selectbox__list">
+                                                    <li class="selectbox__option">Консультацию
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - консультация по одной из тем специализаций</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Документ
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - документ</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="selectbox__option">Услугу
+                                                        <div class="selectbox__title">
+                                                            <span>тип заказа - работа</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <button class="button button_transparent filter-controls__button">
                                             <span class="button__name">Применить</span>
