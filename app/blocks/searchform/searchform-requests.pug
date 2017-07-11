@@ -21,6 +21,6 @@ mixin searchform-requests()
           +selectbox(getData('request-filter-documents'))._light._visible
         +e.field
           +e.SPAN.label_bold._small Регион
-          +selectbox(getData('request-filter-region'))._light._visible
+          +selectbox(getData('request-filter-region'))._light._scrollable
       +e.row
         +button("button")._blue.__button Применить
