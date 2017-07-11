@@ -12,11 +12,12 @@ mixin selectbox(data, label, required, def)
         +e.SPAN.label= label
       +e.SPAN.button-name= placeholder
       +e.I.right-icon(class='fa fa-angle-down')
-    +e.UL.list
-      each option in data.option
-        +e.LI.option= option.name
-          -if (option.suboption)
-            +e.I.arrow(class='fa fa-angle-right')
-            +e.UL.sublist
-              each suboption in option.suboption
-                +e.LI.option= suboption
+    +e.container
+      +e.UL.list
+        each option in data.option
+          +e.LI.option= option.name
+            -if (option.suboption)
+              +e.I.arrow(class='fa fa-angle-right')
+              +e.UL.sublist
+                each suboption in option.suboption
+                  +e.LI.option= suboption

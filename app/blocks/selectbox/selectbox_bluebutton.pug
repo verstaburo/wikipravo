@@ -7,8 +7,9 @@ mixin selectbox_bluebutton(data, label)
     +e.INPUT.input(type='hidden' value=placeholder placeholder=placeholder)
     +button-arrow('down').__button.button_blue
       block
-    +e.UL.list
-      each option in data.option
-        +e.LI.option= option.name
-          +e.title
-            span= option.title
+    +e.container
+      +e.UL.list
+        each option in data.option
+          +e.LI.option= option.name
+            +e.title
+              span= option.title

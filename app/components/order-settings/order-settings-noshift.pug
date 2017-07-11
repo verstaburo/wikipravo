@@ -20,14 +20,14 @@ mixin order-settings-noshift()
       +e.order-row
         +e.order-col.__first
           +e.order-label Специалист в категории права
-          +selectbox(getData('selectbox-law-category'))._light._visible.__selectbox
+          +selectbox(getData('selectbox-law-category'))._light._scrollable._multilevel.__selectbox
         +e.order-col.__second
           +e.order-label Регион
           +selectbox(getData('order-region'))._light._height._scrollable
       +e.order-row
         +e.order-col.__first
           +e.order-label Работает с документами
-          +selectbox(getData('selectbox-documents'))._light._visible.__selectbox
+          +selectbox(getData('selectbox-documents'))._light._scrollable._multilevel.__selectbox
         +e.order-col.__second
           +e.order-label Стаж работы
           +e.order-col_inner

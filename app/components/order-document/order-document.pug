@@ -11,7 +11,7 @@ mixin order-document()
     +block-title("Какой документ вам нужен?").__title
     +e.row_half
       +section-title("Тип документа")._bold.__label
-      +selectbox(getData("selectbox-order-documents"))._light._visible._shift.__doctype
+      +selectbox(getData("selectbox-order-documents"))._light._scrollable._multilevel._shift.__doctype
     +e.row_half
       +section-title("Мне нужно")._bold.__label
       +input(type="text" placeholder="Кратко опишите задачу")#short-describe.__input

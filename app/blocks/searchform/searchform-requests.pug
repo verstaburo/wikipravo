@@ -15,10 +15,10 @@ mixin searchform-requests()
       +e.row
         +e.field
           +e.SPAN.label_bold._small Категории права
-          +selectbox(getData('request-filter-law-category'))._light._visible
+          +selectbox(getData('request-filter-law-category'))._light._scrollable._multilevel
         +e.field
           +e.SPAN.label_bold._small Виды документа
-          +selectbox(getData('request-filter-documents'))._light._visible
+          +selectbox(getData('request-filter-documents'))._light._scrollable._multilevel
         +e.field
           +e.SPAN.label_bold._small Регион
           +selectbox(getData('request-filter-region'))._light._scrollable

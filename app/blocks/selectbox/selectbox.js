@@ -8,6 +8,9 @@ export function VerstaSelectBox() {
       inputClass = mainClass + "__input",
       optionActiveClass = optionClass + "_active",
       selectTopListClass = mainClass + "__list_top",
+      containerListClass = mainClass + "__container",
+      containerTopListClass = mainClass + "__container_top",
+      sublistClass = mainClass + "__sublist",
       selectScrollParent,
       selectListHeight,
       selectValue;
@@ -41,7 +44,7 @@ export function VerstaSelectBox() {
   // #####################
   // Скрытие списка при уходе с него указателя мыши
 
-  $('.' + listClass).mouseleave(function() {
+  $('.' + containerListClass).mouseleave(function() {
     $(this).parents("." + mainClass).removeClass(activeClass);
   });
 
@@ -67,17 +70,18 @@ export function VerstaSelectBox() {
     if (bottomSpace < selectListHeight + 40) {
 
       // Места недостаточно — добавляем класс
-      el.parents("." + mainClass).find("." + listClass).addClass(selectTopListClass);
+      el.parents("." + mainClass).find("." + containerListClass).addClass(containerTopListClass);
     } else {
 
       // Места достаточно
-      el.parents("." + mainClass).find("." + listClass).removeClass(selectTopListClass);
+      el.parents("." + mainClass).find("." + containerListClass).removeClass(containerTopListClass);
     }
   }
 
   if($('.' + mainClass).length > 0) {
     selectBoxPosition( $("." + buttonClass) );
   }
+
 
   // #####################
   // Инициализация скрипта

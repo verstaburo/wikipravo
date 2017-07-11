@@ -10,13 +10,13 @@ mixin searchform(authorized)
       +e.row
         +e.field_category
           +e.SPAN.label Категория
-          +selectbox(getData('selectbox-law-category'))._light._visible
+          +selectbox(getData('selectbox-law-category'))._light._scrollable._multilevel
         +e.field_location
           +e.SPAN.label Местоположение
           +selectbox(getData('selectbox-searchform-city'))._light._scrollable
         +e.field_document
           +e.SPAN.label Тип документов
-          +selectbox(getData('selectbox-documents'))._light._visible
+          +selectbox(getData('selectbox-documents'))._light._scrollable._multilevel
         +e.inputfield_experience
           +e.SPAN.label Стаж работы
           +input.min(type="text" name="min" placeholder="От")
