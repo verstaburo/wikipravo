@@ -32,7 +32,8 @@ export function VerstaTabs(prefix) {
     $(document).find("[" + targetIdAttr + "='" + targetId + "']").show(0, function(){
 
       // Передаем ее высоту контейнеру, анимируем через библиотеку Velocity
-      currentContainer.velocity({ height: $(this).outerHeight() }, { duration: 250 });
+      currentContainer.velocity({ height: $(this).outerHeight() }, { duration: 250, complete: function () { $(this).css({'height' : 'auto'});} });
+
 
       // Добавляем вкладке активный класс
       $(this).addClass("active");
@@ -56,7 +57,7 @@ export function VerstaTabs(prefix) {
 
   // ###################
   // Меняем высоту контейнера на auto при ресайзе страницы
-  $(window).resize(function(){
+  /*$(window).resize(function(){
     $(document).find(targetGroupContainerSelector).height("auto");
     setTimeout(baseContainerHeight, 1);
   });
@@ -70,7 +71,7 @@ export function VerstaTabs(prefix) {
     });
   }
 
-  baseContainerHeight();
+  baseContainerHeight();*/
 
   // ###################
   // Отслеживаем клик по вкладке
